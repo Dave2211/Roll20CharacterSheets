@@ -1,0 +1,883 @@
+<div class="sheet-main">
+    <img src="https://s3.amazonaws.com/files.staging.d20.io/images/221093/hstj0O3XmZYDhA6tPiiJrA/med.png" class="sheet-logo" /> 
+	
+	<!-- Character -->
+	<div class="sheet-divbox sheet-title">	
+		<div class="sheet-header sheet-text-center">Feuille de Personnage</div>	
+		<div class="sheet-rTable">
+			<div class="sheet-rTableRow">
+				<div class="sheet-rTableCell sheet-border-right sheet-text-center">
+					Nom du Joueur<br/><input name="attr_playername" type="text" class="sheet-box" />
+				</div>
+				<div class="sheet-rTableCell sheet-text-center">
+					<strong>Alliance</strong><br/> 
+					<input type="radio" id="sex1" class="" name="attr_alliance" value="male" title="Positif" checked="checked"/>Positif
+					<input type="radio" id="sex2" class="" name="attr_alliance" value="female" title="Négatif"/>Négatif
+				</div>
+			</div>
+		</div>
+	</div>
+	<br/>
+	
+	<!-- Abilities -->
+	<div class="sheet-divbox">	
+		<div class="sheet-header sheet-text-center">Caractéristiques</div>	
+		<div class="sheet-rTable">
+			<div class="sheet-rTableRow">
+				<div class="sheet-rTableCell">				
+					<div class="sheet-rTable">
+						<div class="sheet-rTableRow">
+							<div class="sheet-rTableCell">
+								FOR
+							</div>
+							<div class="sheet-rTableCell">
+								<input name="attr_str" type="number" class="sheet-box" />
+							</div>
+							<div class="sheet-rTableCell">
+								Modif. Dégâts
+							</div>
+							<div class="sheet-rTableCell">
+								[<span name="attr_modDamage" class="sheet-box sheet-medium sheet-grayback"></span>]
+							</div>
+						</div>
+						<div class="sheet-rTableRow">
+							<div class="sheet-rTableCell">
+								CON
+							</div>
+							<div class="sheet-rTableCell">
+								<input name="attr_con" type="number" class="sheet-box" />
+							</div>
+							<div class="sheet-rTableCell">
+								&nbsp;
+							</div>
+							<div class="sheet-rTableCell">
+								&nbsp;
+							</div>
+						</div>
+						<div class="sheet-rTableRow">
+							<div class="sheet-rTableCell">
+								TAI
+							</div>
+							<div class="sheet-rTableCell">
+								<input name="attr_hgt" type="number" class="sheet-box" />
+							</div>
+							<div class="sheet-rTableCell">
+								DEP
+							</div>
+							<div class="sheet-rTableCell">
+								<input name="attr_mov" type="number" class="sheet-box" />
+							</div>
+						</div>
+						<div class="sheet-rTableRow">
+							<div class="sheet-rTableCell">
+								INT
+							</div>
+							<div class="sheet-rTableCell">
+								<input name="attr_int" type="number" class="sheet-box" />
+							</div>
+							<div class="sheet-rTableCell">
+								x5= Idée
+							</div>
+							<div class="sheet-rTableCell">
+								<input name="attr_idea" type="number" disabled="true" value="@{int}*5" class="sheet-box" />%
+							</div>
+						</div>
+						<div class="sheet-rTableRow">
+							<div class="sheet-rTableCell">
+								POU
+							</div>
+							<div class="sheet-rTableCell">
+								<input name="attr_pow" type="number" class="sheet-box" />
+							</div>
+							<div class="sheet-rTableCell">
+								x5= Chance
+							</div>
+							<div class="sheet-rTableCell">
+								<input name="attr_luck" type="number" disabled="true" value="@{pow}*5" class="sheet-box" />%
+							</div>
+						</div>
+						<div class="sheet-rTableRow">
+							<div class="sheet-rTableCell">
+								DEX
+							</div>
+							<div class="sheet-rTableCell">
+								<input name="attr_dex" type="number" class="sheet-box" />
+							</div>
+							<div class="sheet-rTableCell">
+								x5= Dextérité
+							</div>
+							<div class="sheet-rTableCell">
+								<input name="attr_dext" type="number" disabled="true" value="@{dex}*5" class="sheet-box" />%
+							</div>
+						</div>
+						<div class="sheet-rTableRow">
+							<div class="sheet-rTableCell">
+								APP
+							</div>
+							<div class="sheet-rTableCell">
+								<input name="attr_app" type="number" class="sheet-box" />
+							</div>
+							<div class="sheet-rTableCell">
+								x5= Charisme
+							</div>
+							<div class="sheet-rTableCell">
+								<input name="attr_cha" type="number" disabled="true" value="@{app}*5" class="sheet-box" />%
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-rTableCell">
+					<div class="sheet-rTable">
+						<div class="sheet-rTableRow">
+							<div class="sheet-rTableCell">	
+								Nom : <input name="attr_name" type="text" class="sheet-box" />
+								Sexe : 
+								<select name="attr_sex" class="sheet-boxinput sheet-medium">                
+									<option value="Masculin">Masculin</option>
+									<option value="Feminin">Feminin</option>
+								</select>
+								Age : <input name="attr_age" type="number" class="sheet-box" />
+							</div>
+						</div>
+						<div class="sheet-rTableRow">
+							<div class="sheet-rTableCell">	
+								Lieu de naissance : <input name="attr_birthplace" type="text" class="sheet-box sheet-large" />
+							</div>
+						</div>
+						<div class="sheet-rTableRow">
+							<div class="sheet-rTableCell">	
+								Allure, Attitude, Mutations, Tares et Malformations Apparentes<br/>
+								<textarea style="height: 150px;width:370px;" name="attr_look"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br/>
+	
+	<!-- Health Points -->
+	<div class="sheet-divbox" style="width:680px; margin:auto;">	
+		<div class="sheet-header sheet-text-center">Point de Vie (Max:<span name="attr_hp_max" class=""></span>)</div>	
+
+		<div class="sheet-rTable">
+			<div class="sheet-rTableRow">
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">Mort<br/><input type="radio" value="-10" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">-2<br/><input type="radio" value="-2" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">-1<br/><input type="radio" value="-1" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">0<br/><input type="radio" value="0" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">+1<br/><input type="radio" value="1" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">+2<br/><input type="radio" value="2" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">3<br/><input type="radio" value="3" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">4<br/><input type="radio" value="4" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">5<br/><input type="radio" value="5" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">6<br/><input type="radio" value="6" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">7<br/><input type="radio" value="7" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom ">8<br/><input type="radio" value="8" name="attr_hp" /></div>
+			</div>
+			<div class="sheet-rTableRow">
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">9<br/><input type="radio" value="9" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">10<br/><input type="radio" value="10" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">11<br/><input type="radio" value="11" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">12<br/><input type="radio" value="12" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">13<br/><input type="radio" value="13" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">14<br/><input type="radio" value="14" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">15<br/><input type="radio" value="15" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">16<br/><input type="radio" value="16" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">17<br/><input type="radio" value="17" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">18<br/><input type="radio" value="18" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">19<br/><input type="radio" value="19" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom ">20<br/><input type="radio" value="20" name="attr_hp" /></div>
+			</div>
+			<div class="sheet-rTableRow">
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">21<br/><input type="radio" value="21" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">22<br/><input type="radio" value="22" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">23<br/><input type="radio" value="23" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">24<br/><input type="radio" value="24" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">25<br/><input type="radio" value="25" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">26<br/><input type="radio" value="26" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">27<br/><input type="radio" value="27" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">28<br/><input type="radio" value="28" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">29<br/><input type="radio" value="29" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">30<br/><input type="radio" value="30" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">31<br/><input type="radio" value="31" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom ">32<br/><input type="radio" value="32" name="attr_hp" /></div>
+			</div>
+			<div class="sheet-rTableRow">
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">33<br/><input type="radio" value="33" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">34<br/><input type="radio" value="34" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">35<br/><input type="radio" value="35" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">36<br/><input type="radio" value="36" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">37<br/><input type="radio" value="37" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">38<br/><input type="radio" value="38" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">39<br/><input type="radio" value="39" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">40<br/><input type="radio" value="40" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">41<br/><input type="radio" value="41" name="attr_hp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">42<br/><input type="radio" value="42" name="attr_hp" /></div>
+				<div class="sheet-rTableCell"></div>
+				<div class="sheet-rTableCell"></div>
+			</div>
+		</div>
+	</div>
+	<br/>
+
+	<!-- Magic Points -->
+	<div class="sheet-divbox" style="width:620px margin:auto;">	
+		<div class="sheet-header sheet-text-center">Points de Magie (Max:<span name="attr_mp_max" class=""></span>)</div>	
+		<div class="sheet-rTable">
+			<div class="sheet-rTableRow">
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">Inc.<br/><input type="radio" value="-10" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">0<br/><input type="radio" value="0" checked name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">1<br/><input type="radio" value="1" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">2<br/><input type="radio" value="2" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">3<br/><input type="radio" value="3" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">4<br/><input type="radio" value="4" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">5<br/><input type="radio" value="5" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">6<br/><input type="radio" value="6" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">7<br/><input type="radio" value="7" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">8<br/><input type="radio" value="8" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom">9<br/><input type="radio" value="9" name="attr_mp" /></div>
+			</div>
+			<div class="sheet-rTableRow">
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">10<br/><input type="radio" value="10" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">11<br/><input type="radio" value="11" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">12<br/><input type="radio" value="12" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">13<br/><input type="radio" value="13" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">14<br/><input type="radio" value="14" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">15<br/><input type="radio" value="15" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">16<br/><input type="radio" value="16" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">17<br/><input type="radio" value="17" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">18<br/><input type="radio" value="18" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom sheet-border-right">19<br/><input type="radio" value="19" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-bottom">20<br/><input type="radio" value="20" name="attr_mp" /></div>
+			</div>
+			<div class="sheet-rTableRow">
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">21<br/><input type="radio" value="21" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">22<br/><input type="radio" value="22" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">23<br/><input type="radio" value="23" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">24<br/><input type="radio" value="24" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">25<br/><input type="radio" value="25" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">26<br/><input type="radio" value="26" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">27<br/><input type="radio" value="27" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">28<br/><input type="radio" value="28" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">29<br/><input type="radio" value="29" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center sheet-border-right">30<br/><input type="radio" value="30" name="attr_mp" /></div>
+				<div class="sheet-rTableCell sheet-text-center">31<br/><input type="radio" value="31" name="attr_mp" /></div>
+			</div>
+		</div>
+	</div>
+	<br/>
+	
+	<!-- Skills -->
+	<div class="sheet-divbox sheet-divbox-skill">	
+		<div class="sheet-header sheet-text-center">Compétences</div>	
+		<div class="sheet-rTable">
+			<div class="sheet-rTableRow">
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_initTrapCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Amorcer Piège (05%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_initTrap" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Amorcer Piège}} {{skill_value=[[@{initTrap}]]}} {{diceroll=[[1d100cs<[[(ceil(@{initTrap}/5))]]cf>99]]}}" name="roll_initTrapCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_dodgeCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Esquive (DEX x 2%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_dodge" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Esquive}} {{skill_value=[[@{dodge}]]}} {{diceroll=[[1d100cs<[[(ceil(@{riding}/5))]]cf>99]]}}" name="roll_dodgeCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_swimCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Natation (25%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_swim" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Natation}} {{skill_value=[[@{swim}]]}} {{diceroll=[[1d100cs<[[(ceil(@{swim}/5))]]cf>99]]}}" name="roll_swimCheck" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_artCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Art (05%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_art" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Art}} {{skill_value=[[@{art}]]}} {{diceroll=[[1d100cs<[[(ceil(@{art}/5))]]cf>99]]}}" name="roll_artCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_europeCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Europe (15%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_europe" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Europe}} {{skill_value=[[@{europe}]]}} {{diceroll=[[1d100cs<[[(ceil(@{europe}/5))]]cf>99]]}}" name="roll_europeCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_navigateCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Navigation (15%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_sailing" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Navigation}} {{skill_value=[[@{sailing}]]}} {{diceroll=[[1d100cs<[[(ceil(@{sailing}/5))]]cf>99]]}}" name="roll_navigateCheck" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_artSpe1Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_artSpe1Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_artSpe1" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Art (@{artSpe1Name})}} {{skill_value=[[@{artSpe1}]]}} {{diceroll=[[1d100cs<[[(ceil(@{artSpe1}/5))]]cf>99]]}}" name="roll_artSpe1Check" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_evaluateCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Evaluer (15%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_evaluate" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Evaluer}} {{skill_value=[[@{evaluate}]]}} {{diceroll=[[1d100cs<[[(ceil(@{evaluate}/5))]]cf>99]]}}" name="roll_evaluateCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_orientationCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Orientation (10%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_orientation" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Orientation}} {{skill_value=[[@{orientation}]]}} {{diceroll=[[1d100cs<[[(ceil(@{orientation}/5))]]cf>99]]}}" name="roll_orientationCheck" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_artSpe2Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_artSpe2Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_artSpe2" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Art (@{artSpe2Name})}} {{skill_value=[[@{artSpe2}]]}} {{diceroll=[[1d100cs<[[(ceil(@{artSpe2}/5))]]cf>99]]}}" name="roll_artSpe2Check" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_climbCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Grimper (40%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_climb" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Grimper}} {{skill_value=[[@{climb}]]}} {{diceroll=[[1d100cs<[[(ceil(@{climb}/5))]]cf>99]]}}" name="roll_climbCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_steerCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Piloter (05%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_steer" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Piloter}} {{skill_value=[[@{steer}]]}} {{diceroll=[[1d100cs<[[(ceil(@{steer}/5))]]cf>99]]}}" name="roll_steerCheck" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_craftCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Artisanat (05%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_craft" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Artisanat}} {{skill_value=[[@{craft}]]}} {{diceroll=[[1d100cs<[[(ceil(@{craft}/5))]]cf>99]]}}" name="roll_craftCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_hypnoseCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Hypnose (0%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_hypnosis" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Hypnose}} {{skill_value=[[@{hypnosis}]]}} {{diceroll=[[1d100cs<[[(ceil(@{hypnosis}/5))]]cf>99]]}}" name="roll_hypnoseCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_steerSpe1Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_steerSpe1Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_steerSpe1" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Pilote (@{steerSpe1Name})}} {{skill_value=[[@{steerSpe1}]]}} {{diceroll=[[1d100cs<[[(ceil(@{steerSpe1}/5))]]cf>99]]}}" name="roll_steerSpe1Check" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_craftSpe1Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_craftSpe1Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_craftSpe1" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Artisanat (@{craftSpe1Name})}} {{skill_value=[[@{craftSpe1}]]}} {{diceroll=[[1d100cs<[[(ceil(@{craftSpe1}/5))]]cf>99]]}}" name="roll_craftSpe1Check" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_launchCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Lancer (25%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_launch" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Lancer}} {{skill_value=[[@{launch}]]}} {{diceroll=[[1d100cs<[[(ceil(@{launch}/5))]]cf>99]]}}" name="roll_launchCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_steerSpe2Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_steerSpe2Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_steerSpe2" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Pilote (@{steerSpe2Name})}} {{skill_value=[[@{steerSpe2}]]}} {{diceroll=[[1d100cs<[[(ceil(@{steerSpe2}/5))]]cf>99]]}}" name="roll_steerSpe2Check" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_craftSpe2Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_craftSpe2Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_craftSpe2" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Artisanat (@{craftSpe2Name})}} {{skill_value=[[@{craftSpe2}]]}} {{diceroll=[[1d100cs<[[(ceil(@{craftSpe2}/5))]]cf>99]]}}" name="roll_craftSpe2Check" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_foreingLangCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Langue Etrang. (0%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_foreingLang" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Langue Etrangère}} {{skill_value=[[@{foreingLang}]]}} {{diceroll=[[1d100cs<[[(ceil(@{foreingLang}/5))]]cf>99]]}}" name="roll_foreingLangCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_trackCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Pister (10%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_track" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Pister}} {{skill_value=[[@{track}]]}} {{diceroll=[[1d100cs<[[(ceil(@{track}/5))]]cf>99]]}}" name="roll_trackCheck" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_spielCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Baratin (15%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_spiel" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Baratin}} {{skill_value=[[@{spiel}]]}} {{diceroll=[[1d100cs<[[(ceil(@{spiel}/5))]]cf>99]]}}" name="roll_spielCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_foreingLangSpe1Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_foreingLangSpe1Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_foreingLangSpe1" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Langue Etrang. (@{foreingLangSpe1Name})}} {{skill_value=[[@{foreingLangSpe1}]]}} {{diceroll=[[1d100cs<[[(ceil(@{foreingLangSpe1}/5))]]cf>99]]}}" name="roll_foreingLangSpe1Check" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_potionCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Potions (0%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_potion" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Potions}} {{skill_value=[[@{potion}]]}} {{diceroll=[[1d100cs<[[(ceil(@{potion}/5))]]cf>99]]}}" name="roll_potionCheck" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_searchCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Chercher (15%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_search" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Chercher}} {{skill_value=[[@{search}]]}} {{diceroll=[[1d100cs<[[(ceil(@{search}/5))]]cf>99]]}}" name="roll_searchCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_foreing2angSpe1Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_foreingLangSpe2Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_foreingLangSpe2" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Langue Etrang. (@{foreingLangSpe2Name})}} {{skill_value=[[@{foreingLangSpe2}]]}} {{diceroll=[[1d100cs<[[(ceil(@{foreingLangSpe2}/5))]]cf>99]]}}" name="roll_foreingLangSpe2Check" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_repairCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Reparer/Concev. (DEX x 4%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_repair" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Reparer/Concevoir}} {{skill_value=[[@{repair}]]}} {{diceroll=[[1d100cs<[[(ceil(@{repair}/5))]]cf>99]]}}" name="roll_repairCheck" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_pickCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Crocheter (05%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_pick" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Crocheter}} {{skill_value=[[@{pick}]]}} {{diceroll=[[1d100cs<[[(ceil(@{pick}/5))]]cf>99]]}}" name="roll_pickCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_foreingLangSpe3Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_foreingLangSpe3Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_foreingLangSpe3" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Langue Etrang. (@{foreingLangSpe3Name})}} {{skill_value=[[@{foreingLangSpe3}]]}} {{diceroll=[[1d100cs<[[(ceil(@{foreingLangSpe3}/5))]]cf>99]]}}" name="roll_foreingLangSpe3Check" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_perspicacityCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Sagacité (15%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_perspicacity" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Sagacité}} {{skill_value=[[@{perspicacity}]]}} {{diceroll=[[1d100cs<[[(ceil(@{perspicacity}/5))]]cf>99]]}}" name="roll_perspicacityCheck" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_desguiseCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Déguisement (15%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_desguise" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Déguisement}} {{skill_value=[[@{desguise}]]}} {{diceroll=[[1d100cs<[[(ceil(@{desguise}/5))]]cf>99]]}}" name="roll_Check" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_foreingLangSpe4Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_foreingLangSpe4Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_foreingLangSpe4" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Langue Etrang. (@{foreingLangSpe4Name})}} {{skill_value=[[@{foreingLangSpe4}]]}} {{diceroll=[[1d100cs<[[(ceil(@{foreingLangSpe4}/5))]]cf>99]]}}" name="roll_Check" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_jumpCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Sauter (25%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_jump" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Sauter}} {{skill_value=[[@{jump}]]}} {{diceroll=[[1d100cs<[[(ceil(@{jump}/5))]]cf>99]]}}" name="roll_Check" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_quietMoveCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Depl. Silencieux (20%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_quietMove" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Deplacement Silencieux}} {{skill_value=[[@{quietMove}]]}} {{diceroll=[[1d100cs<[[(ceil(@{quietMove}/5))]]cf>99]]}}" name="roll_quietMoveCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_motherTongueCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Langue Matern. (INT x 5%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_motherTongue" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Langue Maternelle}} {{skill_value=[[@{motherTongue}]]}} {{diceroll=[[1d100cs<[[(ceil(@{motherTongue}/5))]]cf>99]]}}" name="roll_motherTongueCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_scribeCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Scribe (0%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_scribe" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Scribe}} {{skill_value=[[@{scribe}]]}} {{diceroll=[[1d100cs<[[(ceil(@{scribe}/5))]]cf>99]]}}" name="roll_scribeCheck" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_hideObjectCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Dissimuler Obj. (25%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_hideObject" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Dissimuler Objet}} {{skill_value=[[@{hideObject}]]}} {{diceroll=[[1d100cs<[[(ceil(@{hideObject}/5))]]cf>99]]}}" name="roll_hideCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_techKnowledgeCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Maitrise Techno. (05%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_techKnowledge" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Maitrise Techno.}} {{skill_value=[[@{techKnowledge}]]}} {{diceroll=[[1d100cs<[[(ceil(@{techKnowledge}/5))]]cf>99]]}}" name="roll_techKnowledgeCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_hideCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Se Cacher (20%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_hide" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Se Cacher}} {{skill_value=[[@{hide}]]}} {{diceroll=[[1d100cs<[[(ceil(@{hide}/5))]]cf>99]]}}" name="roll_hideCheck" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_listenCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Ecouter (25%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_listen" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Ecouter}} {{skill_value=[[@{listen}]]}} {{diceroll=[[1d100cs<[[(ceil(@{listen}/5))]]cf>99]]}}" name="roll_listenCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_bargainCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Marchander (15%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_bargain" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Marchander}} {{skill_value=[[@{bargain}]]}} {{diceroll=[[1d100cs<[[(ceil(@{bargain}/5))]]cf>99]]}}" name="roll_bargainCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_smellTasteCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Sentir/Gouter (15%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_smellTaste" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Sentir/Gouter}} {{skill_value=[[@{smellTaste}]]}} {{diceroll=[[1d100cs<[[(ceil(@{smellTaste}/5))]]cf>99]]}}" name="roll_smellTasteCheck" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_eloquenceCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Eloquence (05%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_eloquence" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Eloquence}} {{skill_value=[[@{eloquence}]]}} {{diceroll=[[1d100cs<[[(ceil(@{eloquence}/5))]]cf>99]]}}" name="roll_eloquenceCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_basicMedicineCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Medecine Rudiment. (30%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_basicMedicine" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Medecine Rudiment.}} {{skill_value=[[@{basicMedicine}]]}} {{diceroll=[[1d100cs<[[(ceil(@{basicMedicine}/5))]]cf>99]]}}" name="roll_basicMedicineCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_terraIncognitaCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Terra Incognita (0%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_terraIncognita" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Terra Incognita}} {{skill_value=[[@{terraIncognita}]]}} {{diceroll=[[1d100cs<[[(ceil(@{terraIncognita}/5))]]cf>99]]}}" name="roll_terraIncognitaCheck" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_ridingCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Equitation (35%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_riding" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Equitation}} {{skill_value=[[@{riding}]]}} {{diceroll=[[1d100cs<[[(ceil(@{riding}/5))]]cf>99]]}}" name="roll_ridingCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_millionSphereCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Million de Sphères (0%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_millionSphere" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Million de Sphères}} {{skill_value=[[@{millionSphere}]]}} {{diceroll=[[1d100cs<[[(ceil(@{millionSphere}/5))]]cf>99]]}}" name="roll_millionSphereCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_terraIncognitaSpe1Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_terraIncognitaSpe1Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_terraIncognitaSpe1" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Terra Incognita (@{terraIncognitaSpe1Name})}} {{skill_value=[[@{terraIncognitaSpe1}]]}} {{diceroll=[[1d100cs<[[(ceil(@{terraIncognitaSpe1}/5))]]cf>99]]}}" name="roll_terraIncognitaSpe1Check" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell sheet-border-bottom"><input type="checkbox" name="attr_ridingSpe1Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_ridingSpe1Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_ridingSpe1" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Equitation (@{ridingSpe1Name})}} {{skill_value=[[@{ridingSpe1}]]}} {{diceroll=[[1d100cs<[[(ceil(@{ridingSpe1}/5))]]cf>99]]}}" name="roll_ridingSpe1Check" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_ancientWorldCheck" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom">Monde Ancien (0%)</div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_ancientWorld" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Monde Ancien}} {{skill_value=[[@{ancientWorld}]]}} {{diceroll=[[1d100cs<[[(ceil(@{ancientWorld}/5))]]cf>99]]}}" name="roll_ancientWorldCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom sheet-border-left"><input type="checkbox" name="attr_terraIncognitaSpe2Check" value="1" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_terraIncognitaSpe2Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><input name="attr_terraIncognitaSpe2" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell sheet-border-bottom"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Terra Incognita (@{terraIncognitaSpe2Name})}} {{skill_value=[[@{terraIncognitaSpe2}]]}} {{diceroll=[[1d100cs<[[(ceil(@{terraIncognitaSpe2}/5))]]cf>99]]}}" name="roll_terraIncognitaSpe2Check" /></div>
+			</div>
+			<div class="sheet-rTableRow">		
+				<div class="sheet-rTableCell"><input type="checkbox" name="attr_ridingSpe2Check" value="1" /></div>
+				<div class="sheet-rTableCell"><input name="attr_ridingSpe2Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell"><input name="attr_ridingSpe2" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Equitation (@{ridingSpe2Name})}} {{skill_value=[[@{ridingSpe2}]]}} {{diceroll=[[1d100cs<[[(ceil(@{ridingSpe2}/5))]]cf>99]]}}" name="roll_ridingSpe2Check" /></div>
+				<div class="sheet-rTableCell sheet-border-left"><input type="checkbox" name="attr_naturalWorldCheck" value="1" /></div>
+				<div class="sheet-rTableCell">Monde Naturel (25%)</div>
+				<div class="sheet-rTableCell"><input name="attr_naturalWorld" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Monde Naturel}} {{skill_value=[[@{naturalWorld}]]}} {{diceroll=[[1d100cs<[[(ceil(@{naturalWorld}/5))]]cf>99]]}}" name="roll_naturalWorldCheck" /></div>
+				<div class="sheet-rTableCell sheet-border-left"><input type="checkbox" name="attr_terraIncognitaSpe3Check" value="1" /></div>
+				<div class="sheet-rTableCell"><input name="attr_terraIncognitaSpe3Name" type="text" class="sheet-box sheet-superlarge" /></div>
+				<div class="sheet-rTableCell"><input name="attr_terraIncognitaSpe3" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><button type="roll" value="&{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=Terra Incognita (@{terraIncognitaSpe3Name})}} {{skill_value=[[@{terraIncognitaSpe3}]]}} {{diceroll=[[1d100cs<[[(ceil(@{terraIncognitaSpe3}/5))]]cf>99]]}}" name="roll_terraIncognitaSpe3Check" /></div>
+			</div>
+		</div>
+	</div>
+	<br/>
+	
+	<!-- Scientific Expertise -->
+	<div class="sheet-divbox">	
+		<div class="sheet-header sheet-text-center">Expertise Scientifique (INT Libre : <input name="attr_intFree" type="number" class="sheet-box" />)</div>	
+		<div class="sheet-rTable">
+			<fieldset class="repeating_scientificSkills">
+				<div class="sheet-rTableCell">
+					<input name="attr_scientificSkillName" type="text" class="sheet-box sheet-box-full" />
+				</div>
+			</fieldset>
+		</div>
+	</div>
+	<br/>
+	
+	<!-- Mutations, Flaws, Deformity -->
+	<div class="sheet-divbox">	
+		<div class="sheet-header sheet-text-center">Mutations, Tares, Malformations</div>	
+		<div class="sheet-rTable">
+			<fieldset class="repeating_physiques">				
+				<div class="sheet-rTableCell">
+					<input name="attr_physiqueName" type="text" class="sheet-box sheet-box-full" />
+				</div>				
+			</fieldset>
+		</div>
+	</div>
+	<br/>
+	
+	<!-- Melee Weapons -->
+	<div class="sheet-divbox sheet-divbox-melee">	
+		<div class="sheet-header sheet-text-center">Armes de contact</div>	
+		<div class="sheet-rTable">
+			<div class="sheet-rTableHeadRow">
+                <div class="sheet-rTableRow">
+                    <div class="sheet-rTableHead">Nom</div>
+                    <div class="sheet-rTableHead">%</div>
+                    <div class="sheet-rTableHead">Dégâts</div>
+                    <div class="sheet-rTableHead">Structure</div>
+                    <div class="sheet-rTableHead">Longueur</div>
+                    <div class="sheet-rTableHead">Main</div>
+                    <div class="sheet-rTableHead">Empale</div>
+                    <div class="sheet-rTableHead">Pare</div>
+                    <div class="sheet-rTableHead">&nbsp;</div>
+                </div>
+            </div>
+			<fieldset class="repeating_contactWeapon">				
+				<div class="sheet-rTableCell"><input name="attr_contactWeaponName" type="text" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><input name="attr_contactWeaponPercent" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell">
+					<input name="attr_contactWeaponDamage" type="text" class="sheet-box" />
+					<select name="attr_contactWeaponDamageMod" class="sheet-boxinput sheet-medium">
+						<option value="" selected></option>
+						<option value="@{modDamage}" >+MD</option>
+					</select>
+				</div>
+				<div class="sheet-rTableCell"><input name="attr_contactWeaponStructure" type="text" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><input name="attr_contactWeaponLength" type="text" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><input name="attr_contactWeaponHand" type="text" class="sheet-box" /></div>
+				<div class="sheet-rTableCell">
+					<select name="attr_contactWeaponImpale" class="sheet-boxinput sheet-medium">
+						<option value="0" selected>Non</option>
+						<option value="1" >Oui</option>
+					</select>
+				</div>
+				<div class="sheet-rTableCell">
+					<select name="attr_contactWeaponCounter" class="sheet-boxinput sheet-medium">
+						<option value="0" selected>Non</option>
+						<option value="1" >Oui</option>
+					</select>
+				</div>
+				<div class="sheet-rTableCell"><button type="roll" value="&{template:hm_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_name=@{contactWeaponName}}} {{weapon_value=[[@{contactWeaponPercent}]]}} {{diceroll=[[1d100cs<[[(ceil(@{contactWeaponPercent}/5))]]cf>99]]}} {{diceroll_damage=[[@{contactWeaponDamage} + @{contactWeaponDamageMod}]]}} {{weapon_impale=@{contactWeaponImpale}}} {{weapon_counter=@{contactWeaponCounter}}}" name="roll_contactWeaponCheck"></button></div>				
+			</fieldset>
+		</div>
+	</div>
+	<br/>
+	
+	<!-- Ranged Weapons -->
+	<div class="sheet-divbox sheet-divbox-ranged">
+		<div class="sheet-header sheet-text-center">Armes de Jet et de Tir</div>	
+		<div class="sheet-rTable">
+			<div class="sheet-rTableHeadRow">
+                <div class="sheet-rTableRow">
+                    <div class="sheet-rTableHead">Nom</div>
+                    <div class="sheet-rTableHead">%</div>
+                    <div class="sheet-rTableHead">Dégâts</div>
+                    <div class="sheet-rTableHead">Portée</div>
+                    <div class="sheet-rTableHead">Att./Round</div>
+                    <div class="sheet-rTableHead">Pds</div>
+                    <div class="sheet-rTableHead">PA</div>
+                    <div class="sheet-rTableHead">Autonomie</div>
+                    <div class="sheet-rTableHead">&nbsp;</div>
+                </div>
+            </div>	
+		
+			<fieldset class="repeating_rangedWeapon">
+				
+				<div class="sheet-rTableCell"><input name="attr_rangedWeaponName" type="text" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><input name="attr_rangedWeaponPercent" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><input name="attr_rangedWeaponDamage" type="text" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><input name="attr_rangedWeaponRange" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><input name="attr_rangedWeaponRound" type="text" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><input name="attr_rangedWeaponPds" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><input name="attr_rangedWeaponPA" type="number" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><input name="attr_rangedWeaponAutonomy" type="text" class="sheet-box" /></div>
+				<div class="sheet-rTableCell"><button type="roll" value="" name="roll_rangedWeaponCheck"></button></div>
+					
+			</fieldset>
+		</div>
+	</div>
+	<br/>
+	
+	<!-- Armor, Shield -->
+	<div class="sheet-divbox">
+	
+		<table>
+			<tr>
+				<th colspan="7" class="sheet-header">Armure, Bouclier</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="2">Heaume</td>
+				<td colspan="2">Sans Heaume</td>
+				<td></td>
+				<td>Rounds</td>
+			</tr>
+			<tr>
+				<td>Armure</td>
+				<td>Absorp./</td>
+				<td>% Affect</td>
+				<td>Absorp./</td>
+				<td>% Affect</td>
+				<td>Enc.</td>
+				<td>pour revêtir</td>
+			</tr>
+			<tr>
+				<td><input name="attr_armorName" type="text" class="sheet-box" /></td>
+				<td><input name="attr_armorHelmetAbs" type="number" class="sheet-box" /></td>
+				<td><input name="attr_armorHelmetAffect" type="number" class="sheet-box" /></td>
+				<td><input name="attr_armorWithoutHelmetAbs" type="number" class="sheet-box" /></td>
+				<td><input name="attr_armorWithoutHelmetAffect" type="number" class="sheet-box" /></td>
+				<td><input name="attr_armorEnc" type="number" class="sheet-box" /></td>
+				<td><input name="attr_armorRound" type="number" class="sheet-box" /></td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<input type="checkbox" name="attr_shieldCheck" value="1" />Bouclier
+					<input name="attr_shieldBase" type="number" class="" />%
+				</td>
+				<td colspan="4">
+					Degâts <input name="attr_shieldDamage" type="number" class="" /> + Repousser
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					D<input type="checkbox" name="attr_shieldD" value="1" />
+					P<input type="checkbox" name="attr_shieldP" value="1" />
+					E<input type="checkbox" name="attr_shieldE" value="1" />
+					G<input type="checkbox" name="attr_shieldG" value="1" />
+				</td>
+				<td colspan="2">
+					Pourcentage Init. <input name="attr_shieldInitPercent" type="number" class="" />%
+				</td>
+				<td colspan="2">
+					PDS <input name="attr_shieldPDS" type="number" class="" />%
+				</td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+
+
+<rolltemplate class="sheet-rolltemplate-hm_skill">	
+	<div class="sheet-roll-table sheet-rounded">
+		<div class="sheet-roll-header">
+		{{#character_name}}
+		{{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}}
+		{{^character_id}}{{character_name}}{{/character_id}}
+		{{/character_name}}
+		</div>
+		<div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
+		Compétence : {{skill_name}}
+		</div>
+		<div class="sheet-roll-group2">
+			<div class="sheet-roll-row">
+				<div class="sheet-roll-cell">Valeur</div>
+				<div class="sheet-roll-cell">{{skill_value}}</div>
+			</div>
+			<div class="sheet-roll-row">
+				<div class="sheet-roll-cell">Résultat</div>
+				<div class="sheet-roll-cell">{{diceroll}}</div>
+			</div>
+
+			{{#rollGreater() diceroll skill_value}}
+			<div class="sheet-roll-row">
+				<div class="sheet-roll-cell">{{#rollWasFumble() diceroll}}<span style="color:red;font-weight:bold;">Critique !</span>{{/rollWasFumble() diceroll}}</div>
+				<div class="sheet-roll-cell"><span style="font-weight:bold;">Echec</span></div>
+			</div>
+			{{/rollGreater() diceroll skill_value}}
+
+			{{#rollLess() diceroll skill_value}}
+			<div class="sheet-roll-row">
+				<div class="sheet-roll-cell">{{#rollWasCrit() diceroll}}<span style="color:green;font-weight:bold;">Critique !</span>{{/rollWasCrit() diceroll}}</div>
+				<div class="sheet-roll-cell"><span style="font-weight:bold;">Réussite</span></div>
+			</div>
+			{{/rollLess() diceroll skill_value}}
+
+		</div>
+	</div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-hm_weapons">
+	<div class="sheet-roll-table sheet-rounded">
+		<div class="sheet-roll-header">
+		{{#character_name}}
+		{{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}}
+		{{^character_id}}{{character_name}}{{/character_id}}
+		{{/character_name}}
+		</div>
+		<div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
+		Arme : {{weapon_name}}
+		</div>
+		<div class="sheet-roll-group2">
+			<div class="sheet-roll-row">
+				<div class="sheet-roll-cell">Valeur</div>
+				<div class="sheet-roll-cell">{{weapon_value}}</div>
+			</div>
+			<div class="sheet-roll-row">
+				<div class="sheet-roll-cell">Résultat</div>
+				<div class="sheet-roll-cell">{{diceroll}}</div>
+			</div>
+			<div class="sheet-roll-row">
+				<div class="sheet-roll-cell">Dégâts</div>
+				<div class="sheet-roll-cell">{{diceroll_damage}}</div>
+			</div>
+
+			{{#rollTotal() weapon_impale 1}}
+			{{#rollTotal() diceroll 1}}
+			<div class="sheet-roll-row">
+				<div class="sheet-roll-cell">&nbsp;</div>
+				<div class="sheet-roll-cell">Empale !</div>
+			</div>
+			{{/rollTotal() diceroll 1}}
+			{{/rollTotal() weapon_impale 1}}
+
+			{{#rollGreater() diceroll weapon_value}}
+			<div class="sheet-roll-row">
+				<div class="sheet-roll-cell">{{#rollWasFumble() diceroll}}<span style="color:red;font-weight:bold;">Critique !</span>{{/rollWasFumble() diceroll}}</div>
+				<div class="sheet-roll-cell"><span style="font-weight:bold;">Echec</span></div>
+			</div>
+			{{/rollGreater() diceroll weapon_value}}
+
+			{{#rollLess() diceroll weapon_value}}
+			<div class="sheet-roll-row">
+				<div class="sheet-roll-cell">{{#rollWasCrit() diceroll}}<span style="color:green;font-weight:bold;">Critique !</span>{{/rollWasCrit() diceroll}}</div>
+				<div class="sheet-roll-cell"><span style="font-weight:bold;">Réussite</span></div>
+			</div>
+			{{/rollLess() diceroll weapon_value}}
+
+		</div>
+	</div>
+</rolltemplate>
+
+
+<script type="text/worker">
+
+	on("change:str change:hgt", function(){
+		//console.log("STR or HGT changed");
+		getAttrs(["str","hgt"], function(values) {
+			resValue=parseInt(values.str)+parseInt(values.hgt);	
+			//console.log(resValue);
+			if(resValue < 13){
+				setAttrs({				
+					modDamage: "-1d6"					
+				});
+			}
+			else if(resValue < 17){
+				setAttrs({				
+					modDamage: "-1d4"					
+				});
+			}
+			else if(resValue < 25){
+				setAttrs({				
+					modDamage: "0"					
+				});
+			}
+			else if(resValue < 33){
+				setAttrs({				
+					modDamage: "1d4"					
+				});
+			}
+			else if(resValue < 51){
+				setAttrs({				
+					modDamage: "1d6"					
+				});
+			}
+			else if(resValue < 57){
+				setAttrs({				
+					modDamage: "2d6"					
+				});
+			}
+			else if(resValue < 73){
+				setAttrs({				
+					modDamage: "3d6"				
+				});
+			}
+			else if(resValue < 89){
+				setAttrs({				
+					modDamage: "4d6"					
+				});
+			}
+			else if(resValue < 105){
+				setAttrs({				
+					modDamage: "5d6"					
+				});
+			}
+			else if(resValue < 121){
+				setAttrs({				
+					modDamage: "6d6"					
+				});
+			}
+			else if(resValue < 137){
+				setAttrs({				
+					modDamage: "7d6"					
+				});
+			}
+			else if(resValue < 153){
+				setAttrs({				
+					modDamage: "8d6"					
+				});
+			}
+			else if(resValue < 169){
+				setAttrs({				
+					modDamage: "9d6"					
+				});
+			}
+			else {
+				setAttrs({				
+					modDamage: "10d6"					
+				});
+			}
+		});
+	});
+	
+	on("change:con change:hgt", function(){
+		//console.log("CON or HGT changed");
+		getAttrs(["con","hgt"], function(values) {
+			resValue=parseInt(values.con)+parseInt(values.hgt);	
+			setAttrs({				
+					hp_max: Math.round(resValue/2)					
+				});
+		});
+	});
+</script>
