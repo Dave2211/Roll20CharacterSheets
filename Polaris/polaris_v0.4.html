@@ -42,8 +42,8 @@
                 <label class="sheet-small-label2" style="width: 20%;"><input name="attr_geneticType" type="text" data-i18n-placeholder="genetic-type-place" placeholder="Type génétique du personnage" /><span data-i18n="genetic-type">Type génétique</span></label>
                 <label class="sheet-small-label2" style="width: 7%;"><input name="attr_age" type="number" data-i18n-title="age-title" title="Age du personnage" /><span data-i18n="age">Age</span></label>
                 <label class="sheet-small-label2" style="width: 10%;"><input name="attr_height" type="text" data-i18n-placeholder="height-place" placeholder="Taille du personnage" /><span data-i18n="height">Taille</span></label>
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_complexion" type="text" data-i18n-placeholder="complexion-place" placeholder="Détails de la Peau" /><span data-i18n="skin">Peau</span></label>
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_make" type="text" data-i18n-placeholder="make-place" placeholder="Corpulence du personnage" /><span data-i18n="make">Corpulence</span></label>
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_complexion" type="text" data-i18n-placeholder="complexion-place" placeholder="Détails de la Peau" /><span data-i18n="complexion">Peau</span></label>
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_corpulence" type="text" data-i18n-placeholder="corpulence-place" placeholder="Corpulence du personnage" /><span data-i18n="corpulence">Corpulence</span></label>
                 <label class="sheet-small-label2" style="width: 20%;"><input name="att_hair" type="text" data-i18n-placeholder="hair-place" placeholder="Détails des Cheveux" /><span data-i18n="hair">Cheveux</span></label>
                 <label class="sheet-small-label2" style="width: 20%;"><input name="att_eyes" type="text" data-i18n-placeholder="eyes-place" placeholder="Détails des Yeux" /><span data-i18n="eyes">Yeux</span></label>
                 <label class="sheet-small-label2" style="width: 7%;"><input name="attr_weight" type="number" data-i18n-title="weight-title" title="Poids du personnage" /><span data-i18n="weight">Poids</span></label>
@@ -106,7 +106,7 @@
                           <td></td>
                         </tr>
                         <tr>
-                          <td><label class="sheet-small-label2" style="width: 30%;"><span data-i18n="current-luck">Actuelle</span><input name="attr_luck" type="text" data-i18n-placeholder="current-luck-place" placeholder="Chance Actuelle" /></label></td>
+                          <td><label class="sheet-small-label2" style="width: 30%;"><span data-i18n="current-luck">Actuelle</span><input name="attr_luck" type="text" data-i18n-title="current-luck-title" title="Chance Actuelle" /></label></td>
                         </tr>
                         <tr>
                           <td></td>
@@ -115,7 +115,7 @@
                           <td></td>
                         </tr>
                         <tr>
-                          <td><label class="sheet-small-label2" style="width: 30%;"><span data-i18n="total-luck">Totale</span><input name="attr_luckTotal" type="text" data-i18n-placeholder="total-luck-place" placeholder="Chance Totale" /></label>
+                          <td><label class="sheet-small-label2" style="width: 30%;"><span data-i18n="total-luck">Totale</span><input name="attr_luckTotal" type="text" data-i18n-title="total-luck-title" title="Chance Totale" /></label>
                         </tr>
                       </table>
                     </td>
@@ -248,24 +248,24 @@
                     <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{zero-g-maneuvering}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{zerogManeuvering}]]}} {{critical_roll=[[1d20]]}}" name="roll_zerogManeuveringCheck"></button></td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td><input type="checkbox" name="attr_underwaterManeuveringCheck" value="1" /></td>
-                    <td><span data-i18n="underwater-maneuvering">Manoeuvres sous-marines</span> &#8226;</td>
+                    <td><input type="checkbox" name="attr_submarineManeuveringCheck" value="1" /></td>
+                    <td><span data-i18n="submarine-maneuvering">Manoeuvres sous-marines</span> &#8226;</td>
                     <td class="sheet-smalldata">&nbsp;</td>
                     <td><span data-i18n="str">FOR</span>/<span data-i18n="coo">COO</span></td>
-                    <td><input name="attr_underwaterManeuveringBase" type="number" value="(@{strNaturalGift}+@{cooNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td><input name="attr_underwaterManeuveringMast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
-                    <td><input name="attr_underwaterManeuvering" type="number" value="(@{underwaterManeuveringBase}+@{underwaterManeuveringMast})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{underwater-maneuvering}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{underwaterManeuvering}]]}} {{critical_roll=[[1d20]]}}" name="roll_underwaterManeuveringCheck"></button></td>
+                    <td><input name="attr_submarineManeuveringBase" type="number" value="(@{strNaturalGift}+@{cooNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
+                    <td><input name="attr_submarineManeuveringMast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
+                    <td><input name="attr_submarineManeuvering" type="number" value="(@{submarineManeuveringBase}+@{submarineManeuveringMast})" disabled="true" class="sheet-short sheet-boxinput" /></td>
+                    <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{submarine-maneuvering}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{submarineManeuvering}]]}} {{critical_roll=[[1d20]]}}" name="roll_submarineManeuveringCheck"></button></td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td><input type="checkbox" name="attr_foeBreathingCheck" value="1" /></td>
-                    <td><span data-i18n="foe-breathing" data-i18n-title="foe-breathing-title" title="Respiration par Fluide Organique Etranger">Respiration FOE</span></td>
+                    <td><input type="checkbox" name="attr_fofBreathingCheck" value="1" /></td>
+                    <td><span data-i18n="fof-breathing" data-i18n-title="fof-breathing-title" title="Respiration par Fluide Organique Etranger">Respiration FOE</span></td>
                     <td class="sheet-smalldata">(-3)</td>
                     <td><span data-i18n="con">CON</span>/<span data-i18n="wil">VOL</span></td>
-                    <td><input name="attr_foeBreathingBase" type="number" value="(@{conNaturalGift}+@{wilNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td><input name="attr_foeBreathingMast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
-                    <td><input name="attr_foeBreathing" type="number" value="(@{foeBreathingBase}+@{foeBreathingMast})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name==^{foe-breathing}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{foeBreathing}]]}} {{critical_roll=[[1d20]]}}" name="roll_foeBreathingCheck"></button></td>
+                    <td><input name="attr_fofBreathingBase" type="number" value="(@{conNaturalGift}+@{wilNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
+                    <td><input name="attr_fofBreathingMast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
+                    <td><input name="attr_fofBreathing" type="number" value="(@{fofBreathingBase}+@{fofBreathingMast})" disabled="true" class="sheet-short sheet-boxinput" /></td>
+                    <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name==^{fof-breathing}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{fofBreathing}]]}} {{critical_roll=[[1d20]]}}" name="roll_fofBreathingCheck"></button></td>
                   </tr>
                   <tr>
                     <td colspan="8"></td>
@@ -386,14 +386,14 @@
                     <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{handguns}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{handguns}]]}} {{critical_roll=[[1d20]]}}" name="roll_handgunsCheck"></button></td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td><input type="checkbox" name="attr_underwaterWeaponsCheck" value="1" /></td>
-                    <td><span data-i18n="underwater-weapons">Armes sous-marines</span></td>
+                    <td><input type="checkbox" name="attr_submarineWeaponsCheck" value="1" /></td>
+                    <td><span data-i18n="submarine-weapons">Armes sous-marines</span></td>
                     <td class="sheet-smalldata">&nbsp;</td>
                     <td><span data-i18n="coo">COO</span>/<span data-i18n="per">PER</span></td>
-                    <td><input name="attr_underwaterWeaponsBase" type="number" value="(@{cooNaturalGift}+@{perNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td><input name="attr_underwaterWeaponsMast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
-                    <td><input name="attr_underwaterWeapons" type="number" value="(@{underwaterWeaponsBase}+@{underwaterWeaponsMast})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{underwater-weapons}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{underwaterWeapons}]]}} {{critical_roll=[[1d20]]}}" name="roll_underwaterWeaponsCheck"></button></td>
+                    <td><input name="attr_submarineWeaponsBase" type="number" value="(@{cooNaturalGift}+@{perNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
+                    <td><input name="attr_submarineWeaponsMast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
+                    <td><input name="attr_submarineWeapons" type="number" value="(@{submarineWeaponsBase}+@{submarineWeaponsMast})" disabled="true" class="sheet-short sheet-boxinput" /></td>
+                    <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{submarine-weapons}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{submarineWeapons}]]}} {{critical_roll=[[1d20]]}}" name="roll_submarineWeaponsCheck"></button></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td><input type="checkbox" name="attr_specialWeaponRangedCheck" value="1" /></td>
@@ -705,13 +705,13 @@
                   </tr>
                   <tr class="sheet-tableline">
                     <td><input type="checkbox" name="attr_scienceSpecializedKnowledge2Check" value="1" /></td>
-                    <td><span data-i18n="science-special-knowledge">Sciences/Conn. spé</span> :<input name="attr_scienceSpecializedKnowledge2Name" type="text" class="sheet-nobox sheet-extralarge" /></td>
+                    <td><span data-i18n="science-specialized-knowledge">Sciences/Conn. spé</span> :<input name="attr_scienceSpecializedKnowledge2Name" type="text" class="sheet-nobox sheet-extralarge" /></td>
                     <td class="sheet-smalldata">&nbsp;</td>
                     <td><span data-i18n="int">INT</span>/<span data-i18n="int">INT</span></td>
                     <td><input name="attr_scienceSpecializedKnowledge2Base" type="number" value="(@{intNaturalGift}+@{intNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_scienceSpecializedKnowledge2Mast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_scienceSpecializedKnowledge2" type="number" value="(@{scienceSpecializedKnowledge2Base}+@{scienceSpecializedKnowledge2Mast})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{science-special-knowledge}: @{scienceSpecializedKnowledge2Name}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{scienceSpecializedKnowledge2}]]}} {{critical_roll=[[1d20]]}}" name="roll_scienceSpecializedKnowledge2Check"></button></td>
+                    <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{science-specialized-knowledge}: @{scienceSpecializedKnowledge2Name}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{scienceSpecializedKnowledge2}]]}} {{critical_roll=[[1d20]]}}" name="roll_scienceSpecializedKnowledge2Check"></button></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td><input type="checkbox" name="attr_strategyCheck" value="1" /></td>
@@ -824,7 +824,7 @@
                   <tr class="sheet-tableline">
                     <td><input type="checkbox" name="attr_foreignLanguage1Check" value="1" /></td>
                     <td><span data-i18n="foreign-language">Lang. étrangères</span> :<input name="attr_foreignLanguage1Name" type="text" class="sheet-nobox sheet-extralarge" /></td>
-                    <td class="sheet-smalldata">PN</td>
+                    <td class="sheet-smalldata"><span data-i18n="natural-progression-abbrv">PN</span></td>
                     <td><span data-i18n="int">INT</span>/<span data-i18n="int">INT</span></td>
                     <td><input name="attr_foreignLanguage1Base" type="number" value="(@{intNaturalGift}+@{intNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_foreignLanguage1Mast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
@@ -834,7 +834,7 @@
                   <tr class="sheet-tableline">
                     <td><input type="checkbox" name="attr_foreignLanguage2Check" value="1" /></td>
                     <td><span data-i18n="foreign-language">Lang. étrangères</span> :<input name="attr_foreignLanguage2Name" type="text" class="sheet-nobox sheet-extralarge" /></td>
-                    <td class="sheet-smalldata">PN</td>
+                    <td class="sheet-smalldata"><span data-i18n="natural-progression-abbrv">PN</span></td>
                     <td><span data-i18n="int">INT</span>/<span data-i18n="int">INT</span></td>
                     <td><input name="attr_foreignLanguage2Base" type="number" value="(@{intNaturalGift}+@{intNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_foreignLanguage2Mast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
@@ -1513,7 +1513,7 @@
           <div class="sheet-section">
             <div class="sheet-h2-section">
               <h2 data-i18n="moves-h">Déplacements</h2>
-              <label for="attr_moves-details-show" class="sheet-label-a" data-i18n="moves-exp">Développer les attributs secondaires</label>
+              <label for="attr_moves-details-show" class="sheet-label-a" data-i18n="moves-exp">Développer les déplacements</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_moves-details-show" name="attr_moves-details-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
               <div class="sheet-nontable sheet-sect">    
                 <div class="sheet-header sheet-text-center"><span data-i18n="moves">DEPLACEMENTS</span></div>
@@ -1561,7 +1561,7 @@
                     <fieldset class="repeating_meleeWeapons">
                       <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
                         <input type="checkbox" class="sheet-counted sheet-sect-show" data-i18n-title="minimize-cmd" title="Minimize Row" name="attr_row-show" value="1" checked="checked" /><span></span>
-                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:pl_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_type=^{contact-attack}}} {{weapon_name=@{meleeWeaponName}}} {{skill_value=[[@{meleeWeaponSkill}]]}} {{diceroll=[[@{difficulty-query}]]}} {{damage_roll=[[@{meleeWeaponDamage}+@{meleeDamageMod}]]}} {{choc_roll=[[@{meleeWeaponChoc}]]}} {{critical_roll=[[1d20]]}}" name="roll_meleeWeaponCheck"><span data-i18n="attack"></span></button>
+                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:pl_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_type=^{contact-attack}}} {{weapon_name=@{meleeWeaponName}}} {{skill_value=[[@{meleeWeaponSkill}]]}} {{diceroll=[[@{difficulty-query}]]}} {{damage_roll=[[@{meleeWeaponDamage}+@{meleeDamageMod}]]}} {{shock_roll=[[@{meleeWeaponShock}]]}} {{critical_roll=[[1d20]]}}" name="roll_meleeWeaponCheck"><span data-i18n="attack"></span></button>
                         </span>
                         <span class="sheet-small-label2 sheet-entry-25p-shrink"><input type="text" name="attr_meleeWeaponName" data-i18n-placeholder="contact-weapon-name-place" placeholder="Nom de l'arme" /><span data-i18n="name">Nom</span></span>
                         <span class="sheet-small-label2"><select name="attr_meleeWeaponSkill">                
@@ -1575,8 +1575,8 @@
                             <option value="@{handToHandCombat}" data-i18n="hand-to-hand-combat">Combat à mains nues</option>
                           </select><span data-i18n="skill">Compétence</span></span>
                         <span class="sheet-small-label2 sheet-entry-short"><input name="attr_meleeWeaponDamage" data-i18n-placeholder="contact-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="damage">Dégâts</span></span>
-                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_meleeWeaponChoc" data-i18n-placeholder="contact-weapon-choc-place" placeholder="ex: 1d4+1" type="text" /><span data-i18n="shock">Choc</span></span>
-                        <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_meleeWeaponStrength" type="number" /><span data-i18n="strenght">Force</span></span>
+                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_meleeWeaponShock" data-i18n-placeholder="contact-weapon-shock-place" placeholder="ex: 1d4+1" type="text" /><span data-i18n="shock">Choc</span></span>
+                        <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_meleeWeaponStrength" type="number" /><span data-i18n="strength">Force</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_meleeWeaponInit" type="number" /><span data-i18n="initiative">Initiative</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_meleeWeaponAll" type="number" /><span data-i18n="reach">Allonge</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_meleeWeaponITG" type="number" /><span data-i18n="integrity">Intégrité</span></span>
@@ -1603,7 +1603,7 @@
                     <fieldset class="repeating_rangedWeapons">
                       <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
                         <input type="checkbox" class="sheet-counted sheet-sect-show" data-i18n-title="minimize-cmd" title="Minimize Row" name="attr_row-show" value="1" checked="checked" /><span></span>
-                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:pl_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_type=^{ranged-attack}}} {{weapon_name=@{rangedWeaponName}}} {{skill_value=[[@{rangedWeaponSkill}]]}} {{diceroll=[[@{difficulty-query}]]}} {{damage_roll=[[@{rangedWeaponDamage}]]}} {{choc_roll=[[@{rangedWeaponChoc}]]}} {{critical_roll=[[1d20]]}}" name="roll_rangedWeaponCheck "><span data-i18n="attack"></span></button>
+                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:pl_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_type=^{ranged-attack}}} {{weapon_name=@{rangedWeaponName}}} {{skill_value=[[@{rangedWeaponSkill}]]}} {{diceroll=[[@{difficulty-query}]]}} {{damage_roll=[[@{rangedWeaponDamage}]]}} {{shock_roll=[[@{rangedWeaponShock}]]}} {{critical_roll=[[1d20]]}}" name="roll_rangedWeaponCheck "><span data-i18n="attack"></span></button>
                         </span>
                         <span class="sheet-small-label2 sheet-entry-25p-shrink"><input type="text" name="attr_rangedWeaponName" data-i18n-placeholder="ranged-weapon-name-place" placeholder="Nom de l'arme" /><span data-i18n="name">Nom</span></span>
                         <span class="sheet-small-label2"><select name="attr_rangedWeaponSkill">                
@@ -1611,7 +1611,7 @@
                             <option value="@{throwingWeapons}" data-i18n="throwing-weapons">Armes de jet</option>           
                             <option value="@{heavyWeaponShooting}" data-i18n="heavy-weapons-shooting">Armes lourdes (tir)</option>           
                             <option value="@{handguns}" data-i18n="handguns">Armes de poing</option>           
-                            <option value="@{underwaterWeapons}" data-i18n="underwater-weapons">Armes sous-marines</option>           
+                            <option value="@{submarineWeapons}" data-i18n="submarine-weapons">Armes sous-marines</option>           
                             <option value="@{specialWeaponRanged}" data-i18n="special-weapons">Armes spéciales</option>           
                             <option value="@{rangedWeapon}" data-i18n="ranged-weapon">Armes de trait</option>           
                             <option value="@{riflesShoulderFiredWeapons}" data-i18n="rifles-shoulder-fired-weapons">Fusils/Armes d'épaule</option>
@@ -1619,8 +1619,8 @@
                             <option value="@{sharpShooting}" data-i18n="precision-shoot">Tir de précision</option>   
                           </select><span data-i18n="skill">Compétence</span></span>
                         <span class="sheet-small-label2 sheet-entry-short"><input name="attr_rangedWeaponDamage" data-i18n-placeholder="ranged-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="damage">Dégâts</span></span>
-                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_rangedWeaponChoc" data-i18n-placeholder="ranged-weapon-choc-place" placeholder="ex: 1d4+1" type="text" /><span data-i18n="shock">Choc</span></span>
-                        <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_rangedWeaponStrength" type="number" /><span data-i18n="strenght">Force</span></span>
+                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_rangedWeaponShock" data-i18n-placeholder="ranged-weapon-shock-place" placeholder="ex: 1d4+1" type="text" /><span data-i18n="shock">Choc</span></span>
+                        <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_rangedWeaponStrength" type="number" /><span data-i18n="strength">Force</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_rangedWeaponInit" type="number" /><span data-i18n="initiative">Initiative</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_rangedWeaponITG" type="number" /><span data-i18n="integrity">Intégrité</span></span>
                       <!--</div>
@@ -1871,11 +1871,11 @@
                   <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="protections">PROTECTIONS</span></div>
                   <br/>
                   <fieldset class="repeating_protections">
-                    <span class="sheet-small-label2" style="width:50%;"><input type="text" name="attr_protectionName" data-i18n-placeholder="protection-name-place" placeholder="Nom de la proctection" /><span data-i18n="name">Nom</span></span>
-                    <span class="sheet-small-label2" style="width:10%;"><input type="text" name="attr_protectionValue" data-i18n-placeholder="protection-value-place" placeholder="Valeur de la proctection" /><span data-i18n="value">Valeur</span></span>
-                    <span class="sheet-small-label2" style="width:10%;"><input type="text" name="attr_protectionChoc" data-i18n-placeholder="protection-choc-place" placeholder="Encaissement de choc" /><span data-i18n="shock">Choc</span></span>
-                    <span class="sheet-small-label2" style="width:10%;"><input type="text" name="attr_protectionLocalisation" data-i18n-placeholder="protection-localisation-place" placeholder="Localisation de la proctection" /><span data-i18n="localisation">Localisation</span></span>
-                    <span class="sheet-small-label2" style="width:10%;"><input type="text" name="attr_protectionMalus" data-i18n-placeholder="protection-malus-place" placeholder="Malus de la proctection" /><span data-i18n="malus">Malus</span></span>
+                    <span class="sheet-small-label2" style="width:50%;"><input type="text" name="attr_protectionName" data-i18n-placeholder="protection-name-place" placeholder="Nom de la protection" /><span data-i18n="name">Nom</span></span>
+                    <span class="sheet-small-label2" style="width:10%;"><input type="text" name="attr_protectionValue" data-i18n-placeholder="protection-value-place" placeholder="Valeur de la protection" /><span data-i18n="value">Valeur</span></span>
+                    <span class="sheet-small-label2" style="width:10%;"><input type="text" name="attr_protectionShock" data-i18n-placeholder="protection-shock-place" placeholder="Encaissement de choc" /><span data-i18n="shock">Choc</span></span>
+                    <span class="sheet-small-label2" style="width:10%;"><input type="text" name="attr_protectionLocalisation" data-i18n-placeholder="protection-localisation-place" placeholder="Localisation de la protection" /><span data-i18n="localisation">Localisation</span></span>
+                    <span class="sheet-small-label2" style="width:10%;"><input type="text" name="attr_protectionPenalty" data-i18n-placeholder="protection-penalty-place" placeholder="Malus de la protection" /><span data-i18n="penalty">Malus</span></span>
                   </fieldset>
                 </div>
               </div>
@@ -1897,7 +1897,7 @@
                   <fieldset class="repeating_equipments">
                     <span class="sheet-small-label2" style="width:70%;"><input type="text" name="attr_equipmentName" data-i18n-placeholder="equipment-name-place" placeholder="Nom de l'équipement" /><span data-i18n="name">Nom</span></span>
                     <span class="sheet-small-label2" style="width:10%;"><input type="text" name="attr_equipmentValue" data-i18n-placeholder="equipment-value-place" placeholder="Valeur de l'équipement" /><span data-i18n="name">Valeur</span></span>
-                    <span class="sheet-small-label2" style="width:5%;"><input type="text" name="attr_protectionChoc" data-i18n-placeholder="equipment-number-place" placeholder="Nombre" /><span data-i18n="number-abbrv">Nb.</span></span>
+                    <span class="sheet-small-label2" style="width:5%;"><input type="text" name="attr_protectionShock" data-i18n-placeholder="equipment-number-place" placeholder="Nombre" /><span data-i18n="number-abbrv">Nb.</span></span>
                     <span class="sheet-small-label2" style="width:5%;"><input type="text" name="attr_protectionLocalisation" data-i18n-placeholder="equipment-maximum-place" placeholder="Maximum" /><span data-i18n="max">Max</span></span>
                   </fieldset>
                 </div>
@@ -1945,8 +1945,8 @@
                   <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="benefits-and-disadvantages">Avantages & Désavantages</span></div>
                   <br/>
                   <fieldset class="repeating_benefitsAndDisavantages">
-                    <span class="sheet-small-label2" style="width:30%;"><input type="text" name="attr_benefitsAndDisavantagesName" data-i18n-placeholder="benefits-and-disadvantages-name-place" placeholder="Nom de la mutation ou du flux Polaris" /><span data-i18n="name">Nom</span></span>
-                    <span class="sheet-small-label2" style="width:50%;"><input type="text" name="attr_benefitsAndDisavantagesDesc" data-i18n-placeholder="benefits-and-disadvantages-description-place" placeholder="Description de la mutation ou du flux Polaris" /><span data-i18n="description">Description</span></span>
+                    <span class="sheet-small-label2" style="width:30%;"><input type="text" name="attr_benefitsAndDisavantagesName" data-i18n-placeholder="benefits-and-disadvantages-name-place" placeholder="Nom de l'avantage ou du désavantage" /><span data-i18n="name">Nom</span></span>
+                    <span class="sheet-small-label2" style="width:50%;"><input type="text" name="attr_benefitsAndDisavantagesDesc" data-i18n-placeholder="benefits-and-disadvantages-description-place" placeholder="Description de l'avantage ou du désavantage" /><span data-i18n="description">Description</span></span>
                     <span class="sheet-small-label2" style="width:10%;"><select name="attr_benefitsAndDisavantagesType">                
                           <option value="benefits" data-i18n="benefits">Avantage</option>
                           <option value="disadvantage" data-i18n="disadvantage">Désavantage</option>
@@ -2009,9 +2009,9 @@
           <!-- ARMOR ATTRIBUTS -->
           <div class="sheet-section">
             <div class="sheet-h2-section">
-              <h2 data-i18n="armor-attributs-h">Attributs de l'Armure</h2>
-              <label for="attr_armor-attributs-show" class="sheet-label-a" data-i18n="armor-attributs-exp">Développer la Description de l'Armure</label>
-              <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_armor-attributs-show" name="attr_armor-attributs-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
+              <h2 data-i18n="armor-attributes-h">Attributs de l'Armure</h2>
+              <label for="attr_armor-attributs-show" class="sheet-label-a" data-i18n="armor-attributes-exp">Développer les attributs de l'armure</label>
+              <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_armor-attributes-show" name="attr_armor-attributes-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
 
               <div class="sheet-nontable sheet-sect" style="border:1px solid black;">
                 <span class="sheet-nontable-name" data-i18n="armor-desc">Attributs de l'Armure</span>
@@ -2240,7 +2240,7 @@
           <div class="sheet-section">
             <div class="sheet-h2-section">
               <h2 data-i18n="armor-auxiliary-systems-h">Systèmes Auxiliaires</h2>
-              <label for="attr_armor-auxiliary-systems-show" class="sheet-label-a" data-i18n="armor-auxiliary-systems-exp">Développer les équipements</label>
+              <label for="attr_armor-auxiliary-systems-show" class="sheet-label-a" data-i18n="armor-auxiliary-systems-exp">Développer les systèmes auxiliaires</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_armor-auxiliary-systems-show" name="attr_auxiliary-systems-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
               <div class="sheet-nontable sheet-sect"> 
 
@@ -2267,7 +2267,7 @@
           <div class="sheet-section">
             <div class="sheet-h2-section">
               <h2 data-i18n="armor-weaponery-h">Armement</h2>
-              <label for="attr_armor-weaponery-show" class="sheet-label-a" data-i18n="armor-weaponery-exp">Développer les armes à distance</label>
+              <label for="attr_armor-weaponery-show" class="sheet-label-a" data-i18n="armor-weaponery-exp">Développer l'armement</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_armor-weaponery-show" name="attr_armor-weaponery-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
               <div class="sheet-nontable sheet-sect"> 
                 <div class="sheet-divbox sheet-repeating-sect">
@@ -2277,7 +2277,7 @@
                     <fieldset class="repeating_armorWeaponeries">
                       <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
                         <input type="checkbox" class="sheet-counted sheet-sect-show" data-i18n-title="minimize-cmd" title="Minimize Row" name="attr_row-show" value="1" checked="checked" /><span></span>
-                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:pl_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_type=^{armor-attack}}} {{weapon_name=@{armorWeaponeryName}}} {{skill_value=[[@{armorWeaponerySkill}]]}} {{diceroll=[[@{difficulty-query}]]}} {{damage_roll=[[@{armorWeaponeryDamage}]]}} {{choc_roll=[[@{armorWeaponeryChoc}]]}} {{critical_roll=[[1d20]]}}" name="roll_armorWeaponeryCheck "><span data-i18n="attack"></span></button>
+                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:pl_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_type=^{armor-attack}}} {{weapon_name=@{armorWeaponeryName}}} {{skill_value=[[@{armorWeaponerySkill}]]}} {{diceroll=[[@{difficulty-query}]]}} {{damage_roll=[[@{armorWeaponeryDamage}]]}} {{shock_roll=[[@{armorWeaponeryShock}]]}} {{critical_roll=[[1d20]]}}" name="roll_armorWeaponeryCheck "><span data-i18n="attack"></span></button>
                         </span>
                         <span class="sheet-small-label2 sheet-entry-25p-shrink"><input type="text" name="attr_armorWeaponeryName" data-i18n-placeholder="ranged-weapon-name-place" placeholder="Nom de l'arme" /><span data-i18n="name">Nom</span></span>
                         <span class="sheet-small-label2"><select name="attr_armorWeaponerySkill">                
@@ -2286,7 +2286,7 @@
                             <option value="@{armorManeuver}" data-i18n="armor-maneuver">Manoeuvres d’armures</option>   
                           </select><span data-i18n="skill">Compétence</span></span>
                         <span class="sheet-small-label2 sheet-entry-short"><input name="attr_armorWeaponeryDamage" data-i18n-placeholder="ranged-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="damage">Dégâts</span></span>
-                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_armorWeaponeryChoc" data-i18n-placeholder="ranged-weapon-choc-place" placeholder="ex: 1d4+1" type="text" /><span data-i18n="shock">Choc</span></span>
+                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_armorWeaponeryShock" data-i18n-placeholder="ranged-weapon-shock-place" placeholder="ex: 1d4+1" type="text" /><span data-i18n="shock">Choc</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_armorWeaponeryTechnologicalLevel" type="number" /><span data-i18n="armor-technological-level">NT</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_armorWeaponeryInit" type="number" /><span data-i18n="initiative">Initiative</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_armorWeaponeryITG" type="number" /><span data-i18n="integrity">Intégrité</span></span>
@@ -2336,7 +2336,7 @@
                 <span class="sheet-nontable-name" data-i18n="vehicle-desc">Description du Véhicule</span>
 
                 <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleTypeName" type="text" data-i18n-placeholder="vehicle-type-name-place" placeholder="Type de véhicule" /><span data-i18n="vehicle-type-name">Type/Nom</span></label>
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleCategory" type="text" data-i18n-placeholder="vehicle-category-place" placeholder="Catégorie de l'armure" /><span data-i18n="vehicle-category">Catégorie</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleCategory" type="text" data-i18n-placeholder="vehicle-category-place" placeholder="Catégorie du véhicule" /><span data-i18n="vehicle-category">Catégorie</span></label>
                 <label class="sheet-small-label2" style="width: 10%;"><select name="attr_vehicleTechnologicalLevel">                
                       <option value="1" data-i18n="roman-numeral-one">I</option>
                       <option value="2" data-i18n="roman-numeral-two">II</option>
@@ -2379,12 +2379,12 @@
                 <span class="sheet-nontable-name" data-i18n="vehicle-desc">Attributs du véhicule</span>
 
                 <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleSize" type="number" data-i18n-title="vehicle-size-title" title="Gabarit du véhicule" /><span data-i18n="vehicle-size">GAB</span></label>
-                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleManoeuvrability" type="number" data-i18n-title="vehicle-manoeuvrability-title" title="Manoeuvrabilité du véhicule" /><span data-i18n="vehicle-manoeuvrability">Man.</span></label>
+                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleManoeuvrability" type="number" data-i18n-title="vehicle-maneuvrability-title" title="Manoeuvrabilité du véhicule" /><span data-i18n="vehicle-maneuvrability">Man.</span></label>
                 <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleDamageResistance" type="number" data-i18n-title="vehicle-damage-resistance-title" title="Résistance aux Dommages" /><span data-i18n="vehicle-damage-resistance">RD</span></label>
                 <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleSpeed" type="number" data-i18n-title="vehicle-speed-title" title="Vitesse" /><span data-i18n="vehicle-speed">Vit.</span></label>
                 <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleShielding" type="number" data-i18n-title="vehicle-shielding-title" title="Valeur du blindage" /><span data-i18n="vehicle-shielding">Blindage</span></label>
                 <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleMovementPoints" type="number" data-i18n-title="vehicle-movement-points-title" title="Points de Mouvement" /><span data-i18n="vehicle-movement-points">Pts. Mv.</span></label>
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehiclePropulsionType" type="text" data-i18n-placeholder="vehicle-propulsion-type-place" placeholder="Type de propulsion" /><span data-i18n="vehicle-propulsion-type">Type de propulsion</span></label>
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleThrustType" type="text" data-i18n-placeholder="vehicle-thrust-type-place" placeholder="Type de propulsion" /><span data-i18n="vehicle-thrust-type">Type de propulsion</span></label>
                 <label class="sheet-small-label2" style="width: 20%;"><input type="checkbox" name="attr_vehicleSafetyFlapPilot" class="sheet-noshow" value="1" /><span data-i18n="vehicle-safety-flap-pilot">Volet de Sécu. sur Poste de Pilotage</span></label>
 
             </div>
@@ -2597,7 +2597,7 @@
           <div class="sheet-section">
             <div class="sheet-h2-section">
               <h2 data-i18n="vehicle-blocks-h">Tranches</h2>
-              <label for="attr_vehicle-blocks-show" class="sheet-label-a" data-i18n="mutations-and-polaris-exp">Développer les tranches</label>
+              <label for="attr_vehicle-blocks-show" class="sheet-label-a" data-i18n="vehicle-blocks-exp">Développer les tranches</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_vehicle-blocks-show" name="attr_vehicle-blocks-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
               <div class="sheet-nontable sheet-sect"> 
 
@@ -2646,7 +2646,7 @@
           <div class="sheet-section">
             <div class="sheet-h2-section">
               <h2 data-i18n="vehicle-weaponery-h">Armement</h2>
-              <label for="attr_vehicle-weaponery-show" class="sheet-label-a" data-i18n="vehicle-weaponery-exp">Développer les armes à distance</label>
+              <label for="attr_vehicle-weaponery-show" class="sheet-label-a" data-i18n="vehicle-weaponery-exp">Développer les armements</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_vehicle-weaponery-show" name="attr_vehicle-weaponery-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
               <div class="sheet-nontable sheet-sect"> 
                 <div class="sheet-divbox sheet-repeating-sect">
@@ -2656,7 +2656,7 @@
                     <fieldset class="repeating_vehicleWeaponeries">
                       <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
                         <input type="checkbox" class="sheet-counted sheet-sect-show" data-i18n-title="minimize-cmd" title="Minimize Row" name="attr_row-show" value="1" checked="checked" /><span></span>
-                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:pl_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_type=^{vehicle-attack}}} {{weapon_name=@{vehicleWeaponeryName}}} {{skill_value=[[@{vehicleWeaponerySkill}]]}} {{diceroll=[[@{difficulty-query}]]}} {{damage_roll=[[@{vehicleWeaponeryDamage}]]}} {{choc_roll=[[@{vehicleWeaponeryChoc}]]}} {{critical_roll=[[1d20]]}}" name="roll_vehicleWeaponeryCheck "><span data-i18n="attack"></span></button>
+                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:pl_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_type=^{vehicle-attack}}} {{weapon_name=@{vehicleWeaponeryName}}} {{skill_value=[[@{vehicleWeaponerySkill}]]}} {{diceroll=[[@{difficulty-query}]]}} {{damage_roll=[[@{vehicleWeaponeryDamage}]]}} {{shock_roll=[[@{vehicleWeaponeryShock}]]}} {{critical_roll=[[1d20]]}}" name="roll_vehicleWeaponeryCheck "><span data-i18n="attack"></span></button>
                         </span>
                         <span class="sheet-small-label2 sheet-entry-25p-shrink"><input type="text" name="attr_vehicleWeaponeryName" data-i18n-placeholder="ranged-weapon-name-place" placeholder="Nom de l'arme" /><span data-i18n="name">Nom</span></span>
                         <span class="sheet-small-label2"><select name="attr_vehicleWeaponerySkill">                
@@ -2664,7 +2664,7 @@
                             <option value="@{onboardWeapons}" data-i18n="onboard-weapons-artillery" selected>Armes embarqués/Artillerie</option>
                           </select><span data-i18n="skill">Compétence</span></span>
                         <span class="sheet-small-label2 sheet-entry-short"><input name="attr_vehicleWeaponeryDamage" data-i18n-placeholder="ranged-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="damage">Dégâts</span></span>
-                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_vehicleWeaponeryChoc" data-i18n-placeholder="ranged-weapon-choc-place" placeholder="ex: 1d4+1" type="text" /><span data-i18n="shock">Choc</span></span>
+                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_vehicleWeaponeryShock" data-i18n-placeholder="ranged-weapon-shock-place" placeholder="ex: 1d4+1" type="text" /><span data-i18n="shock">Choc</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_vehicleWeaponeryTechnologicalLevel" type="number" /><span data-i18n="vehicle-technological-level">NT</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_vehicleWeaponeryInit" type="number" /><span data-i18n="initiative">Initiative</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_vehicleWeaponeryITG" type="number" /><span data-i18n="integrity">Intégrité</span></span>
@@ -2706,7 +2706,7 @@
           <div class="sheet-section">
             <div class="sheet-h2-section">
               <h2 data-i18n="annexes-success-failure-margin-h">Table des marges de réussite et d'échec</h2>
-              <label for="attr_annexes-success-failure-margin-show" class="sheet-label-a" data-i18n="annexes-success-failure-margin-exp">Développer les annexes</label>
+              <label for="attr_annexes-success-failure-margin-show" class="sheet-label-a" data-i18n="annexes-success-failure-margin-exp">Développer le tableau</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_annexes-success-failure-margin-show" name="attr_annexes-success-failure-margin-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
               <div class="sheet-nontable sheet-sect"> 
 
@@ -2750,8 +2750,8 @@
           <!-- HEALTH AND PROTECTION -->
           <div class="sheet-section">
             <div class="sheet-h2-section">
-              <h2 data-i18n="annexes-states-health-and-protection-h">Table des marges de réussite et d'échec</h2>
-              <label for="attr_annexes-states-health-and-protection-show" class="sheet-label-a" data-i18n="annexes-states-health-and-protection-exp">Développer les annexes</label>
+              <h2 data-i18n="annexes-states-health-and-protection-h">Etat de santé & Protections</h2>
+              <label for="attr_annexes-states-health-and-protection-show" class="sheet-label-a" data-i18n="annexes-states-health-and-protection-exp">Développer le tableau</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_annexes-states-health-and-protection-show" name="attr_annexes-states-health-and-protection-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
               <div class="sheet-nontable sheet-sect"> 
 
@@ -2813,7 +2813,7 @@
     <div class="sheet-footer">
       <div class="sheet-table">
         <div class="sheet-table-row">
-          <span class="sheet-table-cell"><span data-i18n="footer-created-by">Créé par</span> PadRPG <span data-i18n="footer-inspired">(fortement inspiré de la fiche Pathfinder)</span> | <span data-i18n="footer-last-update">Dernière MAJ</span>: <i>23.08.2016&nbsp;&nbsp;</i>v0.4</span>
+          <span class="sheet-table-cell"><span data-i18n="footer-created-by">Créé par</span> PadRPG <span data-i18n="footer-inspired">(fortement inspiré de la fiche Pathfinder)</span> | <span data-i18n="footer-last-update">Dernière MAJ</span>: <i>25.08.2016&nbsp;&nbsp;</i>v0.4</span>
         </div>
       </div>
     </div>
@@ -2919,7 +2919,7 @@
           </div>
           <div class="sheet-roll-row">
             <div class="sheet-roll-cell"><span data-i18n="shock">Choc</span></div>
-            <div class="sheet-roll-cell">{{choc_roll}}</div>
+            <div class="sheet-roll-cell">{{shock_roll}}</div>
           </div>     
           <div class="sheet-roll-row">
             <div class="sheet-roll-cell"><span style="color:green;font-weight:bold;" data-i18n="critical-result">Critique !</span></div>
@@ -2934,7 +2934,7 @@
           </div>
           <div class="sheet-roll-row">
             <div class="sheet-roll-cell"><span data-i18n="shock">Choc</span></div>
-            <div class="sheet-roll-cell">{{choc_roll}}</div>
+            <div class="sheet-roll-cell">{{shock_roll}}</div>
           </div>
           <div class="sheet-roll-row">
             <div class="sheet-roll-cell"></div>
