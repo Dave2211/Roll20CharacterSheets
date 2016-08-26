@@ -144,14 +144,14 @@
                   </tr>
                   <tr class="sheet-tableline">
                     <td><strong><span data-i18n="current-level">Niveau actuel</span></strong></td>
-                    <td class="sheet-cell-center sheet-cell-border"><input name="attr_str" type="number" value="(@{strBase}+@{strModGen}+@{strModPC})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td class="sheet-cell-center sheet-cell-border"><input name="attr_con" type="number" value="(@{conBase}+@{conModGen}+@{conModPC})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td class="sheet-cell-center sheet-cell-border"><input name="attr_coo" type="number" value="(@{cooBase}+@{cooModGen}+@{cooModPC})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td class="sheet-cell-center sheet-cell-border"><input name="attr_ada" type="number" value="(@{adaBase}+@{adaModGen}+@{adaModPC})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td class="sheet-cell-center sheet-cell-border"><input name="attr_per" type="number" value="(@{perBase}+@{perModGen}+@{perModPC})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td class="sheet-cell-center sheet-cell-border"><input name="attr_int" type="number" value="(@{intBase}+@{intModGen}+@{intModPC})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td class="sheet-cell-center sheet-cell-border"><input name="attr_wil" type="number" value="(@{wilBase}+@{wilModGen}+@{wilModPC})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td class="sheet-cell-center sheet-cell-border"><input name="attr_pre" type="number" value="(@{preBase}+@{preModGen}+@{preModPC})" disabled="true" class="sheet-short sheet-boxinput" /></td>
+                    <td class="sheet-cell-center sheet-cell-border"><span class="sheet-short sheet-boxinput" name="attr_str"></span></td>
+                    <td class="sheet-cell-center sheet-cell-border"><span class="sheet-short sheet-boxinput" name="attr_con"></span></td>
+                    <td class="sheet-cell-center sheet-cell-border"><span class="sheet-short sheet-boxinput" name="attr_coo"></span></td>
+                    <td class="sheet-cell-center sheet-cell-border"><span class="sheet-short sheet-boxinput" name="attr_ada"></span></td>
+                    <td class="sheet-cell-center sheet-cell-border"><span class="sheet-short sheet-boxinput" name="attr_per"></span></td>
+                    <td class="sheet-cell-center sheet-cell-border"><span class="sheet-short sheet-boxinput" name="attr_int"></span></td>
+                    <td class="sheet-cell-center sheet-cell-border"><span class="sheet-short sheet-boxinput" name="attr_wil"></span></td>
+                    <td class="sheet-cell-center sheet-cell-border"><span class="sheet-short sheet-boxinput" name="attr_pre"></span></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td><strong><span data-i18n="natural-ability">Aptitude naturelle</span></strong></td>
@@ -1486,7 +1486,7 @@
                   <div class="sheet-rTableRow">
                     <div class="sheet-rTableCell sheet-border-left sheet-border-bottom sheet-text-bold"><span data-i18n="damage-resistance">Résistance aux dommages</span></div>
                     <div class="sheet-rTableCell sheet-border-bottom"></div>
-                    <div class="sheet-rTableCell sheet-border-left sheet-border-right sheet-border-bottom sheet-text-center"><span name="attr_damageResist" class="sheet-short sheet-boxinput"></span></div>
+                    <div class="sheet-rTableCell sheet-border-left sheet-border-right sheet-border-bottom sheet-text-center"><span class="sheet-short sheet-boxinput" name="attr_damagesResist"></span></div>
                   </div>
                   <div class="sheet-rTableRow">
                     <div class="sheet-rTableCell sheet-border-left sheet-border-bottom sheet-text-bold"><span data-i18n="natural-resistance">Resistances naturelles</span></div>
@@ -1561,7 +1561,7 @@
                     <fieldset class="repeating_meleeWeapons">
                       <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
                         <input type="checkbox" class="sheet-counted sheet-sect-show" data-i18n-title="minimize-cmd" title="Minimize Row" name="attr_row-show" value="1" checked="checked" /><span></span>
-                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:pl_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_type=^{contact-attack}}} {{weapon_name=@{meleeWeaponName}}} {{skill_value=[[@{meleeWeaponSkill}]]}} {{diceroll=[[@{difficulty-query}]]}} {{damage_roll=[[@{meleeWeaponDamage}+@{meleeDamageMod}]]}} {{shock_roll=[[@{meleeWeaponShock}]]}} {{critical_roll=[[1d20]]}}" name="roll_meleeWeaponCheck"><span data-i18n="attack"></span></button>
+                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:pl_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_type=^{melee-attack}}} {{weapon_name=@{meleeWeaponName}}} {{skill_value=[[@{meleeWeaponSkill}]]}} {{diceroll=[[@{difficulty-query}]]}} {{damage_roll=[[@{meleeWeaponDamage}+@{meleeDamageMod}]]}} {{shock_roll=[[@{meleeWeaponShock}]]}} {{critical_roll=[[1d20]]}}" name="roll_meleeWeaponCheck"><span data-i18n="attack"></span></button>
                         </span>
                         <span class="sheet-small-label2 sheet-entry-25p-shrink"><input type="text" name="attr_meleeWeaponName" data-i18n-placeholder="contact-weapon-name-place" placeholder="Nom de l'arme" /><span data-i18n="name">Nom</span></span>
                         <span class="sheet-small-label2"><select name="attr_meleeWeaponSkill">                
@@ -1574,7 +1574,7 @@
                             <option value="@{armedCombat}" data-i18n="armed-combat">Combat armé</option>           
                             <option value="@{handToHandCombat}" data-i18n="hand-to-hand-combat">Combat à mains nues</option>
                           </select><span data-i18n="skill">Compétence</span></span>
-                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_meleeWeaponDamage" data-i18n-placeholder="contact-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="damage">Dégâts</span></span>
+                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_meleeWeaponDamage" data-i18n-placeholder="contact-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="weapon-damage">Dégâts</span></span>
                         <span class="sheet-small-label2 sheet-entry-short"><input name="attr_meleeWeaponShock" data-i18n-placeholder="contact-weapon-shock-place" placeholder="ex: 1d4+1" type="text" /><span data-i18n="shock">Choc</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_meleeWeaponStrength" type="number" /><span data-i18n="strength">Force</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_meleeWeaponInit" type="number" /><span data-i18n="initiative">Initiative</span></span>
@@ -1618,7 +1618,7 @@
                             <option value="@{automaticShoot}" data-i18n="automatic-shoot">Tir automatique</option>   
                             <option value="@{sharpShooting}" data-i18n="precision-shoot">Tir de précision</option>   
                           </select><span data-i18n="skill">Compétence</span></span>
-                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_rangedWeaponDamage" data-i18n-placeholder="ranged-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="damage">Dégâts</span></span>
+                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_rangedWeaponDamage" data-i18n-placeholder="ranged-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="weapon-damage">Dégâts</span></span>
                         <span class="sheet-small-label2 sheet-entry-short"><input name="attr_rangedWeaponShock" data-i18n-placeholder="ranged-weapon-shock-place" placeholder="ex: 1d4+1" type="text" /><span data-i18n="shock">Choc</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_rangedWeaponStrength" type="number" /><span data-i18n="strength">Force</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_rangedWeaponInit" type="number" /><span data-i18n="initiative">Initiative</span></span>
@@ -1976,8 +1976,8 @@
               <div class="sheet-nontable sheet-sect" style="border:1px solid black;">
                 <span class="sheet-nontable-name" data-i18n="armor-desc">Description de l'Armure</span>
 
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorTypeName" type="text" data-i18n-placeholder="armor-type-name-place" placeholder="Type/Nom de l'armure" /><span data-i18n="armor-type-name">Type/Nom</span></label>
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorCategory" type="text" data-i18n-placeholder="armor-category-place" placeholder="Catégorie de l'armure" /><span data-i18n="armor-category">Catégorie</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorTypeName" type="text" data-i18n-placeholder="type-name-armor-place" placeholder="Type/Nom de l'armure" /><span data-i18n="type-name">Type/Nom</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorCategory" type="text" data-i18n-placeholder="category-armor-place" placeholder="Catégorie de l'armure" /><span data-i18n="category">Catégorie</span></label>
                 <label class="sheet-small-label2" style="width: 10%;"><select name="attr_armorTechnologicalLevel">                
                       <option value="1" data-i18n="roman-numeral-one">I</option>
                       <option value="2" data-i18n="roman-numeral-two">II</option>
@@ -1987,19 +1987,19 @@
                       <option value="6" data-i18n="roman-numeral-six">VI</option>
                       <option value="7" data-i18n="roman-numeral-seven">VII</option>
                       <option value="8" data-i18n="roman-numeral-height">VIII</option>
-                    </select><span data-i18n="armor-technological-level">NT</span></label>                    
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_armorSize" type="text" data-i18n-placeholder="armor-size-place" placeholder="Taille de l'armure" /><span data-i18n="armor-size">Taille</span></label>
+                    </select><span data-i18n="technological-level">NT</span></label>                    
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_armorSize" type="text" data-i18n-placeholder="size-armor-place" placeholder="Taille de l'armure" /><span data-i18n="size">Taille</span></label>
 
-                <label class="sheet-small-label2" style="width: 15%;"><input name="attr_armorOptimumDepth" type="number" data-i18n-title="armor-optimum-depth-place" title="Profondeur optimale de l'armure" /><span data-i18n="armor-optimum-depth">Prf. (Optimale)</span></label>
-                <label class="sheet-small-label2" style="width: 15%;"><input name="attr_armorLimitDepth" type="number" data-i18n-title="armor-limit-depth-place" title="Profondeur limite de l'armure" /><span data-i18n="armor-limit-depth">Prf. (Limite)</span></label>
-                <label class="sheet-small-label2" style="width: 15%;"><input name="attr_armorCrushingDepth" type="number" data-i18n-title="armor-crushing-depth-place" title="Profondeur d'écrasement de l'armure" /><span data-i18n="armor-crushing-depth">Prf. (Ecrasement)</span></label>
+                <label class="sheet-small-label2" style="width: 15%;"><input name="attr_armorOptimumDepth" type="number" data-i18n-title="optimum-depth-armor-title" title="Profondeur optimale de l'armure" /><span data-i18n="optimum-depth">Prf. (Optimale)</span></label>
+                <label class="sheet-small-label2" style="width: 15%;"><input name="attr_armorLimitDepth" type="number" data-i18n-title="limit-depth-armor-title" title="Profondeur limite de l'armure" /><span data-i18n="limit-depth">Prf. (Limite)</span></label>
+                <label class="sheet-small-label2" style="width: 15%;"><input name="attr_armorCrushingDepth" type="number" data-i18n-title="crushing-depth-armor-title" title="Profondeur d'écrasement de l'armure" /><span data-i18n="crushing-depth">Prf. (Ecrasement)</span></label>
                 <label class="sheet-small-label2" style="width: 20%;"><input name="attr_armorSeizurePenalty" type="text" data-i18n-placeholder="armor-seizure-penalty-place" placeholder="Malus de saisie de l'armure" /><span data-i18n="armor-seizure-penalty">Malus de Saisie</span></label>
                 <label class="sheet-small-label2" style="width: 20%;"><input name="attr_armorDown" type="text" data-i18n-placeholder="armor-down-place" placeholder="Armure à terre" /><span data-i18n="armor-down">Armure à terre</span></label>
 
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_armorAutonomy" type="text" data-i18n-placeholder="armor-autonomy-place" placeholder="Autonomie de l'armure" /><span data-i18n="armor-autonomy">Autonomie</span></label>
-                <label class="sheet-small-label2" style="width: 50%;"><input name="attr_armorBatteryType" type="text" data-i18n-placeholder="armor-battery-type-place" placeholder="Type de batterie qui alimente l'armure" /><span data-i18n="armor-battery-type">Type de Batterie</span></label>
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_armorAutonomy" type="text" data-i18n-placeholder="autonomy-armor-place" placeholder="Autonomie de l'armure" /><span data-i18n="autonomy">Autonomie</span></label>
+                <label class="sheet-small-label2" style="width: 50%;"><input name="attr_armorBatteryType" type="text" data-i18n-placeholder="battery-type-armor-place" placeholder="Type de batterie qui alimente l'armure" /><span data-i18n="battery-type">Type de Batterie</span></label>
 
-                <label class="sheet-small-label2" style="width: 100%;"><input name="attr_armorNotes" type="text" data-i18n-placeholder="armor-notes-place" placeholder="Notes générales sur l'armure" /><span data-i18n="armor-notes">Notes</span></label>
+                <label class="sheet-small-label2" style="width: 100%;"><input name="attr_armorNotes" type="text" data-i18n-placeholder="armor-notes-place" placeholder="Notes générales sur l'armure" /><span data-i18n="notes">Notes</span></label>
               </div>
 
             </div>
@@ -2016,12 +2016,12 @@
               <div class="sheet-nontable sheet-sect" style="border:1px solid black;">
                 <span class="sheet-nontable-name" data-i18n="armor-desc">Attributs de l'Armure</span>
 
-                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_armorDamageResistance" type="number" data-i18n-title="armor-damage-resistance-title" title="Résistance aux Dommages" /><span data-i18n="armor-damage-resistance">RD</span></label>
+                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_armorDamageResistance" type="number" data-i18n-title="damage-resistance-title" title="Résistance aux Dommages" /><span data-i18n="damage-resistance">RD</span></label>
                 <label class="sheet-small-label2" style="width: 20%;"><input name="attr_armorHullType" type="text" data-i18n-placeholder="armor-hull-type-place" placeholder="Type de coque / matériaux" /><span data-i18n="armor-hull-type">Type de coque</span></label>
-                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_armorShielding" type="number" data-i18n-title="armor-shielding-title" title="Valeur du blindage" /><span data-i18n="armor-shielding">Blindage</span></label>
+                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_armorShielding" type="number" data-i18n-title="shielding-title" title="Valeur du blindage" /><span data-i18n="shielding">Blindage</span></label>
                 <label class="sheet-small-label2" style="width: 20%;"><input type="checkbox" name="attr_armorSafetyFlapVisor" class="sheet-noshow" value="1" /><span data-i18n="armor-safety-flap-visor">Volet de Sécurité sur Visière</span></label>
                 <label class="sheet-small-label2" style="width: 10%;"><input name="attr_armorExoForce" type="number" data-i18n-title="armor-exo-force-title" title="Exo-force de l'Armure" /><span data-i18n="armor-exo-force">Exo-Force</span></label>
-                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_armorDamageModifier" type="number" data-i18n-title="armor-damage-modifier-title" title="Modificateur de Dommages" /><span data-i18n="armor-damage-modifier">MD</span></label>
+                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_armorDamageModifier" type="number" data-i18n-title="damage-modifier-title" title="Modificateur de Dommages" /><span data-i18n="damage-modifier">MD</span></label>
 
 
                 <label class="sheet-small-label2" style="width: 20%;"><input name="attr_armorUnderwaterSpeed" type="number" data-i18n-title="armor-underwater-speed-title" title="Vitesse de déplacement sous l'eau" /><span data-i18n="armor-underwater-speed">Vit. /s Eau</span></label>
@@ -2037,21 +2037,21 @@
           <!-- DAMAGES -->
           <div class="sheet-section">
             <div class="sheet-h2-section">
-              <h2 data-i18n="armor-damages-h">Dommages</h2>
-              <label for="attr_armor-damages-show" class="sheet-label-a" data-i18n="armor-damages-exp">Développer les dommages</label>
+              <h2 data-i18n="damages-h">Dommages</h2>
+              <label for="attr_armor-damages-show" class="sheet-label-a" data-i18n="damages-exp">Développer les dommages</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_armor-damages-show" name="attr_armor-damages-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
 
               <div class="sheet-nontable sheet-sect">
-                <div class="sheet-header sheet-text-center" style="width:100%;"><span class="sheet-nontable-name" data-i18n="armor-damages">DOMMAGES</span></div>                
+                <div class="sheet-header sheet-text-center" style="width:100%;"><span class="sheet-nontable-name" data-i18n="damages-up">DOMMAGES</span></div>                
                 <table style="border-collapse:collapse; width:100%;">
                   <tr class="sheet-tableline">
                     <th class="sheet-header sheet-cell-left"></th>
-                    <th class="sheet-header sheet-cell-center"><span data-i18n="armor-damage">Avaries</span></th>
-                    <th class="sheet-header sheet-cell-center"><span data-i18n="armor-incident-modifier">Modificateur<br/>d'incident</span></th>
-                    <th class="sheet-header sheet-cell-center"><span data-i18n="armor-integrity-permanent-loss">Perte définitive<br/>d’ITG (structure)</span></th>
+                    <th class="sheet-header sheet-cell-center"><span data-i18n="damages">Dommage</span></th>
+                    <th class="sheet-header sheet-cell-center"><span data-i18n="incident-modifier">Modificateur<br/>d'incident</span></th>
+                    <th class="sheet-header sheet-cell-center"><span data-i18n="integrity-permanent-loss">Perte définitive<br/>d’ITG (structure)</span></th>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="armor-light">Légères</span> (5)</td>
+                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="light">Légères</span> (5)</td>
                     <td class="sheet-cell-border sheet-cell-left">
                       <input type="checkbox" name="attr_armorLightDamage1" value="1" />
                       <input type="checkbox" name="attr_armorLightDamage2" value="1" />
@@ -2062,7 +2062,7 @@
                     <td class="sheet-cell-border sheet-cell-center">-</td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="armor-moderate">Moyennes</span> (10)</td>
+                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="moderate">Moyennes</span> (10)</td>
                     <td class="sheet-cell-border sheet-cell-left">
                       <input type="checkbox" name="attr_armorModerateDamage1" value="1" />
                       <input type="checkbox" name="attr_armorModerateDamage2" value="1" />
@@ -2073,7 +2073,7 @@
                     <td class="sheet-cell-border sheet-cell-center">-</td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="armor-serious">Graves</span> (15)</td>
+                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="serious">Graves</span> (15)</td>
                     <td class="sheet-cell-border sheet-cell-left">
                       <input type="checkbox" name="attr_armorSeriousWoundHead1" value="1" />
                       <input type="checkbox" name="attr_armorSeriousWoundHead2" value="1" />
@@ -2083,7 +2083,7 @@
                     <td class="sheet-cell-border sheet-cell-center">-</td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="armor-critical">Critiques</span> (20)</td>
+                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="critical">Critiques</span> (20)</td>
                     <td class="sheet-cell-border sheet-cell-left">
                       <input type="checkbox" name="attr_armorCriticalWoundHead1" value="1" />
                       <input type="checkbox" name="attr_armorCriticalWoundHead2" value="1" />
@@ -2092,7 +2092,7 @@
                     <td class="sheet-cell-border sheet-cell-center">1</td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="armor-disastrous">Catastrophique</span> (25)</td>
+                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="disastrous">Catastrophique</span> (25)</td>
                     <td class="sheet-cell-border sheet-cell-left">
                       <input type="checkbox" name="attr_armorDisastrousWoundHead1" value="1" />
                       <input type="checkbox" name="attr_armorDisastrousWoundHead2" value="1" />
@@ -2101,9 +2101,9 @@
                     <td class="sheet-cell-border sheet-cell-center">1</td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="armor-destruction">Destruction</span>(30)</td>
+                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="destruction">Destruction</span>(30)</td>
                     <td class="sheet-cell-border sheet-cell-left">
-                      <span data-i18n="armor-destruction">Destruction</span>
+                      <span data-i18n="destruction">Destruction</span>
                     </td>
                     <td class="sheet-cell-border sheet-cell-center">-</td>
                     <td class="sheet-cell-border sheet-cell-center">2</td>
@@ -2117,48 +2117,48 @@
           <!-- INCIDENTS -->
           <div class="sheet-section">
             <div class="sheet-h2-section">
-              <h2 data-i18n="armor-incidents-h">Incidents</h2>
-              <label for="attr_armor-incidents-show" class="sheet-label-a" data-i18n="armor-incidents-exp">Développer les incidents</label>
+              <h2 data-i18n="incidents-h">Incidents</h2>
+              <label for="attr_armor-incidents-show" class="sheet-label-a" data-i18n="incidents-exp">Développer les incidents</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_armor-incidents-show" name="attr_armor-incidents-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
 
               <!-- INCIDENTS LOCALISATION -->
               <div class="sheet-nontable sheet-sect">
-                <div class="sheet-header sheet-text-center"><span data-i18n="armor-incidents-localisation">LOCALISATION DES INCIDENTS</span><button type="roll" value="&{template:pl_incident} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{diceroll=[[1d10]]}}" name="roll_indidentsLocalisationCheck"></button></div>
+                <div class="sheet-header sheet-text-center"><span data-i18n="incidents-localisation">LOCALISATION DES INCIDENTS</span><button type="roll" value="&{template:pl_incident} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{diceroll=[[1d10]]}}" name="roll_indidentsLocalisationCheck"></button></div>
 
                 <table style="border-collapse:collapse;">
                   <tr class="sheet-tableline">
                     <th class="sheet-header sheet-cell-center">1D10</th>
-                    <th class="sheet-header sheet-cell-center"><span data-i18n="armor-item">Eléments</span></th>
-                    <th class="sheet-header sheet-cell-center"><span data-i18n="armor-integrity">ITG</span></th>
+                    <th class="sheet-header sheet-cell-center"><span data-i18n="item">Eléments</span></th>
+                    <th class="sheet-header sheet-cell-center"><span data-i18n="integrity-abbrv">ITG</span></th>
                   </tr>
                   <tr class="sheet-tableline">
                     <td class="sheet-cell-border sheet-cell-left">1-2</td>
-                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="armor-structure">Structure</span></td>
+                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="structure">Structure</span></td>
                     <td class="sheet-cell-border sheet-cell-center"><input name="attr_armorStructureITG" type="number" class="sheet-short sheet-boxinput" /></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td class="sheet-cell-border sheet-cell-left">3-4</td>
-                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="armor-exoskeleton">Exosquelette</span></td>
+                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="exoskeleton">Exosquelette</span></td>
                     <td class="sheet-cell-border sheet-cell-center"><input name="attr_armorExoskeletonITG" type="number" class="sheet-short sheet-boxinput" /></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td class="sheet-cell-border sheet-cell-left">5</td>
-                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="armor-generator">Générateur</span></td>
+                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="generator">Générateur</span></td>
                     <td class="sheet-cell-border sheet-cell-center"><input name="attr_armorGeneratorITG" type="number" class="sheet-short sheet-boxinput" /></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td class="sheet-cell-border sheet-cell-left">6-7</td>
-                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="armor-auxiliary-systems">Systèmes Auxiliaires</span></td>
+                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="auxiliary-systems">Systèmes Auxiliaires</span></td>
                     <td class="sheet-cell-border sheet-cell-center"><input name="attr_armorAuxiliarySystemsITG" type="number" class="sheet-short sheet-boxinput" /></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td class="sheet-cell-border sheet-cell-left">8-9</td>
-                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="armor-weaponry">Armements</span></td>
+                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="weaponry">Armements</span></td>
                     <td class="sheet-cell-border sheet-cell-center"><input name="attr_armorWeaponryITG" type="number" class="sheet-short sheet-boxinput" /></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td class="sheet-cell-border sheet-cell-left">10</td>
-                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="armor-pilot">Pilote</span></td>
+                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="pilot">Pilote</span></td>
                     <td class="sheet-cell-border sheet-cell-center"><input name="attr_armorPilotITG" type="number" class="sheet-short sheet-boxinput" /></td>
                   </tr>
                 </table>
@@ -2168,18 +2168,18 @@
               <div class="sheet-nontable sheet-sect"> 
 
                 <div class="sheet-divbox sheet-repeating-sect">
-                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="armor-incidents-effects">Effets des Incidents</span></div>
+                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="incidents-effects">Effets des Incidents</span></div>
                   <br/>
                   <fieldset class="repeating_armorIncidentsEffets">
-                    <span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_armorIncidentsEffetName" data-i18n-placeholder="armor-incidents-effects-name-place" placeholder="Nom de l'effet" /><span data-i18n="name">Nom</span></span>
-                    <span class="sheet-small-label2" style="width:55%;"><input type="text" name="attr_armorIncidentsEffetDesc" data-i18n-placeholder="armor-incidents-effects-description-place" placeholder="Description de l'incident et de l'effet" /><span data-i18n="description">Description</span></span>
+                    <span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_armorIncidentsEffetName" data-i18n-placeholder="incidents-effects-name-place" placeholder="Nom de l'effet" /><span data-i18n="name">Nom</span></span>
+                    <span class="sheet-small-label2" style="width:55%;"><input type="text" name="attr_armorIncidentsEffetDesc" data-i18n-placeholder="incidents-effects-description-place" placeholder="Description de l'incident et de l'effet" /><span data-i18n="description">Description</span></span>
                     <span class="sheet-small-label2" style="width:15%;"><select name="attr_armorIncidentsEffetLocalisation">                
-                          <option value="structure" data-i18n="armor-structure">Structure</option>
-                          <option value="exoskeleton" data-i18n="armor-exoskeleton">Exosquelette</option>
-                          <option value="generator" data-i18n="armor-generator">Générateur</option>
-                          <option value="auxiliary-systems" data-i18n="armor-auxiliary-systems">Systèmes auxiliaires</option>
-                          <option value="weaponry" data-i18n="armor-weaponry">Armements</option>
-                          <option value="pilot" data-i18n="armor-pilot">Pilote</option>
+                          <option value="structure" data-i18n="structure">Structure</option>
+                          <option value="exoskeleton" data-i18n="exoskeleton">Exosquelette</option>
+                          <option value="generator" data-i18n="generator">Générateur</option>
+                          <option value="auxiliary-systems" data-i18n="auxiliary-systems">Systèmes auxiliaires</option>
+                          <option value="weaponry" data-i18n="weaponry">Armements</option>
+                          <option value="pilot" data-i18n="pilot">Pilote</option>
                         </select><span data-i18n="localisation">Localisation</span></span>
                   </fieldset>
                 </div>
@@ -2193,24 +2193,24 @@
           <!-- COMPUTER -->
           <div class="sheet-section">
             <div class="sheet-h2-section">
-              <h2 data-i18n="armor-computer-h">Ordinateur</h2>
-              <label for="attr_armor-computer-show" class="sheet-label-a" data-i18n="armor-computer-exp">Développer l'ordinateur</label>
+              <h2 data-i18n="computer-h">Ordinateur</h2>
+              <label for="attr_armor-computer-show" class="sheet-label-a" data-i18n="computer-exp">Développer l'ordinateur</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_armor-computer-show" name="attr_armor-computer-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
 
               <!-- COMPUTER DETAILS -->
               <div class="sheet-nontable sheet-sect" style="border:1px solid black;">
-                <span class="sheet-nontable-name" data-i18n="armor-computer-desc">Description de l'Ordinateur</span>
+                <span class="sheet-nontable-name" data-i18n="computer-desc">Description de l'Ordinateur</span>
 
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorComputerType" type="text" data-i18n-placeholder="armor-computer-type-place" placeholder="Type de matériel" /><span data-i18n="armor-computer-type">Type</span></label>
-                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_armorComputerWeight" type="number" data-i18n-title="armor-computer-weight-title" title="Poids de l'ordinateur en kilogramme" /><span data-i18n="armor-computer-weight">Poids</span></label>
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_armorComputerMaxLevelPrograms" type="number" data-i18n-title="armor-computer-max-level-programs-title" title="Niveau Max des Programmes" /><span data-i18n="armor-computer-max-level-programs">Niv. Max</span></label>
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorComputerSystemsManagement" type="text" data-i18n-placeholder="armor-computer-systems-management-place" placeholder="Gestion des systèmes de l'ordinateur" /><span data-i18n="armor-computer-systems-management">Gestion Systèmes</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorComputerType" type="text" data-i18n-placeholder="computer-type-place" placeholder="Type de matériel" /><span data-i18n="computer-type">Type</span></label>
+                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_armorComputerWeight" type="number" data-i18n-title="computer-weight-title" title="Poids de l'ordinateur en kilogramme" /><span data-i18n="computer-weight">Poids</span></label>
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_armorComputerMaxLevelPrograms" type="number" data-i18n-title="computer-max-level-programs-title" title="Niveau Max des Programmes" /><span data-i18n="computer-max-level-programs">Niv. Max</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorComputerSystemsManagement" type="text" data-i18n-placeholder="computer-systems-management-place" placeholder="Gestion des systèmes de l'ordinateur" /><span data-i18n="computer-systems-management">Gestion Systèmes</span></label>
                 
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorComputerPotential" type="text" data-i18n-placeholder="armor-computer-potential-place" placeholder="Potentiel de l'ordinateur" /><span data-i18n="armor-computer-potential">Potentiel</span></label>
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorComputerGeneration" type="text" data-i18n-placeholder="armor-computer-generation-place" placeholder="Génération de l'ordinateur" /><span data-i18n="armor-computer-generation">Génération</span></label>
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorComputerEmpShielding" type="text" data-i18n-placeholder="armor-computer-emp-shielding-place" placeholder="Blindage IEM de l'ordinateur" /><span data-i18n="armor-computer-emp-shielding">Blindage IEM</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorComputerPotential" type="text" data-i18n-placeholder="computer-potential-place" placeholder="Potentiel de l'ordinateur" /><span data-i18n="computer-potential">Potentiel</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorComputerGeneration" type="text" data-i18n-placeholder="computer-generation-place" placeholder="Génération de l'ordinateur" /><span data-i18n="computer-generation">Génération</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorComputerEmpShielding" type="text" data-i18n-placeholder="computer-emp-shielding-place" placeholder="Blindage IEM de l'ordinateur" /><span data-i18n="computer-emp-shielding">Blindage IEM</span></label>
 
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorComputerIntegrity" type="text" data-i18n-placeholder="armor-computer-integrity-place" placeholder="Intégrité de l'ordinateur" /><span data-i18n="armor-computer-integrity">Intégrité</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_armorComputerIntegrity" type="text" data-i18n-placeholder="computer-integrity-place" placeholder="Intégrité de l'ordinateur" /><span data-i18n="computer-integrity">Intégrité</span></label>
 
               </div>
               <br/>
@@ -2218,13 +2218,13 @@
               <div class="sheet-nontable sheet-sect"> 
 
                 <div class="sheet-divbox sheet-repeating-sect">
-                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="armor-computer-programs">Programmes</span></div>
+                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="computer-programs">Programmes</span></div>
                   <br/>
                   <div class="sheet-repeating-fields">
                     <fieldset class="repeating_armorComputerPrograms">
                       <div class="sheet-nontable-repeating">
-                        <span class="sheet-small-label2" style="width:30%;"><input type="text" name="attr_armorComputerProgramName" data-i18n-placeholder="armor-computer-program-name-place" placeholder="Nom du programme" /><span data-i18n="name">Nom</span></span>
-                        <span class="sheet-small-label2" style="width:60%;"><input type="text" name="attr_armorComputerProgramDesc" data-i18n-placeholder="armor-computer-program-description-place" placeholder="Description du programme" /><span data-i18n="description">Description</span></span>      
+                        <span class="sheet-small-label2" style="width:30%;"><input type="text" name="attr_armorComputerProgramName" data-i18n-placeholder="computer-program-name-place" placeholder="Nom du programme" /><span data-i18n="name">Nom</span></span>
+                        <span class="sheet-small-label2" style="width:60%;"><input type="text" name="attr_armorComputerProgramDesc" data-i18n-placeholder="computer-program-description-place" placeholder="Description du programme" /><span data-i18n="description">Description</span></span>      
                       </div>   
                     </fieldset>
                   </div>
@@ -2239,21 +2239,21 @@
           <!-- AUXILIARY SYSTEMS -->
           <div class="sheet-section">
             <div class="sheet-h2-section">
-              <h2 data-i18n="armor-auxiliary-systems-h">Systèmes Auxiliaires</h2>
-              <label for="attr_armor-auxiliary-systems-show" class="sheet-label-a" data-i18n="armor-auxiliary-systems-exp">Développer les systèmes auxiliaires</label>
+              <h2 data-i18n="auxiliary-systems-h">Systèmes Auxiliaires</h2>
+              <label for="attr_armor-auxiliary-systems-show" class="sheet-label-a" data-i18n="auxiliary-systems-exp">Développer les systèmes auxiliaires</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_armor-auxiliary-systems-show" name="attr_auxiliary-systems-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
               <div class="sheet-nontable sheet-sect"> 
 
                 <div class="sheet-divbox sheet-repeating-sect">
-                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="armor-auxiliary-systems">SYSTEMES AUXILIAIRES</span></div>
+                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="auxiliary-systems">SYSTEMES AUXILIAIRES</span></div>
                   <br/>
                   <div class="sheet-repeating-fields">
                     <fieldset class="repeating_armorAuxiliarySystems">
                       <input type="checkbox" class="sheet-counted sheet-sect-show" data-i18n-title="minimize-cmd" title="Minimize Row" name="attr_row-show" value="1" checked="checked" /><span></span>
-                      <span class="sheet-small-label2 sheet-entry-25p-shrink"><input type="text" name="attr_armorAuxiliarySystemName" data-i18n-placeholder="armor-auxiliary-system-name-place" placeholder="Nom du système auxiliaire" /><span data-i18n="name">Nom</span></span>
-                      <span class="sheet-small-label2 sheet-entry-vshort"><input type="number" name="attr_armorAuxiliarySystemLevel" data-i18n-title="armor-auxiliary-system-level-title" title="Niveau du système auxiliaire" /><span data-i18n="armor-auxiliary-systems-level">Niv.</span></span>
-                      <span class="sheet-small-label2 sheet-sect" style="width:40%;"><input type="text" name="attr_armorAuxiliarySystemDesc" data-i18n-placeholder="armor-auxiliary-system-description-place" placeholder="Description du système auxiliaire" /><span data-i18n="description">Description</span></span>
-                      <span class="sheet-small-label2 sheet-entry-vshort"><input type="number" name="attr_armorAuxiliarySystemIntegrity" data-i18n-title="armor-auxiliary-system-integrity-title" title="Intégrité du système auxiliaire" /><span data-i18n="integrity">ITG</span></span>
+                      <span class="sheet-small-label2 sheet-entry-25p-shrink"><input type="text" name="attr_armorAuxiliarySystemName" data-i18n-placeholder="auxiliary-system-name-place" placeholder="Nom du système auxiliaire" /><span data-i18n="name">Nom</span></span>
+                      <span class="sheet-small-label2 sheet-entry-vshort"><input type="number" name="attr_armorAuxiliarySystemLevel" data-i18n-title="auxiliary-system-level-title" title="Niveau du système auxiliaire" /><span data-i18n="auxiliary-systems-level">Niv.</span></span>
+                      <span class="sheet-small-label2 sheet-sect" style="width:40%;"><input type="text" name="attr_armorAuxiliarySystemDesc" data-i18n-placeholder="auxiliary-system-description-place" placeholder="Description du système auxiliaire" /><span data-i18n="description">Description</span></span>
+                      <span class="sheet-small-label2 sheet-entry-vshort"><input type="number" name="attr_armorAuxiliarySystemIntegrity" data-i18n-title="auxiliary-system-integrity-title" title="Intégrité du système auxiliaire" /><span data-i18n="integrity-abbrv">ITG</span></span>
                     </fieldset>
                   </div>
                 </div>
@@ -2266,12 +2266,12 @@
           <!-- ARMOR WEAPONS -->
           <div class="sheet-section">
             <div class="sheet-h2-section">
-              <h2 data-i18n="armor-weaponery-h">Armement</h2>
-              <label for="attr_armor-weaponery-show" class="sheet-label-a" data-i18n="armor-weaponery-exp">Développer l'armement</label>
+              <h2 data-i18n="weaponery-h">Armement</h2>
+              <label for="attr_armor-weaponery-show" class="sheet-label-a" data-i18n="weaponery-exp">Développer l'armement</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_armor-weaponery-show" name="attr_armor-weaponery-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
               <div class="sheet-nontable sheet-sect"> 
                 <div class="sheet-divbox sheet-repeating-sect">
-                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="armor-weaponery">ARMEMENT</span></div>
+                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="weaponery-up">ARMEMENT</span></div>
                   <br/>
                   <div class="sheet-repeating-fields">
                     <fieldset class="repeating_armorWeaponeries">
@@ -2285,9 +2285,9 @@
                             <option value="@{submarineArmorManeuver}" data-i18n="submarine-armor-maneuver" selected>Manoeuvres d’armures [sous-marines]</option>
                             <option value="@{armorManeuver}" data-i18n="armor-maneuver">Manoeuvres d’armures</option>   
                           </select><span data-i18n="skill">Compétence</span></span>
-                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_armorWeaponeryDamage" data-i18n-placeholder="ranged-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="damage">Dégâts</span></span>
+                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_armorWeaponeryDamage" data-i18n-placeholder="ranged-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="weapon-damage">Dégâts</span></span>
                         <span class="sheet-small-label2 sheet-entry-short"><input name="attr_armorWeaponeryShock" data-i18n-placeholder="ranged-weapon-shock-place" placeholder="ex: 1d4+1" type="text" /><span data-i18n="shock">Choc</span></span>
-                        <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_armorWeaponeryTechnologicalLevel" type="number" /><span data-i18n="armor-technological-level">NT</span></span>
+                        <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_armorWeaponeryTechnologicalLevel" type="number" /><span data-i18n="technological-level">NT</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_armorWeaponeryInit" type="number" /><span data-i18n="initiative">Initiative</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_armorWeaponeryITG" type="number" /><span data-i18n="integrity">Intégrité</span></span>
                                            
@@ -2335,8 +2335,8 @@
               <div class="sheet-nontable sheet-sect" style="border:1px solid black;">
                 <span class="sheet-nontable-name" data-i18n="vehicle-desc">Description du Véhicule</span>
 
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleTypeName" type="text" data-i18n-placeholder="vehicle-type-name-place" placeholder="Type de véhicule" /><span data-i18n="vehicle-type-name">Type/Nom</span></label>
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleCategory" type="text" data-i18n-placeholder="vehicle-category-place" placeholder="Catégorie du véhicule" /><span data-i18n="vehicle-category">Catégorie</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleTypeName" type="text" data-i18n-placeholder="type-name-vehicle-place" placeholder="Type de véhicule" /><span data-i18n="type-name">Type/Nom</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleCategory" type="text" data-i18n-placeholder="category-vehicle-place" placeholder="Catégorie du véhicule" /><span data-i18n="category">Catégorie</span></label>
                 <label class="sheet-small-label2" style="width: 10%;"><select name="attr_vehicleTechnologicalLevel">                
                       <option value="1" data-i18n="roman-numeral-one">I</option>
                       <option value="2" data-i18n="roman-numeral-two">II</option>
@@ -2346,22 +2346,22 @@
                       <option value="6" data-i18n="roman-numeral-six">VI</option>
                       <option value="7" data-i18n="roman-numeral-seven">VII</option>
                       <option value="8" data-i18n="roman-numeral-height">VIII</option>
-                    </select><span data-i18n="vehicle-technological-level">NT</span></label>                    
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleLength" type="text" data-i18n-placeholder="vehicle-length-place" placeholder="Longueur du véhicule" /><span data-i18n="vehicle-length">Longueur</span></label>          
+                    </select><span data-i18n="technological-level">NT</span></label>                    
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleLength" type="text" data-i18n-placeholder="length-vehicle-place" placeholder="Longueur du véhicule" /><span data-i18n="length">Longueur</span></label>          
 
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleDiameter" type="text" data-i18n-placeholder="vehicle-diameter-place" placeholder="Diamètre du véhicule" /><span data-i18n="vehicle-diameter">Diamètre</span></label>
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleOptimumDepth" type="number" data-i18n-title="vehicle-optimum-depth-title" title="Profondeur optimale du véhicule" /><span data-i18n="vehicle-optimum-depth">Prf. (Optimale)</span></label>
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleLimitDepth" type="number" data-i18n-title="vehicle-limit-depth-title" title="Profondeur limite du véhicule" /><span data-i18n="vehicle-limit-depth">Prf. (Limite)</span></label>
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleCrushingDepth" type="number" data-i18n-title="vehicle-crushing-depth-title" title="Profondeur d'écrasement du véhicule" /><span data-i18n="vehicle-crushing-depth">Prf. (Ecrasement)</span></label>
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleDiameter" type="text" data-i18n-placeholder="diameter-vehicle-place" placeholder="Diamètre du véhicule" /><span data-i18n="diameter">Diamètre</span></label>
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleOptimumDepth" type="number" data-i18n-title="optimum-depth-vehicle-title" title="Profondeur optimale du véhicule" /><span data-i18n="optimum-depth">Prf. (Optimale)</span></label>
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleLimitDepth" type="number" data-i18n-title="limit-depth-vehicle-title" title="Profondeur limite du véhicule" /><span data-i18n="limit-depth">Prf. (Limite)</span></label>
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleCrushingDepth" type="number" data-i18n-title="crushing-depth-vehicle-title" title="Profondeur d'écrasement du véhicule" /><span data-i18n="crushing-depth">Prf. (Ecrasement)</span></label>
                 
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleAutonomy" type="text" data-i18n-placeholder="vehicle-autonomy-place" placeholder="Autonomie du véhicule" /><span data-i18n="vehicle-autonomy">Autonomie</span></label>
-                <label class="sheet-small-label2" style="width: 40%;"><input name="attr_vehicleBatteryType" type="text" data-i18n-placeholder="vehicle-battery-type-place" placeholder="Type de batterie qui alimente le véhicule" /><span data-i18n="vehicle-battery-type">Type de Batterie</span></label>
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleAutonomy" type="text" data-i18n-placeholder="autonomy-vehicle-place" placeholder="Autonomie du véhicule" /><span data-i18n="autonomy">Autonomie</span></label>
+                <label class="sheet-small-label2" style="width: 40%;"><input name="attr_vehicleBatteryType" type="text" data-i18n-placeholder="battery-type-vehicle-place" placeholder="Type de batterie qui alimente le véhicule" /><span data-i18n="battery-type">Type de Batterie</span></label>
 
                 <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleCrew" type="number" data-i18n-title="vehicle-crew-title" title="Nombre de membres dans l'équipage du véhicule" /><span data-i18n="vehicle-crew">Equipage</span></label>
                 <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleFreight " type="number" data-i18n-title="vehicle-freight-title" title="Nombre de fret qui peuvent être contenu dans le véhicule" /><span data-i18n="vehicle-freight ">Fret</span></label>
                 <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehiclePassengers" type="number" data-i18n-title="vehicle-passengers-title" title="Nombre de passagers pouvant être accueillis dans le véhicule" /><span data-i18n="vehicle-passengers">Passagers</span></label>
 
-                <label class="sheet-small-label2" style="width: 100%;"><input name="attr_vehicleNotes" type="text" data-i18n-placeholder="vehicle-notes-place" placeholder="Notes générales sur le véhicule" /><span data-i18n="vehicle-notes">Notes</span></label>
+                <label class="sheet-small-label2" style="width: 100%;"><input name="attr_vehicleNotes" type="text" data-i18n-placeholder="vehicle-notes-place" placeholder="Notes générales sur le véhicule" /><span data-i18n="notes">Notes</span></label>
               </div>
 
             </div>
@@ -2378,11 +2378,11 @@
               <div class="sheet-nontable sheet-sect" style="border:1px solid black;">
                 <span class="sheet-nontable-name" data-i18n="vehicle-desc">Attributs du véhicule</span>
 
-                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleSize" type="number" data-i18n-title="vehicle-size-title" title="Gabarit du véhicule" /><span data-i18n="vehicle-size">GAB</span></label>
+                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleSize" type="number" data-i18n-title="size-vehicle-title" title="Gabarit du véhicule" /><span data-i18n="size">GAB</span></label>
                 <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleManoeuvrability" type="number" data-i18n-title="vehicle-maneuvrability-title" title="Manoeuvrabilité du véhicule" /><span data-i18n="vehicle-maneuvrability">Man.</span></label>
-                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleDamageResistance" type="number" data-i18n-title="vehicle-damage-resistance-title" title="Résistance aux Dommages" /><span data-i18n="vehicle-damage-resistance">RD</span></label>
+                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleDamageResistance" type="number" data-i18n-title="damage-resistance-title" title="Résistance aux Dommages" /><span data-i18n="damage-resistance">RD</span></label>
                 <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleSpeed" type="number" data-i18n-title="vehicle-speed-title" title="Vitesse" /><span data-i18n="vehicle-speed">Vit.</span></label>
-                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleShielding" type="number" data-i18n-title="vehicle-shielding-title" title="Valeur du blindage" /><span data-i18n="vehicle-shielding">Blindage</span></label>
+                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleShielding" type="number" data-i18n-title="shielding-title" title="Valeur du blindage" /><span data-i18n="shielding">Blindage</span></label>
                 <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleMovementPoints" type="number" data-i18n-title="vehicle-movement-points-title" title="Points de Mouvement" /><span data-i18n="vehicle-movement-points">Pts. Mv.</span></label>
                 <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleThrustType" type="text" data-i18n-placeholder="vehicle-thrust-type-place" placeholder="Type de propulsion" /><span data-i18n="vehicle-thrust-type">Type de propulsion</span></label>
                 <label class="sheet-small-label2" style="width: 20%;"><input type="checkbox" name="attr_vehicleSafetyFlapPilot" class="sheet-noshow" value="1" /><span data-i18n="vehicle-safety-flap-pilot">Volet de Sécu. sur Poste de Pilotage</span></label>
@@ -2394,21 +2394,21 @@
           <!-- DAMAGES -->
           <div class="sheet-section">
             <div class="sheet-h2-section">
-              <h2 data-i18n="vehicle-damages-h">Dommages</h2>
-              <label for="attr_vehicle-damages-show" class="sheet-label-a" data-i18n="vehicle-damages-exp">Développer les dommages</label>
+              <h2 data-i18n="damages-h">Dommages</h2>
+              <label for="attr_vehicle-damages-show" class="sheet-label-a" data-i18n="damages-exp">Développer les dommages</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_vehicle-damages-show" name="attr_vehicle-damages-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
 
               <div class="sheet-nontable sheet-sect">
-                <div class="sheet-header sheet-text-center" style="width:100%;"><span class="sheet-nontable-name" data-i18n="vehicle-damages">DOMMAGES</span></div>                
+                <div class="sheet-header sheet-text-center" style="width:100%;"><span class="sheet-nontable-name" data-i18n="damages-up">DOMMAGES</span></div>                
                 <table style="border-collapse:collapse; width:100%;">
                   <tr class="sheet-tableline">
                     <th class="sheet-header sheet-cell-left"></th>
-                    <th class="sheet-header sheet-cell-center"><span data-i18n="vehicle-damage">Avaries</span></th>
-                    <th class="sheet-header sheet-cell-center"><span data-i18n="vehicle-incident-modifier">Modificateur<br/>d'incident</span></th>
-                    <th class="sheet-header sheet-cell-center"><span data-i18n="vehicle-integrity-permanent-loss">Perte définitive<br/>d’ITG (structure)</span></th>
+                    <th class="sheet-header sheet-cell-center"><span data-i18n="damages">Dommages</span></th>
+                    <th class="sheet-header sheet-cell-center"><span data-i18n="incident-modifier">Modificateur<br/>d'incident</span></th>
+                    <th class="sheet-header sheet-cell-center"><span data-i18n="integrity-permanent-loss">Perte définitive<br/>d’ITG (structure)</span></th>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="vehicle-light">Légères</span> (5)</td>
+                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="light">Légères</span> (5)</td>
                     <td class="sheet-cell-border sheet-cell-left">
                       <input type="checkbox" name="attr_vehicleLightDamage1" value="1" />
                       <input type="checkbox" name="attr_vehicleLightDamage2" value="1" />
@@ -2419,7 +2419,7 @@
                     <td class="sheet-cell-border sheet-cell-center">-</td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="vehicle-moderate">Moyennes</span> (10)</td>
+                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="moderate">Moyennes</span> (10)</td>
                     <td class="sheet-cell-border sheet-cell-left">
                       <input type="checkbox" name="attr_vehicleModerateDamage1" value="1" />
                       <input type="checkbox" name="attr_vehicleModerateDamage2" value="1" />
@@ -2430,7 +2430,7 @@
                     <td class="sheet-cell-border sheet-cell-center">-</td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="vehicle-serious">Graves</span> (15)</td>
+                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="serious">Graves</span> (15)</td>
                     <td class="sheet-cell-border sheet-cell-left">
                       <input type="checkbox" name="attr_vehicleSeriousWoundHead1" value="1" />
                       <input type="checkbox" name="attr_vehicleSeriousWoundHead2" value="1" />
@@ -2440,7 +2440,7 @@
                     <td class="sheet-cell-border sheet-cell-center">-</td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="vehicle-critical">Critiques</span> (20)</td>
+                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="critical">Critiques</span> (20)</td>
                     <td class="sheet-cell-border sheet-cell-left">
                       <input type="checkbox" name="attr_vehicleCriticalWoundHead1" value="1" />
                       <input type="checkbox" name="attr_vehicleCriticalWoundHead2" value="1" />
@@ -2449,7 +2449,7 @@
                     <td class="sheet-cell-border sheet-cell-center">1</td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="vehicle-disastrous">Catastrophique</span> (25)</td>
+                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="disastrous">Catastrophique</span> (25)</td>
                     <td class="sheet-cell-border sheet-cell-left">
                       <input type="checkbox" name="attr_vehicleDisastrousWoundHead1" value="1" />
                       <input type="checkbox" name="attr_vehicleDisastrousWoundHead2" value="1" />
@@ -2458,9 +2458,9 @@
                     <td class="sheet-cell-border sheet-cell-center">1</td>
                   </tr>
                   <tr class="sheet-tableline">
-                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="vehicle-destruction">Destruction</span>(30)</td>
+                    <td class="sheet-tablecell sheet-cell-left sheet-cell-bold"><span data-i18n="destruction">Destruction</span>(30)</td>
                     <td class="sheet-cell-border sheet-cell-left">
-                      <span data-i18n="vehicle-destruction">Destruction</span>
+                      <span data-i18n="destruction">Destruction</span>
                     </td>
                     <td class="sheet-cell-border sheet-cell-center">-</td>
                     <td class="sheet-cell-border sheet-cell-center">2</td>
@@ -2474,48 +2474,48 @@
           <!-- INCIDENTS -->
           <div class="sheet-section">
             <div class="sheet-h2-section">
-              <h2 data-i18n="vehicle-incidents-h">Incidents</h2>
-              <label for="attr_vehicle-incidents-show" class="sheet-label-a" data-i18n="vehicle-incidents-exp">Développer les incidents</label>
+              <h2 data-i18n="incidents-h">Incidents</h2>
+              <label for="attr_vehicle-incidents-show" class="sheet-label-a" data-i18n="incidents-exp">Développer les incidents</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_vehicle-incidents-show" name="attr_vehicle-incidents-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
 
               <!-- INCIDENTS LOCALISATION -->
               <div class="sheet-nontable sheet-sect">
-                <div class="sheet-header sheet-text-center"><span data-i18n="vehicle-incidents-localisation">LOCALISATION DES INCIDENTS</span><button type="roll" value="&{template:pl_incident} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{diceroll=[[1d10]]}}" name="roll_indidentsLocalisationCheck"></button></div>
+                <div class="sheet-header sheet-text-center"><span data-i18n="incidents-localisation">LOCALISATION DES INCIDENTS</span><button type="roll" value="&{template:pl_incident} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{diceroll=[[1d10]]}}" name="roll_indidentsLocalisationCheck"></button></div>
 
                 <table style="border-collapse:collapse;">
                   <tr class="sheet-tableline">
                     <th class="sheet-header sheet-cell-center">1D10</th>
-                    <th class="sheet-header sheet-cell-center"><span data-i18n="vehicle-item">Eléments</span></th>
-                    <th class="sheet-header sheet-cell-center"><span data-i18n="vehicle-integrity">ITG</span></th>
+                    <th class="sheet-header sheet-cell-center"><span data-i18n="item">Eléments</span></th>
+                    <th class="sheet-header sheet-cell-center"><span data-i18n="integrity-abbrv">ITG</span></th>
                   </tr>
                   <tr class="sheet-tableline">
                     <td class="sheet-cell-border sheet-cell-left">1-2</td>
-                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="vehicle-structure">Structure</span></td>
+                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="structure">Structure</span></td>
                     <td class="sheet-cell-border sheet-cell-center"><input name="attr_vehicleStructureITG" type="number" class="sheet-short sheet-boxinput" /></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td class="sheet-cell-border sheet-cell-left">3-4</td>
-                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="vehicle-exoskeleton">Exosquelette</span></td>
+                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="exoskeleton">Exosquelette</span></td>
                     <td class="sheet-cell-border sheet-cell-center"><input name="attr_vehicleExoskeletonITG" type="number" class="sheet-short sheet-boxinput" /></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td class="sheet-cell-border sheet-cell-left">5</td>
-                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="vehicle-generator">Générateur</span></td>
+                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="generator">Générateur</span></td>
                     <td class="sheet-cell-border sheet-cell-center"><input name="attr_vehicleGeneratorITG" type="number" class="sheet-short sheet-boxinput" /></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td class="sheet-cell-border sheet-cell-left">6-7</td>
-                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="vehicle-auxiliary-systems">Systèmes Auxiliaires</span></td>
+                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="auxiliary-systems">Systèmes Auxiliaires</span></td>
                     <td class="sheet-cell-border sheet-cell-center"><input name="attr_vehicleAuxiliarySystemsITG" type="number" class="sheet-short sheet-boxinput" /></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td class="sheet-cell-border sheet-cell-left">8-9</td>
-                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="vehicle-weaponry">Armements</span></td>
+                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="weaponry">Armements</span></td>
                     <td class="sheet-cell-border sheet-cell-center"><input name="attr_vehicleWeaponryITG" type="number" class="sheet-short sheet-boxinput" /></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td class="sheet-cell-border sheet-cell-left">10</td>
-                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="vehicle-pilot">Pilote</span></td>
+                    <td class="sheet-cell-border sheet-cell-center"><span data-i18n="pilot">Pilote</span></td>
                     <td class="sheet-cell-border sheet-cell-center"><input name="attr_vehiclePilotITG" type="number" class="sheet-short sheet-boxinput" /></td>
                   </tr>
                 </table>
@@ -2525,18 +2525,18 @@
               <div class="sheet-nontable sheet-sect"> 
 
                 <div class="sheet-divbox sheet-repeating-sect">
-                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="vehicle-incidents-effects">Effets des Incidents</span></div>
+                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="incidents-effects">Effets des Incidents</span></div>
                   <br/>
                   <fieldset class="repeating_vehicleIncidentsEffets">
-                    <span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_vehicleIncidentsEffetName" data-i18n-placeholder="vehicle-incidents-effects-name-place" placeholder="Nom de l'effet" /><span data-i18n="name">Nom</span></span>
-                    <span class="sheet-small-label2" style="width:55%;"><input type="text" name="attr_vehicleIncidentsEffetDesc" data-i18n-placeholder="vehicle-incidents-effects-description-place" placeholder="Description de l'incident et de l'effet" /><span data-i18n="description">Description</span></span>
+                    <span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_vehicleIncidentsEffetName" data-i18n-placeholder="incidents-effects-name-place" placeholder="Nom de l'effet" /><span data-i18n="name">Nom</span></span>
+                    <span class="sheet-small-label2" style="width:55%;"><input type="text" name="attr_vehicleIncidentsEffetDesc" data-i18n-placeholder="incidents-effects-description-place" placeholder="Description de l'incident et de l'effet" /><span data-i18n="description">Description</span></span>
                     <span class="sheet-small-label2" style="width:15%;"><select name="attr_vehicleIncidentsEffetLocalisation">                
-                          <option value="structure" data-i18n="vehicle-structure">Structure</option>
-                          <option value="exoskeleton" data-i18n="vehicle-exoskeleton">Exosquelette</option>
-                          <option value="generator" data-i18n="vehicle-generator">Générateur</option>
-                          <option value="auxiliary-systems" data-i18n="vehicle-auxiliary-systems">Systèmes auxiliaires</option>
-                          <option value="weaponry" data-i18n="vehicle-weaponry">Armements</option>
-                          <option value="pilot" data-i18n="vehicle-pilot">Pilote</option>
+                          <option value="structure" data-i18n="structure">Structure</option>
+                          <option value="exoskeleton" data-i18n="exoskeleton">Exosquelette</option>
+                          <option value="generator" data-i18n="generator">Générateur</option>
+                          <option value="auxiliary-systems" data-i18n="auxiliary-systems">Systèmes auxiliaires</option>
+                          <option value="weaponry" data-i18n="weaponry">Armements</option>
+                          <option value="pilot" data-i18n="pilot">Pilote</option>
                         </select><span data-i18n="localisation">Localisation</span></span>
                   </fieldset>
                 </div>
@@ -2550,24 +2550,24 @@
           <!-- COMPUTER -->
           <div class="sheet-section">
             <div class="sheet-h2-section">
-              <h2 data-i18n="vehicle-computer-h">Ordinateur</h2>
-              <label for="attr_vehicle-computer-show" class="sheet-label-a" data-i18n="vehicle-computer-exp">Développer l'ordinateur</label>
+              <h2 data-i18n="computer-h">Ordinateur</h2>
+              <label for="attr_vehicle-computer-show" class="sheet-label-a" data-i18n="computer-exp">Développer l'ordinateur</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_vehicle-computer-show" name="attr_vehicle-computer-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
 
               <!-- COMPUTER DETAILS -->
               <div class="sheet-nontable sheet-sect" style="border:1px solid black;">
-                <span class="sheet-nontable-name" data-i18n="vehicle-computer-desc">Description de l'Ordinateur</span>
+                <span class="sheet-nontable-name" data-i18n="computer-desc">Description de l'Ordinateur</span>
 
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleComputerType" type="text" data-i18n-placeholder="vehicle-computer-type-place" placeholder="Type de matériel" /><span data-i18n="vehicle-computer-type">Type</span></label>
-                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleComputerWeight" type="number" data-i18n-title="vehicle-computer-weight-title" title="Poids de l'ordinateur en kilogramme" /><span data-i18n="vehicle-computer-weight">Poids</span></label>
-                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleComputerMaxLevelPrograms" type="number" data-i18n-title="vehicle-computer-max-level-programs-title" title="Niveau Max des Programmes" /><span data-i18n="vehicle-computer-max-level-programs">Niv. Max</span></label>
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleComputerSystemsManagement" type="text" data-i18n-placeholder="vehicle-computer-systems-management-place" placeholder="Gestion des systèmes de l'ordinateur" /><span data-i18n="vehicle-computer-systems-management">Gestion Systèmes</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleComputerType" type="text" data-i18n-placeholder="computer-type-place" placeholder="Type de matériel" /><span data-i18n="computer-type">Type</span></label>
+                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_vehicleComputerWeight" type="number" data-i18n-title="computer-weight-title" title="Poids de l'ordinateur en kilogramme" /><span data-i18n="computer-weight">Poids</span></label>
+                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_vehicleComputerMaxLevelPrograms" type="number" data-i18n-title="computer-max-level-programs-title" title="Niveau Max des Programmes" /><span data-i18n="computer-max-level-programs">Niv. Max</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleComputerSystemsManagement" type="text" data-i18n-placeholder="computer-systems-management-place" placeholder="Gestion des systèmes de l'ordinateur" /><span data-i18n="computer-systems-management">Gestion Systèmes</span></label>
                 
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleComputerPotential" type="text" data-i18n-placeholder="vehicle-computer-potential-place" placeholder="Potentiel de l'ordinateur" /><span data-i18n="vehicle-computer-potential">Potentiel</span></label>
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleComputerGeneration" type="text" data-i18n-placeholder="vehicle-computer-generation-place" placeholder="Génération de l'ordinateur" /><span data-i18n="vehicle-computer-generation">Génération</span></label>
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleComputerEmpShielding" type="text" data-i18n-placeholder="vehicle-computer-emp-shielding-place" placeholder="Blindage IEM de l'ordinateur" /><span data-i18n="vehicle-computer-emp-shielding">Blindage IEM</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleComputerPotential" type="text" data-i18n-placeholder="computer-potential-place" placeholder="Potentiel de l'ordinateur" /><span data-i18n="computer-potential">Potentiel</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleComputerGeneration" type="text" data-i18n-placeholder="computer-generation-place" placeholder="Génération de l'ordinateur" /><span data-i18n="computer-generation">Génération</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleComputerEmpShielding" type="text" data-i18n-placeholder="computer-emp-shielding-place" placeholder="Blindage IEM de l'ordinateur" /><span data-i18n="computer-emp-shielding">Blindage IEM</span></label>
 
-                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleComputerIntegrity" type="text" data-i18n-placeholder="vehicle-computer-integrity-place" placeholder="Intégrité de l'ordinateur" /><span data-i18n="vehicle-computer-integrity">Intégrité</span></label>
+                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_vehicleComputerIntegrity" type="text" data-i18n-placeholder="computer-integrity-place" placeholder="Intégrité de l'ordinateur" /><span data-i18n="computer-integrity">Intégrité</span></label>
 
               </div>
               <br/>
@@ -2575,13 +2575,13 @@
               <div class="sheet-nontable sheet-sect"> 
 
                 <div class="sheet-divbox sheet-repeating-sect">
-                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="vehicle-computer-programs">Programmes</span></div>
+                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="computer-programs">Programmes</span></div>
                   <br/>
                   <div class="sheet-repeating-fields">
                     <fieldset class="repeating_vehicleComputerPrograms">
                       <div class="sheet-nontable-repeating">
-                        <span class="sheet-small-label2" style="width:30%;"><input type="text" name="attr_vehicleComputerProgramName" data-i18n-placeholder="vehicle-computer-program-name-place" placeholder="Nom du programme" /><span data-i18n="name">Nom</span></span>
-                        <span class="sheet-small-label2" style="width:60%;"><input type="text" name="attr_vehicleComputerProgramDesc" data-i18n-placeholder="vehicle-computer-program-description-place" placeholder="Description du programme" /><span data-i18n="description">Description</span></span>      
+                        <span class="sheet-small-label2" style="width:30%;"><input type="text" name="attr_vehicleComputerProgramName" data-i18n-placeholder="computer-program-name-place" placeholder="Nom du programme" /><span data-i18n="name">Nom</span></span>
+                        <span class="sheet-small-label2" style="width:60%;"><input type="text" name="attr_vehicleComputerProgramDesc" data-i18n-placeholder="computer-program-description-place" placeholder="Description du programme" /><span data-i18n="description">Description</span></span>      
                       </div>   
                     </fieldset>
                   </div>
@@ -2618,21 +2618,21 @@
           <!-- AUXILIARY SYSTEMS -->
           <div class="sheet-section">
             <div class="sheet-h2-section">
-              <h2 data-i18n="vehicle-auxiliary-systems-h">Systèmes Auxiliaires</h2>
-              <label for="attr_vehicle-auxiliary-systems-show" class="sheet-label-a" data-i18n="vehicle-auxiliary-systems-exp">Développer les équipements</label>
+              <h2 data-i18n="auxiliary-systems-h">Systèmes Auxiliaires</h2>
+              <label for="attr_vehicle-auxiliary-systems-show" class="sheet-label-a" data-i18n="auxiliary-systems-exp">Développer les équipements</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_vehicle-auxiliary-systems-show" name="attr_auxiliary-systems-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
               <div class="sheet-nontable sheet-sect"> 
 
                 <div class="sheet-divbox sheet-repeating-sect">
-                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="vehicle-auxiliary-systems">SYSTEMES AUXILIAIRES</span></div>
+                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="auxiliary-systems">SYSTEMES AUXILIAIRES</span></div>
                   <br/>
                   <div class="sheet-repeating-fields">
                     <fieldset class="repeating_vehicleAuxiliarySystems">
                       <input type="checkbox" class="sheet-counted sheet-sect-show" data-i18n-title="minimize-cmd" title="Minimize Row" name="attr_row-show" value="1" checked="checked" /><span></span>
-                      <span class="sheet-small-label2 sheet-entry-25p-shrink"><input type="text" name="attr_vehicleAuxiliarySystemName" data-i18n-placeholder="vehicle-auxiliary-system-name-place" placeholder="Nom du système auxiliaire" /><span data-i18n="name">Nom</span></span>
-                      <span class="sheet-small-label2 sheet-entry-vshort"><input type="number" name="attr_vehicleAuxiliarySystemLevel" data-i18n-title="vehicle-auxiliary-system-level-title" title="Niveau du système auxiliaire" /><span data-i18n="vehicle-auxiliary-systems-level">Niv.</span></span>
-                      <span class="sheet-small-label2 sheet-sect" style="width:40%;"><input type="text" name="attr_vehicleAuxiliarySystemDesc" data-i18n-placeholder="vehicle-auxiliary-system-description-place" placeholder="Description du système auxiliaire" /><span data-i18n="description">Description</span></span>
-                      <span class="sheet-small-label2 sheet-entry-vshort"><input type="number" name="attr_vehicleAuxiliarySystemIntegrity" data-i18n-title="vehicle-auxiliary-system-integrity-title" title="Intégrité du système auxiliaire" /><span data-i18n="integrity">ITG</span></span>
+                      <span class="sheet-small-label2 sheet-entry-25p-shrink"><input type="text" name="attr_vehicleAuxiliarySystemName" data-i18n-placeholder="auxiliary-system-name-place" placeholder="Nom du système auxiliaire" /><span data-i18n="name">Nom</span></span>
+                      <span class="sheet-small-label2 sheet-entry-vshort"><input type="number" name="attr_vehicleAuxiliarySystemLevel" data-i18n-title="auxiliary-system-level-title" title="Niveau du système auxiliaire" /><span data-i18n="auxiliary-systems-level">Niv.</span></span>
+                      <span class="sheet-small-label2 sheet-sect" style="width:40%;"><input type="text" name="attr_vehicleAuxiliarySystemDesc" data-i18n-placeholder="auxiliary-system-description-place" placeholder="Description du système auxiliaire" /><span data-i18n="description">Description</span></span>
+                      <span class="sheet-small-label2 sheet-entry-vshort"><input type="number" name="attr_vehicleAuxiliarySystemIntegrity" data-i18n-title="auxiliary-system-integrity-title" title="Intégrité du système auxiliaire" /><span data-i18n="integrity-abbrv">ITG</span></span>
                     </fieldset>
                   </div>
                 </div>
@@ -2645,12 +2645,12 @@
           <!-- VEHICULE WEAPONS -->
           <div class="sheet-section">
             <div class="sheet-h2-section">
-              <h2 data-i18n="vehicle-weaponery-h">Armement</h2>
-              <label for="attr_vehicle-weaponery-show" class="sheet-label-a" data-i18n="vehicle-weaponery-exp">Développer les armements</label>
+              <h2 data-i18n="weaponery-h">Armement</h2>
+              <label for="attr_vehicle-weaponery-show" class="sheet-label-a" data-i18n="weaponery-exp">Développer les armements</label>
               <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_vehicle-weaponery-show" name="attr_vehicle-weaponery-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
               <div class="sheet-nontable sheet-sect"> 
                 <div class="sheet-divbox sheet-repeating-sect">
-                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="vehicle-weaponery">ARMEMENT</span></div>
+                  <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="weaponery-up">ARMEMENT</span></div>
                   <br/>
                   <div class="sheet-repeating-fields">
                     <fieldset class="repeating_vehicleWeaponeries">
@@ -2663,9 +2663,9 @@
                             <option value=""></option>           
                             <option value="@{onboardWeapons}" data-i18n="onboard-weapons-artillery" selected>Armes embarqués/Artillerie</option>
                           </select><span data-i18n="skill">Compétence</span></span>
-                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_vehicleWeaponeryDamage" data-i18n-placeholder="ranged-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="damage">Dégâts</span></span>
+                        <span class="sheet-small-label2 sheet-entry-short"><input name="attr_vehicleWeaponeryDamage" data-i18n-placeholder="ranged-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="weapon-damage">Dégâts</span></span>
                         <span class="sheet-small-label2 sheet-entry-short"><input name="attr_vehicleWeaponeryShock" data-i18n-placeholder="ranged-weapon-shock-place" placeholder="ex: 1d4+1" type="text" /><span data-i18n="shock">Choc</span></span>
-                        <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_vehicleWeaponeryTechnologicalLevel" type="number" /><span data-i18n="vehicle-technological-level">NT</span></span>
+                        <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_vehicleWeaponeryTechnologicalLevel" type="number" /><span data-i18n="technological-level">NT</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_vehicleWeaponeryInit" type="number" /><span data-i18n="initiative">Initiative</span></span>
                         <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_vehicleWeaponeryITG" type="number" /><span data-i18n="integrity">Intégrité</span></span>
                                            
@@ -2813,7 +2813,7 @@
     <div class="sheet-footer">
       <div class="sheet-table">
         <div class="sheet-table-row">
-          <span class="sheet-table-cell"><span data-i18n="footer-created-by">Créé par</span> PadRPG <span data-i18n="footer-inspired">(fortement inspiré de la fiche Pathfinder)</span> | <span data-i18n="footer-last-update">Dernière MAJ</span>: <i>25.08.2016&nbsp;&nbsp;</i>v0.4</span>
+          <span class="sheet-table-cell"><span data-i18n="footer-created-by">Créé par</span> PadRPG <span data-i18n="footer-inspired">(fortement inspiré de la fiche Pathfinder)</span> | <span data-i18n="footer-last-update">Dernière MAJ</span>: <i>26.08.2016&nbsp;&nbsp;</i>v0.5</span>
         </div>
       </div>
     </div>
@@ -2914,7 +2914,7 @@
 
           {{#rollTotal() diceroll skill_value}}    
           <div class="sheet-roll-row">
-            <div class="sheet-roll-cell"><span data-i18n="damage">Dégâts</span></div>
+            <div class="sheet-roll-cell"><span data-i18n="weapon-damage">Dégâts</span></div>
             <div class="sheet-roll-cell">{{damage_roll}}</div>
           </div>
           <div class="sheet-roll-row">
@@ -2929,7 +2929,7 @@
 
           {{#rollLess() diceroll skill_value}}
           <div class="sheet-roll-row">
-            <div class="sheet-roll-cell"><span data-i18n="damage">Dégâts</span></div>
+            <div class="sheet-roll-cell"><span data-i18n="weapon-damage">Dégâts</span></div>
             <div class="sheet-roll-cell">{{damage_roll}}</div>
           </div>
           <div class="sheet-roll-row">
@@ -2963,22 +2963,22 @@
           <div class="sheet-roll-row">
             <div class="sheet-roll-cell">
               {{#rollBetween() diceroll 1 2}}
-                <span data-i18n="armor-structure">Structure</span>
+                <span data-i18n="structure">Structure</span>
               {{/rollBetween() diceroll 1 2}}
               {{#rollBetween() diceroll 3 4}}
-                <span data-i18n="armor-exoskeleton">Exosquelette</span>
+                <span data-i18n="exoskeleton">Exosquelette</span>
               {{/rollBetween() diceroll 3 4}}
               {{#rollTotal() diceroll 5}}
-                <span data-i18n="armor-generator">Générateur</span>
+                <span data-i18n="generator">Générateur</span>
               {{/rollTotal() diceroll 5}}
               {{#rollBetween() diceroll 6 7}}
-                <span data-i18n="armor-auxiliary-systems">Systèmes Auxiliaires</span>
+                <span data-i18n="auxiliary-systems">Systèmes Auxiliaires</span>
               {{/rollBetween() diceroll 6 7}}
               {{#rollBetween() diceroll 8 9}}
-                <span data-i18n="armor-weaponry">Armements</span>
+                <span data-i18n="weaponry">Armements</span>
               {{/rollBetween() diceroll 8 9}}
               {{#rollTotal() diceroll 10}}
-                <span data-i18n="armor-pilot">Pilote</span>
+                <span data-i18n="pilot">Pilote</span>
               {{/rollTotal() diceroll 10}}
             </div>
             <div class="sheet-roll-cell">({{diceroll}})</div>
@@ -2990,13 +2990,13 @@
 
   </aside>
 
-  <!-- SCRIPT WORKER -->
+  <!-- SHEET WORKER SCRIPTS -->
   <script type="text/worker">
 
     /* Damage resist calcul */
-    on("change:strBase change:conBase", function(){
-      getAttrs(["strBase","conBase"], function(values) {
-        resValue=parseInt(values.strBase)+parseInt(values.conBase); 
+    on("change:str change:con", function(){
+      getAttrs(["str","con"], function(values) {
+        resValue=parseInt(values.str)+parseInt(values.con); 
         if(resValue < 6){
           setAttrs({        
             damagesResist: 6          
@@ -3057,60 +3057,60 @@
     });
     
     /* Damage mod calcul*/
-    on("change:strBase", function() {
-      getAttrs(["strBase"], function(values) {
-        if(values.strBase < 3){
+    on("change:str", function() {
+      getAttrs(["str"], function(values) {
+        if(values.str < 3){
           setAttrs({        
             meleeDamageMod: -6         
           });
         }
-        else if(values.strBase < 5){
+        else if(values.str < 5){
           setAttrs({        
             meleeDamageMod: -4
           });
         }
-        else if(values.strBase < 7){
+        else if(values.str < 7){
           setAttrs({        
             meleeDamageMod: -2
           });
         }
-        else if(values.strBase < 9){
+        else if(values.str < 9){
           setAttrs({        
             meleeDamageMod: -1
           });
         }
-        else if(values.strBase < 12){
+        else if(values.str < 12){
           setAttrs({        
             meleeDamageMod: 0
           });
         }
-        else if(values.strBase < 14){
+        else if(values.str < 14){
           setAttrs({        
             meleeDamageMod: 1
           });
         }
-        else if(values.strBase < 16){
+        else if(values.str < 16){
           setAttrs({        
             meleeDamageMod: 2
           });
         }
-        else if(values.strBase < 18){
+        else if(values.str < 18){
           setAttrs({        
             meleeDamageMod: 3
           });
         }
-        else if(values.strBase < 20){
+        else if(values.str < 20){
           setAttrs({        
             meleeDamageMod: 4
           });
         }
-        else if(values.strBase < 22){
+        else if(values.str < 22){
           setAttrs({        
             meleeDamageMod: 5
           });
         }
         else{
-          calValue = Math.round(((values.strBase-10) / 2)-0.1);
+          calValue = Math.round(((values.str-10) / 2)-0.1);
           setAttrs({        
             meleeDamageMod: calValue
           });
@@ -3118,55 +3118,62 @@
        });
     });
 
-    /* Natural ability calcul*/
-    on("change:strBase change:conBase change:cooBase change:adaBase change:perBase change:intBase change:wilBase change:preBase", function(){
-      getAttrs(["strBase","conBase","cooBase","adaBase","perBase","intBase","wilBase","preBase"], function(values) {
-        if(values.strBase<4){
+    /* ================= */
+    /* Abilities Calculs */
+
+    /* Strength */
+    on("change:strBase change:strModGen change:strModPC", function(){
+      getAttrs(["strBase","strModGen","strModPC"], function(values){
+        resValue=parseInt(values.strBase)+parseInt(values.strModGen)+parseInt(values.strModPC);
+        setAttrs({        
+            str: resValue       
+          });
+        if(resValue<4){
           setAttrs({        
             strNaturalGift: -4          
           });
         }
-        else if(values.strBase==4){
+        else if(resValue==4){
           setAttrs({        
             strNaturalGift: -3          
           });
         }
-        else if(values.strBase==5){
+        else if(resValue==5){
           setAttrs({        
             strNaturalGift: -2          
           });
         }
-        else if(values.strBase<8){
+        else if(resValue<8){
           setAttrs({        
             strNaturalGift: -1          
           });
         }
-        else if(values.strBase<10){
+        else if(resValue<10){
           setAttrs({        
             strNaturalGift: 0       
           });
         }
-        else if(values.strBase<13){
+        else if(resValue<13){
           setAttrs({        
             strNaturalGift: 1         
           });
         }
-        else if(values.strBase<16){
+        else if(resValue<16){
           setAttrs({        
             strNaturalGift: 2         
           });
         }
-        else if(values.strBase<19){
+        else if(resValue<19){
           setAttrs({        
             strNaturalGift: 3         
           });
         }
-        else if(values.strBase<22){
+        else if(resValue<22){
           setAttrs({        
             strNaturalGift: 4         
           });
         }
-        else if(values.strBase<25){
+        else if(resValue<25){
           setAttrs({        
             strNaturalGift: 5         
           });
@@ -3176,53 +3183,62 @@
             strNaturalGift: 6         
           });
         }
-        
-        if(values.conBase<4){
+      });
+    });
+
+    /* Constitution */
+    on("change:conBase change:conModGen change:conModPC", function(){
+      getAttrs(["conBase","conModGen","conModPC"], function(values){
+        resValue=parseInt(values.conBase)+parseInt(values.conModGen)+parseInt(values.conModPC);
+        setAttrs({        
+            con: resValue       
+          });
+        if(resValue<4){
           setAttrs({        
             conNaturalGift: -4          
           });
         }
-        else if(values.conBase==4){
+        else if(resValue==4){
           setAttrs({        
             conNaturalGift: -3          
           });
         }
-        else if(values.conBase==5){
+        else if(resValue==5){
           setAttrs({        
             conNaturalGift: -2          
           });
         }
-        else if(values.conBase<8){
+        else if(resValue<8){
           setAttrs({        
             conNaturalGift: -1          
           });
         }
-        else if(values.conBase<10){
+        else if(resValue<10){
           setAttrs({        
             conNaturalGift: 0       
           });
         }
-        else if(values.conBase<13){
+        else if(resValue<13){
           setAttrs({        
             conNaturalGift: 1         
           });
         }
-        else if(values.conBase<16){
+        else if(resValue<16){
           setAttrs({        
             conNaturalGift: 2         
           });
         }
-        else if(values.conBase<19){
+        else if(resValue<19){
           setAttrs({        
             conNaturalGift: 3         
           });
         }
-        else if(values.conBase<22){
+        else if(resValue<22){
           setAttrs({        
             conNaturalGift: 4         
           });
         }
-        else if(values.conBase<25){
+        else if(resValue<25){
           setAttrs({        
             conNaturalGift: 5         
           });
@@ -3232,53 +3248,62 @@
             conNaturalGift: 6         
           });
         }
-        
-        if(values.cooBase<4){
+      });
+    });
+
+    /* Coordination */
+    on("change:cooBase change:cooModGen change:cooModPC", function(){
+      getAttrs(["cooBase","cooModGen","cooModPC"], function(values){
+        resValue=parseInt(values.cooBase)+parseInt(values.cooModGen)+parseInt(values.cooModPC);
+        setAttrs({        
+            coo: resValue       
+          });
+        if(resValue<4){
           setAttrs({        
             cooNaturalGift: -4          
           });
         }
-        else if(values.cooBase==4){
+        else if(resValue==4){
           setAttrs({        
             cooNaturalGift: -3          
           });
         }
-        else if(values.cooBase==5){
+        else if(resValue==5){
           setAttrs({        
             cooNaturalGift: -2          
           });
         }
-        else if(values.cooBase<8){
+        else if(resValue<8){
           setAttrs({        
             cooNaturalGift: -1          
           });
         }
-        else if(values.cooBase<10){
+        else if(resValue<10){
           setAttrs({        
             cooNaturalGift: 0       
           });
         }
-        else if(values.cooBase<13){
+        else if(resValue<13){
           setAttrs({        
             cooNaturalGift: 1         
           });
         }
-        else if(values.cooBase<16){
+        else if(resValue<16){
           setAttrs({        
             cooNaturalGift: 2         
           });
         }
-        else if(values.cooBase<19){
+        else if(resValue<19){
           setAttrs({        
             cooNaturalGift: 3         
           });
         }
-        else if(values.cooBase<22){
+        else if(resValue<22){
           setAttrs({        
             cooNaturalGift: 4         
           });
         }
-        else if(values.cooBase<25){
+        else if(resValue<25){
           setAttrs({        
             cooNaturalGift: 5         
           });
@@ -3288,53 +3313,62 @@
             cooNaturalGift: 6         
           });
         }
-        
-        if(values.adaBase<4){
+      });
+    });
+
+    /* Adaptation */
+    on("change:adaBase change:adaModGen change:adaModPC", function(){
+      getAttrs(["adaBase","adaModGen","adaModPC"], function(values){
+        resValue=parseInt(values.adaBase)+parseInt(values.adaModGen)+parseInt(values.adaModPC);
+        setAttrs({        
+            ada: resValue       
+          });
+        if(resValue<4){
           setAttrs({        
             adaNaturalGift: -4          
           });
         }
-        else if(values.adaBase==4){
+        else if(resValue==4){
           setAttrs({        
             adaNaturalGift: -3          
           });
         }
-        else if(values.adaBase==5){
+        else if(resValue==5){
           setAttrs({        
             adaNaturalGift: -2          
           });
         }
-        else if(values.adaBase<8){
+        else if(resValue<8){
           setAttrs({        
             adaNaturalGift: -1          
           });
         }
-        else if(values.adaBase<10){
+        else if(resValue<10){
           setAttrs({        
             adaNaturalGift: 0       
           });
         }
-        else if(values.adaBase<13){
+        else if(resValue<13){
           setAttrs({        
             adaNaturalGift: 1         
           });
         }
-        else if(values.adaBase<16){
+        else if(resValue<16){
           setAttrs({        
             adaNaturalGift: 2         
           });
         }
-        else if(values.adaBase<19){
+        else if(resValue<19){
           setAttrs({        
             adaNaturalGift: 3         
           });
         }
-        else if(values.adaBase<22){
+        else if(resValue<22){
           setAttrs({        
             adaNaturalGift: 4         
           });
         }
-        else if(values.adaBase<25){
+        else if(resValue<25){
           setAttrs({        
             adaNaturalGift: 5         
           });
@@ -3344,53 +3378,62 @@
             adaNaturalGift: 6         
           });
         }
-      
-        if(values.perBase<4){
+      });
+    });
+
+    /* Perception */
+    on("change:perBase change:perModGen change:perModPC", function(){
+      getAttrs(["perBase","perModGen","perModPC"], function(values){
+        resValue=parseInt(values.perBase)+parseInt(values.perModGen)+parseInt(values.perModPC);
+        setAttrs({        
+            per: resValue       
+          });
+        if(resValue<4){
           setAttrs({        
             perNaturalGift: -4          
           });
         }
-        else if(values.perBase==4){
+        else if(resValue==4){
           setAttrs({        
             perNaturalGift: -3          
           });
         }
-        else if(values.perBase==5){
+        else if(resValue==5){
           setAttrs({        
             perNaturalGift: -2          
           });
         }
-        else if(values.perBase<8){
+        else if(resValue<8){
           setAttrs({        
             perNaturalGift: -1          
           });
         }
-        else if(values.perBase<10){
+        else if(resValue<10){
           setAttrs({        
             perNaturalGift: 0       
           });
         }
-        else if(values.perBase<13){
+        else if(resValue<13){
           setAttrs({        
             perNaturalGift: 1         
           });
         }
-        else if(values.perBase<16){
+        else if(resValue<16){
           setAttrs({        
             perNaturalGift: 2         
           });
         }
-        else if(values.perBase<19){
+        else if(resValue<19){
           setAttrs({        
             perNaturalGift: 3         
           });
         }
-        else if(values.perBase<22){
+        else if(resValue<22){
           setAttrs({        
             perNaturalGift: 4         
           });
         }
-        else if(values.perBase<25){
+        else if(resValue<25){
           setAttrs({        
             perNaturalGift: 5         
           });
@@ -3400,53 +3443,62 @@
             perNaturalGift: 6         
           });
         }
-        
-        if(values.intBase<4){
+      });
+    });
+
+    /* Intelligence */
+    on("change:intBase change:intModGen change:intModPC", function(){
+      getAttrs(["intBase","intModGen","intModPC"], function(values){
+        resValue=parseInt(values.intBase)+parseInt(values.intModGen)+parseInt(values.intModPC);
+        setAttrs({        
+            int: resValue       
+          });
+        if(resValue<4){
           setAttrs({        
             intNaturalGift: -4          
           });
         }
-        else if(values.intBase==4){
+        else if(resValue==4){
           setAttrs({        
             intNaturalGift: -3          
           });
         }
-        else if(values.intBase==5){
+        else if(resValue==5){
           setAttrs({        
             intNaturalGift: -2          
           });
         }
-        else if(values.intBase<8){
+        else if(resValue<8){
           setAttrs({        
             intNaturalGift: -1          
           });
         }
-        else if(values.intBase<10){
+        else if(resValue<10){
           setAttrs({        
             intNaturalGift: 0       
           });
         }
-        else if(values.intBase<13){
+        else if(resValue<13){
           setAttrs({        
             intNaturalGift: 1         
           });
         }
-        else if(values.intBase<16){
+        else if(resValue<16){
           setAttrs({        
             intNaturalGift: 2         
           });
         }
-        else if(values.intBase<19){
+        else if(resValue<19){
           setAttrs({        
             intNaturalGift: 3         
           });
         }
-        else if(values.intBase<22){
+        else if(resValue<22){
           setAttrs({        
             intNaturalGift: 4         
           });
         }
-        else if(values.intBase<25){
+        else if(resValue<25){
           setAttrs({        
             intNaturalGift: 5         
           });
@@ -3456,53 +3508,62 @@
             intNaturalGift: 6         
           });
         }
-        
-        if(values.wilBase<4){
+      });
+    });
+
+    /* Willpower */
+    on("change:wilBase change:wilModGen change:wilModPC", function(){
+      getAttrs(["wilBase","wilModGen","wilModPC"], function(values){
+        resValue=parseInt(values.wilBase)+parseInt(values.wilModGen)+parseInt(values.wilModPC);
+        setAttrs({        
+            wil: resValue       
+          });
+        if(resValue<4){
           setAttrs({        
             wilNaturalGift: -4          
           });
         }
-        else if(values.wilBase==4){
+        else if(resValue==4){
           setAttrs({        
             wilNaturalGift: -3          
           });
         }
-        else if(values.wilBase==5){
+        else if(resValue==5){
           setAttrs({        
             wilNaturalGift: -2          
           });
         }
-        else if(values.wilBase<8){
+        else if(resValue<8){
           setAttrs({        
             wilNaturalGift: -1          
           });
         }
-        else if(values.wilBase<10){
+        else if(resValue<10){
           setAttrs({        
             wilNaturalGift: 0       
           });
         }
-        else if(values.wilBase<13){
+        else if(resValue<13){
           setAttrs({        
             wilNaturalGift: 1         
           });
         }
-        else if(values.wilBase<16){
+        else if(resValue<16){
           setAttrs({        
             wilNaturalGift: 2         
           });
         }
-        else if(values.wilBase<19){
+        else if(resValue<19){
           setAttrs({        
             wilNaturalGift: 3         
           });
         }
-        else if(values.wilBase<22){
+        else if(resValue<22){
           setAttrs({        
             wilNaturalGift: 4         
           });
         }
-        else if(values.wilBase<25){
+        else if(resValue<25){
           setAttrs({        
             wilNaturalGift: 5         
           });
@@ -3512,53 +3573,62 @@
             wilNaturalGift: 6         
           });
         }
-        
-        if(values.preBase<4){
+      });
+    });
+
+    /* Presence */
+    on("change:preBase change:preModGen change:preModPC", function(){
+      getAttrs(["preBase","preModGen","preModPC"], function(values){
+        resValue=parseInt(values.preBase)+parseInt(values.preModGen)+parseInt(values.preModPC);
+        setAttrs({        
+            pre: resValue       
+          });
+        if(resValue<4){
           setAttrs({        
             preNaturalGift: -4          
           });
         }
-        else if(values.preBase==4){
+        else if(resValue==4){
           setAttrs({        
             preNaturalGift: -3          
           });
         }
-        else if(values.preBase==5){
+        else if(resValue==5){
           setAttrs({        
             preNaturalGift: -2          
           });
         }
-        else if(values.preBase<8){
+        else if(resValue<8){
           setAttrs({        
             preNaturalGift: -1          
           });
         }
-        else if(values.preBase<10){
+        else if(resValue<10){
           setAttrs({        
             preNaturalGift: 0       
           });
         }
-        else if(values.preBase<13){
+        else if(resValue<13){
           setAttrs({        
             preNaturalGift: 1         
           });
         }
-        else if(values.preBase<16){
+        else if(resValue<16){
           setAttrs({        
             preNaturalGift: 2         
           });
         }
-        else if(values.preBase<19){
+        else if(resValue<19){
           setAttrs({        
             preNaturalGift: 3         
           });
         }
-        else if(values.preBase<22){
+        else if(resValue<22){
           setAttrs({        
             preNaturalGift: 4         
           });
         }
-        else if(values.preBase<25){
+        else if(resValue<25){
           setAttrs({        
             preNaturalGift: 5         
           });
@@ -3570,4 +3640,7 @@
         }
       });
     });
+
+    /* ================= */
+
   </script>
