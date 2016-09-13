@@ -1,0 +1,14 @@
+&{template:yggdrasill} {{title=Initiative}} {{character_name=@{firstname} @{lastname}}} {{emote=lance un dé pour son initiative}} {{subheader=@{Selected|Token_Name}}} {{freetextname=Résultat}} {{freetext=[[1d10 + ?{Valeur Physique|0} &{tracker}]]}} 
+
+
+
+&{template:yggdrasill} {{title=Jet Pur}} {{character_name=@{firstname} @{lastname}}} {{freetextname=Résultat}} {{freetext=[[?{Valeur de carac|1,1d10!!+1|2,2d10!!+2|3,3d10!!k2+3|4,4d10!!k2+4|5,5d10!!k2+5}]]}}
+
+&{template:yggdrasill} {{title=Jet Standard}} {{subheader=@{Selected|Token_Name}}} {{freetextname=Résultat}} {{freetext=[[?{Valeur de carac|1,1d10!!|2,2d10!!|3,3d10!!k2|4,4d10!!k2|5,5d10!!k2} + ?{Compétence|0}]]}}
+
+&{template:yggdrasill} {{title=Jet Standard + Dé de réserve}} {{subheader=@{Selected|Token_Name}}} {{freetextname=Résultat}} {{freetext=[[?{Valeur de carac|1,1d10!!|2,2d10!!|3,3d10!!k2|4,4d10!!k2|5,5d10!!k2}  + ?{Compétence|0} + 1d10!!]]}}
+
+
+&{template:yggdrasill} {{title=Sort}} {{subheader=@{Selected|Token_Name}}} {{freetextname=Résultat}} {{freetext=[[?{Valeur de carac|1,1d10!!|2,2d10!!|3,3d10!!k2|4,4d10!!k2|5,5d10!!k2}  + ?{Compétence|0} + ?{Nb de dé de réserve|0}d10!!]]}}
+
+

@@ -1,0 +1,138 @@
+
+<div class="sheet-ygg-main">	
+	<h3>Personnage</h3>
+					
+	<table cellspacing="0" cellpadding="0" border="0" class="sheet-ygg-character">
+		<tbody>
+			<tr>
+				<td><label>Nom:</label></td>
+				<td><input type="text" name="attr_lastname" placeholder="Nom du personnage" /></td>
+				<td><label>Archétype:</label></td>
+				<td><input type="text" name="attr_archetype" placeholder="Archétype du personnage" /></td>
+				<td rowspan="5"><img src="http://img15.hostingpics.net/pics/954146logo.png" alt="Logo" class="sheet-ygg-logo" /></td>
+			</tr>
+			<tr>
+				<td><label>Prénom:</label></td>
+				<td><input type="text" name="attr_firstname" placeholder="Prénom du personnage" /></td>
+				<td><label>Profession:</label></td>
+				<td><input type="text" name="attr_job" placeholder="Profession du personnage" /></td>
+			</tr>
+			<tr>
+				<td><label>Age:</label></td>
+				<td><input type="text" name="attr_age" placeholder="Age du personnage" /></td>
+				<td><label>Taille:</label></td>
+				<td><input type="text" name="attr_height" placeholder="Taille du personnage" /></td>
+			</tr>
+			<tr>
+				<td><label>Royaume:</label></td>
+				<td><input type="text" name="attr_realm" placeholder="Royaume du personnage" /></td>
+				<td><label>Poids:</label></td>
+				<td><input type="text" name="attr_weight" placeholder="Poids du personnage" /></td>
+			</tr>
+			<tr>
+				<td><label>Don:</label></td>
+				<td><input type="text" name="attr_gift" placeholder="Don du personnage" /></td>
+				<td><label>Faiblesse:</label></td>
+				<td><input type="text" name="attr_wickness" placeholder="Faiblesse du personnage" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>Caractéristiques</h3>
+	<table cellspacing="0" cellpadding="0" border="0" class="sheet-ygg-carac">
+		<thead>
+			<tr>
+				<th colspan="2"><h4>Corps</h4></th>
+				<th style="width:20px;"></th>
+				<th colspan="2"><h4>Esprit</h4></th>
+				<th style="width:20px;"></th>
+				<th colspan="2"><h4>Ame</h4></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><label>Puissance:</label></td>
+				<td>
+					<input type="number" name="attr_pow" /><button type="roll" name="roll_pow" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Puissance}} {{character_name=@{firstname} @{lastname}}} {{emote=veut démontrer sa puissance}} {{freetextname=Résultat}} {{freetext=[[@{pow}d10k2!!+@{pow}]]}}" ></button>
+				</td>
+				<td></td>
+				<td><label>Intellect:</label></td>
+				<td>
+					<input type="number" name="attr_int" /><button type="roll" name="roll_str" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Intellect}} {{character_name=@{firstname} @{lastname}}} {{emote=réfléchi}} {{freetextname=Résultat}} {{freetext=[[@{int}d10k2!!+@{int}]]}}" ></button>
+				</td>
+				<td></td>
+				<td><label>Charisme:</label></td>
+				<td>
+					<input type="number" name="attr_cha" /><button type="roll" name="roll_cha" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Charisme}} {{character_name=@{firstname} @{lastname}}} {{emote=essaye d'influencer}} {{freetextname=Résultat}} {{freetext=[[@{cha}d10k2!!+@{cha}]]}}" ></button>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Vigueur:</label></td>
+				<td>
+					<input type="number" name="attr_str" /><button type="roll" name="roll_str" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Vigueur}} {{character_name=@{firstname} @{lastname}}} {{emote=veut montrer sa force}} {{freetextname=Résultat}} {{freetext=[[@{str}d10k2!!+@{str}]]}}" ></button>
+				</td>
+				<td></td>
+				<td><label>Perception:</label></td>
+				<td>
+					<input type="number" name="attr_per" /><button type="roll" name="roll_per" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Perception}} {{character_name=@{firstname} @{lastname}}} {{emote=ouvre les yeux}} {{freetextname=Résultat}} {{freetext=[[@{per}d10k2!!+@{per}]]}}" ></button>
+				</td>
+				<td></td>
+				<td><label>Instinct:</label></td>
+				<td>
+					<input type="number" name="attr_ins" /><button type="roll" name="roll_ins" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Instinct}} {{character_name=@{firstname} @{lastname}}} {{emote=fait appel à tous ces sens}} {{freetextname=Résultat}} {{freetext=[[@{ins}d10k2!!+@{ins}]]}}" ></button>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Agilité:</label></td>
+				<td>
+					<input type="number" name="attr_agi" /><button type="roll" name="roll_agi" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Agilité}} {{character_name=@{firstname} @{lastname}}} {{emote=démontre sa souplesse}} {{freetextname=Résultat}} {{freetext=[[@{agi}d10k2!!+@{agi}]]}}" ></button>
+				</td>
+				<td></td>
+				<td><label>Ténacité:</label></td>
+				<td>
+					<input type="number" name="attr_ten" /><button type="roll" name="roll_ten" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Ténacité}} {{character_name=@{firstname} @{lastname}}} {{emote=ne lâche rien}} {{freetextname=Résultat}} {{freetext=[[@{ten}d10k2!!+@{ten}]]}}" ></button>
+				</td>
+				<td></td>
+				<td><label>Communication:</label></td>
+				<td>
+					<input type="number" name="attr_com" /><button type="roll" name="roll_com" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Comùmunication}} {{character_name=@{firstname} @{lastname}}} {{emote=montre son élocance}} {{freetextname=Résultat}} {{freetext=[[@{com}d10k2!!+@{com}]]}}" ></button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<rolltemplate class="sheet-rolltemplate-yggdrasill">
+	
+	<div class="sheet-rt-card">
+		
+		<div class="sheet-rt-header sheet-ability">
+			
+			<div class="sheet-rt-title">{{title}}</div>
+			{{#subheader}}
+			<div class="sheet-rt-subheader">{{subheader}}{{#subheaderright}} &bullet; {{subheaderright}}{{/subheaderright}}</div>
+			{{/subheader}}
+			
+			{{#subheader2}}
+			<div class="sheet-rt-subheader">{{subheader2}}{{#subheaderright2}} &bullet; {{subheaderright2}}{{/subheaderright2}}</div>
+			{{/subheader2}}
+		</div>
+					
+		{{#emote}}
+		<p class="sheet-rt-emote">{{character_name}} {{emote}}</p>
+		{{/emote}}
+		
+		<div class="sheet-main-content">
+			
+			<!--Generic section-->
+			{{#freetext}}
+				<div class="sheet-row">
+					<div class="sheet-col-5-12 sheet-padl sheet-padr sheet-rt-key">{{freetextname}}</div>
+					<div class="sheet-col-7-12 sheet-padr sheet-rt-value">{{freetext}}</div>
+				</div>			
+			{{/freetext}}			
+			
+		</div>
+		
+	</div>
+	
+</rolltemplate>

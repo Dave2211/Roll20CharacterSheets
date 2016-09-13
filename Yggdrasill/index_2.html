@@ -1,0 +1,824 @@
+<div class="sheet-ygg-main">
+    <h1>YGGDRASILL</h1>
+    <img src="http://img15.hostingpics.net/pics/954146logo.png" alt="Logo" class="sheet-ygg-logo sheet-float-left" />
+    <img src="http://img15.hostingpics.net/pics/954146logo.png" alt="Logo" class="sheet-ygg-logo sheet-float-right" />
+	<input type="radio" class="sheet-tab sheet-tab-character" name="attr_csc" value="1" title="Personnage" checked="checked" /><span class="sheet-tab sheet-tab-character">Personnage</span>
+	<input type="radio" class="sheet-tab sheet-tab-features" name="attr_csc" value="2" title="Caractéristiques" /><span class="sheet-tab sheet-tab-features">Caractéristiques</span>
+	<br/>
+	<input type="radio" class="sheet-tab sheet-tab-skills" name="attr_csc" value="3" title="Compétences" /><span class="sheet-tab sheet-tab-skills">Compétences</span> 
+	<input type="radio" class="sheet-tab sheet-tab-weapon" name="attr_csc" value="4" title="Armes et Equipements" /><span class="sheet-tab sheet-tab-weapon">Armes & Equipement</span>
+	<br/>
+	<input type="radio" class="sheet-tab sheet-tab-spell" name="attr_csc" value="5" title="Sorts et Magie" /><span class="sheet-tab sheet-tab-spell">Sorts & Magie</span>
+	<input type="radio" class="sheet-tab sheet-tab-notes" name="attr_csc" value="6" title="Notes" /><span class="sheet-tab sheet-tab-notes">Notes</span>
+    <br style="clear:both;"/>
+    <br/>
+    <div class="sheet-tab-content sheet-tab-character">
+         <h3>Personnage</h3>
+
+        <table cellspacing="0" cellpadding="0" border="0" class="sheet-ygg-character">
+            <tbody>
+                <tr>
+                    <td class="sheet-text-align-right">
+                        <label class="sheet-label">Nom:</label>
+                    </td>
+                    <td class="sheet-text-align-left">
+                        <input type="text" name="attr_lastname" />
+                    </td>
+                    <td class="sheet-text-align-right">
+                        <label class="sheet-label">Archétype:</label>
+                    </td>
+                    <td class="sheet-text-align-left">
+						<select name="attr_archetype" class="sheet-dropdown-character">
+							<option value="" selected="selected">Noble</option>
+							<option value="">Guerrier</option>
+							<option value="">Sage</option>
+							<option value="">Travailleur</option>
+							<option value="">Voyageur</option>
+						</select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sheet-text-align-right">
+                        <label class="sheet-label">Prénom:</label>
+                    </td>
+                    <td class="sheet-text-align-left">
+                        <input type="text" name="attr_firstname" />
+                    </td>
+                    <td class="sheet-text-align-right">
+                        <label class="sheet-label">Profession:</label>
+                    </td>
+                    <td class="sheet-text-align-left">
+						<select name="attr_job" class="sheet-dropdown-character">
+							<option value="" selected="selected">Jarl</option>
+							<option value="">Chef de Guerre</option>
+							<option value="">Conseiller du Seigneur</option>
+							<option value=""></option>
+							<option value="">Hirdmen</option>
+							<option value="">Berserkr</option>
+							<option value="">Mercenaire</option>
+							<option value=""></option>
+							<option value="">Völva</option>
+							<option value="">Thurl</option>
+							<option value="">Scalde</option>
+							<option value="">Soigneur</option>
+							<option value=""></option>							
+							<option value="">Artisan</option>
+							<option value="">Charpentier de marine</option>
+							<option value="">Fermier</option>
+							<option value="">Forestier</option>
+							<option value="">Mineur</option>
+							<option value=""></option>
+							<option value="">Commandant de navire</option>
+							<option value="">Pilote</option>
+							<option value="">Marchand</option>
+							<option value="">Emissaire</option>
+							<option value="">Forgeron Itinérant</option>
+							<option value="">Espion</option>
+						</select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sheet-text-align-right">
+                        <label class="sheet-label">Age:</label>
+                    </td>
+                    <td class="sheet-text-align-left">
+                        <input type="text" name="attr_age" />
+                    </td>
+                    <td class="sheet-text-align-right">
+                        <label class="sheet-label">Taille:</label>
+                    </td>
+                    <td class="sheet-text-align-left">
+                        <input type="text" name="attr_height" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sheet-text-align-right">
+                        <label class="sheet-label">Royaume:</label>
+                    </td>
+                    <td class="sheet-text-align-left">
+                        <input type="text" name="attr_realm" />
+                    </td>
+                    <td class="sheet-text-align-right">
+                        <label class="sheet-label">Poids:</label>
+                    </td>
+                    <td class="sheet-text-align-left">
+                        <input type="text" name="attr_weight" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sheet-text-align-right">
+                        <label class="sheet-label">Don:</label>
+                    </td>
+                    <td class="sheet-text-align-left">
+                        <input type="text" name="attr_gift" />
+                    </td>
+                    <td class="sheet-text-align-right">
+                        <label class="sheet-label">Faiblesse:</label>
+                    </td>
+                    <td class="sheet-text-align-left">
+                        <input type="text" name="attr_wickness" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="sheet-tab-content sheet-tab-features">
+         <h3>Caractéristiques</h3>
+
+        <table cellspacing="0" cellpadding="0" border="0" class="sheet-ygg-carac">
+            <thead>
+                <tr>
+                    <th colspan="2" class="sheet-top-td sheet-left-td sheet-right-td">
+                         <h4>Corps</h4>
+                    </th>
+                    <th style="width:20px;"></th>
+                    <th colspan="2" class="sheet-top-td sheet-left-td sheet-right-td">
+                         <h4>Esprit</h4>
+                    </th>
+                    <th style="width:20px;"></th>
+                    <th colspan="2" class="sheet-top-td sheet-left-td sheet-right-td">
+                         <h4>Ame</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sheet-left-td">
+                        <label class="sheet-label">Puissance:</label>
+                    </td>
+                    <td class="sheet-right-td">
+                        <input type="number" name="attr_pow" max="5" />
+                        <button type="roll" name="roll_pow" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Puissance}} {{character_name=@{firstname} @{lastname}}} {{emote=veut démontrer sa puissance}} {{freetextname=Résultat}} {{freetext=[[@{pow}d10!!k2+@{pow}]]}}"></button>
+                    </td>
+                    <td></td>
+                    <td class="sheet-left-td">
+                        <label class="sheet-label">Intellect:</label>
+                    </td>
+                    <td class="sheet-right-td">
+                        <input type="number" name="attr_int" max="5" />
+                        <button type="roll" name="roll_int" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Intellect}} {{character_name=@{firstname} @{lastname}}} {{emote=réfléchi}} {{freetextname=Résultat}} {{freetext=[[@{int}d10!!k2+@{int}]]}}"></button>
+                    </td>
+                    <td></td>
+                    <td class="sheet-left-td">
+                        <label class="sheet-label">Charisme:</label>
+                    </td>
+                    <td class="sheet-right-td">
+                        <input type="number" name="attr_cha" max="5" />
+                        <button type="roll" name="roll_cha" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Charisme}} {{character_name=@{firstname} @{lastname}}} {{emote=essaye d'influencer}} {{freetextname=Résultat}} {{freetext=[[@{cha}d10!!k2+@{cha}]]}}"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sheet-left-td">
+                        <label class="sheet-label">Vigueur:</label>
+                    </td>
+                    <td class="sheet-right-td">
+                        <input type="number" name="attr_str" max="5" />
+                        <button type="roll" name="roll_str" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Vigueur}} {{character_name=@{firstname} @{lastname}}} {{emote=veut montrer sa force}} {{freetextname=Résultat}} {{freetext=[[@{str}d10!!k2+@{str}]]}}"></button>
+                    </td>
+                    <td></td>
+                    <td class="sheet-left-td">
+                        <label class="sheet-label">Perception:</label>
+                    </td>
+                    <td class="sheet-right-td">
+                        <input type="number" name="attr_per" max="5" />
+                        <button type="roll" name="roll_per" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Perception}} {{character_name=@{firstname} @{lastname}}} {{emote=ouvre les yeux}} {{freetextname=Résultat}} {{freetext=[[@{per}d10!!k2+@{per}]]}}"></button>
+                    </td>
+                    <td></td>
+                    <td class="sheet-left-td">
+                        <label class="sheet-label">Instinct:</label>
+                    </td>
+                    <td class="sheet-right-td">
+                        <input type="number" name="attr_ins" max="5" />
+                        <button type="roll" name="roll_ins" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Instinct}} {{character_name=@{firstname} @{lastname}}} {{emote=fait appel à tous ces sens}} {{freetextname=Résultat}} {{freetext=[[@{ins}d10!!k2+@{ins}]]}}"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sheet-left-td sheet-bottom-td">
+                        <label class="sheet-label">Agilité:</label>
+                    </td>
+                    <td class="sheet-right-td sheet-bottom-td">
+                        <input type="number" name="attr_agi" max="5" />
+                        <button type="roll" name="roll_agi" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Agilité}} {{character_name=@{firstname} @{lastname}}} {{emote=démontre sa souplesse}} {{freetextname=Résultat}} {{freetext=[[@{agi}d10!!k2+@{agi}]]}}"></button>
+                    </td>
+                    <td></td>
+                    <td class="sheet-left-td sheet-bottom-td">
+                        <label class="sheet-label">Ténacité:</label>
+                    </td>
+                    <td class="sheet-right-td sheet-bottom-td">
+                        <input type="number" name="attr_ten" max="5" />
+                        <button type="roll" name="roll_ten" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Ténacité}} {{character_name=@{firstname} @{lastname}}} {{emote=ne lâche rien}} {{freetextname=Résultat}} {{freetext=[[@{ten}d10!!k2+@{ten}]]}}"></button>
+                    </td>
+                    <td></td>
+                    <td class="sheet-left-td sheet-bottom-td">
+                        <label class="sheet-label">Communication:</label>
+                    </td>
+                    <td class="sheet-right-td sheet-bottom-td">
+                        <input type="number" name="attr_com" max="5" />
+                        <button type="roll" name="roll_com" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Communication}} {{character_name=@{firstname} @{lastname}}} {{emote=montre son élocance}} {{freetextname=Résultat}} {{freetext=[[@{com}d10!!k2+@{com}]]}}"></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+		<table cellspacing="0" cellpadding="0" border="0" class="sheet-ygg-character">
+            <tbody>
+                <tr>
+					<td>
+						<label class="sheet-label">PV</label>
+					</td>
+					<td>
+						<label class="sheet-label">Blessé</label>
+					</td>
+					<td>
+						<label class="sheet-label">Meurtri</label>
+					</td>
+					<td>
+						<label class="sheet-label">Inconscient</label>
+					</td>
+					<td>
+						<label class="sheet-label">Mort</label>
+					</td>
+				</tr>
+                <tr>
+					<td>
+						<input type="number" name="attr_pv" value="" />/
+						<input type="number" name="attr_pv_max" value="(((@{pow}+@{str}+@{agi})*3)+((@{int}+@{per}+@{ten})*2)+(@{cha}+@{ins}+@{com}))" disabled="true" />        
+					</td>
+					<td>
+						<input type="number" name="attr_wounded" value="round((@{pv_max}/2))" disabled="true" />
+					</td>
+					<td>
+						<input type="number" name="attr_seriously_wounded" value="round((@{pv_max}/4))" disabled="true" />
+					</td>
+					<td>
+						<input type="number" name="attr_passed_out" value="0" disabled="true" />
+					</td>
+					<td>
+						<input type="number" name="attr_dead" value="0-round(((@{pv_max}/4)))" disabled="true" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<table cellspacing="0" cellpadding="0" border="0" class="sheet-ygg-character">
+            <tbody>
+                <tr>
+					<td>
+						<label class="sheet-label">Réaction:</label>
+					</td>
+					<td>
+						<input type="number" name="attr_wounded" value="(@{int}+@{per}+@{ins})" disabled="true" />
+					</td>
+					<td>
+						<label class="sheet-label">Cap. Encombrement:</label>
+					</td>
+					<td>
+						<input type="number" name="attr_wounded" value="((@{pow}*2)+@{str})" disabled="true" />
+					</td>
+				</tr>
+                <tr>
+					<td>
+						<label class="sheet-label">Def. Physique:</label>
+					</td>
+					<td>
+						<input type="number" name="attr_wounded" value="(@{agi}+@{str}+@{ins})" disabled="true" />
+					</td>
+					<td>
+						<label class="sheet-label">Déplacement:</label>
+					</td>
+					<td>
+						<input type="number" name="attr_wounded" value="(@{agi}+@{str})" disabled="true" />
+					</td>
+				</tr>
+                <tr>
+					<td>
+						<label class="sheet-label">Def. Mentale:</label>
+					</td>
+					<td>
+						<input type="number" name="attr_wounded" value="(@{ten}+@{int}+@{ins})" disabled="true" />
+					</td>
+					<td>
+						<label class="sheet-label">Actions:</label>
+					</td>
+					<td>
+						<input type="number" name="attr_wounded" value="(@{agi}+@{str})" disabled="true" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		        
+    </div>
+    <div class="sheet-tab-content sheet-tab-skills">
+        <h3>Compétences</h3>
+		
+		<input type="radio" class="sheet-tab-hp sheet-tab-fullhp" name="attr_skills" value="1" title="Full HP" checked="checked" /><span class="sheet-tab-hp sheet-tab-fullhp">Full HP</span>
+		<input type="radio" class="sheet-tab-hp sheet-tab-halfhp" name="attr_skills" value="2" title="Half HP" /><span class="sheet-tab-hp sheet-tab-halfhp">1/2 HP</span>
+		<input type="radio" class="sheet-tab-hp sheet-tab-quarterhp" name="attr_skills" value="3" title="Quarter HP" /><span class="sheet-tab-hp sheet-tab-quarterhp">1/4 HP</span>
+		
+		<br style="clear:both;"/>
+		<br/>
+		
+		<div class="sheet-tab-content sheet-tab-fullhp">
+			
+			<select name="attr_feature1" class="sheet-dropdown">
+				<option value="@{pow}" selected="selected">Puissance</option>
+				<option value="@{str}">Vigueur</option>
+				<option value="@{agi}">Agilité</option>
+				<option value=""></option>
+				<option value="@{int}">Intellect</option>
+				<option value="@{per}">Perception</option>
+				<option value="@{ten}">Ténacité</option>
+				<option value=""></option>
+				<option value="@{cha}">Charisme</option>
+				<option value="@{ins}">Instinct</option>
+				<option value="@{com}">Communication</option>
+			</select>
+			<select name="attr_skill1" class="sheet-dropdown">
+				<option value="@{acrobatics}" selected="selected">Acrobatie</option>
+				<option value="@{craft}">Artisanat</option>
+				<option value="@{arts}">Arts</option>
+				<option value="@{drive}">Attelage</option>
+				<option value="@{search}">Chercher</option>
+				<option value="@{ride}">Chevaucher</option>
+				<option value="@{commerce}">Commerce</option>
+				<option value="@{stealth}">Discrétion</option>
+				<option value="@{eloquence}">Eloquence</option>
+				<option value="@{empathy}">Empathie</option>
+				<option value="@{climbing}">Escalade</option>
+				<option value="@{dodge}">Esquive</option>
+				<option value="@{herbalism}">Herboristerie</option>
+				<option value="@{intimidation}">Intimidation</option>
+				<option value="@{games}">Jeux</option>
+				<option value="@{languages}">Langues</option>
+				<option value="@{theft}">Larcins</option>
+				<option value="@{medecine}">Médecine</option>
+				<option value="@{athletics}">Mouvement</option>
+				<option value="@{navigatation}">Navigation</option>
+				<option value="@{swim}">Natation</option>
+				<option value="@{negociation}">Négociation</option>
+				<option value="@{sagas}">Sagas</option>
+				<option value="@{knowledge}">Savoir</option>
+				<option value="@{seduction}">Séduction</option>
+				<option value="@{superstition}">Superstition</option>
+				<option value="@{survival}">Survie</option>
+				<option value="@{tactics}">Tactique</option>
+				<option value="@{traditions}">Traditions</option>
+				<option value="@{vigilance}">Vigilance</option>
+				<option value=""></option>
+				<option value="@{garld}">Galdr</option>
+				<option value="@{runes}">Runes</option>
+				<option value="@{sejdr}">Sejdr</option>
+				<option value=""></option>
+				<option value="@{shortweapon}">Armes courtes</option>
+				<option value="@{longweapon}">Armes longues</option>
+				<option value="@{twohandedweapon}">Armes à deux mains</option>
+				<option value="@{poleweapon}">Armes d’hast</option>
+				<option value="@{rangedweapon}">Armes de tir</option>
+				<option value="@{throwweapon}">Lancer</option>
+				<option value="@{handtohand}">Lutte</option>
+				<option value="@{improvweapon}">Armes Improvisées</option>
+				<option value=""></option>
+				<option value="@{skill1val}">Comp Perso 1</option>
+				<option value="@{skill2val}">Comp Perso 2</option>
+			</select>	
+		
+			<select name="attr_resultThreshold1" class="sheet-dropdown">
+				<option value="5">SR5</option>
+				<option value="7">SR7</option>
+				<option value="10">SR10</option>
+				<option value="14" selected="selected">SR14</option>
+				<option value="19">SR19</option>
+				<option value="25">SR25</option>
+				<option value="32">SR32</option>
+				<option value="40">SR40</option>
+				<option value="49">SR49</option>
+			</select>
+			
+			<button type="roll" name="roll_test" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Compétence}} {{freetextname=Résultat}} {{freetext=[[{@{feature1}d10!!k2+@{skill1}}>@{resultThreshold1}]]}}"></button>
+		</div>	
+		<div class="sheet-tab-content sheet-tab-halfhp">
+			
+			<select name="attr_feature2" class="sheet-dropdown">
+				<option value="@{pow}" selected="selected">Puissance</option>
+				<option value="@{str}">Vigueur</option>
+				<option value="@{agi}">Agilité</option>
+				<option value=""></option>
+				<option value="@{int}">Intellect</option>
+				<option value="@{per}">Perception</option>
+				<option value="@{ten}">Ténacité</option>
+				<option value=""></option>
+				<option value="@{cha}">Charisme</option>
+				<option value="@{ins}">Instinct</option>
+				<option value="@{com}">Communication</option>
+			</select>
+			<select name="attr_skill2" class="sheet-dropdown">
+				<option value="@{acrobatics}" selected="selected">Acrobatie</option>
+				<option value="@{craft}">Artisanat</option>
+				<option value="@{arts}">Arts</option>
+				<option value="@{drive}">Attelage</option>
+				<option value="@{search}">Chercher</option>
+				<option value="@{ride}">Chevaucher</option>
+				<option value="@{commerce}">Commerce</option>
+				<option value="@{stealth}">Discrétion</option>
+				<option value="@{eloquence}">Eloquence</option>
+				<option value="@{empathy}">Empathie</option>
+				<option value="@{climbing}">Escalade</option>
+				<option value="@{dodge}">Esquive</option>
+				<option value="@{herbalism}">Herboristerie</option>
+				<option value="@{intimidation}">Intimidation</option>
+				<option value="@{games}">Jeux</option>
+				<option value="@{languages}">Langues</option>
+				<option value="@{theft}">Larcins</option>
+				<option value="@{medecine}">Médecine</option>
+				<option value="@{athletics}">Mouvement</option>
+				<option value="@{navigatation}">Navigation</option>
+				<option value="@{swim}">Natation</option>
+				<option value="@{negociation}">Négociation</option>
+				<option value="@{sagas}">Sagas</option>
+				<option value="@{knowledge}">Savoir</option>
+				<option value="@{seduction}">Séduction</option>
+				<option value="@{superstition}">Superstition</option>
+				<option value="@{survival}">Survie</option>
+				<option value="@{tactics}">Tactique</option>
+				<option value="@{traditions}">Traditions</option>
+				<option value="@{vigilance}">Vigilance</option>
+				<option value=""></option>
+				<option value="@{garld}">Galdr</option>
+				<option value="@{runes}">Runes</option>
+				<option value="@{sejdr}">Sejdr</option>
+				<option value=""></option>
+				<option value="@{shortweapon}">Armes courtes</option>
+				<option value="@{longweapon}">Armes longues</option>
+				<option value="@{twohandedweapon}">Armes à deux mains</option>
+				<option value="@{poleweapon}">Armes d’hast</option>
+				<option value="@{rangedweapon}">Armes de tir</option>
+				<option value="@{throwweapon}">Lancer</option>
+				<option value="@{handtohand}">Lutte</option>
+				<option value="@{improvweapon}">Armes Improvisées</option>
+				<option value=""></option>
+				<option value="@{skill1val}">Comp Perso 1</option>
+				<option value="@{skill2val}">Comp Perso 2</option>
+			</select>	
+		
+			<select name="attr_resultThreshold2" class="sheet-dropdown">
+				<option value="5">SR5</option>
+				<option value="7">SR7</option>
+				<option value="10">SR10</option>
+				<option value="14" selected="selected">SR14</option>
+				<option value="19">SR19</option>
+				<option value="25">SR25</option>
+				<option value="32">SR32</option>
+				<option value="40">SR40</option>
+				<option value="49">SR49</option>
+			</select>
+			
+			<button type="roll" name="roll_test" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Compétence}} {{freetextname=Résultat}} {{freetext=[[{@{feature2}d10!!k2+(@{skill2}-3)}>@{resultThreshold2}]]}}"></button>
+		</div>
+		<div class="sheet-tab-content sheet-tab-quarterhp">
+		
+			<select name="attr_feature3" class="sheet-dropdown">
+				<option value="@{pow}" selected="selected">Puissance</option>
+				<option value="@{str}">Vigueur</option>
+				<option value="@{agi}">Agilité</option>
+				<option value=""></option>
+				<option value="@{int}">Intellect</option>
+				<option value="@{per}">Perception</option>
+				<option value="@{ten}">Ténacité</option>
+				<option value=""></option>
+				<option value="@{cha}">Charisme</option>
+				<option value="@{ins}">Instinct</option>
+				<option value="@{com}">Communication</option>
+			</select>
+			<select name="attr_skill3" class="sheet-dropdown">
+				<option value="@{acrobatics}" selected="selected">Acrobatie</option>
+				<option value="@{craft}">Artisanat</option>
+				<option value="@{arts}">Arts</option>
+				<option value="@{drive}">Attelage</option>
+				<option value="@{search}">Chercher</option>
+				<option value="@{ride}">Chevaucher</option>
+				<option value="@{commerce}">Commerce</option>
+				<option value="@{stealth}">Discrétion</option>
+				<option value="@{eloquence}">Eloquence</option>
+				<option value="@{empathy}">Empathie</option>
+				<option value="@{climbing}">Escalade</option>
+				<option value="@{dodge}">Esquive</option>
+				<option value="@{herbalism}">Herboristerie</option>
+				<option value="@{intimidation}">Intimidation</option>
+				<option value="@{games}">Jeux</option>
+				<option value="@{languages}">Langues</option>
+				<option value="@{theft}">Larcins</option>
+				<option value="@{medecine}">Médecine</option>
+				<option value="@{athletics}">Mouvement</option>
+				<option value="@{navigatation}">Navigation</option>
+				<option value="@{swim}">Natation</option>
+				<option value="@{negociation}">Négociation</option>
+				<option value="@{sagas}">Sagas</option>
+				<option value="@{knowledge}">Savoir</option>
+				<option value="@{seduction}">Séduction</option>
+				<option value="@{superstition}">Superstition</option>
+				<option value="@{survival}">Survie</option>
+				<option value="@{tactics}">Tactique</option>
+				<option value="@{traditions}">Traditions</option>
+				<option value="@{vigilance}">Vigilance</option>
+				<option value=""></option>
+				<option value="@{garld}">Galdr</option>
+				<option value="@{runes}">Runes</option>
+				<option value="@{sejdr}">Sejdr</option>
+				<option value=""></option>
+				<option value="@{shortweapon}">Armes courtes</option>
+				<option value="@{longweapon}">Armes longues</option>
+				<option value="@{twohandedweapon}">Armes à deux mains</option>
+				<option value="@{poleweapon}">Armes d’hast</option>
+				<option value="@{rangedweapon}">Armes de tir</option>
+				<option value="@{throwweapon}">Lancer</option>
+				<option value="@{handtohand}">Lutte</option>
+				<option value="@{improvweapon}">Armes Improvisées</option>
+				<option value=""></option>
+				<option value="@{skill1val}">Comp Perso 1</option>
+				<option value="@{skill2val}">Comp Perso 2</option>
+			</select>	
+		
+			<select name="attr_resultThreshold3" class="sheet-dropdown">
+				<option value="5">SR5</option>
+				<option value="7">SR7</option>
+				<option value="10">SR10</option>
+				<option value="14" selected="selected">SR14</option>
+				<option value="19">SR19</option>
+				<option value="25">SR25</option>
+				<option value="32">SR32</option>
+				<option value="40">SR40</option>
+				<option value="49">SR49</option>
+			</select>
+			
+			<button type="roll" name="roll_test" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Compétence}} {{freetextname=Résultat}} {{freetext=[[{(@{feature3}-1)d10!!k2+@{skill3}}>@{resultThreshold2}]]}}"></button>
+		</div>
+		
+		
+		<table cellspacing="0" cellpadding="0" border="0" class="sheet-ygg-skills" >
+			<tr>
+				<td>Acrobatie</td>
+				<td>
+					<input type="number" name="attr_acrobatics" value="0" max="20" />
+				</td>
+				<td>Langues* (<input type="text" name="attr_languagedetail" style="width:75px;" />)</td>
+				<td>
+					<input type="number" name="attr_languages" value="0" max="20" />
+				</td>
+				<td>Galdr*</td>
+				<td>
+					<input type="number" name="attr_garld" value="0" max="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>Artisanat (<input type="text" name="attr_craftdetail" style="width:75px;" />)</td>
+				<td>
+					<input type="number" name="attr_craft" value="0" max="20" />
+				</td>
+				<td>Larcins</td>
+				<td>
+					<input type="number" name="attr_theft" value="0" max="20" />
+				</td>
+				<td>Runes*</td>
+				<td>
+					<input type="number" name="attr_runes" value="0" max="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>Arts (<input type="text" name="attr_artsdetail" style="width:75px;" />)</td>
+				<td>
+					<input type="number" name="attr_arts" value="0" max="20" />
+				</td>
+				<td>Médecine*</td>
+				<td>
+					<input type="number" name="attr_medecine" value="0" max="20" />
+				</td>
+				<td>Sejdr*</td>
+				<td>
+					<input type="number" name="attr_sejdr" value="0" max="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>Attelage</td>
+				<td>
+					<input type="number" name="attr_drive" value="0" max="20" />
+				</td>
+				<td>Mouvement</td>
+				<td>
+					<input type="number" name="attr_athletics" value="0" max="20" />
+				</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Chercher</td>
+				<td>
+					<input type="number" name="attr_search" value="0" max="20" />
+				</td>
+				<td>Navigation</td>
+				<td>
+					<input type="number" name="attr_navigatation" value="0" max="20" />
+				</td>
+				<td>Armes courtes</td>
+				<td>
+					<input type="number" name="attr_shortweapon" value="0" max="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>Chevaucher</td>
+				<td>	
+					<input type="number" name="attr_ride" value="0" max="20" />
+				</td>
+				<td>Natation</td>
+				<td>
+					<input type="number" name="attr_swim" value="0" max="20" />
+				</td>
+				<td>Armes longues</td>
+				<td>
+					<input type="number" name="attr_longweapon" value="0" max="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>Commerce</td>
+				<td>
+					<input type="number" name="attr_commerce" value="0" max="20" />
+				</td>
+				<td>Négociation</td>
+				<td>
+					<input type="number" name="attr_negociation" value="0" max="20" />
+				</td>
+				<td>Armes à deux mains</td>
+				<td>
+					<input type="number" name="attr_twohandedweapon" value="0" max="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>Discrétion</td>
+				<td>
+					<input type="number" name="attr_stealth" value="0" max="20" />
+				</td>
+				<td>Sagas</td>
+				<td>
+					<input type="number" name="attr_sagas" value="0" max="20" />
+				</td>
+				<td>Armes d’hast</td>
+				<td>
+					<input type="number" name="attr_poleweapon" value="0" max="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>Eloquence</td>
+				<td>
+					<input type="number" name="attr_eloquence" value="0" max="20" />
+				</td>
+				<td>Savoir (<input type="text" name="attr_knowledgedetail" style="width:75px;" />)</td>
+				<td>
+					<input type="number" name="attr_knowledge" value="0" max="20" />
+				</td>
+				<td>Armes de tir</td>
+				<td>
+					<input type="number" name="attr_rangedweapon" value="0" max="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>Empathie</td>
+				<td>
+					<input type="number" name="attr_empathy" value="0" max="20" />
+				</td>
+				<td>Séduction</td>
+				<td>
+					<input type="number" name="attr_seduction" value="0" max="20" />
+				</td>
+				<td>Lancer</td>
+				<td>
+					<input type="number" name="attr_throwweapon" value="0" max="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>Escalade</td>
+				<td>
+					<input type="number" name="attr_climbing" value="0" max="20" />
+				</td>
+				<td>Superstition</td>
+				<td>
+					<input type="number" name="attr_superstition" value="0" max="20" />
+				</td>
+				<td>Lutte</td>
+				<td>
+					<input type="number" name="attr_handtohand" value="0" max="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>Esquive</td>
+				<td>
+					<input type="number" name="attr_dodge" value="0" max="20" />
+				</td>
+				<td>Survie</td>
+				<td>
+					<input type="number" name="attr_survival" value="0" max="20" />
+				</td>
+				<td>Armes Improvisées</td>
+				<td>
+					<input type="number" name="attr_improvweapon" value="0" max="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>Herboristerie</td>
+				<td>
+					<input type="number" name="attr_herbalism" value="0" max="20" />
+				</td>
+				<td>Tactique</td>
+				<td>
+					<input type="number" name="attr_tactics" value="0" max="20" />
+				</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Intimidation</td>
+				<td>
+					<input type="number" name="attr_intimidation" value="0" max="20" />
+				</td>
+				<td>Traditions</td>
+				<td>
+					<input type="number" name="attr_traditions" value="0" max="20" />
+				</td>
+				<td><input type="text" name="attr_skill1name" style="width:120px;" /></td>
+				<td>
+					<input type="number" name="attr_skill1val" value="0" max="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>Jeux</td>
+				<td>
+					<input type="number" name="attr_games" value="0" max="20" />
+				</td>
+				<td>Vigilance</td>
+				<td>
+					<input type="number" name="attr_vigilance" value="0" max="20" />
+				</td>
+				<td><input type="text" name="attr_skill2name" style="width:120px;" /></td>
+				<td>
+					<input type="number" name="attr_skill2val" value="0" max="20" />
+				</td>
+			</tr>
+		</table>
+			
+	</div>
+    <div class="sheet-tab-content sheet-tab-weapon">
+         <h3>Armes et Equipement</h3>
+		<fieldset class="repeating_skills">   
+			<input type="text" name="attr_weapon" />
+			<input type="number" name="attr_weaponlvl" />
+			<input type="number" name="attr_weapondmg" />
+			<input type="number" name="attr_weaponpc" />
+			<input type="number" name="attr_weaponpm" />
+			<input type="number" name="attr_weaponpl" />
+			<input type="number" name="attr_weaponpe" />
+			<input type="text" name="attr_weaponexploit" />
+			<button type="roll" name="roll_weapon" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Attaque}} {{character_name=@{firstname} @{lastname}}} {{emote=attaque avec @{weapon}}} {{freetextname=Résultat}} {{freetext=[[@{pow}d10!!k2+@{pow}]]}}"></button>
+		</fieldset>
+    </div>
+    <div class="sheet-tab-content sheet-tab-spell">
+         <h3>Sorts & Magie</h3>
+		
+    </div>
+    <div class="sheet-tab-content sheet-tab-notes">
+         <h3>Notes</h3>
+        <textarea name="attr_notes" style="width:99%;" placeholder="Prennez des notes"></textarea>
+    </div>
+</div>
+
+<rolltemplate class="sheet-rolltemplate-yggdrasill">
+    <div class="sheet-rt-card">
+        <div class="sheet-rt-header sheet-ability">
+            <div class="sheet-rt-title">{{title}}</div>{{#subheader}}
+            <div class="sheet-rt-subheader">{{subheader}}{{#subheaderright}} &bullet; {{subheaderright}}{{/subheaderright}}</div>{{/subheader}} {{#subheader2}}
+            <div class="sheet-rt-subheader">{{subheader2}}{{#subheaderright2}} &bullet; {{subheaderright2}}{{/subheaderright2}}</div>{{/subheader2}}
+		</div>
+		{{#emote}}
+        <p class="sheet-rt-emote">{{character_name}} {{emote}}</p>
+		{{/emote}}
+        <div class="sheet-main-content">
+            <!--Generic section-->
+			{{#freetext}}
+            <div class="sheet-row">
+                <div class="sheet-col-5-12 sheet-padl sheet-padr sheet-rt-key">{{freetextname}}</div>
+                <div class="sheet-col-7-12 sheet-padr sheet-rt-value">{{freetext}}</div>
+            </div>
+			{{/freetext}}
+		</div>
+    </div>
+</rolltemplate>
+
+<script type="text/worker">
+
+	on("change:pow", function() {
+		console.log("POWER CHANGE!");
+		getAttrs(["pow"], function(values) {
+		  setAttrs({
+			  realm: Math.floor(values.pow / 2)
+		  });
+	   });
+	});
+
+</script>
