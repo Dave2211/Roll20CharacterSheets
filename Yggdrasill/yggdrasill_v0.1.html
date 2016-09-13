@@ -1,0 +1,284 @@
+<div class="sheet-main-container">
+	<!--spacer so scrollbar does not disappear-->
+	<div style="width:1px; height:600px; min-height:600px;position:absolute;left:1px;">&nbsp;</div>
+	<header>
+		<div class="sheet-table-row">
+			<label class="sheet-table-cell" style="width:22%;"><img src="http://img15.hostingpics.net/pics/954146logo.png" alt="YGGDRASILL Logo" style="max-height: 100px;" /></label>
+			<label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="lastname">Nom</span><input name="attr_character_lastname" type="text" data-i18n-placeholder="character-lastname-place" placeholder="Nom du personnage" /></label>
+			<label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="firstname">Prénom</span><input name="attr_character_firstname" type="text" data-i18n-placeholder="character-firstname-place" placeholder="Prénom du Personnage" /></label>
+			<label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="archetype">Archetype</span><input name="attr_archetype" type="text" disabled="true" /></label>
+			<label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="occupation">Profession</span><input name="attr_occupation" type="text" disabled="true" /></label>
+		</div>
+	</header>
+	<nav role="navigation" aria-label="Main navigation hide and show sections." data-i18n-aria-label="nav-main-desc">
+		<input type="checkbox" class="sheet-tab1 sheet-pagetab1" name="attr_tab" value="1" style="display:none;" />
+		<input type="checkbox" class="sheet-tab2 sheet-pagetab2" name="attr_tab" value="2" style="display:none;" />
+		<input type="checkbox" class="sheet-tab3 sheet-pagetab3" name="attr_tab" value="3" style="display:none;" />
+		<input type="checkbox" class="sheet-tab4 sheet-pagetab4" name="attr_tab" value="4" style="display:none;" />
+		<input type="checkbox" class="sheet-tab5 sheet-pagetab5" name="attr_tab" value="5" style="display:none;" />
+		<input type="checkbox" class="sheet-tab6 sheet-pagetab6" name="attr_tab" value="6" style="display:none;" />
+		<input type="checkbox" class="sheet-tab7 sheet-pagetab7" name="attr_tab" value="7" style="display:none;" />
+		<div class="sheet-mainnav sheet-tabs">
+			<label class="sheet-tab sheet-tab1" style="width:12%;"><span data-i18n="page-character">Personnage</span><input type="radio" class="sheet-tab" name="attr_tab" value="1" checked="checked" /></label>
+			<label class="sheet-tab sheet-tab2" style="width:15%;"><span data-i18n="page-abilities">Caractéristiques</span><input type="radio" class="sheet-tab" name="attr_tab" value="2" /></label>
+			<label class="sheet-tab sheet-tab3" style="width:15%;"><span data-i18n="page-skills">Compétences</span><input type="radio" class="sheet-tab" name="attr_tab" value="3" /></label>    
+			<label class="sheet-tab sheet-tab4" style="width:20%;"><span data-i18n="page-weapons-equipments">Armes & Equipement</span><input type="radio" class="sheet-tab" name="attr_tab" value="4" /></label>    
+			<label class="sheet-tab sheet-tab5" style="width:15%;"><span data-i18n="page-spells-magic">Sorts & Magie</span><input type="radio" class="sheet-tab" name="attr_tab" value="5" /></label>    
+			<label class="sheet-tab sheet-tab6" style="width:10%;"><span data-i18n="page-notes">Notes</span><input type="radio" class="sheet-tab" name="attr_tab" value="6" /></label>    
+			<label class="sheet-tab sheet-tab7" style="width:5%;"><span data-i18n-title="page-config" title="Configuration" class="sheet-pictos">y</span><input type="radio" class="sheet-tab" name="attr_tab" value="7" /></label>    
+		</div>
+	</nav>
+	 <main role="main">
+		<div class="sheet-main">
+			<section role="region" aria-label="Personnage" data-i18n-aria-label="page-character-aria">
+				<div class="sheet-section sheet-section-character">
+					<br/>
+					<div class="sheet-nontable sheet-sect">
+		                <span class="sheet-nontable-name" data-i18n="character-desc">Description du Personnage</span>
+		                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_character_lastname" type="text" data-i18n-placeholder="character-lastname-place" placeholder="Nom du personnage" /><span data-i18n="character-lastname">Nom du Personnage</span></label>
+		                <label class="sheet-small-label2" style="width: 30%;"><input name="attr_character_firstname" type="text" data-i18n-placeholder="character-firstname-place" placeholder="Prénom du personnage" /><span data-i18n="character-firstname">Prénom du Personnage</span></label>
+		                <label class="sheet-small-label2" style="width: 20%;"><select name="attr_archetype" class="sheet-dropdown-character">
+							<option value="Noble" data-i18n="noble" selected="selected">Noble</option>
+							<option value="Guerrier" data-i18n="warrior">Guerrier</option>
+							<option value="Sage" data-i18n="wiseman">Sage</option>
+							<option value="Travailleur" data-i18n="worker">Travailleur</option>
+							<option value="Voyageur" data-i18n="traveler">Voyageur</option>
+						</select><span data-i18n="archetype">Archetype</span></label>
+		                <label class="sheet-small-label2" style="width: 20%;"><select name="attr_occupation" class="sheet-dropdown-character">
+							<option value="Jarl" data-i18n="jarl" selected="selected">Jarl</option>
+							<option value="Chef de Guerre" data-i18n="war-chief">Chef de Guerre</option>
+							<option value="Conseiller du Seigneur" data-i18n="lord-adviser">Conseiller du Seigneur</option>
+							<option value="" data-i18n=""></option>
+							<option value="Hirdmen" data-i18n="hirdmen">Hirdmen</option>
+							<option value="Berserkr" data-i18n="berserkr">Berserkr</option>
+							<option value="Mercenaire" data-i18n="mercenary">Mercenaire</option>
+							<option value="" data-i18n=""></option>
+							<option value="Völva" data-i18n="volva">Völva</option>
+							<option value="Thurl" data-i18n="thurl">Thurl</option>
+							<option value="Scalde" data-i18n="scalde">Scalde</option>
+							<option value="Soigneur" data-i18n="healer">Soigneur</option>
+							<option value="" data-i18n=""></option>							
+							<option value="Artisan" data-i18n="craftsman">Artisan</option>
+							<option value="Charpentier de marine" data-i18n="shipwright">Charpentier de marine</option>
+							<option value="Fermier" data-i18n="farmer">Fermier</option>
+							<option value="Forestier" data-i18n="forester">Forestier</option>
+							<option value="Mineur" data-i18n="miner">Mineur</option>
+							<option value="" data-i18n=""></option>
+							<option value="Commandant de navire" data-i18n="ship-commander">Commandant de navire</option>
+							<option value="Pilote" data-i18n="pilot">Pilote</option>
+							<option value="Marchand" data-i18n="seller">Marchand</option>
+							<option value="Emissaire" data-i18n="emissary">Emissaire</option>
+							<option value="Forgeron Itinérant" data-i18n="travelling-blacksmith">Forgeron Itinérant</option>
+							<option value="Espion" data-i18n="spy">Espion</option>
+						</select><span data-i18n="occupation">Profession</span></label>
+						<label class="sheet-small-label2" style="width: 7%;"><input name="attr_age" type="number" data-i18n-title="age-title" title="Age du personnage" /><span data-i18n="age">Age</span></label>
+		                <label class="sheet-small-label2" style="width: 7%;"><input name="attr_size" type="number" data-i18n-title="size-title" title="Taille du personnage" /><span data-i18n="size">Taille</span></label>
+		                <label class="sheet-small-label2" style="width: 7%;"><input name="attr_weight" type="number" data-i18n-title="weight-title" title="Poids du personnage" /><span data-i18n="weight">Poids</span></label>
+		                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_realm" type="text" data-i18n-placeholder="realm-place" placeholder="Royaume d'origine" /><span data-i18n="realm">Royaume</span></label>
+		                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_gift" type="text" data-i18n-placeholder="gift-place" placeholder="Don du personnage" /><span data-i18n="gift">Don</span></label>
+		                <label class="sheet-small-label2" style="width: 20%;"><input name="attr_weakness" type="text" data-i18n-placeholder="weakness-place" placeholder="Faiblesse du personnage" /><span data-i18n="weakness">Faiblesse</span></label>
+	              	</div>
+
+	            </div>
+			</section>
+			<section role="region" aria-label="Caractéristiques" data-i18n-aria-label="page-abilities-aria">
+				<div class="sheet-section sheet-section-abilities">
+
+					<table cellspacing="0" cellpadding="0" border="0" class="sheet-table-carac">
+			            <thead>
+			                <tr>
+			                    <th colspan="2" class="sheet-table-carac-head">
+			                         <h4>Corps</h4>
+			                    </th>
+			                    <th style="width:20px;"></th>
+			                    <th colspan="2" class="sheet-table-carac-head">
+			                         <h4>Esprit</h4>
+			                    </th>
+			                    <th style="width:20px;"></th>
+			                    <th colspan="2" class="sheet-table-carac-head">
+			                         <h4>Ame</h4>
+			                    </th>
+			                </tr>
+			            </thead>
+			            <tbody>
+			                <tr>
+			                    <td class="sheet-table-carac-left">
+			                        <label class="sheet-table-carac-label">Puissance:</label>
+			                    </td>
+			                    <td class="sheet-table-carac-right">
+			                        <input type="number" name="attr_pow" max="5" />
+			                        <button type="roll" name="roll_pow" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Puissance}} {{character_name=@{firstname} @{lastname}}} {{emote=veut démontrer sa puissance}} {{freetextname=Résultat}} {{freetext=[[@{pow}d10!!k2+@{pow}]]}}"></button>
+			                    </td>
+			                    <td></td>
+			                    <td class="sheet-table-carac-left">
+			                        <label class="sheet-table-carac-label">Intellect:</label>
+			                    </td>
+			                    <td class="sheet-table-carac-right">
+			                        <input type="number" name="attr_int" max="5" />
+			                        <button type="roll" name="roll_int" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Intellect}} {{character_name=@{firstname} @{lastname}}} {{emote=réfléchi}} {{freetextname=Résultat}} {{freetext=[[@{int}d10!!k2+@{int}]]}}"></button>
+			                    </td>
+			                    <td></td>
+			                    <td class="sheet-table-carac-left">
+			                        <label class="sheet-table-carac-label">Charisme:</label>
+			                    </td>
+			                    <td class="sheet-table-carac-right">
+			                        <input type="number" name="attr_cha" max="5" />
+			                        <button type="roll" name="roll_cha" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Charisme}} {{character_name=@{firstname} @{lastname}}} {{emote=essaye d'influencer}} {{freetextname=Résultat}} {{freetext=[[@{cha}d10!!k2+@{cha}]]}}"></button>
+			                    </td>
+			                </tr>
+			                <tr>
+			                    <td class="sheet-table-carac-left">
+			                        <label class="sheet-table-carac-label">Vigueur:</label>
+			                    </td>
+			                    <td class="sheet-table-carac-right">
+			                        <input type="number" name="attr_str" max="5" />
+			                        <button type="roll" name="roll_str" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Vigueur}} {{character_name=@{firstname} @{lastname}}} {{emote=veut montrer sa force}} {{freetextname=Résultat}} {{freetext=[[@{str}d10!!k2+@{str}]]}}"></button>
+			                    </td>
+			                    <td></td>
+			                    <td class="sheet-table-carac-left">
+			                        <label class="sheet-table-carac-label">Perception:</label>
+			                    </td>
+			                    <td class="sheet-table-carac-right">
+			                        <input type="number" name="attr_per" max="5" />
+			                        <button type="roll" name="roll_per" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Perception}} {{character_name=@{firstname} @{lastname}}} {{emote=ouvre les yeux}} {{freetextname=Résultat}} {{freetext=[[@{per}d10!!k2+@{per}]]}}"></button>
+			                    </td>
+			                    <td></td>
+			                    <td class="sheet-table-carac-left">
+			                        <label class="sheet-table-carac-label">Instinct:</label>
+			                    </td>
+			                    <td class="sheet-table-carac-right">
+			                        <input type="number" name="attr_ins" max="5" />
+			                        <button type="roll" name="roll_ins" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Instinct}} {{character_name=@{firstname} @{lastname}}} {{emote=fait appel à tous ces sens}} {{freetextname=Résultat}} {{freetext=[[@{ins}d10!!k2+@{ins}]]}}"></button>
+			                    </td>
+			                </tr>
+			                <tr>
+			                    <td class="sheet-table-carac-left sheet-table-carac-bottom">
+			                        <label class="sheet-table-carac-label">Agilité:</label>
+			                    </td>
+			                    <td class="sheet-table-carac-right sheet-table-carac-bottom">
+			                        <input type="number" name="attr_agi" max="5" />
+			                        <button type="roll" name="roll_agi" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Agilité}} {{character_name=@{firstname} @{lastname}}} {{emote=démontre sa souplesse}} {{freetextname=Résultat}} {{freetext=[[@{agi}d10!!k2+@{agi}]]}}"></button>
+			                    </td>
+			                    <td></td>
+			                    <td class="sheet-table-carac-left sheet-table-carac-bottom">
+			                        <label class="sheet-table-carac-label">Ténacité:</label>
+			                    </td>
+			                    <td class="sheet-table-carac-right sheet-table-carac-bottom">
+			                        <input type="number" name="attr_ten" max="5" />
+			                        <button type="roll" name="roll_ten" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Ténacité}} {{character_name=@{firstname} @{lastname}}} {{emote=ne lâche rien}} {{freetextname=Résultat}} {{freetext=[[@{ten}d10!!k2+@{ten}]]}}"></button>
+			                    </td>
+			                    <td></td>
+			                    <td class="sheet-table-carac-left sheet-table-carac-bottom">
+			                        <label class="sheet-table-carac-label">Communication:</label>
+			                    </td>
+			                    <td class="sheet-table-carac-right sheet-table-carac-bottom">
+			                        <input type="number" name="attr_com" max="5" />
+			                        <button type="roll" name="roll_com" class="sheet-rollbutton" value="&{template:yggdrasill} {{title=Communication}} {{character_name=@{firstname} @{lastname}}} {{emote=montre son élocance}} {{freetextname=Résultat}} {{freetext=[[@{com}d10!!k2+@{com}]]}}"></button>
+			                    </td>
+			                </tr>
+			            </tbody>
+			        </table>
+
+				</div>
+			</section>
+			<section role="region" aria-label="Compétences" data-i18n-aria-label="page-skills-aria">
+				<div class="sheet-section sheet-section-skills">
+					Compétences
+				</div>
+			</section>
+			<section role="region" aria-label="Armes & Equipement" data-i18n-aria-label="page-weapons-equipments-aria">
+				<div class="sheet-section sheet-section-weapons-equipments">
+					Armes & Equipement
+				</div>
+			</section>
+			<section role="region" aria-label="Sorts & Magie" data-i18n-aria-label="page-spells-magic-aria">
+				<div class="sheet-section sheet-section-spells-magic">
+					Sorts & Magie
+				</div>
+			</section>
+			<section role="region" aria-label="Notes" data-i18n-aria-label="page-notes-aria">
+				<div class="sheet-section sheet-section-notes">
+					Notes
+				</div>
+			</section>
+			<section role="region" aria-label="Configuration" data-i18n-aria-label="page-config-aria">
+				<div class="sheet-section sheet-section-config">
+					Configuration
+				</div>
+			</section>
+		</div>
+	</main>
+  <footer role="contentinfo" aria-label="Help links">
+    <div class="sheet-footer">
+      <div class="sheet-table">
+        <div class="sheet-table-row">
+          <span class="sheet-table-cell"><span data-i18n="footer-created-by">Créé par</span> PadRPG <span data-i18n="footer-inspired">(fortement inspiré de la fiche Pathfinder)</span> | <span data-i18n="footer-last-update">Dernière MAJ</span>: <i>26.08.2016&nbsp;&nbsp;</i>v0.1</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <aside role="complementary">
+    <!-- ROLLTEMPLATE FOR SKILLS -->
+    <rolltemplate class="sheet-rolltemplate-pl_skill">  
+      <div class="sheet-roll-table sheet-rounded">
+        <div class="sheet-roll-header">
+        {{#character_name}}
+        {{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}}
+        {{^character_id}}{{character_name}}{{/character_id}}
+        {{/character_name}}
+        </div>
+        <div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
+        <span data-i18n="skill">Compétence</span> : {{skill_name}}
+        </div>
+        <div class="sheet-roll-group2">
+          <div class="sheet-roll-row">
+            <div class="sheet-roll-cell">Valeur</div>
+            <div class="sheet-roll-cell">{{skill_value}}</div>
+          </div>
+          <div class="sheet-roll-row">
+            <div class="sheet-roll-cell">Résultat</div>
+            <div class="sheet-roll-cell">{{diceroll}}</div>
+          </div>
+
+          {{#rollGreater() diceroll skill_value}}
+          <div class="sheet-roll-row">
+            <div class="sheet-roll-cell">{{#rollWasFumble() diceroll}}<span style="color:red;font-weight:bold;" data-i18n="critical-result">Critique !</span>{{/rollWasFumble() diceroll}}</div>
+            <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="fail-result">Echec</span></div>
+          </div>
+
+            {{#rollWasFumble() diceroll}}
+            <div class="sheet-roll-row">
+              <div class="sheet-roll-cell"><span data-i18n="critical-reroll">Relance Critique</span></div>
+              <div class="sheet-roll-cell">{{critical_roll}}</div>
+            </div>
+            {{/rollWasFumble() diceroll}}
+
+          {{/rollGreater() diceroll skill_value}}
+
+          {{#rollTotal() diceroll skill_value}}          
+          <div class="sheet-roll-row">
+            <div class="sheet-roll-cell"><span style="color:green;font-weight:bold;" data-i18n="critical-result">Critique !</span></div>
+            <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
+          </div>
+          {{/rollTotal() diceroll skill_value}}
+
+          {{#rollLess() diceroll skill_value}}
+          <div class="sheet-roll-row">
+            <div class="sheet-roll-cell"></div>
+            <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
+          </div>
+          {{/rollLess() diceroll skill_value}}
+
+        </div>
+      </div>
+    </rolltemplate>
+
+
+  </aside>
+
+  <!-- SHEET WORKER SCRIPTS -->
+  <script type="text/worker">
+
+  </script>
+</div>

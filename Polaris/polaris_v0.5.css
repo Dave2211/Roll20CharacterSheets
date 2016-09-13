@@ -353,15 +353,6 @@ content: counter(sheet-rep-items) '. ▼' !important;
 	border-radius: 5px;
 	display:inline;
 }
-.sheet-conditions .sheet-table-row {
-	height:1.85em;
-}
-.sheet-conditions .sheet-table-row:last-child {
-	background-color:lightgray;
-}
-.sheet-conditions .sheet-table-cell {
-	font-size:.7125rem;
-}
 
 .sheet-no-pad-right {
 	padding-right: 0 !important;
@@ -390,14 +381,6 @@ hr.sheet-skinny {
 	width: 15%;
 }
 
-.sheet-iterative_attack_section  .sheet-table-row .sheet-table-cell {
-	vertical-align:top;
-}
-
-.sheet-iterative_attack_section .sheet-table-row .sheet-table-cell:first-child {
-	text-align:left;
-	padding-top:.5em;
-}
 .sheet-footer {
 	text-align: center;
 	font-size: .75rem;
