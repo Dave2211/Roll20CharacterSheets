@@ -1,10 +1,38 @@
-.sheet-main-container {
+
+.repcontrol_add,
+.repcontrol_edit,
+.repcontrol_del,
+.repcontrol_move {
+    display: block;
+	background:darkgrey;
+	color:White;
+}
+.repcontrol_del{
+	font-weight: bold;
+	color:red;
+}
+.repcontrol_move {
+	float: right;
+	margin-right: 5px;
+	width: 2.5em;
 }
 
+button[type="roll"] {
+	margin-left:initial;
+	margin-right:initial;
+}
 
-/* custom labels for repitem buttons */
-[data-groupname=repeating_meleeWeapons] > button.btn.repcontrol_add::after {
-    content: " Nouvelle Arme";
+button, button:hover, button:active {
+	background-image: initial;
+}
+
+button[type="roll"] {
+	margin: .25em .25em .25em .25em ;
+	font-size:.8125rem;
+}
+
+textarea {
+    resize: none;
 }
 
 h2,h3,h4,h5,h6,h7,h8,h9 {
@@ -27,6 +55,28 @@ h1 {
 	display:block;
 	text-align:center;
 	vertical-align:bottom;
+}
+
+.sheet-table {
+	display: table;
+	width: 100%;
+}
+
+.sheet-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+	text-align:center;
+	padding-left:.125em;
+	padding-right:.125em;
+	padding-bottom:.125em;
+}
+
+.sheet-table-row {
+	display: table-row;
+	vertical-align: bottom;
+	width:100%;
+	overflow:hidden;
+	border-collapse:collapse;
 }
 
 .sheet-table-carac {
@@ -208,7 +258,8 @@ input.sheet-tab2:checked  ~ .sheet-tabs .sheet-tab2,
 input.sheet-tab3:checked  ~ .sheet-tabs .sheet-tab3,
 input.sheet-tab4:checked  ~ .sheet-tabs .sheet-tab4,
 input.sheet-tab5:checked  ~ .sheet-tabs .sheet-tab5,
-input.sheet-tab6:checked  ~ .sheet-tabs .sheet-tab6{
+input.sheet-tab6:checked  ~ .sheet-tabs .sheet-tab6,
+input.sheet-tab7:checked  ~ .sheet-tabs .sheet-tab7{
 	background: #000;
 	color: #FFF;
 }
@@ -218,8 +269,9 @@ input.sheet-pagetab1:checked ~ .sheet-main div.sheet-section-character.sheet-sec
 input.sheet-pagetab2:checked ~ .sheet-main div.sheet-section-skills.sheet-section,
 input.sheet-pagetab3:checked ~ .sheet-main div.sheet-section-weapons-equipments.sheet-section,
 input.sheet-pagetab4:checked ~ .sheet-main div.sheet-section-technology-magic.sheet-section,
-input.sheet-pagetab5:checked ~ .sheet-main div.sheet-section-notes.sheet-section,
-input.sheet-pagetab6:checked ~ .sheet-main div.sheet-section-config.sheet-section   {
+input.sheet-pagetab5:checked ~ .sheet-main div.sheet-section-mount.sheet-section,
+input.sheet-pagetab6:checked ~ .sheet-main div.sheet-section-notes.sheet-section,
+input.sheet-pagetab7:checked ~ .sheet-main div.sheet-section-config.sheet-section   {
 	display:block;
 	max-height: 999999px;
 	visibility: visible;
@@ -252,6 +304,7 @@ input.sheet-pagetab6:checked ~ .sheet-main div.sheet-section-config.sheet-sectio
 .sheet-section-skills,
 .sheet-section-weapons-equipments,
 .sheet-section-technology-magic,
+.sheet-section-mount,
 .sheet-section-notes,
 .sheet-section-config  {
     display:none;
@@ -445,28 +498,18 @@ input[type="checkbox"]:not(.sheet-noshow):checked + span:not(.sheet-not-sheet-sh
 	width:3.5em;
 }
 
-
-.sheet-footer {
-	text-align: center; 
-	font-size: xx-small; 
-	background-color: #FFF8DC;	
-	border: 1px #000 solid;
-	border-radius: 3px;
+div.sheet-divbox{
+	border:1px solid black;
 }
 
-
 div.sheet-header{
-    height:30px;	
-	background-color:grey;	
+	background-color:darkgrey;	
+	height:30px;
+	color: white;
 	font-weight:bold; 
 	line-height:30px;
 	font-size:13px;
-	-webkit-border-top-left-radius: 7px;
-	-webkit-border-top-right-radius: 7px;
-	-moz-border-radius-topleft: 7px;
-	-moz-border-radius-topright: 7px;
-	border-top-left-radius: 7px;
-	border-top-right-radius: 7px;
+	width:98%;
 }
 
 .sheet-text-center{	
@@ -700,15 +743,45 @@ content: counter(sheet-rep-items) '. ▼' !important;
 .sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-8p-shrink {
 	width:10%;
 }
+
 /******* end of generic repeating items ********/
 
+.sheet-footer {
+	text-align: center;
+	font-size: .75rem;
+	background-color: #FFF8DC;
+	border: 1px #000 solid;
+	border-radius: 3px;
+}
+
+.repcontainer .repitem,.sheet-repeating-sect  .repitem {
+    padding: 2px 4px 1px 0px;
+    margin: 2px 0 4px 0;
+    border: 2px solid #CCCCCC;
+    border-radius: 7px;
+	vertical-align:top;
+	overflow: hidden;
+	display: block;
+	width:100%;
+}
+.repcontainer.editmode + .repcontrol {
+	margin-bottom:3em;
+}
+.repcontainer.editmode .repitem .itemcontrol {
+	z-index:3;
+	background-color:rgba(220,220,220,0.40);
+}
+.sheet-repeating-sect {
+	position:relative;
+}
+
 /* ROLL TEMPLATES */
-.sheet-rolltemplate-hm_melee_weapons,
+.sheet-rolltemplate-hm_weapons,
 .sheet-rolltemplate-hm_skill {
   box-sizing: border-box;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .sheet-roll-table,
+.sheet-rolltemplate-hm_weapons .sheet-roll-table,
 .sheet-rolltemplate-hm_skill .sheet-roll-table {
   width: 100%;
   display: table;
@@ -722,12 +795,12 @@ content: counter(sheet-rep-items) '. ▼' !important;
   line-height: 25px;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .sheet-roll-table .sheet-rounded,
+.sheet-rolltemplate-hm_weapons .sheet-roll-table .sheet-rounded,
 .sheet-rolltemplate-hm_skill .sheet-roll-table .sheet-rounded {
   border-radius: 5px;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .sheet-roll-header,
+.sheet-rolltemplate-hm_weapons .sheet-roll-header,
 .sheet-rolltemplate-hm_skill .sheet-roll-header {
   display: table-row-group;
   width: 100%;
@@ -738,31 +811,31 @@ content: counter(sheet-rep-items) '. ▼' !important;
   font-weight: bold;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .sheet-roll-header a ,
+.sheet-rolltemplate-hm_weapons .sheet-roll-header a ,
 .sheet-rolltemplate-hm_skill .sheet-roll-header a {
 	text-decoration: underline;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .sheet-roll-row,
+.sheet-rolltemplate-hm_weapons .sheet-roll-row,
 .sheet-rolltemplate-hm_skill .sheet-roll-row {
   width: 100%;
   overflow: hidden;
   background-color: whitesmoke;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .sheet-roll-row:nth-child(even),
+.sheet-rolltemplate-hm_weapons .sheet-roll-row:nth-child(even),
 .sheet-rolltemplate-hm_skill .sheet-roll-row:nth-child(even){
   background-color: #B7B7B7;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .sheet-roll-cell,
+.sheet-rolltemplate-hm_weapons .sheet-roll-cell,
 .sheet-rolltemplate-hm_skill .sheet-roll-cell {
   padding: 1px 1px 1px 5px;
   text-align: left;
   width: 100%;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell,
+.sheet-rolltemplate-hm_weapons .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell,
 .sheet-rolltemplate-hm_skill .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell {
   font-size: .9em;
   width: 24%;
@@ -773,7 +846,7 @@ content: counter(sheet-rep-items) '. ▼' !important;
   vertical-align: bottom;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child,
+.sheet-rolltemplate-hm_weapons .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child,
 .sheet-rolltemplate-hm_skill .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child {
   width: 69%;
   float: left;
@@ -782,42 +855,70 @@ content: counter(sheet-rep-items) '. ▼' !important;
 }
 
 
-.sheet-rolltemplate-hm_melee_weapons .inlinerollresult,
+.sheet-rolltemplate-hm_weapons .inlinerollresult,
 .sheet-rolltemplate-hm_skill .inlinerollresult {  
     background-color: lightgrey;
     border: 2px solid grey;
 }
 
 
-.sheet-rolltemplate-hm_melee_weapons .inlinerollresult.fullcrit,
+.sheet-rolltemplate-hm_weapons .inlinerollresult.fullcrit,
 .sheet-rolltemplate-hm_skill .inlinerollresult.fullcrit {
   color: #FFF;
   background-color: #3FB315;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .inlinerollresult.fullfail,
+.sheet-rolltemplate-hm_weapons .inlinerollresult.fullfail,
 .sheet-rolltemplate-hm_skill .inlinerollresult.fullfail {
   color: #FFF;
   background-color: #B31515;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .inlinerollresult.importantroll,
+.sheet-rolltemplate-hm_weapons .inlinerollresult.importantroll,
 .sheet-rolltemplate-hm_skill .inlinerollresult.importantroll {
   color: #FFF;
   background-color: #4A57ED;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .sheet-roll-text-white,
+.sheet-rolltemplate-hm_weapons .sheet-roll-text-white,
 .sheet-rolltemplate-hm_skill .sheet-roll-text-white {
   color:white;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .sheet-roll-text-12px,
+.sheet-rolltemplate-hm_weapons .sheet-roll-text-12px,
 .sheet-rolltemplate-hm_skill .sheet-roll-text-12px {  
     font-size: 12px;
 }
 
-.sheet-rolltemplate-hm_melee_weapons .sheet-roll-text-right,
+.sheet-rolltemplate-hm_weapons .sheet-roll-text-right,
 .sheet-rolltemplate-hm_skill .sheet-roll-text-right {
   text-align:right;
 }
+
+
+/* custom labels for repitem buttons 
+[data-groupname=repeating_meleeWeapons] > button.btn.repcontrol_add::after {
+    content: " Nouvelle Arme de contact";
+}
+[data-groupname=repeating_rangedweapons] > button.btn.repcontrol_add::after {
+    content: " Nouvelle Arme à distance";
+}
+[data-groupname=repeating_equipments] > button.btn.repcontrol_add::after {
+    content: " Nouvel Equipement";
+}
+[data-groupname=repeating_scientificExpertises] > button.btn.repcontrol_add::after {
+    content: " Nouvelle Expertise Scientifique";
+}
+[data-groupname=repeating_scientificDocuments] > button.btn.repcontrol_add::after {
+    content: " Nouveau Document Scientifique";
+}
+[data-groupname=repeating_memorizedMagics] > button.btn.repcontrol_add::after {
+    content: " Nouvelle Magie Mémorisée";
+}
+[data-groupname=repeating_mountSkills] > button.btn.repcontrol_add::after {
+    content: " Nouvelle Compétence";
+}
+[data-groupname=repeating_mutationsFlawsDeformities] > button.btn.repcontrol_add::after {
+    content: " Nouvelle Mutation, Tare ou Malformation";
+}
+*/
