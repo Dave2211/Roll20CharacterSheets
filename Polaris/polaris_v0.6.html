@@ -994,7 +994,7 @@
                   <tr class="sheet-tableline">
                     <td><input type="checkbox" name="attr_surfaceKnowledgeCheck" value="1" /></td>
                     <td><span data-i18n="natural-environment-knowledge">Conn. milieu naturel</span> [ <span data-i18n="surface">Surface</span> ] &#8226;</td>
-                    <td class="sheet-smalldata">(-3)</td>
+                    <td class="sheet-smalldata">(X)</td>
                     <td><span data-i18n="int">INT</span>/<span data-i18n="ada">ADA</span></td>
                     <td><input name="attr_surfaceKnowledgeBase" type="number" value="(@{intNaturalGift}+@{adaNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_surfaceKnowledgeMast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
@@ -1004,7 +1004,7 @@
                   <tr class="sheet-tableline">
                     <td><input type="checkbox" name="attr_observationCheck" value="1" /></td>
                     <td><span data-i18n="observation">Observation</span></td>
-                    <td class="sheet-smalldata">(-3)</td>
+                    <td class="sheet-smalldata"></td>
                     <td><span data-i18n="per">PER</span>/<span data-i18n="wil">VOL</span></td>
                     <td><input name="attr_observationBase" type="number" value="(@{perNaturalGift}+@{wilNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_observationMast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
@@ -1014,7 +1014,7 @@
                   <tr class="sheet-tableline">
                     <td><input type="checkbox" name="attr_orientationCheck" value="1" /></td>
                     <td><span data-i18n="orientation">Orientation</span></td>
-                    <td class="sheet-smalldata">(-3)</td>
+                    <td class="sheet-smalldata"></td>
                     <td><span data-i18n="per">PER</span>/<span data-i18n="ada">ADA</span></td>
                     <td><input name="attr_orientationBase" type="number" value="(@{perNaturalGift}+@{adaNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_orientationMast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
@@ -1238,7 +1238,7 @@
                     <td><input name="attr_firstAidBase" type="number" value="(@{intNaturalGift}+@{adaNaturalGift})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_firstAidMast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_firstAid" type="number" value="(@{firstAidBase}+@{firstAidMast})" disabled="true" class="sheet-short sheet-boxinput" /></td>
-                    <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{first-aid}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{Premiers soins}]]}} {{critical_roll=[[1d20]]}}" name="roll_Premiers soinsCheck"></button></td>
+                    <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{first-aid}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{first-aid}]]}} {{critical_roll=[[1d20]]}}" name="roll_Premiers soinsCheck"></button></td>
                   </tr>
                   <tr class="sheet-tableline">
                     <td><input type="checkbox" name="attr_securitySystemsCheck" value="1" /></td>
@@ -1286,7 +1286,7 @@
                         <option value="@{preNaturalGift}" data-i18n="pre">PRE</option>
                       </select>
                     </td>
-                    <td><input name="attr_specialComp1Base" type="number" value="(@{attr_specialComp1FirstAttribut}+@{attr_specialComp1SecondAttribut})" disabled="true" class="sheet-short sheet-boxinput" /></td>
+                    <td><input name="attr_specialComp1Base" type="number" value="(@{specialComp1FirstAttribut}+@{specialComp1SecondAttribut})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_specialComp1Mast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_specialComp1" type="number" value="(@{specialComp1Base}+@{specialComp1Mast})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{specialComp1Name}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{specialComp1}]]}} {{critical_roll=[[1d20]]}}" name="roll_specialComp1Check"></button></td>
@@ -1318,7 +1318,7 @@
                         <option value="@{preNaturalGift}" data-i18n="pre">PRE</option>
                       </select>
                     </td>
-                    <td><input name="attr_specialComp2Base" type="number" value="(@{attr_specialComp2FirstAttribut}+@{attr_specialComp2SecondAttribut})" disabled="true" class="sheet-short sheet-boxinput" /></td>
+                    <td><input name="attr_specialComp2Base" type="number" value="(@{specialComp2FirstAttribut}+@{specialComp2SecondAttribut})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_specialComp2Mast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_specialComp2" type="number" value="(@{specialComp2Base}+@{specialComp2Mast})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{specialComp2Name}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{specialComp2}]]}} {{critical_roll=[[1d20]]}}" name="roll_specialComp2Check"></button></td>
@@ -1350,7 +1350,7 @@
                         <option value="@{preNaturalGift}" data-i18n="pre">PRE</option>
                       </select>
                     </td>
-                    <td><input name="attr_specialComp3Base" type="number" value="(@{attr_specialComp3FirstAttribut}+@{attr_specialComp3SecondAttribut})" disabled="true" class="sheet-short sheet-boxinput" /></td>
+                    <td><input name="attr_specialComp3Base" type="number" value="(@{specialComp3FirstAttribut}+@{specialComp3SecondAttribut})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_specialComp3Mast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_specialComp3" type="number" value="(@{specialComp3Base}+@{specialComp3Mast})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{specialComp3Name}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{specialComp3}]]}} {{critical_roll=[[1d20]]}}" name="roll_specialComp3Check"></button></td>
@@ -1382,7 +1382,7 @@
                         <option value="@{preNaturalGift}" data-i18n="pre">PRE</option>
                       </select>
                     </td>
-                    <td><input name="attr_specialComp4Base" type="number" value="(@{attr_specialComp4FirstAttribut}+@{attr_specialComp4SecondAttribut})" disabled="true" class="sheet-short sheet-boxinput" /></td>
+                    <td><input name="attr_specialComp4Base" type="number" value="(@{specialComp4FirstAttribut}+@{specialComp4SecondAttribut})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_specialComp4Mast" type="number" value="0" class="sheet-short sheet-boxinput" /></td>
                     <td><input name="attr_specialComp4" type="number" value="(@{specialComp4Base}+@{specialComp4Mast})" disabled="true" class="sheet-short sheet-boxinput" /></td>
                     <td><button type="roll" value="&{template:pl_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{specialComp4Name}}} {{diceroll=[[@{difficulty-query}]]}} {{skill_value=[[@{specialComp4}]]}} {{critical_roll=[[1d20]]}}" name="roll_specialComp4Check"></button></td>
@@ -1491,12 +1491,12 @@
                   <div class="sheet-rTableRow">
                     <div class="sheet-rTableCell sheet-border-left sheet-border-bottom sheet-text-bold"><span data-i18n="natural-resistance">Resistances naturelles</span></div>
                     <div class="sheet-rTableCell sheet-text-right sheet-border-bottom"><span data-i18n="drugs">Drogues</span></div>
-                    <div class="sheet-rTableCell sheet-border-left sheet-border-right sheet-border-bottom sheet-text-center"><input name="attr_drugsResist" type="number" value="floor((@{con}+@{wil})/2)" disabled="true" class="sheet-short sheet-boxinput" /></div>
+                    <div class="sheet-rTableCell sheet-border-left sheet-border-right sheet-border-bottom sheet-text-center"><span name="attr_drugsResist" class="sheet-short sheet-boxinput" /></div>
                   </div>
                   <div class="sheet-rTableRow">
                     <div class="sheet-rTableCell sheet-border-left sheet-border-bottom"></div>
                     <div class="sheet-rTableCell sheet-text-right sheet-border-bottom"><span data-i18n="poisons-deseases-radiations">Maladie, poisons &amp; radiations</span></div>
-                    <div class="sheet-rTableCell sheet-border-left sheet-border-right sheet-border-bottom sheet-text-center"><input name="attr_poisonsDeseasesRadiationsResist" type="number" value="(@{con})" disabled="true" class="sheet-short sheet-boxinput" /></div>
+                    <div class="sheet-rTableCell sheet-border-left sheet-border-right sheet-border-bottom sheet-text-center"><span name="attr_poisonsDeseasesRadiationsResist" class="sheet-short sheet-boxinput" /></div>
                   </div>
                   <div class="sheet-rTableRow">
                     <div class="sheet-rTableCell sheet-border-left sheet-border-bottom sheet-text-bold"><span data-i18n="apnea">Souffle</span></div>
@@ -2813,7 +2813,7 @@
     <div class="sheet-footer">
       <div class="sheet-table">
         <div class="sheet-table-row">
-          <span class="sheet-table-cell"><span data-i18n="footer-created-by">Créé par</span> PadRPG <span data-i18n="footer-inspired">(fortement inspiré de la fiche Pathfinder)</span> | <span data-i18n="footer-last-update">Dernière MAJ</span>: <i>26.08.2016&nbsp;&nbsp;</i>v0.5</span>
+          <span class="sheet-table-cell"><span data-i18n="footer-created-by">Créé par</span> PadRPG <span data-i18n="footer-inspired">(fortement inspiré de la fiche Pathfinder)</span> | <span data-i18n="footer-last-update">Dernière MAJ</span>: <i>20.09.2016&nbsp;&nbsp;</i>v0.6</span>
         </div>
       </div>
     </div>
@@ -3056,6 +3056,133 @@
       });
     });
     
+    /* Drug resist calcul */
+    on("change:con change:wil", function(){
+      getAttrs(["con","wil"], function(values) {
+        resValue=Math.round((parseInt(values.con)+parseInt(values.wil))/2); 
+        
+        if(resValue < 3){
+          setAttrs({        
+            drugsResist: 6          
+          });
+        }
+        else if(resValue < 5){
+          setAttrs({        
+            drugsResist: 4          
+          });
+        }
+        else if(resValue < 7){
+          setAttrs({        
+            drugsResist: 2          
+          });
+        }
+        else if(resValue < 9){
+          setAttrs({        
+            drugsResist: 1          
+          });
+        }
+        else if(resValue < 12){
+          setAttrs({        
+            drugsResist: 0          
+          });
+        }
+        else if(resValue < 14){
+          setAttrs({        
+            drugsResist: -1         
+          });
+        }
+        else if(resValue < 16){
+          setAttrs({        
+            drugsResist: -2       
+          });
+        }
+        else if(resValue < 18){
+          setAttrs({        
+            drugsResist: -3         
+          });
+        }
+        else if(resValue < 20){
+          setAttrs({        
+            drugsResist: -4         
+          });
+        }
+        else if(resValue < 22){
+          setAttrs({        
+            drugsResist: -5         
+          });
+        }
+        else{
+          calValue=Math.floor(1-(resValue/3))
+          setAttrs({        
+            drugsResist: calValue
+          });
+        }
+      });
+    });
+
+    /* Poisons, Deseases & Radiations resist calcul */
+    on("change:con", function(){
+      getAttrs(["con"], function(values) {
+        resValue=parseInt(values.con); 
+        
+        if(resValue < 3){
+          setAttrs({        
+            poisonsDeseasesRadiationsResist: 6          
+          });
+        }
+        else if(resValue < 5){
+          setAttrs({        
+            poisonsDeseasesRadiationsResist: 4          
+          });
+        }
+        else if(resValue < 7){
+          setAttrs({        
+            poisonsDeseasesRadiationsResist: 2          
+          });
+        }
+        else if(resValue < 9){
+          setAttrs({        
+            poisonsDeseasesRadiationsResist: 1          
+          });
+        }
+        else if(resValue < 12){
+          setAttrs({        
+            poisonsDeseasesRadiationsResist: 0          
+          });
+        }
+        else if(resValue < 14){
+          setAttrs({        
+            poisonsDeseasesRadiationsResist: -1         
+          });
+        }
+        else if(resValue < 16){
+          setAttrs({        
+            poisonsDeseasesRadiationsResist: -2       
+          });
+        }
+        else if(resValue < 18){
+          setAttrs({        
+            poisonsDeseasesRadiationsResist: -3         
+          });
+        }
+        else if(resValue < 20){
+          setAttrs({        
+            poisonsDeseasesRadiationsResist: -4         
+          });
+        }
+        else if(resValue < 22){
+          setAttrs({        
+            poisonsDeseasesRadiationsResist: -5         
+          });
+        }
+        else{
+          calValue=Math.floor(1-(resValue/3))
+          setAttrs({        
+            poisonsDeseasesRadiationsResist: calValue
+          });
+        }
+      });
+    });
     /* Damage mod calcul*/
     on("change:str", function() {
       getAttrs(["str"], function(values) {
