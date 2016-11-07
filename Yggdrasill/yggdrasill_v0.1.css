@@ -1,5 +1,101 @@
+
+input[type="text"], input[type="number"] {
+    background-color: transparent;
+    border: 0 solid saddlebrown;
+	border-bottom-width: 1px;
+    margin-top: 1px;
+}
+
+input[type="text"], select {
+	width: 100%;
+    margin: 1px 0 0 0;
+}
+
+input[type="text"] {
+	min-width:3em;
+}
+
+.sheet-inline-textarea,{
+	height:3em;
+	width:100%;
+	margin: 0;
+	resize:none;
+}
+
+
+/* turn off spinners for firefox width:3.25em; */
+input[type="number"] {
+	-moz-appearance: textfield !important;
+	-moz-padding-end: .5em;
+	padding-inline-end: .5em; /* moz changes to this */
+}
+/* set width for number input and surrounding labels */
+input[type="number"], .sheet-number {
+	min-width:2.5em;
+	max-width:4.5em;
+	width:auto;
+}
+/* set right align for numbers */
+input[type="number"], span.sheet-number, input.sheet-number {
+	text-align:right;
+}
+
+
+h2,h3,h4,h5,h6,h7,h8,h9 {
+	line-height:1em;
+	margin:inherit;
+	display:inline;
+	font-size:.8125rem;
+	color:inherit;
+}
+
+h1 {
+	width: 100%;
+	background: linear-gradient(to right, black , #3F83D0);
+	color: #FFF;
+	padding:.2em 0em 0em 0em;
+	min-height: 1em;
+	margin:0px 0px .5em 0px;
+	font-size:.8125rem;
+	line-height:1.4em;
+	display:block;
+	text-align:center;
+	vertical-align:bottom;
+}
+
+
+div.sheet-header{
+	background-color:saddlebrown;	
+	height:30px;
+	color: white;
+	font-weight:bold; 
+	line-height:30px;
+	font-size:13px;
+}
+
+.sheet-text-center{	
+	text-align:center;	
+}
+
 .sheet-main-container {
     background-image:url("http://i48.servimg.com/u/f48/13/08/73/86/parcho12.jpg");
+}
+
+.sheet-rTable {   	
+	display: table;   	
+	width: 100%; 
+	font-size:11px;
+} 
+.sheet-rTableRow {
+  display: table-row;
+}
+.sheet-rTableCell, .sheet-rTableHead {   	
+	display: table-cell;   	
+	padding: 3px 10px;   	
+} 
+
+.sheet-border-left{
+	border-left:1px solid brown;
 }
 
 .sheet-table-carac {
@@ -34,44 +130,10 @@
     padding-bottom:2px;
 }
 
-input[type="text"], input[type="number"] {
-    background-color: transparent;
-    border: 0 solid saddlebrown;
-	border-bottom-width: 1px;
-    margin-top: 1px;
-}
-
-input[type="text"], select {
-	width: 100%;
-    margin: 1px 0 0 0;
-}
-
-input[type="text"] {
-	min-width:3em;
-}
-
 .sheet-small-label2 > input[type=number]{
 	width: 98%;
 	max-width: 100%;
 }
-
-/* turn off spinners for firefox width:3.25em; */
-input[type="number"] {
-	-moz-appearance: textfield !important;
-	-moz-padding-end: .5em;
-	padding-inline-end: .5em; /* moz changes to this */
-}
-/* set width for number input and surrounding labels */
-input[type="number"], .sheet-number {
-	min-width:2.5em;
-	max-width:4.5em;
-	width:auto;
-}
-/* set right align for numbers */
-input[type="number"], span.sheet-number, input.sheet-number {
-	text-align:right;
-}
-
 
 /* CHROME: hide spinner area at right when readonly or when not hovering over a number */
 input[readonly]::-webkit-inner-spin-button ,
@@ -236,6 +298,256 @@ input.sheet-pagetab7:checked ~ .sheet-main div.sheet-section-config.sheet-sectio
 
 /*================================================================================*/
 
+
+/***********************repeating item counter ************************************/
+.sheet-repeating-fields {
+	counter-reset: sheet-rep-items -1;
+}
+/* do not allow user to click when minimized */
+.sheet-minimize-show:checked ~ .sheet-lock-show,
+.sheet-minimize-show:checked ~ .sheet-repeating-fields .sheet-counted ,
+.sheet-lock-show:checked ~ .sheet-repeating-fields .sheet-counted,
+.sheet-lock-show:checked ~ .sheet-repeating-fields .sheet-showsect {
+	pointer-events: none;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields .sheet-counted:checked + span::before,
+.sheet-minimize-show:checked ~ .sheet-repeating-fields .sheet-counted + span::before,
+.sheet-counted + span::before {
+	counter-increment: sheet-rep-items;
+	content: counter(sheet-rep-items) '. ►' !important;
+	width: auto !important;
+	color:Black;
+}
+.sheet-counted:checked + span::before {
+	counter-increment: sheet-rep-items;
+content: counter(sheet-rep-items) '. ▼' !important;
+	width: auto !important;
+}
+/* inside table */
+.sheet-counted , .sheet-counted.sheet-sect-show {
+	position:absolute;
+	left:.5em;
+	top:.5em;
+	width:2.5em;
+	padding:0px;
+}
+
+.sheet-counted + span {
+	position:relative;
+	width:3em;
+	margin-left:-2em;
+}
+
+.sheet-counted + span.sheet-table-cell {
+	vertical-align:top;
+	padding-top:.25em;
+}
+
+.sheet-nontable-repeating .sheet-counted ,
+.sheet-nontable-repeating .sheet-counted.sheet-sect-show ,
+.sheet-nontable-repeating .sheet-counted + span {
+	display:inline-block;
+	position:relative;
+	vertical-align:middle;
+}
+
+.sheet-repeating-rollbutton {
+	width:2em;
+}
+
+.sheet-nontable-repeating .sheet-repeating-rollbutton button {
+	position:relative;
+	margin-left:0px;
+}
+
+
+.sheet-split-column-show:not(:checked)  ~ .sheet-repeating-fields .repitem {
+	clear:both;
+}
+
+.sheet-split-column-show:checked  ~ .sheet-repeating-fields .repitem {
+	width:50%;
+	display:inline-block;
+}
+.sheet-split-column-show:checked  ~ .sheet-repeating-fields .repitem:nth-child(odd),
+.sheet-split-column-show:checked  ~ .sheet-repeating-fields .repitem:first-child(odd){
+	float:left;
+}
+.sheet-split-column-show:checked  ~ .sheet-repeating-fields .repitem:nth-child(even){
+	float:right;
+}
+
+
+.sheet-minimize-show:checked ~ .sheet-repeating-fields  .sheet-small-label2,
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-small-label2,
+.sheet-counted:not(:checked) ~ .sheet-small-label2 {
+	margin-left:0px;
+	margin-right:2px;
+}
+
+
+.sheet-split-column-show:checked  ~ .sheet-repeating-fields .sheet-small-label2 {
+	height:auto;
+}
+.sheet-split-column-show:checked  ~ .sheet-repeating-fields  .sheet-small-label2 span {
+	margin:0 -.2em 0 -.2em;
+	padding:0;
+}
+
+.sheet-minimize-show:checked ~ .sheet-repeating-fields .sheet-entry-vlong,
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-vlong,
+.sheet-counted:not(:checked) ~ .sheet-small-label2.sheet-entry-vlong {
+	width:10em;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields .sheet-entry-long,
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-long,
+.sheet-counted:not(:checked) ~ .sheet-small-label2.sheet-entry-long {
+	width:8.75em;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields  .sheet-entry-med,
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-med,
+.sheet-counted:not(:checked) ~ .sheet-small-label2.sheet-entry-med  {
+	width:7em;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields .sheet-entry-short,
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-short,
+.sheet-counted:not(:checked) ~ .sheet-small-label2.sheet-entry-short  {
+	width:5em;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields  .sheet-entry-small,
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-small,
+.sheet-counted:not(:checked) ~ .sheet-small-label2.sheet-entry-small  {
+	width:4em;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields  .sheet-entry-vshort,
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-vshort,
+.sheet-counted:not(:checked) ~ .sheet-small-label2.sheet-entry-vshort  {
+	width:3.5em;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields  .sheet-small-label2.sheet-space-right-collapse,
+.sheet-minimize-show:checked ~ .sheet-repeating-fields  .sheet-linked-fields.sheet-space-right-collapse,
+.sheet-counted:not(:checked) ~ .sheet-small-label2.sheet-space-right-collapse,
+.sheet-counted:not(:checked) ~ .sheet-linked-fields.sheet-space-right-collapse {
+	margin-right:1.25em;
+}
+
+
+.sheet-entry-25p  {
+	width:25%;
+}
+.sheet-entry-25p-shrink  {
+	width:25%;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields .sheet-entry-25p-shrink  ,
+.sheet-counted:not(:checked) ~ .sheet-entry-25p-shrink {
+	width:40%;
+}
+
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-25p,
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-25p-shrink {
+	width:35%;
+}
+
+.sheet-entry-20p-shrink  {
+	width:20%;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields  .sheet-entry-20p-shrink ,
+.sheet-counted:not(:checked) ~ .sheet-entry-20p-shrink {
+	width:15%;
+}
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-20p-shrink {
+	width:25%;
+}
+
+.sheet-entry-15p-shrink  {
+	width:15%;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields  .sheet-entry-15p-shrink,
+.sheet-counted:not(:checked) ~ .sheet-entry-15p-shrink {
+	width:10%;
+}
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-15p-shrink {
+	width:20%;
+}
+
+.sheet-entry-12p-shrink  {
+	width:12%;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields  .sheet-entry-12p-shrink ,
+.sheet-counted:not(:checked) ~ .sheet-entry-12p-shrink {
+	width:9%;
+}
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-12p-shrink {
+	width:15%;
+}
+
+.sheet-entry-10p-shrink  {
+	width:10%;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields .sheet-entry-10p-shrink,
+.sheet-counted:not(:checked) ~ .sheet-entry-10p-shrink {
+	width:8%;
+}
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-10p-shrink {
+	width:12%;
+}
+
+.sheet-entry-8p {
+	width:8%;
+}
+.sheet-entry-8p-shrink  {
+	width:8%;
+}
+.sheet-minimize-show:checked ~ .sheet-repeating-fields .sheet-entry-8p-shrink,
+.sheet-counted:not(:checked) ~ .sheet-entry-8p-shrink {
+	width:6%;
+}
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-8p-shrink {
+	width:10%;
+}
+
+.repcontainer .repitem,.sheet-repeating-sect  .repitem {
+    padding: 2px 4px 1px 0px;
+    margin: 2px 0 4px 0;
+    border: 2px solid #CCCCCC;
+    border-radius: 7px;
+	vertical-align:top;
+	overflow: hidden;
+	display: block;
+	width:100%;
+}
+.repcontainer.editmode + .repcontrol {
+	margin-bottom:3em;
+}
+.repcontainer.editmode .repitem .itemcontrol {
+	z-index:3;
+	background-color:rgba(220,220,220,0.40);
+}
+.sheet-repeating-sect {
+	position:relative;
+}
+
+/******* end of generic repeating items ********/
+
+
+.repcontrol_add,
+.repcontrol_edit,
+.repcontrol_del,
+.repcontrol_move {
+    display: block;
+	background:saddlebrown;
+	color:White;
+}
+.repcontrol_del{
+	font-weight: bold;
+	color:red;
+}
+.repcontrol_move {
+	float: right;
+	margin-right: 5px;
+	width: 2.5em;
+}
+
 .sheet-nontable {
 	text-align:justify;
 	border-collapse:collapse;
@@ -337,3 +649,232 @@ input.sheet-pagetab7:checked ~ .sheet-main div.sheet-section-config.sheet-sectio
 	border: 1px #000 solid;
 	border-radius: 3px;
 }
+
+
+div.sheet-h2-section {	
+  display:block;
+  position:relative;
+  clear:both;
+  height:auto;
+  width:100%;
+}
+
+div.sheet-h2-section {
+	display:block;position:relative;clear:both;height:auto;width:100%;
+}
+
+
+.sheet-section-header .sheet-small-label2 {
+	display:table-cell;
+	padding: 0 .25em 0 .25em;
+	vertical-align:bottom;
+}
+
+
+
+input.sheet-sect-show:checked ~.sheet-npc-spells.sheet-sect {
+	display:block;
+	max-height: 999999px;
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.5s linear 0s;
+	overflow: hidden;	
+}
+
+input[type="checkbox"].sheet-cssbutton, input[type="checkbox"].sheet-showbutton,
+input[type="checkbox"].sheet-refreshbutton, input[type="checkbox"].sheet-split-column-show,
+input[type="checkbox"].sheet-options-show, input[type="checkbox"].sheet-desc-show,
+input[type="checkbox"].sheet-repeating_ids-show, input[type="checkbox"].sheet-sect-show {
+	opacity: 0;height: 1.5em; position: relative; top: 0; left: 0; cursor: pointer; z-index: 1;
+}
+/* added sheet-noshow to input so class can be on checkbox, instead of on a span after checkbox 
+though ideally we'd add a class only to checkbox we want to modify */
+input[type="checkbox"]:not(.sheet-noshow) + span:not(.sheet-not-sheet-show)::before {
+	display: inline-block;
+	content: '►';
+	width: 14px;
+	height: 16px;
+	font-size: .85em;
+}
+
+input[type="checkbox"].sheet-nextitem-show:checked + span {
+	display:inline;
+}
+input[type="checkbox"].sheet-nextitem-show:checked + span::before{
+	content:none;
+}
+/* used often and always the same size refactor: change to em */
+input[type="checkbox"].sheet-options-show{
+	width:70px;
+	margin:0px -15px 0px -55px;
+}
+
+input[type="checkbox"].sheet-desc-show{
+	width:90px;
+	margin:0px -15px 0px -75px;
+}
+
+input[type="checkbox"].sheet-repeating_ids-show{
+	width:40px;
+	margin:0px -15px 0px -25px;
+}
+
+input[type="checkbox"].sheet-refreshbutton{
+	width:3em;
+	margin:0px -3em 0px 0px;
+}
+input[type="checkbox"]:not(.sheet-noshow):checked + span:not(.sheet-not-sheet-show)::before {
+	content: '▼';
+}
+
+.sheet-sect-show:not(:checked)~.sheet-sect,
+.sheet-sect-show-inverse:checked~.sheet-sect-inverse{
+	display:none !important;	
+}
+
+.sheet-hide-a , .sheet-label-a{
+	position:absolute;
+	left:-1500px;
+	font-size:5px;
+}
+
+
+
+
+/* ROLL TEMPLATES */
+.sheet-rolltemplate-ygg_ability,
+.sheet-rolltemplate-ygg_skill,
+.sheet-rolltemplate-ygg_weapon {
+  box-sizing: border-box;
+}
+
+.sheet-rolltemplate-ygg_ability .sheet-roll-table,
+.sheet-rolltemplate-ygg_skill .sheet-roll-table,
+.sheet-rolltemplate-ygg_weapon .sheet-roll-table {
+  width: 100%;
+  display: table;
+  font-family: cursive;
+  border: 2px solid saddlebrown;
+  border-spacing: 0;
+  border-collapse: separate;
+  -moz-box-shadow: 2px 2px 5px #000;
+  -webkit-box-shadow: 2px 2px 5px #000;
+  box-shadow: 2px 2px 5px #000;
+  line-height: 25px;
+}
+
+.sheet-rolltemplate-ygg_ability .sheet-roll-table .sheet-rounded,
+.sheet-rolltemplate-ygg_skill .sheet-roll-table .sheet-rounded ,
+.sheet-rolltemplate-ygg_weapon .sheet-roll-table .sheet-rounded {
+  border-radius: 5px;
+}
+
+.sheet-rolltemplate-ygg_ability .sheet-roll-header,
+.sheet-rolltemplate-ygg_skill .sheet-roll-header,
+.sheet-rolltemplate-ygg_weapon .sheet-roll-header {
+  display: table-row-group;
+  width: 100%;
+  overflow: hidden;
+  caption-side: top;
+  width: 100%;
+  background-color: saddlebrown;
+  font-weight: bold;
+}
+
+.sheet-rolltemplate-ygg_ability .sheet-roll-header a ,
+.sheet-rolltemplate-ygg_skill .sheet-roll-header a,
+.sheet-rolltemplate-ygg_weapon .sheet-roll-header a {
+	text-decoration: underline;
+}
+
+.sheet-rolltemplate-ygg_ability .sheet-roll-row,
+.sheet-rolltemplate-ygg_skill .sheet-roll-row,
+.sheet-rolltemplate-ygg_weapon .sheet-roll-row {
+  width: 100%;
+  overflow: hidden;
+  background-color: whitesmoke;
+}
+
+.sheet-rolltemplate-ygg_ability .sheet-roll-row:nth-child(even),
+.sheet-rolltemplate-ygg_skill .sheet-roll-row:nth-child(even),
+.sheet-rolltemplate-ygg_weapon .sheet-roll-row:nth-child(even){
+  background-color: #FADABF;
+}
+
+.sheet-rolltemplate-ygg_ability .sheet-roll-cell,
+.sheet-rolltemplate-ygg_skill .sheet-roll-cell,
+.sheet-rolltemplate-ygg_weapon .sheet-roll-cell {
+  padding: 1px 1px 1px 5px;
+  text-align: left;
+  width: 100%;
+}
+
+.sheet-rolltemplate-ygg_ability .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell,
+.sheet-rolltemplate-ygg_skill .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell ,
+.sheet-rolltemplate-ygg_weapon .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell {
+  font-size: .9em;
+  width: 24%;
+  float: right;
+  text-align: right;
+  display: inline;
+  padding: 1px 1px 1px 5px;
+  vertical-align: bottom;
+}
+
+.sheet-rolltemplate-ygg_ability .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child,
+.sheet-rolltemplate-ygg_skill .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child ,
+.sheet-rolltemplate-ygg_weapon .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child {
+  width: 69%;
+  float: left;
+  text-align: left;
+  padding: 3px 2px 1px 4px;
+}
+
+
+.sheet-rolltemplate-ygg_ability .inlinerollresult,
+.sheet-rolltemplate-ygg_skill .inlinerollresult,
+.sheet-rolltemplate-ygg_weapon .inlinerollresult {  
+    background-color: SandyBrown;
+    border: 2px solid saddlebrown;
+}
+
+
+.sheet-rolltemplate-ygg_ability .inlinerollresult.fullcrit,
+.sheet-rolltemplate-ygg_skill .inlinerollresult.fullcrit ,
+.sheet-rolltemplate-ygg_weapon .inlinerollresult.fullcrit {
+  color: #FFF;
+  background-color: #3FB315;
+}
+
+.sheet-rolltemplate-ygg_ability .inlinerollresult.fullfail,
+.sheet-rolltemplate-ygg_skill .inlinerollresult.fullfail,
+.sheet-rolltemplate-ygg_weapon .inlinerollresult.fullfail {
+  color: #FFF;
+  background-color: #B31515;
+}
+
+.sheet-rolltemplate-ygg_ability .inlinerollresult.importantroll,
+.sheet-rolltemplate-ygg_skill .inlinerollresult.importantroll ,
+.sheet-rolltemplate-ygg_weapon .inlinerollresult.importantroll {
+  color: #FFF;
+  background-color: #4A57ED;
+}
+
+.sheet-rolltemplate-ygg_ability .sheet-roll-text-white,
+.sheet-rolltemplate-ygg_skill .sheet-roll-text-white,
+.sheet-rolltemplate-ygg_weapon .sheet-roll-text-white {
+  color:white;
+}
+
+.sheet-rolltemplate-ygg_ability .sheet-roll-text-12px,
+.sheet-rolltemplate-ygg_skill .sheet-roll-text-12px,
+.sheet-rolltemplate-ygg_weapon .sheet-roll-text-12px {  
+    font-size: 12px;
+}
+
+.sheet-rolltemplate-ygg_ability .sheet-roll-text-right,
+.sheet-rolltemplate-ygg_skill .sheet-roll-text-right,
+.sheet-rolltemplate-ygg_weapon .sheet-roll-text-right {
+  text-align:right;
+}
+
