@@ -1,0 +1,352 @@
+.sheet-main{
+    font-size: 11px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+input[type="text"], input[type="number"], select {
+    font-size: 11px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+input[type="text"] {
+    width: 150px;
+}
+
+input[type="text"], select {
+  width: 100%;
+  margin: 1px 0 0 0;
+}
+
+.sheet-div-table {
+    display:  table;
+    width: 98%;
+    font-size:11px;
+}
+
+.sheet-div-row {
+   display:table-row;
+   width:auto;
+}
+
+.sheet-div-cell, .sheet-div-head {
+    display: table-cell;
+    padding: 2px 5px;
+}
+
+.sheet-div-head {
+    font-weight: bold;
+}
+
+.sheet-div-center {
+    text-align: center;
+}
+
+/******************************* API COMMAND BUTTONS *************************************/
+
+button[type="roll"] {
+  margin-left:initial;
+  margin-right:initial;
+}
+
+button, button:hover, button:active {
+  background-image: initial;
+}
+
+button[type="roll"] {
+  margin: .25em .25em .25em .25em ;
+  font-size:.8125rem;
+}
+
+.sheet-command-button {
+  font-size: 11px;
+  background-color: #000;
+  padding: 2px;
+  color:#FFF;
+}
+
+button[type="roll"].sheet-command-button::before {
+  content: "" !important;
+}
+
+/******************************* REPEATING SECTION *************************************/
+
+
+.sheet-repeating-rollbutton {
+  width:2em;
+}
+
+.sheet-nontable-repeating .sheet-repeating-rollbutton button {
+  position:relative;
+  margin-left:0px;
+}
+
+.sheet-small-label2 {
+  display: inline-block;
+  margin: .3em .2em .3em .25em;
+  height:3em;
+  min-height:3em;
+  vertical-align: top;
+   text-align:center;
+  position:relative;
+}
+
+
+.sheet-small-label2 span {
+  padding: 0em .07em 0em .07em;
+   text-align:center;
+  font-size: .85em;
+  font-style: italic;
+  font-weight: bold;
+  color:#000000;
+  position:relative;
+  bottom:0px;
+}
+
+.sheet-small-label2 > * {
+  max-width:100%;
+}
+
+.sheet-small-label2 > input[type=number]{
+  width: 98%;
+  max-width: 100%;
+}
+
+.sheet-table-cell span[title],  .sheet-table-header[title], .sheet-small-label2 span[title] {
+  cursor: help;
+}
+.sheet-small-label2 > input, .sheet-small-label2 > select, .sheet-small-label2 > .sheet-calc {
+  display:block;
+  padding:.25em 2px .25em 2px;
+  vertical-align:top;
+  height:1.825em; /* otherwise defaults from base.css hardcode it too tall */
+  position:relative;
+  width: 100%
+}
+.sheet-small-label2  input::-moz-focus-inner {
+  padding:0px;
+}
+
+/* chrome displays checkbox height incorrectly and all the way to the left because  1.825em throws it off */
+.sheet-small-label2 > input[type="checkbox"], .sheet-small-label2 > input[type="radio"] {
+  -webkit-logical-height:initial;
+  -webkit-margin-before:.8em;
+  width:100%;
+}
+.sheet-table-name + .sheet-table-group .sheet-small-label2 {
+  margin-top:1.25em;
+}
+
+.sheet-number,
+.sheet-small-label2.sheet-number {
+  width:3.5em;
+}
+
+.sheet-section-header .sheet-small-label2 {
+  display:table-cell;
+  padding: 0 .25em 0 .25em;
+  vertical-align:bottom;
+}
+
+.repcontainer .repitem,.sheet-repeating-sect  .repitem {
+  padding: 2px 4px 1px 0px;
+  margin: 2px 0 4px 0;
+  border: 2px solid #CCCCCC;
+  border-radius: 7px;
+  vertical-align:top;
+  overflow: hidden;
+  display: block;
+  width:100%;
+}
+.repcontainer.editmode + .repcontrol {
+  margin-bottom:3em;
+}
+.repcontainer.editmode .repitem .itemcontrol {
+  z-index:3;
+  background-color:rgba(220,220,220,0.40);
+}
+.sheet-repeating-sect {
+  position:relative;
+}
+
+
+/********************/
+
+
+
+/* ROLL TEMPLATES */
+.sheet-rolltemplate-coc_abilities,
+.sheet-rolltemplate-coc_sanity,
+.sheet-rolltemplate-coc_skills,
+.sheet-rolltemplate-coc_weapons,
+.sheet-rolltemplate-coc_buttons {
+  box-sizing: border-box;
+}
+
+.sheet-rolltemplate-coc_abilities .sheet-roll-table,
+.sheet-rolltemplate-coc_sanity .sheet-roll-table,
+.sheet-rolltemplate-coc_skills .sheet-roll-table,
+.sheet-rolltemplate-coc_weapons .sheet-roll-table ,
+.sheet-rolltemplate-coc_buttons .sheet-roll-table {
+  width: 100%;
+  display: table;
+  font-family: cursive;
+  border: 2px solid black;
+  border-spacing: 0;
+  border-collapse: separate;
+  -moz-box-shadow: 2px 2px 5px #000;
+  -webkit-box-shadow: 2px 2px 5px #000;
+  box-shadow: 2px 2px 5px #000;
+  line-height: 25px;
+}
+
+.sheet-rolltemplate-coc_abilities .sheet-roll-table .sheet-rounded,
+.sheet-rolltemplate-coc_sanity .sheet-roll-table .sheet-rounded ,
+.sheet-rolltemplate-coc_skills .sheet-roll-table .sheet-rounded ,
+.sheet-rolltemplate-coc_weapons .sheet-roll-table .sheet-rounded,
+.sheet-rolltemplate-coc_buttons .sheet-roll-table .sheet-rounded {
+  border-radius: 5px;
+}
+
+.sheet-rolltemplate-coc_abilities .sheet-roll-header,
+.sheet-rolltemplate-coc_sanity .sheet-roll-header,
+.sheet-rolltemplate-coc_skills .sheet-roll-header,
+.sheet-rolltemplate-coc_weapons .sheet-roll-header,
+.sheet-rolltemplate-coc_buttons .sheet-roll-header {
+  display: table-row-group;
+  width: 100%;
+  overflow: hidden;
+  caption-side: top;
+  width: 100%;
+  background-color: black;
+  font-weight: bold;
+}
+
+.sheet-rolltemplate-coc_abilities .sheet-roll-header a ,
+.sheet-rolltemplate-coc_sanity .sheet-roll-header a,
+.sheet-rolltemplate-coc_skills .sheet-roll-header a,
+.sheet-rolltemplate-coc_weapons .sheet-roll-header a,
+.sheet-rolltemplate-coc_buttons .sheet-roll-header a {
+    text-decoration: underline;
+}
+
+.sheet-rolltemplate-coc_abilities .sheet-roll-row,
+.sheet-rolltemplate-coc_sanity .sheet-roll-row,
+.sheet-rolltemplate-coc_skills .sheet-roll-row,
+.sheet-rolltemplate-coc_weapons .sheet-roll-row,
+.sheet-rolltemplate-coc_buttons .sheet-roll-row {
+  width: 100%;
+  overflow: hidden;
+  background-color: whitesmoke;
+}
+
+.sheet-rolltemplate-coc_abilities .sheet-roll-row:nth-child(even),
+.sheet-rolltemplate-coc_sanity .sheet-roll-row:nth-child(even),
+.sheet-rolltemplate-coc_skills .sheet-roll-row:nth-child(even),
+.sheet-rolltemplate-coc_weapons .sheet-roll-row:nth-child(even),
+.sheet-rolltemplate-coc_buttons .sheet-roll-row:nth-child(even){
+  background-color: #B1B1B1;
+}
+
+.sheet-rolltemplate-coc_abilities .sheet-roll-cell,
+.sheet-rolltemplate-coc_sanity .sheet-roll-cell,
+.sheet-rolltemplate-coc_skills .sheet-roll-cell,
+.sheet-rolltemplate-coc_weapons .sheet-roll-cell,
+.sheet-rolltemplate-coc_buttons .sheet-roll-cell {
+  padding: 1px 1px 1px 5px;
+  text-align: left;
+  width: 100%;
+}
+
+.sheet-rolltemplate-coc_abilities .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell,
+.sheet-rolltemplate-coc_sanity .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell ,
+.sheet-rolltemplate-coc_skills .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell ,
+.sheet-rolltemplate-coc_weapons .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell,
+.sheet-rolltemplate-coc_buttons .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell {
+  font-size: .9em;
+  width: 24%;
+  float: right;
+  text-align: right;
+  display: inline;
+  padding: 1px 1px 1px 5px;
+  vertical-align: bottom;
+}
+
+.sheet-rolltemplate-coc_abilities .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child,
+.sheet-rolltemplate-coc_sanity .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child ,
+.sheet-rolltemplate-coc_skills .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child ,
+.sheet-rolltemplate-coc_weapons .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child ,
+.sheet-rolltemplate-coc_buttons .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child {
+  width: 69%;
+  float: left;
+  text-align: left;
+  padding: 3px 2px 1px 4px;
+}
+
+
+.sheet-rolltemplate-coc_abilities .inlinerollresult,
+.sheet-rolltemplate-coc_sanity .inlinerollresult,
+.sheet-rolltemplate-coc_skills .inlinerollresult ,
+.sheet-rolltemplate-coc_weapons .inlinerollresult,
+.sheet-rolltemplate-coc_buttons .inlinerollresult {
+    background-color: lightgrey;
+    border: 2px solid black;
+}
+
+
+.sheet-rolltemplate-coc_abilities .inlinerollresult.fullcrit,
+.sheet-rolltemplate-coc_sanity .inlinerollresult.fullcrit ,
+.sheet-rolltemplate-coc_skills .inlinerollresult.fullcrit,
+.sheet-rolltemplate-coc_weapons .inlinerollresult.fullcrit,
+.sheet-rolltemplate-coc_buttons .inlinerollresult.fullcrit {
+  color: #FFF;
+  background-color: #3FB315;
+}
+
+.sheet-rolltemplate-coc_abilities .inlinerollresult.fullfail,
+.sheet-rolltemplate-coc_sanity .inlinerollresult.fullfail,
+.sheet-rolltemplate-coc_skills .inlinerollresult.fullfail,
+.sheet-rolltemplate-coc_weapons .inlinerollresult.fullfail,
+.sheet-rolltemplate-coc_buttons .inlinerollresult.fullfail {
+  color: #FFF;
+  background-color: #B31515;
+}
+
+.sheet-rolltemplate-coc_abilities .inlinerollresult.importantroll,
+.sheet-rolltemplate-coc_sanity .inlinerollresult.importantroll ,
+.sheet-rolltemplate-coc_skills .inlinerollresult.importantroll ,
+.sheet-rolltemplate-coc_weapons .inlinerollresult.importantroll,
+.sheet-rolltemplate-coc_buttons .inlinerollresult.importantroll {
+  color: #FFF;
+  background-color: #4A57ED;
+}
+
+.sheet-rolltemplate-coc_abilities .sheet-roll-text-white,
+.sheet-rolltemplate-coc_sanity .sheet-roll-text-white,
+.sheet-rolltemplate-coc_skills .sheet-roll-text-white ,
+.sheet-rolltemplate-coc_weapons .sheet-roll-text-white,
+.sheet-rolltemplate-coc_buttons .sheet-roll-text-white {
+  color:white;
+}
+
+.sheet-rolltemplate-coc_abilities .sheet-roll-text-12px,
+.sheet-rolltemplate-coc_sanity .sheet-roll-text-12px,
+.sheet-rolltemplate-coc_skills .sheet-roll-text-12px,
+.sheet-rolltemplate-coc_weapons .sheet-roll-text-12px,
+.sheet-rolltemplate-coc_buttons .sheet-roll-text-12px {
+    font-size: 12px;
+}
+
+.sheet-rolltemplate-coc_abilities .sheet-roll-text-right,
+.sheet-rolltemplate-coc_sanity .sheet-roll-text-right,
+.sheet-rolltemplate-coc_skills .sheet-roll-text-right,
+.sheet-rolltemplate-coc_weapons .sheet-roll-text-right,
+.sheet-rolltemplate-coc_buttons .sheet-roll-text-right {
+  text-align:right;
+}
+
+.sheet-rolltemplate-coc_buttons .textchatcontainer a[href^="!"],
+.sheet-rolltemplate-coc_buttons .textchatcontainer a[href^="~"] {
+  font-size: 11px;
+  background-color: #000;
+  padding: 2px;
+}

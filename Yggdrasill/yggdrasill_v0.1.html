@@ -1,20 +1,19 @@
 <div class="sheet-main-container">
-
-	<!--spacer so scrollbar does not disappear-->
-	<div style="width:1px; height:600px; min-height:600px;position:absolute;left:1px;">&nbsp;</div>
-	<header>
-		<div class="sheet-table-row">
-			<label class="sheet-table-cell" style="width:22%;"><img src="http://img15.hostingpics.net/pics/954146logo.png" alt="YGGDRASILL Logo" style="max-height: 100px;" /></label>
-			<label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="firstname">Prénom</span><input name="attr_character_firstname" type="text" data-i18n-placeholder="character-firstname-place" placeholder="Prénom du Personnage" /></label>
-			<label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="lastname">Nom</span><input name="attr_character_lastname" type="text" data-i18n-placeholder="character-lastname-place" placeholder="Nom du personnage" /></label>
-			<label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="archetype">Archetype</span><select name="attr_archetype" class="sheet-dropdown-character">
+    <!--spacer so scrollbar does not disappear-->
+    <div style="width:1px; height:600px; min-height:600px;position:absolute;left:1px;">&nbsp;</div>
+    <header>
+        <div class="sheet-table-row">
+            <label class="sheet-table-cell" style="width:22%;"><img src="http://img15.hostingpics.net/pics/954146logo.png" alt="YGGDRASILL Logo" style="max-height: 100px;" /></label>
+            <label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="firstname">Prénom</span><input name="attr_character_firstname" type="text" data-i18n-placeholder="character-firstname-place" placeholder="Prénom du Personnage" /></label>
+            <label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="lastname">Nom</span><input name="attr_character_lastname" type="text" data-i18n-placeholder="character-lastname-place" placeholder="Nom du personnage" /></label>
+            <label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="archetype">Archetype</span><select name="attr_archetype" class="sheet-dropdown-character">
 							<option value="Noble" data-i18n="noble" selected="selected">Noble</option>
 							<option value="Guerrier" data-i18n="warrior">Guerrier</option>
 							<option value="Sage" data-i18n="wiseman">Sage</option>
 							<option value="Travailleur" data-i18n="worker">Travailleur</option>
 							<option value="Voyageur" data-i18n="traveler">Voyageur</option>
 						</select></label>
-			<label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="profession">Profession</span><select name="attr_profession" class="sheet-dropdown-character">
+            <label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="profession">Profession</span><select name="attr_profession" class="sheet-dropdown-character">
 							<option value="Jarl" data-i18n="jarl" selected="selected">Jarl</option>
 							<option value="Chef de Guerre" data-i18n="war-chief">Chef de Guerre</option>
 							<option value="Conseiller du Seigneur" data-i18n="lord-adviser">Conseiller du Seigneur</option>
@@ -41,44 +40,44 @@
 							<option value="Forgeron Itinérant" data-i18n="travelling-blacksmith">Forgeron Itinérant</option>
 							<option value="Espion" data-i18n="spy">Espion</option>
 						</select></label>
-		</div>
-	</header>
-	<nav role="navigation" aria-label="Main navigation hide and show sections." data-i18n-aria-label="nav-main-desc">
-		<input type="checkbox" class="sheet-tab1 sheet-pagetab1" name="attr_tab" value="1" style="display:none;" />
-		<input type="checkbox" class="sheet-tab2 sheet-pagetab2" name="attr_tab" value="2" style="display:none;" />
-		<input type="checkbox" class="sheet-tab3 sheet-pagetab3" name="attr_tab" value="3" style="display:none;" />
-		<input type="checkbox" class="sheet-tab4 sheet-pagetab4" name="attr_tab" value="4" style="display:none;" />
-		<input type="checkbox" class="sheet-tab5 sheet-pagetab5" name="attr_tab" value="5" style="display:none;" />
-		<input type="checkbox" class="sheet-tab6 sheet-pagetab6" name="attr_tab" value="6" style="display:none;" />
-		<input type="checkbox" class="sheet-tab7 sheet-pagetab7" name="attr_tab" value="7" style="display:none;" />
-		<div class="sheet-mainnav sheet-tabs">
-			<label class="sheet-tab sheet-tab1" style="width:12%;"><span data-i18n="page-character">Personnage</span><input type="radio" class="sheet-tab" name="attr_tab" value="1" checked="checked" /></label>
-			<label class="sheet-tab sheet-tab2" style="width:15%;"><span data-i18n="page-abilities">Caractéristiques</span><input type="radio" class="sheet-tab" name="attr_tab" value="2" /></label>
-			<label class="sheet-tab sheet-tab3" style="width:15%;"><span data-i18n="page-skills">Compétences</span><input type="radio" class="sheet-tab" name="attr_tab" value="3" /></label>    
-			<label class="sheet-tab sheet-tab4" style="width:20%;"><span data-i18n="page-weapons-equipments">Armes & Equipement</span><input type="radio" class="sheet-tab" name="attr_tab" value="4" /></label>    
-			<label class="sheet-tab sheet-tab5" style="width:15%;"><span data-i18n="page-spells-magic">Sorts & Magie</span><input type="radio" class="sheet-tab" name="attr_tab" value="5" /></label>    
-			<label class="sheet-tab sheet-tab6" style="width:10%;"><span data-i18n="page-notes">Notes</span><input type="radio" class="sheet-tab" name="attr_tab" value="6" /></label>    
-			<label class="sheet-tab sheet-tab7" style="width:5%;"><span data-i18n-title="page-config" title="Configuration" class="sheet-pictos">y</span><input type="radio" class="sheet-tab" name="attr_tab" value="7" /></label>    
-		</div>
-	</nav>
-	<main role="main">
-		<div class="sheet-main">
-			<section role="region" aria-label="Personnage" data-i18n-aria-label="page-character-aria">
-				<div class="sheet-section sheet-section-character">
+        </div>
+    </header>
+    <nav role="navigation" aria-label="Main navigation hide and show sections." data-i18n-aria-label="nav-main-desc">
+        <input type="checkbox" class="sheet-tab1 sheet-pagetab1" name="attr_tab" value="1" style="display:none;" />
+        <input type="checkbox" class="sheet-tab2 sheet-pagetab2" name="attr_tab" value="2" style="display:none;" />
+        <input type="checkbox" class="sheet-tab3 sheet-pagetab3" name="attr_tab" value="3" style="display:none;" />
+        <input type="checkbox" class="sheet-tab4 sheet-pagetab4" name="attr_tab" value="4" style="display:none;" />
+        <input type="checkbox" class="sheet-tab5 sheet-pagetab5" name="attr_tab" value="5" style="display:none;" />
+        <input type="checkbox" class="sheet-tab6 sheet-pagetab6" name="attr_tab" value="6" style="display:none;" />
+        <input type="checkbox" class="sheet-tab7 sheet-pagetab7" name="attr_tab" value="7" style="display:none;" />
+        <div class="sheet-mainnav sheet-tabs">
+            <label class="sheet-tab sheet-tab1" style="width:12%;"><span data-i18n="page-character">Personnage</span><input type="radio" class="sheet-tab" name="attr_tab" value="1" checked="checked" /></label>
+            <label class="sheet-tab sheet-tab2" style="width:15%;"><span data-i18n="page-abilities">Caractéristiques</span><input type="radio" class="sheet-tab" name="attr_tab" value="2" /></label>
+            <label class="sheet-tab sheet-tab3" style="width:15%;"><span data-i18n="page-skills">Compétences</span><input type="radio" class="sheet-tab" name="attr_tab" value="3" /></label>
+            <label class="sheet-tab sheet-tab4" style="width:20%;"><span data-i18n="page-weapons-equipments">Armes & Equipement</span><input type="radio" class="sheet-tab" name="attr_tab" value="4" /></label>
+            <label class="sheet-tab sheet-tab5" style="width:15%;"><span data-i18n="page-spells-runes">Sorts & Runes</span><input type="radio" class="sheet-tab" name="attr_tab" value="5" /></label>
+            <label class="sheet-tab sheet-tab6" style="width:10%;"><span data-i18n="page-notes">Notes</span><input type="radio" class="sheet-tab" name="attr_tab" value="6" /></label>
+            <label class="sheet-tab sheet-tab7" style="width:5%;"><span data-i18n-title="page-config" title="Configuration" class="sheet-pictos">y</span><input type="radio" class="sheet-tab" name="attr_tab" value="7" /></label>
+        </div>
+    </nav>
+    <main role="main">
+        <div class="sheet-main">
+            <section role="region" aria-label="Personnage" data-i18n-aria-label="page-character-aria">
+                <div class="sheet-section sheet-section-character">
 
-					<br/>
-					<div class="sheet-nontable sheet-sect">
-		                <span class="sheet-nontable-name" data-i18n="character-desc">Description du Personnage</span>
-		                <label class="sheet-small-label2" style="width: 25%;"><input name="attr_character_firstname" type="text" data-i18n-placeholder="character-firstname-place" placeholder="Prénom du personnage" /><span data-i18n="firstname">Prénom</span></label>
-		                <label class="sheet-small-label2" style="width: 25%;"><input name="attr_character_lastname" type="text" data-i18n-placeholder="character-lastname-place" placeholder="Nom du personnage" /><span data-i18n="lastname">Nom</span></label>
-		                <label class="sheet-small-label2" style="width: 20%;"><select name="attr_archetype" class="sheet-dropdown-character">
+                    <br/>
+                    <div class="sheet-nontable sheet-sect">
+                        <span class="sheet-nontable-name" data-i18n="character-desc">Description du Personnage</span>
+                        <label class="sheet-small-label2" style="width: 25%;"><input name="attr_character_firstname" type="text" data-i18n-placeholder="character-firstname-place" placeholder="Prénom du personnage" /><span data-i18n="firstname">Prénom</span></label>
+                        <label class="sheet-small-label2" style="width: 25%;"><input name="attr_character_lastname" type="text" data-i18n-placeholder="character-lastname-place" placeholder="Nom du personnage" /><span data-i18n="lastname">Nom</span></label>
+                        <label class="sheet-small-label2" style="width: 20%;"><select name="attr_archetype" class="sheet-dropdown-character">
 								<option value="Noble" data-i18n="noble" selected="selected">Noble</option>
 								<option value="Guerrier" data-i18n="warrior">Guerrier</option>
 								<option value="Sage" data-i18n="wiseman">Sage</option>
 								<option value="Travailleur" data-i18n="worker">Travailleur</option>
 								<option value="Voyageur" data-i18n="traveler">Voyageur</option>
 							</select><span data-i18n="archetype">Archetype</span></label>
-		                <label class="sheet-small-label2" style="width: 20%;"><select name="attr_profession" class="sheet-dropdown-character">
+                        <label class="sheet-small-label2" style="width: 20%;"><select name="attr_profession" class="sheet-dropdown-character">
 								<option value="Jarl" data-i18n="jarl" selected="selected">Jarl</option>
 								<option value="Chef de Guerre" data-i18n="war-chief">Chef de Guerre</option>
 								<option value="Conseiller du Seigneur" data-i18n="lord-adviser">Conseiller du Seigneur</option>
@@ -105,715 +104,828 @@
 								<option value="Forgeron Itinérant" data-i18n="travelling-blacksmith">Forgeron Itinérant</option>
 								<option value="Espion" data-i18n="spy">Espion</option>
 							</select><span data-i18n="profession">Profession</span></label>
-						<label class="sheet-small-label2" style="width: 7%;"><input name="attr_age" type="number" data-i18n-title="age-title" title="Age du personnage" /><span data-i18n="age">Age</span></label>
-		                <label class="sheet-small-label2" style="width: 7%;"><input name="attr_height" type="number" data-i18n-title="height-title" title="Taille du personnage" /><span data-i18n="height">Taille</span></label>
-		                <label class="sheet-small-label2" style="width: 7%;"><input name="attr_weight" type="number" data-i18n-title="weight-title" title="Poids du personnage" /><span data-i18n="weight">Poids</span></label>
-
-		                <label class="sheet-small-label2" style="width: 18%;"><input name="attr_kingdom" type="text" data-i18n-placeholder="kingdom-place" placeholder="Royaume d'origine" /><span data-i18n="kingdom">Royaume</span></label>
-		                <label class="sheet-small-label2" style="width: 18%;"><input name="attr_gifts" type="text" data-i18n-placeholder="gifts-place" placeholder="Dons du personnage" /><span data-i18n="gifts">Dons</span></label>
-		                <label class="sheet-small-label2" style="width: 18%;"><input name="attr_weakness" type="text" data-i18n-placeholder="weakness-place" placeholder="Faiblesse du personnage" /><span data-i18n="weakness">Faiblesse</span></label>
-		                <label class="sheet-small-label2" style="width: 7%;"><input name="attr_renown" type="number" data-i18n-title="renown-title" title="Renommée du personnage" /><span data-i18n="renown">Renommée</span></label>
-
-						<label class="sheet-small-label2" style="width: 98%;"><textarea class="sheet-inline-textarea" name="attr_history" data-i18n-placeholder="history-place" placeholder="Histoire du Personnage"></textarea><span data-i18n="history">Histoire</span></label>
-						<br/><br/><br/>
-	              	</div>
-
-			        <!-- Noteworthy Deeds -->
-					<div class="sheet-section">
-						<div class="sheet-h2-section">
-							<h2 data-i18n="noteworthy-deeds">Faits Marquants</h2>
-							<label for="attr_noteworthy-deeds-show" class="sheet-label-a" data-i18n="noteworthy-deeds-exp">Développer les Faits Marquants</label>
-							<input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_noteworthy-deeds-show" name="attr_noteworthy-deeds-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
-							<div class="sheet-nontable sheet-sect"> 
-
-								<div class="sheet-divbox sheet-repeating-sect">
-									<div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="noteworthy-deeds">Faits Marquants</span></div>
-									<br/>
-									<fieldset class="repeating_noteworthy-deeds">
-										<span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_noteworthyDeedsName" data-i18n-placeholder="noteworthy-deeds-name-place" placeholder="Nom du Faits Marquants" /><span data-i18n="name">Nom</span></span>
-										<span class="sheet-small-label2" style="width:50%;"><input type="text" name="attr_noteworthyDeedsDesc" data-i18n-placeholder="noteworthy-deeds-description-place" placeholder="Description du Faits Marquants" /><span data-i18n="description">Description</span></span>
-									</fieldset>
-								</div>
-
-							</div>
-						</div>
-					</div>
-					<br/>
-
-
-	            </div>
-			</section>
-			<section role="region" aria-label="Caractéristiques" data-i18n-aria-label="page-abilities-aria">
-				<div class="sheet-section sheet-section-abilities">
-
-					<!-- ABILITIES -->
-					<table cellspacing="0" cellpadding="0" border="0" class="sheet-table-carac">
-			            <thead>
-			                <tr>
-			                    <th colspan="2" class="sheet-table-carac-head">
-			                         <h4><span data-i18n="body">Corps</span></h4>
-			                    </th>
-			                    <th style="width:20px;"></th>
-			                    <th colspan="2" class="sheet-table-carac-head">
-			                         <h4><span data-i18n="mind">Esprit</span></h4>
-			                    </th>
-			                    <th style="width:20px;"></th>
-			                    <th colspan="2" class="sheet-table-carac-head">
-			                         <h4><span data-i18n="soul">Ame</span></h4>
-			                    </th>
-			                </tr>
-			            </thead>
-			            <tbody>
-			                <tr>
-			                    <td class="sheet-table-carac-left">
-			                        <label class="sheet-table-carac-label"><span data-i18n="strength">Puissance</span>:</label>
-			                    </td>
-			                    <td class="sheet-table-carac-right">
-			                        <input type="number" name="attr_str" max="5" />
-			                        <button type="roll" name="roll_str" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{strength}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{str}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{str}-@{hvHalflife}]]]]}} "></button>
-			                    </td>
-			                    <td></td>
-			                    <td class="sheet-table-carac-left">
-			                        <label class="sheet-table-carac-label"><span data-i18n="intellect">Intellect</span>:</label>
-			                    </td>
-			                    <td class="sheet-table-carac-right">
-			                        <input type="number" name="attr_int" max="5" />
-			                        <button type="roll" name="roll_int" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{intellect}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{int}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{int}-@{hvHalflife}]]]]}} "></button>
-			                    </td>
-			                    <td></td>
-			                    <td class="sheet-table-carac-left">
-			                        <label class="sheet-table-carac-label"><span data-i18n="charisma">Charisme</span>:</label>
-			                    </td>
-			                    <td class="sheet-table-carac-right">
-			                        <input type="number" name="attr_cha" max="5" />
-			                        <button type="roll" name="roll_cha" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{charisma}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{cha}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{cha}-@{hvHalflife}]]]]}} "></button>
-			                    </td>
-			                </tr>
-			                <tr>
-			                    <td class="sheet-table-carac-left">
-			                        <label class="sheet-table-carac-label"><span data-i18n="vigour">Vigueur</span>:</label>
-			                    </td>
-			                    <td class="sheet-table-carac-right">
-			                        <input type="number" name="attr_vig" max="5" />
-			                        <button type="roll" name="roll_vig" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{vigour}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{vig}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{vig}-@{hvHalflife}]]]]}} "></button>
-			                    </td>
-			                    <td></td>
-			                    <td class="sheet-table-carac-left">
-			                        <label class="sheet-table-carac-label"><span data-i18n="perception">Perception</span>:</label>
-			                    </td>
-			                    <td class="sheet-table-carac-right">
-			                        <input type="number" name="attr_per" max="5" />
-			                        <button type="roll" name="roll_per" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{perception}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{per}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{per}-@{hvHalflife}]]]]}} "></button>
-			                    </td>
-			                    <td></td>
-			                    <td class="sheet-table-carac-left">
-			                        <label class="sheet-table-carac-label"><span data-i18n="instinct">Instinct</span>:</label>
-			                    </td>
-			                    <td class="sheet-table-carac-right">
-			                        <input type="number" name="attr_ins" max="5" />
-			                        <button type="roll" name="roll_ins" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{instinct}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{ins}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{ins}-@{hvHalflife}]]]]}} "></button>
-			                    </td>
-			                </tr>
-			                <tr>
-			                    <td class="sheet-table-carac-left sheet-table-carac-bottom">
-			                        <label class="sheet-table-carac-label"><span data-i18n="agility">Agilité</span>:</label>
-			                    </td>
-			                    <td class="sheet-table-carac-right sheet-table-carac-bottom">
-			                        <input type="number" name="attr_agi" max="5" />
-			                        <button type="roll" name="roll_agi" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{agility}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{agi}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{agi}-@{hvHalflife}]]]]}} "></button>
-			                    </td>
-			                    <td></td>
-			                    <td class="sheet-table-carac-left sheet-table-carac-bottom">
-			                        <label class="sheet-table-carac-label"><span data-i18n="tenacity">Ténacité</span>:</label>
-			                    </td>
-			                    <td class="sheet-table-carac-right sheet-table-carac-bottom">
-			                        <input type="number" name="attr_ten" max="5" />
-			                        <button type="roll" name="roll_ten" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{tenacity}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{ten}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{ten}-@{hvHalflife}]]]]}} "></button>
-			                    </td>
-			                    <td></td>
-			                    <td class="sheet-table-carac-left sheet-table-carac-bottom">
-			                        <label class="sheet-table-carac-label"><span data-i18n="communication">Communication</span>:</label>
-			                    </td>
-			                    <td class="sheet-table-carac-right sheet-table-carac-bottom">
-			                        <input type="number" name="attr_com" max="5" />
-			                        <button type="roll" name="roll_com" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{communication}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{com}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{com}-@{hvHalflife}]]]]}} "></button>
-			                    </td>
-			                </tr>
-			            </tbody>
-			        </table>
-					<br/>
-
-					<div class="sheet-nontable sheet-sect">
-		                <span class="sheet-nontable-name" data-i18n="hit-points-stats">Points de vie & Stats</span>
-
-						<label class="sheet-small-label2" style="width: 10%;"><input name="attr_hp" type="number" data-i18n-title="hp-title" title="Points de vie du personnage" /><span data-i18n="hp">PV</span></label>
-						<label class="sheet-small-label2" style="width: 10%;"><input name="attr_hp_max" type="number" data-i18n-title="hp-max-title" title="Points de vie max du personnage" readonly="readonly" /><span data-i18n="max">MAX</span></label>
-
-						<label class="sheet-small-label2" style="width: 10%;"><input name="attr_wounded" type="number" data-i18n-title="wounded-title" title="Niveau auquel le personnage est blessé" readonly="readonly" /><span data-i18n="wounded">Blessé</span></label>
-						<label class="sheet-small-label2" style="width: 10%;"><input name="attr_scarred" type="number" data-i18n-title="scarred-title" title="Niveau auquel le personnage est meutri" readonly="readonly" /><span data-i18n="scarred">Meurtri</span></label>
-						<label class="sheet-small-label2" style="width: 10%;"><input name="attr_unconscious" type="number" data-i18n-title="unconscious-title" title="Niveau auquel le personnage est inconcient" value="0" disabled="true" /><span data-i18n="unconscious">Inconscient</span></label>
-						<label class="sheet-small-label2" style="width: 10%;"><input name="attr_dead" type="number" data-i18n-title="dead-title" title="Niveau auquel le personnage est mort" readonly="readonly" /><span data-i18n="dead">Mort</span></label>
-						<br/>
-
-						<label class="sheet-small-label2" style="width: 10%;"><input name="attr_reaction" type="number" data-i18n-title="reaction-title" title="Réaction du personnage" value="(@{int}+@{per}+@{ins})" disabled="true" /><span data-i18n="reaction">Réaction</span></label>
-						<label class="sheet-small-label2" style="width: 10%;"><input name="attr_encumbrance" type="number" data-i18n-title="encumbrance-title" title="Capacité d'Encombrement du personnage" value="((@{str}*2)+@{vig})" disabled="true" /><span data-i18n="encumbrance">Cap. Enc.</span></label>
-						<label class="sheet-small-label2" style="width: 10%;"><input name="attr_physical-defense" type="number" data-i18n-title="physical-defense-title" title="Défense Physique du personnage" value="(@{agi}+@{vig}+@{ins})" disabled="true" /><span data-i18n="physical-defense">Déf. Phy.</span></label>
-						<label class="sheet-small-label2" style="width: 10%;"><input name="attr_movement" type="number" data-i18n-title="movement-title" title="Mouvement du personnage" value="(@{agi}+@{vig})" disabled="true" /><span data-i18n="movement">Déplacement</span></label>
-						<label class="sheet-small-label2" style="width: 10%;"><input name="attr_mental-defense" type="number" data-i18n-title="mental-defense-title" title="Défense Mentale du personnage" value="(@{ten}+@{int}+@{ins})" disabled="true" /><span data-i18n="mental-defense">Déf. Ment.</span></label>
-						<label class="sheet-small-label2" style="width: 10%;"><input name="attr_actions" type="number" data-i18n-title="actions-title" title="Actions du personnage" value="(@{agi}+@{vig})" disabled="true" /><span data-i18n="actions">Actions</span></label>
-
-					</div>
-					<br/>
-
-				</div>
-			</section>
-			<section role="region" aria-label="Compétences" data-i18n-aria-label="page-skills-aria">
-				<div class="sheet-section sheet-section-skills">
-					
-					<input type="hidden" name="attr_hvAbility" value="?{Compétence utilisée|Puissance,@{str}|Vigeur,@{vig}|Agilité,@{agi}|Intellect,@{int}|Perception,@{per}|Ténacité,@{ten}|Charisme,@{cha}|Instinct,@{ins}|Communication,@{com}}" />
-
-					<input type="hidden" name="attr_hvHalflife" value="0" />
-					<input type="hidden" name="attr_hvQuarterlife" value="0" />
-
-					<input type="hidden" name="attr_hvDifficulty" value="?{Difficultée|SR14,14|SR5,5|SR7,7|SR10,10|SR14,14|SR19,19|SR25,25|SR32,32|SR40,40|SR49,49}" />
-
-					<input type="hidden" name="attr_hvFuror" value="?{Furor|0}" />
-					
-					<div class=""><span data-i18n="furor-pool">Réserve de Dés</span><input name="attr_furor-pool" type="number" data-i18n-title="furor-pool-title" title="Réserve actuelle de dés de Furor" />/<input name="attr_furor-pool-max" type="number" data-i18n-title="furor-pool-max-title" title="Réserve de dés de Furor : <br/>VIG+TEN+INS (don Guerrier-Fauve)<br/>VIG+INT+INS (don Initié d'Odhinn)<br/>(VIG+TEN+INS)/2 (autres)" /></div>
-					<br/>
-
-					<div class="sheet-header sheet-text-center"><span data-i18n="skills">Compétences</span></div>	
-					<div class="sheet-rTable">
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{acrobatics}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{acrobatics}-@{hvHalflife}]]]]}}" name="roll_acrobaticsCheck" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="acrobatics">Acrobaties</span></div>
-							<div class="sheet-rTableCell"><input name="attr_acrobatics" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{languages} (@{languages-detail})}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{languages}-@{hvHalflife}]]]]}}" name="roll_languages-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="languages">Langues</span>* <input name="attr_languages-detail" type="text" data-i18n-placeholder="languages-detail-place" placeholder="Langues parlées" style="width:70px;font-size:10px;" /></div>
-							<div class="sheet-rTableCell"><input name="attr_languages" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{galdr}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{galdr}-@{hvHalflife}]]]]}}" name="roll_galdr-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="galdr">Galdr</span>*</div>
-							<div class="sheet-rTableCell"><input name="attr_galdr" type="number"/></div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{craft} (@{craft-detail})}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{craft}-@{hvHalflife}]]]]}}" name="roll_craft-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="craft">Artisanat</span> <input name="attr_craft-detail" type="text" data-i18n-placeholder="craft-detail-place" placeholder="Artisanat Pratiqué" style="width:65px;font-size:10px;" /></div>
-							<div class="sheet-rTableCell"><input name="attr_craft" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{theft}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{theft}-@{hvHalflife}]]]]}}" name="roll_theft-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="theft">Larcins</span></div>
-							<div class="sheet-rTableCell"><input name="attr_theft" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{runes}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{runes}-@{hvHalflife}]]]]}}" name="roll_runes-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="runes">Runes</span>*</div>
-							<div class="sheet-rTableCell"><input name="attr_runes" type="number"/></div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{art} (@{art-detail})}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{art}-@{hvHalflife}]]]]}}" name="roll_art-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="art">Arts</span> <input name="attr_art-detail" type="text" data-i18n-placeholder="art-detail-place" placeholder="Art Pratiqué" style="width:90px;font-size:10px;" /></div>
-							<div class="sheet-rTableCell"><input name="attr_art" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{medicine}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{medicine}-@{hvHalflife}]]]]}}" name="roll_medicine-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="medicine">Médecine</span>*</div>
-							<div class="sheet-rTableCell"><input name="attr_medicine" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{sejdr}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{sejdr}-@{hvHalflife}]]]]}}" name="roll_sejdr-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="sejdr">Sejdr</span>*</div>
-							<div class="sheet-rTableCell"><input name="attr_sejdr" type="number"/></div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{drive}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{drive}-@{hvHalflife}]]]]}}" name="roll_drive-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="drive">Attelage</span></div>
-							<div class="sheet-rTableCell"><input name="attr_drive" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{athletics}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{athletics}-@{hvHalflife}]]]]}}" name="roll_athletics-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="athletics">Mouvement</span></div>
-							<div class="sheet-rTableCell"><input name="attr_athletics" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left">&nbsp;</div>
-							<div class="sheet-rTableCell">&nbsp;</div>
-							<div class="sheet-rTableCell">&nbsp;</div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{search}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{search}-@{hvHalflife}]]]]}}" name="roll_search-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="search">Chercher</span></div>
-							<div class="sheet-rTableCell"><input name="attr_search" type="number"/></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{navigation}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{navigation}-@{hvHalflife}]]]]}}" name="roll_navigation-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="navigation">Navigation</span></div>
-							<div class="sheet-rTableCell"><input name="attr_navigation" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{short-weapons}}} {{skill_threshold=[[@{short-weapons}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{short-weapons}-@{hvHalflife}]]]]}}" name="roll_short-weapons-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="short-weapons">Armes courtes</span></div>
-							<div class="sheet-rTableCell"><input name="attr_short-weapons" type="number"/></div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{ride}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{ride}-@{hvHalflife}]]]]}}" name="roll_ride-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="ride">Chevaucher</span></div>
-							<div class="sheet-rTableCell"><input name="attr_ride" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{swim}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{swim}-@{hvHalflife}]]]]}}" name="roll_swim-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="swim">Natation</span></div>
-							<div class="sheet-rTableCell"><input name="attr_swim" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{long-weapons}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{long-weapons}-@{hvHalflife}]]]]}}" name="roll_long-weapons-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="long-weapons">Armes longues</span></div>
-							<div class="sheet-rTableCell"><input name="attr_long-weapons" type="number"/></div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{commerce}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{commerce}-@{hvHalflife}]]]]}}" name="roll_commerce-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="commerce">Commerce</span></div>
-							<div class="sheet-rTableCell"><input name="attr_commerce" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{negotiation}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{negotiation}-@{hvHalflife}]]]]}}" name="roll_negotiation-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="negotiation">Négociation</span></div>
-							<div class="sheet-rTableCell"><input name="attr_negotiation" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{two-handed-weapons}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{two-handed-weapons}-@{hvHalflife}]]]]}}" name="roll_two-handed-weapons-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="two-handed-weapons">Armes à deux mains</span></div>
-							<div class="sheet-rTableCell"><input name="attr_two-handed-weapons" type="number"/></div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{stealth}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{stealth}-@{hvHalflife}]]]]}}" name="roll_stealth-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="stealth">Discrétion</span></div>
-							<div class="sheet-rTableCell"><input name="attr_stealth" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{sagas}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{sagas}-@{hvHalflife}]]]]}}" name="roll_sagas-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="sagas">Sagas</span></div>
-							<div class="sheet-rTableCell"><input name="attr_sagas" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{pole-arms}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{pole-arms}-@{hvHalflife}]]]]}}" name="roll_pole-arms-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="pole-arms">Armes d’hast</span></div>
-							<div class="sheet-rTableCell"><input name="attr_pole-arms" type="number"/></div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{eloquence}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{eloquence}-@{hvHalflife}]]]]}}" name="roll_eloquence-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="eloquence">Eloquence</span></div>
-							<div class="sheet-rTableCell"><input name="attr_eloquence" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{knowledge} (@{knowledge-detail})}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{knowledge}-@{hvHalflife}]]]]}}" name="roll_knowledge-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="knowledge">Savoir</span> <input name="attr_knowledge-detail" type="text" data-i18n-placeholder="knowledge-detail-place" placeholder="Savoir connu" style="width:100px;font-size:10px;" /></div>
-							<div class="sheet-rTableCell"><input name="attr_knowledge" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{ranged-weapons}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{ranged-weapons}-@{hvHalflife}]]]]}}" name="roll_ranged-weapons-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="ranged-weapons">Armes de tir</span></div>
-							<div class="sheet-rTableCell"><input name="attr_ranged-weapons" type="number"/></div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{empathy}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{empathy}-@{hvHalflife}]]]]}}" name="roll_empathy-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="empathy">Empathie</span></div>
-							<div class="sheet-rTableCell"><input name="attr_empathy" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{seduction}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{seduction}-@{hvHalflife}]]]]}}" name="roll_seduction-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="seduction">Séduction</span></div>
-							<div class="sheet-rTableCell"><input name="attr_seduction" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{throw}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{throw}-@{hvHalflife}]]]]}}" name="roll_throw-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="throw">Lancer</span></div>
-							<div class="sheet-rTableCell"><input name="attr_throw" type="number"/></div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{climbing}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{climbing}-@{hvHalflife}]]]]}}" name="roll_climbing-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="climbing">Escalade</span></div>
-							<div class="sheet-rTableCell"><input name="attr_climbingclimbing" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{superstition}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{superstition}-@{hvHalflife}]]]]}}" name="roll_superstition-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="superstition">Superstition</span></div>
-							<div class="sheet-rTableCell"><input name="attr_superstition" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{hand-to-hand}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{hand-to-hand}-@{hvHalflife}]]]]}}" name="roll_hand-to-hand-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="hand-to-hand">Lutte</span></div>
-							<div class="sheet-rTableCell"><input name="attr_hand-to-hand" type="number"/></div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{dodge}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{dodge}-@{hvHalflife}]]]]}}" name="roll_dodge-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="dodge">Esquive</span></div>
-							<div class="sheet-rTableCell"><input name="attr_dodge" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{survival}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{survival}-@{hvHalflife}]]]]}}" name="roll_survival-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="survival">Survie</span></div>
-							<div class="sheet-rTableCell"><input name="attr_survival" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{improvised-weapons}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{improvised-weapons}-@{hvHalflife}]]]]}}" name="roll_improvised-weapons-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="improvised-weapons">Armes Improvisées</span></div>
-							<div class="sheet-rTableCell"><input name="attr_improvised-weapons" type="number"/></div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{herbalism}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{herbalism}-@{hvHalflife}]]]]}}" name="roll_herbalism-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="herbalism">Herboristerie</span></div>
-							<div class="sheet-rTableCell"><input name="attr_herbalism" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{tactics}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{tactics}-@{hvHalflife}]]]]}}" name="roll_tactics-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="tactics">Tactique</span></div>
-							<div class="sheet-rTableCell"><input name="attr_tactics" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left">&nbsp;</div>
-							<div class="sheet-rTableCell">&nbsp;</div>
-							<div class="sheet-rTableCell">&nbsp;</div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{intimidation}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{intimidation}-@{hvHalflife}]]]]}}" name="roll_intimidation-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="intimidation">Intimidation</span></div>
-							<div class="sheet-rTableCell"><input name="attr_intimidation" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{traditions}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{traditions}-@{hvHalflife}]]]]}}" name="roll_traditions-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="traditions">Traditions</span></div>
-							<div class="sheet-rTableCell"><input name="attr_traditions" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=@{misc-skill-1-name}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{misc-skill-1}-@{hvHalflife}]]]]}}" name="roll_misc-skill-1-check" /></div>
-							<div class="sheet-rTableCell"><input name="attr_misc-skill-1-name" type="text" data-i18n-placeholder="misc-skill-1-place" placeholder="Compétence diverse" /></div>
-							<div class="sheet-rTableCell"><input name="attr_misc-skill-1" type="number"/></div>
-						</div>
-						<div class="sheet-rTableRow">
-							<div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{games}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{games}-@{hvHalflife}]]]]}}" name="roll_games-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="games">Jeux</span></div>
-							<div class="sheet-rTableCell"><input name="attr_games" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{vigilance}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{vigilance}-@{hvHalflife}]]]]}}" name="roll_vigilance-check" /></div>
-							<div class="sheet-rTableCell"><span data-i18n="vigilance">Vigilance</span></div>
-							<div class="sheet-rTableCell"><input name="attr_vigilance" type="number" /></div>
-
-							<div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=@{misc-skill-2-name}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{misc-skill-2}-@{hvHalflife}]]]]}}" name="roll_misc-skill-2-check" /></div>
-							<div class="sheet-rTableCell"><input name="attr_misc-skill-2-name" type="text" data-i18n-placeholder="misc-skill-2-place" placeholder="Compétence diverse" /></div>
-							<div class="sheet-rTableCell"><input name="attr_misc-skill-2" type="number"/></div>
-						</div>
-					</div>
-
-				</div>
-			</section>
-			<section role="region" aria-label="Armes & Equipement" data-i18n-aria-label="page-weapons-equipments-aria">
-				<div class="sheet-section sheet-section-weapons-equipments">
-					
-					<!-- MELEE WEAPONS -->
-					<div class="sheet-section">
-						<div class="sheet-h2-section">
-							<h2 data-i18n="weapons">Armes</h2>
-							<label for="attr_weapons-details-show" class="sheet-label-a" data-i18n="weapons-exp">Développer les armes de contact</label>
-							<input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_weapons-details-show" name="attr_weapons-details-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
-							<div class="sheet-nontable sheet-sect"> 
-								<div class="sheet-divbox sheet-repeating-sect">
-									<div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="weapons">Armes</span></div>
-									<br/>
-										<fieldset class="repeating_weapons">
-
-												<span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:ygg_weapon} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{weapon_name=@{weaponName}}} {{weapon_threshold=[[@{hvDifficulty}]]}} {{weapon_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{weaponLevel}-@{hvQuarterlife})]]d10!!k2-[[@{hvHalflife}]]]]}} {{diceroll_damage=[[@{weaponDamage}]]}}" name="roll_weaponCheck"><span data-i18n="attack"></span></button></span>
-
-												<span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_weaponName" data-i18n-placeholder="weapon-name-place" placeholder="Nom de l'arme" /><span data-i18n="name">Nom</span></span>
-
-												<span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponLevel" type="number" data-i18n-title="weapon-level-title" title="Niveau de l'arme" /><span data-i18n="level-abbrv">Niv</span></span>
-												<span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponDamage" data-i18n-title="weapon-damage-title" title="Dégâts de l'arme" type="number" /><span data-i18n="weapon-damage">Dégâts</span></span>
-																	
-												<span class="sheet-small-label2" style="width:7%;"></span>
-
-												<span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponSr" data-i18n-title="weapon-short-range-title" title="Porté courte de l'arme" type="number" /><span data-i18n="sr">PC</span></span>
-												<span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponMr" data-i18n-title="weapon-medium-range-title" title="Porté moyenne de l'arme" type="number" /><span data-i18n="mr">PM</span></span>
-												<span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponLr" data-i18n-title="weapon-long-range-title" title="Porté longue de l'arme" type="number" /><span data-i18n="lr">PL</span></span>
-												<span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponEr" data-i18n-title="weapon-extrem-range-title" title="Porté extreme de l'arme" type="number" /><span data-i18n="er">PE</span></span>
-
-												<span class="sheet-small-label2" style="width:7%;"></span>
-
-												<span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponFeats" data-i18n-title="weapon-feats-place" title="Prouesses" type="text" /><span data-i18n="feats">Prouesses</span></span>
-												
-										</fieldset>
-								</div>
-							</div>
-						</div>
-					</div>
-					<br/>
-					
-					<div class=""><span data-i18n="money">Argent</span><input name="attr_money" type="number" data-i18n-title="money-title" title="Argent du joueur" /></div>					
-					<br/>
-
-			        <!-- EQUIPMENTS -->
-					<div class="sheet-section">
-						<div class="sheet-h2-section">
-							<h2 data-i18n="equipments">Equipements</h2>
-							<label for="attr_equipments-show" class="sheet-label-a" data-i18n="equipments-exp">Développer les équipements</label>
-							<input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_equipments-show" name="attr_equipments-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
-							<div class="sheet-nontable sheet-sect"> 
-
-								<div class="sheet-divbox sheet-repeating-sect">
-									<div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="equipments">Equipements</span></div>
-									<br/>
-									<fieldset class="repeating_equipments">
-										<span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_equipmentName" data-i18n-placeholder="equipment-name-place" placeholder="Nom de l'équipement" /><span data-i18n="name">Nom</span></span>
-										<span class="sheet-small-label2" style="width:50%;"><input type="text" name="attr_equipmentDesc" data-i18n-placeholder="equipment-description-place" placeholder="Description de l'équipement" /><span data-i18n="description">Description</span></span>
-										<span class="sheet-small-label2" style="width:5%;"><input type="number" name="attr_equipmentValue" data-i18n-title="equipment-value-title" title="Valeur de l'équipement" /><span data-i18n="value">Valeur</span></span>
-										<span class="sheet-small-label2" style="width:5%;"><input type="number" name="attr_equipmentNumber" data-i18n-title="equipment-number-title" title="Nombre" /><span data-i18n="number-abbrv">Nb.</span></span>
-										<span class="sheet-small-label2" style="width:5%;"><input type="number" name="attr_equipmentMax" data-i18n-title="equipment-maximum-title" title="Maximum" /><span data-i18n="max">Max</span></span>
-									</fieldset>
-								</div>
-
-							</div>
-						</div>
-					</div>
-					<br/>
-
-				</div>
-			</section>
-			<section role="region" aria-label="Sorts & Magie" data-i18n-aria-label="page-spells-magic-aria">
-				<div class="sheet-section sheet-section-spells-magic">
-					Sorts & Magie
-
-
-
-				</div>
-			</section>
-			<section role="region" aria-label="Notes" data-i18n-aria-label="page-notes-aria">
-				<div class="sheet-section sheet-section-notes">
-					
-					<textarea name="attr_notes" style="width:99%;height: 400px;"></textarea>
-
-				</div>
-			</section>
-			<section role="region" aria-label="Configuration" data-i18n-aria-label="page-config-aria">
-				<div class="sheet-section sheet-section-config">
-
-					<textarea name="attr_ability-select"></textarea>
-
-				</div>
-			</section>
-		</div>
-	</main>
-	<footer role="contentinfo" aria-label="Help links">
-	    <div class="sheet-footer">
-	      <div class="sheet-table">
-	        <div class="sheet-table-row">
-	          <span class="sheet-table-cell"><span data-i18n="footer-created-by">Créé par</span> PadRPG <span data-i18n="footer-inspired">(fortement inspiré de la fiche Pathfinder)</span> | <span data-i18n="footer-last-update">Dernière MAJ</span>: <i>26.08.2016&nbsp;&nbsp;</i>v0.1</span>
-	        </div>
-	      </div>
-	    </div>
-	</footer>
-
-	<aside role="complementary">
-
-		<!-- ROLLTEMPLATE FOR ABILITIES -->
-		<rolltemplate class="sheet-rolltemplate-ygg_ability">  
-		  <div class="sheet-roll-table sheet-rounded">
-		    <div class="sheet-roll-header">
-		    {{#character_name}}
-		        {{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}}
-		        {{^character_id}}{{character_name}}{{/character_id}}
-		    {{/character_name}}
-		    </div>
-		    <div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
-		    <span data-i18n="ability">Caracteristique</span> : {{ability_name}}
-		    </div>
-		    <div class="sheet-roll-group2">
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"><span data-i18n="value">Valeur</span></div>
-		        <div class="sheet-roll-cell">{{ability_threshold}}</div>
-		      </div>
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"><span data-i18n="result">Résultat</span></div>
-		        <div class="sheet-roll-cell">{{diceroll}}</div>
-		      </div>
-
-		      {{#rollGreater() diceroll ability_threshold}}
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell">{{#rollGreater() diceroll ability_critical}}<span style="color:green;font-weight:bold;" data-i18n="critical-result">Critique !</span>{{/rollGreater() diceroll ability_critical}}</div>
-		        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
-		      </div>
-		      {{/rollGreater() diceroll ability_threshold}}
-
-		      {{#rollTotal() diceroll ability_threshold}}
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"></div>
-		        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
-		      </div>
-		      {{/rollTotal() diceroll ability_threshold}}
-
-		      {{#rollLess() diceroll ability_threshold}}
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"></div>
-		        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="fail-result">Echec</span></div>
-		      </div>
-		      {{/rollLess() diceroll ability_threshold}}
-
-		    </div>
-		  </div>
-		</rolltemplate>
-
-		<!-- ROLLTEMPLATE FOR SKILLS -->
-		<rolltemplate class="sheet-rolltemplate-ygg_skill">  
-		  <div class="sheet-roll-table sheet-rounded">
-		    <div class="sheet-roll-header">
-		    {{#character_name}}
-		        {{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}}
-		        {{^character_id}}{{character_name}}{{/character_id}}
-		    {{/character_name}}
-		    </div>
-		    <div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
-		    <span data-i18n="skill">Compétence</span> : {{skill_name}}
-		    </div>
-		    <div class="sheet-roll-group2">
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"><span data-i18n="value">Valeur</span></div>
-		        <div class="sheet-roll-cell">{{skill_threshold}}</div>
-		      </div>
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"><span data-i18n="result">Résultat</span></div>
-		        <div class="sheet-roll-cell">{{diceroll}}</div>
-		      </div>
-
-		      {{#rollGreater() diceroll skill_threshold}}
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell">{{#rollGreater() diceroll skill_critical}}<span style="color:green;font-weight:bold;" data-i18n="critical-result">Critique !</span>{{/rollGreater() diceroll skill_critical}}</div>
-		        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
-		      </div>
-
-		      {{/rollGreater() diceroll skill_threshold}}
-
-		      {{#rollTotal() diceroll skill_threshold}}
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"></div>
-		        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
-		      </div>
-		      {{/rollTotal() diceroll skill_threshold}}
-
-		      {{#rollLess() diceroll skill_threshold}}
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"></div>
-		        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="fail-result">Echec</span></div>
-		      </div>
-		      {{/rollLess() diceroll skill_threshold}}
-
-		    </div>
-		  </div>
-		</rolltemplate>
-
-		<!-- ROLLTEMPLATE FOR WEAPONS -->
-		<rolltemplate class="sheet-rolltemplate-ygg_weapon">  
-		  <div class="sheet-roll-table sheet-rounded">
-		    <div class="sheet-roll-header">
-		    {{#character_name}}
-		        {{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}}
-		        {{^character_id}}{{character_name}}{{/character_id}}
-		    {{/character_name}}
-		    </div>
-		    <div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
-		    <span data-i18n="weapon">Arme</span> : {{weapon_name}}
-		    </div>
-		    <div class="sheet-roll-group2">
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"><span data-i18n="value">Valeur</span></div>
-		        <div class="sheet-roll-cell">{{weapon_threshold}}</div>
-		      </div>
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"><span data-i18n="result">Résultat</span></div>
-		        <div class="sheet-roll-cell">{{diceroll}}</div>
-		      </div>
-
-		      {{#rollGreater() diceroll weapon_threshold}}
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell">{{#rollGreater() diceroll weapon_critical}}<span style="color:green;font-weight:bold;" data-i18n="critical-result">Critique !</span>{{/rollGreater() diceroll weapon_critical}}</div>
-		        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
-		      </div>
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"><span data-i18n="damage">Dégâts</span></div>
-		        <div class="sheet-roll-cell">{{diceroll_damage}}</div>
-		      </div>
-		      {{/rollGreater() diceroll weapon_threshold}}
-
-		      {{#rollTotal() diceroll weapon_threshold}}
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"></div>
-		        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
-		      </div>
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"><span data-i18n="damage">Dégâts</span></div>
-		        <div class="sheet-roll-cell">{{diceroll_damage}}</div>
-		      </div>
-		      {{/rollTotal() diceroll weapon_threshold}}
-
-		      {{#rollLess() diceroll weapon_threshold}}
-		      <div class="sheet-roll-row">
-		        <div class="sheet-roll-cell"></div>
-		        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="fail-result">Echec</span></div>
-		      </div>
-		      {{/rollLess() diceroll weapon_threshold}}
-
-		    </div>
-		  </div>
-		</rolltemplate>
-	</aside>
-
-  	<script type="text/worker">
-
-  		on("change:str change:vig change:agi change:int change:per change:ten change:cha change:ins change:com", function(){
-  			
-		    console.log("Abilities Change !!!");
-
-  			getAttrs(["str","vig","agi","int","per","ten","cha","ins","com"], function(values){
-
-  				valStr=parseInt(values.str);
-  				valVig=parseInt(values.vig);
-  				valAgi=parseInt(values.agi);
-
-  				valInt=parseInt(values.int);
-  				valPer=parseInt(values.per);
-  				valTen=parseInt(values.ten);
-
-  				valCha=parseInt(values.cha);
-  				valIns=parseInt(values.ins);
-  				valCom=parseInt(values.com);
-
-  				hpMaxVal=(((valStr+valVig+valAgi)*3)+((valInt+valPer+valTen)*2)+(valCha+valIns+valCom));
-  				
-  				setAttrs({
-	                hp_max: hpMaxVal
-	            });
-  				setAttrs({
-	                wounded: Math.round(hpMaxVal/2)
-	            });
-  				setAttrs({
-	                scarred: Math.round(hpMaxVal/4)
-	            });
-  				setAttrs({
-	                dead: 0-(Math.round(hpMaxVal/4))
-	            });
-  			})
-  		});
-
-	  	on("change:hp", function() {
-			    
-		    getAttrs(["hp","wounded","scarred"], function(values) {
-
-		    	hpValue = parseInt(values.hp);
-		    	woundedValue = parseInt(values.wounded);
-		    	scarredValue = parseInt(values.scarred);
-
-				if (hpValue < scarredValue) {
-		        	console.log("Scarred !!!");
-		        	setAttrs({
-		                hvHalflife: 0
-		            });
-		        	setAttrs({
-		                hvQuarterlife: 1
-		            });
-		        }
-		        else if(hpValue < woundedValue){
-		        	console.log("Wounded !!!");
-		        	setAttrs({
-		                hvHalflife: 3
-		            });
-		        	setAttrs({
-		                hvQuarterlife: 0
-		            });
-		        }
-		        else{	
-		        	console.log("Normal HP !!!");
-		        	setAttrs({
-		                hvHalflife: 0
-		            });
-		        	setAttrs({
-		                hvQuarterlife: 0
-		            });
-	            }		        
-	    	});
-		});
-  	</script>
+                        <label class="sheet-small-label2" style="width: 7%;"><input name="attr_age" type="number" data-i18n-title="age-title" title="Age du personnage" /><span data-i18n="age">Age</span></label>
+                        <label class="sheet-small-label2" style="width: 7%;"><input name="attr_height" type="number" data-i18n-title="height-title" title="Taille du personnage" /><span data-i18n="height">Taille</span></label>
+                        <label class="sheet-small-label2" style="width: 7%;"><input name="attr_weight" type="number" data-i18n-title="weight-title" title="Poids du personnage" /><span data-i18n="weight">Poids</span></label>
+
+                        <label class="sheet-small-label2" style="width: 18%;"><input name="attr_kingdom" type="text" data-i18n-placeholder="kingdom-place" placeholder="Royaume d'origine" /><span data-i18n="kingdom">Royaume</span></label>
+                        <label class="sheet-small-label2" style="width: 18%;"><input name="attr_gifts" type="text" data-i18n-placeholder="gifts-place" placeholder="Dons du personnage" /><span data-i18n="gifts">Dons</span></label>
+                        <label class="sheet-small-label2" style="width: 18%;"><input name="attr_weakness" type="text" data-i18n-placeholder="weakness-place" placeholder="Faiblesse du personnage" /><span data-i18n="weakness">Faiblesse</span></label>
+                        <label class="sheet-small-label2" style="width: 7%;"><input name="attr_renown" type="number" data-i18n-title="renown-title" title="Renommée du personnage" /><span data-i18n="renown">Renommée</span></label>
+
+                        <label class="sheet-small-label2" style="width: 98%;"><textarea class="sheet-inline-textarea" name="attr_history" data-i18n-placeholder="history-place" placeholder="Histoire du Personnage"></textarea><span data-i18n="history">Histoire</span></label>
+                        <br/><br/><br/>
+                    </div>
+
+                    <!-- Noteworthy Deeds -->
+                    <div class="sheet-section">
+                        <div class="sheet-h2-section">
+                            <h2 data-i18n="noteworthy-deeds">Faits Marquants</h2>
+                            <label for="attr_noteworthy-deeds-show" class="sheet-label-a" data-i18n="noteworthy-deeds-exp">Développer les Faits Marquants</label>
+                            <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_noteworthy-deeds-show" name="attr_noteworthy-deeds-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked"
+                            /><span></span>
+                            <div class="sheet-nontable sheet-sect">
+
+                                <div class="sheet-divbox sheet-repeating-sect">
+                                    <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="noteworthy-deeds">Faits Marquants</span></div>
+                                    <br/>
+                                    <fieldset class="repeating_noteworthy-deeds">
+                                        <span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_noteworthyDeedsName" data-i18n-placeholder="noteworthy-deeds-name-place" placeholder="Nom du Faits Marquants" /><span data-i18n="name">Nom</span></span>
+                                        <span class="sheet-small-label2" style="width:50%;"><input type="text" name="attr_noteworthyDeedsDesc" data-i18n-placeholder="noteworthy-deeds-description-place" placeholder="Description du Faits Marquants" /><span data-i18n="description">Description</span></span>
+                                    </fieldset>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+
+
+                </div>
+            </section>
+            <section role="region" aria-label="Caractéristiques" data-i18n-aria-label="page-abilities-aria">
+                <div class="sheet-section sheet-section-abilities">
+
+                    <!-- ABILITIES -->
+                    <table cellspacing="0" cellpadding="0" border="0" class="sheet-table-carac">
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="sheet-table-carac-head">
+                                    <h4><span data-i18n="body">Corps</span></h4>
+                                </th>
+                                <th style="width:20px;"></th>
+                                <th colspan="2" class="sheet-table-carac-head">
+                                    <h4><span data-i18n="mind">Esprit</span></h4>
+                                </th>
+                                <th style="width:20px;"></th>
+                                <th colspan="2" class="sheet-table-carac-head">
+                                    <h4><span data-i18n="soul">Ame</span></h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sheet-table-carac-left">
+                                    <label class="sheet-table-carac-label"><span data-i18n="strength">Puissance</span>:</label>
+                                </td>
+                                <td class="sheet-table-carac-right">
+                                    <input type="number" name="attr_str" max="5" />
+                                    <button type="roll" name="roll_str" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{strength}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{str}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{str}-@{hvHalflife}]]]]}} "></button>
+                                </td>
+                                <td></td>
+                                <td class="sheet-table-carac-left">
+                                    <label class="sheet-table-carac-label"><span data-i18n="intellect">Intellect</span>:</label>
+                                </td>
+                                <td class="sheet-table-carac-right">
+                                    <input type="number" name="attr_int" max="5" />
+                                    <button type="roll" name="roll_int" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{intellect}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{int}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{int}-@{hvHalflife}]]]]}} "></button>
+                                </td>
+                                <td></td>
+                                <td class="sheet-table-carac-left">
+                                    <label class="sheet-table-carac-label"><span data-i18n="charisma">Charisme</span>:</label>
+                                </td>
+                                <td class="sheet-table-carac-right">
+                                    <input type="number" name="attr_cha" max="5" />
+                                    <button type="roll" name="roll_cha" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{charisma}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{cha}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{cha}-@{hvHalflife}]]]]}} "></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sheet-table-carac-left">
+                                    <label class="sheet-table-carac-label"><span data-i18n="vigour">Vigueur</span>:</label>
+                                </td>
+                                <td class="sheet-table-carac-right">
+                                    <input type="number" name="attr_vig" max="5" />
+                                    <button type="roll" name="roll_vig" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{vigour}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{vig}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{vig}-@{hvHalflife}]]]]}} "></button>
+                                </td>
+                                <td></td>
+                                <td class="sheet-table-carac-left">
+                                    <label class="sheet-table-carac-label"><span data-i18n="perception">Perception</span>:</label>
+                                </td>
+                                <td class="sheet-table-carac-right">
+                                    <input type="number" name="attr_per" max="5" />
+                                    <button type="roll" name="roll_per" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{perception}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{per}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{per}-@{hvHalflife}]]]]}} "></button>
+                                </td>
+                                <td></td>
+                                <td class="sheet-table-carac-left">
+                                    <label class="sheet-table-carac-label"><span data-i18n="instinct">Instinct</span>:</label>
+                                </td>
+                                <td class="sheet-table-carac-right">
+                                    <input type="number" name="attr_ins" max="5" />
+                                    <button type="roll" name="roll_ins" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{instinct}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{ins}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{ins}-@{hvHalflife}]]]]}} "></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sheet-table-carac-left sheet-table-carac-bottom">
+                                    <label class="sheet-table-carac-label"><span data-i18n="agility">Agilité</span>:</label>
+                                </td>
+                                <td class="sheet-table-carac-right sheet-table-carac-bottom">
+                                    <input type="number" name="attr_agi" max="5" />
+                                    <button type="roll" name="roll_agi" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{agility}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{agi}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{agi}-@{hvHalflife}]]]]}} "></button>
+                                </td>
+                                <td></td>
+                                <td class="sheet-table-carac-left sheet-table-carac-bottom">
+                                    <label class="sheet-table-carac-label"><span data-i18n="tenacity">Ténacité</span>:</label>
+                                </td>
+                                <td class="sheet-table-carac-right sheet-table-carac-bottom">
+                                    <input type="number" name="attr_ten" max="5" />
+                                    <button type="roll" name="roll_ten" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{tenacity}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{ten}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{ten}-@{hvHalflife}]]]]}} "></button>
+                                </td>
+                                <td></td>
+                                <td class="sheet-table-carac-left sheet-table-carac-bottom">
+                                    <label class="sheet-table-carac-label"><span data-i18n="communication">Communication</span>:</label>
+                                </td>
+                                <td class="sheet-table-carac-right sheet-table-carac-bottom">
+                                    <input type="number" name="attr_com" max="5" />
+                                    <button type="roll" name="roll_com" class="sheet-rollbutton" value="&{template:ygg_ability} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{ability_name=^{communication}}} {{ability_threshold=[[@{hvDifficulty}]]}} {{ability_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{com}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{com}-@{hvHalflife}]]]]}} "></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+
+                    <div class="sheet-nontable sheet-sect">
+                        <span class="sheet-nontable-name" data-i18n="hit-points-stats">Points de vie & Stats</span>
+
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_hp" type="number" data-i18n-title="hp-title" title="Points de vie du personnage" /><span data-i18n="hp">PV</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_hp_max" type="number" data-i18n-title="hp-max-title" title="Points de vie max du personnage" readonly="readonly" /><span data-i18n="max">MAX</span></label>
+
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_wounded" type="number" data-i18n-title="wounded-title" title="Niveau auquel le personnage est blessé" readonly="readonly" /><span data-i18n="wounded">Blessé</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_scarred" type="number" data-i18n-title="scarred-title" title="Niveau auquel le personnage est meutri" readonly="readonly" /><span data-i18n="scarred">Meurtri</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_unconscious" type="number" data-i18n-title="unconscious-title" title="Niveau auquel le personnage est inconcient" value="0" disabled="true" /><span data-i18n="unconscious">Inconscient</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_dead" type="number" data-i18n-title="dead-title" title="Niveau auquel le personnage est mort" readonly="readonly" /><span data-i18n="dead">Mort</span></label>
+                        <br/>
+
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_reaction" type="number" data-i18n-title="reaction-title" title="Réaction du personnage" value="(@{int}+@{per}+@{ins})" disabled="true" /><span data-i18n="reaction">Réaction</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_encumbrance" type="number" data-i18n-title="encumbrance-title" title="Capacité d'Encombrement du personnage" value="((@{str}*2)+@{vig})" disabled="true" /><span data-i18n="encumbrance">Cap. Enc.</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_physical-defense" type="number" data-i18n-title="physical-defense-title" title="Défense Physique du personnage" value="(@{agi}+@{vig}+@{ins})" disabled="true" /><span data-i18n="physical-defense">Déf. Phy.</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_movement" type="number" data-i18n-title="movement-title" title="Mouvement du personnage" value="(@{agi}+@{vig})" disabled="true" /><span data-i18n="movement">Déplacement</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_mental-defense" type="number" data-i18n-title="mental-defense-title" title="Défense Mentale du personnage" value="(@{ten}+@{int}+@{ins})" disabled="true" /><span data-i18n="mental-defense">Déf. Ment.</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_actions" type="number" data-i18n-title="actions-title" title="Actions du personnage" value="(@{agi}+@{vig})" disabled="true" /><span data-i18n="actions">Actions</span></label>
+
+                    </div>
+                    <br/>
+
+                </div>
+            </section>
+            <section role="region" aria-label="Compétences" data-i18n-aria-label="page-skills-aria">
+                <div class="sheet-section sheet-section-skills">
+
+                    <input type="hidden" name="attr_hvAbility" value="?{Compétence utilisée|Puissance,@{str}|Vigeur,@{vig}|Agilité,@{agi}|Intellect,@{int}|Perception,@{per}|Ténacité,@{ten}|Charisme,@{cha}|Instinct,@{ins}|Communication,@{com}}" />
+
+                    <input type="hidden" name="attr_hvHalflife" value="0" />
+                    <input type="hidden" name="attr_hvQuarterlife" value="0" />
+
+                    <input type="hidden" name="attr_hvDifficulty" value="?{Difficultée|SR14,14|SR5,5|SR7,7|SR10,10|SR14,14|SR19,19|SR25,25|SR32,32|SR40,40|SR49,49}" />
+
+                    <input type="hidden" name="attr_hvFuror" value="?{Furor|0}" />
+
+                    <div class=""><span data-i18n="furor-pool">Réserve de Dés</span><input name="attr_furor-pool" type="number" data-i18n-title="furor-pool-title" title="Réserve actuelle de dés de Furor" />/<input name="attr_furor-pool-max" type="number" data-i18n-title="furor-pool-max-title"
+                            title="Réserve de dés de Furor : <br/>VIG+TEN+INS (don Guerrier-Fauve)<br/>VIG+INT+INS (don Initié d'Odhinn)<br/>(VIG+TEN+INS)/2 (autres)" /></div>
+                    <br/>
+
+                    <div class="sheet-header sheet-text-center"><span data-i18n="skills">Compétences</span></div>
+                    <div class="sheet-rTable">
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{acrobatics}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{acrobatics}-@{hvHalflife}]]]]}}"
+                                    name="roll_acrobaticsCheck" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="acrobatics">Acrobaties</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_acrobatics" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{languages} (@{languages-detail})}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{languages}-@{hvHalflife}]]]]}}"
+                                    name="roll_languages-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="languages">Langues</span>* <input name="attr_languages-detail" type="text" data-i18n-placeholder="languages-detail-place" placeholder="Langues parlées" style="width:70px;font-size:10px;" /></div>
+                            <div class="sheet-rTableCell"><input name="attr_languages" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{galdr}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{galdr}-@{hvHalflife}]]]]}}"
+                                    name="roll_galdr-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="galdr">Galdr</span>*</div>
+                            <div class="sheet-rTableCell"><input name="attr_galdr" type="number" /></div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{craft} (@{craft-detail})}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{craft}-@{hvHalflife}]]]]}}"
+                                    name="roll_craft-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="craft">Artisanat</span> <input name="attr_craft-detail" type="text" data-i18n-placeholder="craft-detail-place" placeholder="Artisanat Pratiqué" style="width:65px;font-size:10px;" /></div>
+                            <div class="sheet-rTableCell"><input name="attr_craft" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{theft}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{theft}-@{hvHalflife}]]]]}}"
+                                    name="roll_theft-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="theft">Larcins</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_theft" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{runes}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{runes}-@{hvHalflife}]]]]}}"
+                                    name="roll_runes-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="runes">Runes</span>*</div>
+                            <div class="sheet-rTableCell"><input name="attr_runes" type="number" /></div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{art} (@{art-detail})}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{art}-@{hvHalflife}]]]]}}"
+                                    name="roll_art-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="art">Arts</span> <input name="attr_art-detail" type="text" data-i18n-placeholder="art-detail-place" placeholder="Art Pratiqué" style="width:90px;font-size:10px;" /></div>
+                            <div class="sheet-rTableCell"><input name="attr_art" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{medicine}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{medicine}-@{hvHalflife}]]]]}}"
+                                    name="roll_medicine-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="medicine">Médecine</span>*</div>
+                            <div class="sheet-rTableCell"><input name="attr_medicine" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{sejdr}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{sejdr}-@{hvHalflife}]]]]}}"
+                                    name="roll_sejdr-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="sejdr">Sejdr</span>*</div>
+                            <div class="sheet-rTableCell"><input name="attr_sejdr" type="number" /></div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{drive}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{drive}-@{hvHalflife}]]]]}}"
+                                    name="roll_drive-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="drive">Attelage</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_drive" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{athletics}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{athletics}-@{hvHalflife}]]]]}}"
+                                    name="roll_athletics-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="athletics">Mouvement</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_athletics" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left">&nbsp;</div>
+                            <div class="sheet-rTableCell">&nbsp;</div>
+                            <div class="sheet-rTableCell">&nbsp;</div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{search}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{search}-@{hvHalflife}]]]]}}"
+                                    name="roll_search-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="search">Chercher</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_search" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{navigation}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{navigation}-@{hvHalflife}]]]]}}"
+                                    name="roll_navigation-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="navigation">Navigation</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_navigation" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{short-weapons}}} {{skill_threshold=[[@{short-weapons}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{short-weapons}-@{hvHalflife}]]]]}}"
+                                    name="roll_short-weapons-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="short-weapons">Armes courtes</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_short-weapons" type="number" /></div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{ride}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{ride}-@{hvHalflife}]]]]}}"
+                                    name="roll_ride-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="ride">Chevaucher</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_ride" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{swim}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{swim}-@{hvHalflife}]]]]}}"
+                                    name="roll_swim-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="swim">Natation</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_swim" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{long-weapons}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{long-weapons}-@{hvHalflife}]]]]}}"
+                                    name="roll_long-weapons-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="long-weapons">Armes longues</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_long-weapons" type="number" /></div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{commerce}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{commerce}-@{hvHalflife}]]]]}}"
+                                    name="roll_commerce-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="commerce">Commerce</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_commerce" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{negotiation}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{negotiation}-@{hvHalflife}]]]]}}"
+                                    name="roll_negotiation-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="negotiation">Négociation</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_negotiation" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{two-handed-weapons}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{two-handed-weapons}-@{hvHalflife}]]]]}}"
+                                    name="roll_two-handed-weapons-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="two-handed-weapons">Armes à deux mains</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_two-handed-weapons" type="number" /></div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{stealth}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{stealth}-@{hvHalflife}]]]]}}"
+                                    name="roll_stealth-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="stealth">Discrétion</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_stealth" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{sagas}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{sagas}-@{hvHalflife}]]]]}}"
+                                    name="roll_sagas-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="sagas">Sagas</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_sagas" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{pole-arms}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{pole-arms}-@{hvHalflife}]]]]}}"
+                                    name="roll_pole-arms-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="pole-arms">Armes d’hast</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_pole-arms" type="number" /></div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{eloquence}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{eloquence}-@{hvHalflife}]]]]}}"
+                                    name="roll_eloquence-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="eloquence">Eloquence</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_eloquence" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{knowledge} (@{knowledge-detail})}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{knowledge}-@{hvHalflife}]]]]}}"
+                                    name="roll_knowledge-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="knowledge">Savoir</span> <input name="attr_knowledge-detail" type="text" data-i18n-placeholder="knowledge-detail-place" placeholder="Savoir connu" style="width:100px;font-size:10px;" /></div>
+                            <div class="sheet-rTableCell"><input name="attr_knowledge" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{ranged-weapons}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{ranged-weapons}-@{hvHalflife}]]]]}}"
+                                    name="roll_ranged-weapons-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="ranged-weapons">Armes de tir</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_ranged-weapons" type="number" /></div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{empathy}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{empathy}-@{hvHalflife}]]]]}}"
+                                    name="roll_empathy-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="empathy">Empathie</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_empathy" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{seduction}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{seduction}-@{hvHalflife}]]]]}}"
+                                    name="roll_seduction-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="seduction">Séduction</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_seduction" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{throw}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{throw}-@{hvHalflife}]]]]}}"
+                                    name="roll_throw-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="throw">Lancer</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_throw" type="number" /></div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{climbing}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{climbing}-@{hvHalflife}]]]]}}"
+                                    name="roll_climbing-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="climbing">Escalade</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_climbingclimbing" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{superstition}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{superstition}-@{hvHalflife}]]]]}}"
+                                    name="roll_superstition-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="superstition">Superstition</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_superstition" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{hand-to-hand}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{hand-to-hand}-@{hvHalflife}]]]]}}"
+                                    name="roll_hand-to-hand-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="hand-to-hand">Lutte</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_hand-to-hand" type="number" /></div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{dodge}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{dodge}-@{hvHalflife}]]]]}}"
+                                    name="roll_dodge-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="dodge">Esquive</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_dodge" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{survival}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{survival}-@{hvHalflife}]]]]}}"
+                                    name="roll_survival-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="survival">Survie</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_survival" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{improvised-weapons}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{improvised-weapons}-@{hvHalflife}]]]]}}"
+                                    name="roll_improvised-weapons-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="improvised-weapons">Armes Improvisées</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_improvised-weapons" type="number" /></div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{herbalism}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{herbalism}-@{hvHalflife}]]]]}}"
+                                    name="roll_herbalism-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="herbalism">Herboristerie</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_herbalism" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{tactics}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{tactics}-@{hvHalflife}]]]]}}"
+                                    name="roll_tactics-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="tactics">Tactique</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_tactics" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left">&nbsp;</div>
+                            <div class="sheet-rTableCell">&nbsp;</div>
+                            <div class="sheet-rTableCell">&nbsp;</div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{intimidation}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{intimidation}-@{hvHalflife}]]]]}}"
+                                    name="roll_intimidation-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="intimidation">Intimidation</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_intimidation" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{traditions}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{traditions}-@{hvHalflife}]]]]}}"
+                                    name="roll_traditions-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="traditions">Traditions</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_traditions" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=@{misc-skill-1-name}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{misc-skill-1}-@{hvHalflife}]]]]}}"
+                                    name="roll_misc-skill-1-check" /></div>
+                            <div class="sheet-rTableCell"><input name="attr_misc-skill-1-name" type="text" data-i18n-placeholder="misc-skill-1-place" placeholder="Compétence diverse" /></div>
+                            <div class="sheet-rTableCell"><input name="attr_misc-skill-1" type="number" /></div>
+                        </div>
+                        <div class="sheet-rTableRow">
+                            <div class="sheet-rTableCell"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{games}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{games}-@{hvHalflife}]]]]}}"
+                                    name="roll_games-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="games">Jeux</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_games" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=^{vigilance}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{vigilance}-@{hvHalflife}]]]]}}"
+                                    name="roll_vigilance-check" /></div>
+                            <div class="sheet-rTableCell"><span data-i18n="vigilance">Vigilance</span></div>
+                            <div class="sheet-rTableCell"><input name="attr_vigilance" type="number" /></div>
+
+                            <div class="sheet-rTableCell sheet-border-left"><button type="roll" value="&{template:ygg_skill} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{skill_name=@{misc-skill-2-name}}} {{skill_threshold=[[@{hvDifficulty}]]}} {{skill_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{hvAbility}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{misc-skill-2}-@{hvHalflife}]]]]}}"
+                                    name="roll_misc-skill-2-check" /></div>
+                            <div class="sheet-rTableCell"><input name="attr_misc-skill-2-name" type="text" data-i18n-placeholder="misc-skill-2-place" placeholder="Compétence diverse" /></div>
+                            <div class="sheet-rTableCell"><input name="attr_misc-skill-2" type="number" /></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section role="region" aria-label="Armes & Equipement" data-i18n-aria-label="page-weapons-equipments-aria">
+                <div class="sheet-section sheet-section-weapons-equipments">
+
+                    <!-- MELEE WEAPONS -->
+                    <div class="sheet-section">
+                        <div class="sheet-h2-section">
+                            <h2 data-i18n="weapons">Armes</h2>
+                            <label for="attr_weapons-details-show" class="sheet-label-a" data-i18n="weapons-exp">Développer les armes de contact</label>
+                            <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_weapons-details-show" name="attr_weapons-details-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked"
+                            /><span></span>
+                            <div class="sheet-nontable sheet-sect">
+                                <div class="sheet-divbox sheet-repeating-sect">
+                                    <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="weapons">Armes</span></div>
+                                    <br/>
+                                    <fieldset class="repeating_weapons">
+
+                                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:ygg_weapon} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{weapon_name=@{weaponName}}} {{weapon_threshold=[[@{hvDifficulty}]]}} {{weapon_critical=[[@{hvDifficulty}+@{hvDifficulty}]]}} {{diceroll=[[[[(@{weaponLevel}-@{hvQuarterlife})]]d10!!k2-[[@{hvHalflife}]]]]}} {{diceroll_damage=[[@{weaponDamage}]]}}" name="roll_weaponCheck"><span data-i18n="attack"></span></button>
+                                        </span>
+
+                                        <span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_weaponName" data-i18n-placeholder="weapon-name-place" placeholder="Nom de l'arme" /><span data-i18n="name">Nom</span></span>
+
+                                        <span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponLevel" type="number" data-i18n-title="weapon-level-title" title="Niveau de l'arme" /><span data-i18n="level-abbrv">Niv</span></span>
+                                        <span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponDamage" data-i18n-title="weapon-damage-title" title="Dégâts de l'arme" type="number" /><span data-i18n="weapon-damage">Dégâts</span></span>
+
+                                        <span class="sheet-small-label2" style="width:7%;"></span>
+
+                                        <span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponSr" data-i18n-title="weapon-short-range-title" title="Porté courte de l'arme" type="number" /><span data-i18n="sr">PC</span></span>
+                                        <span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponMr" data-i18n-title="weapon-medium-range-title" title="Porté moyenne de l'arme" type="number" /><span data-i18n="mr">PM</span></span>
+                                        <span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponLr" data-i18n-title="weapon-long-range-title" title="Porté longue de l'arme" type="number" /><span data-i18n="lr">PL</span></span>
+                                        <span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponEr" data-i18n-title="weapon-extrem-range-title" title="Porté extreme de l'arme" type="number" /><span data-i18n="er">PE</span></span>
+
+                                        <span class="sheet-small-label2" style="width:7%;"></span>
+
+                                        <span class="sheet-small-label2" style="width:7%;"><input name="attr_weaponFeats" data-i18n-title="weapon-feats-place" title="Prouesses" type="text" /><span data-i18n="feats">Prouesses</span></span>
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div class=""><span data-i18n="money">Argent</span><input name="attr_money" type="number" data-i18n-title="money-title" title="Argent du joueur" /></div>
+                    <br/>
+
+                    <!-- EQUIPMENTS -->
+                    <div class="sheet-section">
+                        <div class="sheet-h2-section">
+                            <h2 data-i18n="equipments">Equipements</h2>
+                            <label for="attr_equipments-show" class="sheet-label-a" data-i18n="equipments-exp">Développer les équipements</label>
+                            <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_equipments-show" name="attr_equipments-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
+                            <div class="sheet-nontable sheet-sect">
+
+                                <div class="sheet-divbox sheet-repeating-sect">
+                                    <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="equipments">Equipements</span></div>
+                                    <br/>
+                                    <fieldset class="repeating_equipments">
+                                        <span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_equipmentName" data-i18n-placeholder="equipment-name-place" placeholder="Nom de l'équipement" /><span data-i18n="name">Nom</span></span>
+                                        <span class="sheet-small-label2" style="width:50%;"><input type="text" name="attr_equipmentDesc" data-i18n-placeholder="equipment-description-place" placeholder="Description de l'équipement" /><span data-i18n="description">Description</span></span>
+                                        <span class="sheet-small-label2" style="width:5%;"><input type="number" name="attr_equipmentValue" data-i18n-title="equipment-value-title" title="Valeur de l'équipement" /><span data-i18n="value">Valeur</span></span>
+                                        <span class="sheet-small-label2" style="width:5%;"><input type="number" name="attr_equipmentNumber" data-i18n-title="equipment-number-title" title="Nombre" /><span data-i18n="number-abbrv">Nb.</span></span>
+                                        <span class="sheet-small-label2" style="width:5%;"><input type="number" name="attr_equipmentMax" data-i18n-title="equipment-maximum-title" title="Maximum" /><span data-i18n="max">Max</span></span>
+                                    </fieldset>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+
+                </div>
+            </section>
+            <section role="region" aria-label="Sorts & Runes" data-i18n-aria-label="page-spells-runes-aria">
+                <div class="sheet-section sheet-section-spells-runes">
+
+                    <!-- SEJDR SPELLS -->
+                    <div class="sheet-section">
+                        <div class="sheet-h2-section">
+                            <h2 data-i18n="sejdr-spells">Sorts du Sejdr</h2>
+                            <label for="attr_sejdr-spells-details-show" class="sheet-label-a" data-i18n="sejdr-spells-exp">Développer les sorts du Sejdr</label>
+                            <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_sejdr-spells-details-show" name="attr_sejdr-spells-details-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked"
+                            /><span></span>
+                            <div class="sheet-nontable sheet-sect">
+                                <div class="sheet-divbox sheet-repeating-sect">
+                                    <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="sejdr-spells">Sorts du Sejdr</span></div>
+                                    <br/>
+                                    <fieldset class="repeating_sejdr-spells">
+
+                                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:ygg_spell} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{spell_name=@{sejdrSpellName}}} {{spell_level=@{sejdrSpellLevel}}} {{spell_preparation=@{sejdrSpellPreparation}}} {{spell_penalty=@{sejdrSpellPenalty}}} {{spell_duration=@{sejdrSpellDuration}}} {{spell_zone=@{sejdrSpellZone}}} {{spell_effect=@{sejdrSpellEffect}}} {{spell_threshold=[[14]]}} {{spell_critical=[[28]]}} {{diceroll=[[[[(@{ins}-@{hvQuarterlife})]]d10!!k2-[[@{hvHalflife}]]+[[@{sejdrSpellPenalty}]]]]}} " name="roll_sejdrSpellCheck"><span data-i18n=""></span></button>
+                                        </span>
+
+                                        <span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_sejdrSpellName" data-i18n-placeholder="sejdr-spell-name-place" placeholder="Nom du sort" /><span data-i18n="name">Nom</span></span>
+
+                                        <span class="sheet-small-label2" style="width:7%;"><input name="attr_sejdrSpellLevel" data-i18n-title="sejdr-spell-level-title" title="Niveau du Sort" type="number" /><span data-i18n="level">Niveau</span></span>
+                                        <span class="sheet-small-label2" style="width:7%;"><input name="attr_sejdrSpellPreparation" data-i18n-title="sejdr-spell-preparation-title" title="Temp d'incantation" type="text" /><span data-i18n="preparation-abbrv">Prep.</span></span>
+                                        <span class="sheet-small-label2" style="width:7%;"><input name="attr_sejdrSpellPenalty" data-i18n-title="sejdr-spell-penalty-title" title="Malus au lancement du sort" type="number" value="0" /><span data-i18n="penalty">Malus</span></span>
+                                        <span class="sheet-small-label2" style="width:7%;"><input name="attr_sejdrSpellDuration" data-i18n-title="sejdr-spell-duration-title" title="Durée du sort. Laissez vide pour une durée aléatoire" type="text" /><span data-i18n="duration">Durée</span></span>
+                                        <span class="sheet-small-label2" style="width:15%;"><input name="attr_sejdrSpellZone" data-i18n-title="sejdr-spell-zone-title" title="Zone d'effet du sort" type="text" /><span data-i18n="zone">Zone</span></span>
+
+                                        <span class="sheet-small-label2" style="width:7%;"></span>
+
+                                        <span class="sheet-small-label2" style="width:80%;"><input type="text" name="attr_sejdrSpellEffect" data-i18n-placeholder="sejdr-spell-effect-place" placeholder="Effet/Contre Effet du sort" /><span data-i18n="effect">Effet</span></span>
+
+
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+
+
+
+
+                </div>
+            </section>
+            <section role="region" aria-label="Notes" data-i18n-aria-label="page-notes-aria">
+                <div class="sheet-section sheet-section-notes">
+
+                    <textarea name="attr_notes" style="width:99%;height: 400px;"></textarea>
+
+                </div>
+            </section>
+            <section role="region" aria-label="Configuration" data-i18n-aria-label="page-config-aria">
+                <div class="sheet-section sheet-section-config">
+
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer role="contentinfo" aria-label="Help links">
+        <div class="sheet-footer">
+            <div class="sheet-table">
+                <div class="sheet-table-row">
+                    <span class="sheet-table-cell"><span data-i18n="footer-created-by">Créé par</span> PadRPG <span data-i18n="footer-inspired">(fortement inspiré de la fiche Pathfinder)</span> | <span data-i18n="footer-last-update">Dernière MAJ</span>:
+                    <i>26.08.2016&nbsp;&nbsp;</i>v0.1</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <aside role="complementary">
+
+        <!-- ROLLTEMPLATE FOR ABILITIES -->
+        <rolltemplate class="sheet-rolltemplate-ygg_ability">
+            <div class="sheet-roll-table sheet-rounded">
+                <div class="sheet-roll-header">
+                    {{#character_name}} {{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}} {{^character_id}}{{character_name}}{{/character_id}} {{/character_name}}
+                </div>
+                <div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
+                    <span data-i18n="ability">Caracteristique</span> : {{ability_name}}
+                </div>
+                <div class="sheet-roll-group2">
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="value">Valeur</span></div>
+                        <div class="sheet-roll-cell">{{ability_threshold}}</div>
+                    </div>
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="result">Résultat</span></div>
+                        <div class="sheet-roll-cell">{{diceroll}}</div>
+                    </div>
+
+                    {{#rollGreater() diceroll ability_threshold}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">{{#rollGreater() diceroll ability_critical}}<span style="color:green;font-weight:bold;" data-i18n="critical-result">Critique !</span>{{/rollGreater() diceroll ability_critical}}</div>
+                        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
+                    </div>
+                    {{/rollGreater() diceroll ability_threshold}} {{#rollTotal() diceroll ability_threshold}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"></div>
+                        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
+                    </div>
+                    {{/rollTotal() diceroll ability_threshold}} {{#rollLess() diceroll ability_threshold}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"></div>
+                        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="fail-result">Echec</span></div>
+                    </div>
+                    {{/rollLess() diceroll ability_threshold}}
+
+                </div>
+            </div>
+        </rolltemplate>
+
+        <!-- ROLLTEMPLATE FOR SKILLS -->
+        <rolltemplate class="sheet-rolltemplate-ygg_skill">
+            <div class="sheet-roll-table sheet-rounded">
+                <div class="sheet-roll-header">
+                    {{#character_name}} {{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}} {{^character_id}}{{character_name}}{{/character_id}} {{/character_name}}
+                </div>
+                <div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
+                    <span data-i18n="skill">Compétence</span> : {{skill_name}}
+                </div>
+                <div class="sheet-roll-group2">
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="value">Valeur</span></div>
+                        <div class="sheet-roll-cell">{{skill_threshold}}</div>
+                    </div>
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="result">Résultat</span></div>
+                        <div class="sheet-roll-cell">{{diceroll}}</div>
+                    </div>
+
+                    {{#rollGreater() diceroll skill_threshold}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">{{#rollGreater() diceroll skill_critical}}<span style="color:green;font-weight:bold;" data-i18n="critical-result">Critique !</span>{{/rollGreater() diceroll skill_critical}}</div>
+                        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
+                    </div>
+
+                    {{/rollGreater() diceroll skill_threshold}} {{#rollTotal() diceroll skill_threshold}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"></div>
+                        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
+                    </div>
+                    {{/rollTotal() diceroll skill_threshold}} {{#rollLess() diceroll skill_threshold}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"></div>
+                        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="fail-result">Echec</span></div>
+                    </div>
+                    {{/rollLess() diceroll skill_threshold}}
+
+                </div>
+            </div>
+        </rolltemplate>
+
+        <!-- ROLLTEMPLATE FOR WEAPONS -->
+        <rolltemplate class="sheet-rolltemplate-ygg_weapon">
+            <div class="sheet-roll-table sheet-rounded">
+                <div class="sheet-roll-header">
+                    {{#character_name}} {{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}} {{^character_id}}{{character_name}}{{/character_id}} {{/character_name}}
+                </div>
+                <div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
+                    <span data-i18n="weapon">Arme</span> : {{weapon_name}}
+                </div>
+                <div class="sheet-roll-group2">
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="value">Valeur</span></div>
+                        <div class="sheet-roll-cell">{{weapon_threshold}}</div>
+                    </div>
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="result">Résultat</span></div>
+                        <div class="sheet-roll-cell">{{diceroll}}</div>
+                    </div>
+
+                    {{#rollGreater() diceroll weapon_threshold}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">{{#rollGreater() diceroll weapon_critical}}<span style="color:green;font-weight:bold;" data-i18n="critical-result">Critique !</span>{{/rollGreater() diceroll weapon_critical}}</div>
+                        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
+                    </div>
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="damage">Dégâts</span></div>
+                        <div class="sheet-roll-cell">{{diceroll_damage}}</div>
+                    </div>
+                    {{/rollGreater() diceroll weapon_threshold}} {{#rollTotal() diceroll weapon_threshold}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"></div>
+                        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
+                    </div>
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="damage">Dégâts</span></div>
+                        <div class="sheet-roll-cell">{{diceroll_damage}}</div>
+                    </div>
+                    {{/rollTotal() diceroll weapon_threshold}} {{#rollLess() diceroll weapon_threshold}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"></div>
+                        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="fail-result">Echec</span></div>
+                    </div>
+                    {{/rollLess() diceroll weapon_threshold}}
+
+                </div>
+            </div>
+        </rolltemplate>
+
+        <!-- ROLLTEMPLATE FOR SPELLS -->
+        <rolltemplate class="sheet-rolltemplate-ygg_spell">
+            <div class="sheet-roll-table sheet-rounded">
+                <div class="sheet-roll-header">
+                    {{#character_name}} {{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}} {{^character_id}}{{character_name}}{{/character_id}} {{/character_name}}
+                </div>
+                <div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
+                    <span data-i18n="spell">Sort</span> : {{spell_name}}
+                </div>
+                <div class="sheet-roll-group2">
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="level">Niveau</span></div>
+                        <div class="sheet-roll-cell">{{spell_level}}</div>
+                    </div>
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="preparation">Préparation</span></div>
+                        <div class="sheet-roll-cell">{{spell_preparation}}</div>
+                    </div>
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="penalty">Malus</span></div>
+                        <div class="sheet-roll-cell">{{spell_penalty}}</div>
+                    </div>
+                    {{#spell_duration}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="duration">Durée</span></div>
+                        <div class="sheet-roll-cell">{{spell_duration}}</div>
+                    </div>
+                    {{/spell_duration}}
+                    {{^spell_duration}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="duration">Durée</span></div>
+                        <div class="sheet-roll-cell">Durée Aléatoire ({{diceroll}}-{{spell_threshold}})</div>
+                    </div>
+                    {{/spell_duration}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="zone">Zone</span></div>
+                        <div class="sheet-roll-cell">{{spell_zone}}</div>
+                    </div>
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="effect">Effet</span></div>
+                        <div class="sheet-roll-cell">{{spell_effect}}</div>
+                    </div>
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="value">Valeur</span></div>
+                        <div class="sheet-roll-cell">{{spell_threshold}}</div>
+                    </div>
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="result">Résultat</span></div>
+                        <div class="sheet-roll-cell">{{diceroll}}</div>
+                    </div>
+
+                    {{#rollGreater() diceroll spell_threshold}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">{{#rollGreater() diceroll spell_critical}}<span style="color:green;font-weight:bold;" data-i18n="critical-result">Critique !</span>{{/rollGreater() diceroll spell_critical}}</div>
+                        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
+                    </div>
+                    {{/rollGreater() diceroll spell_threshold}}
+                    {{#rollTotal() diceroll spell_threshold}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"></div>
+                        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="success-result">Réussite</span></div>
+                    </div>
+                    {{/rollTotal() diceroll spell_threshold}}
+                    {{#rollLess() diceroll spell_threshold}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"></div>
+                        <div class="sheet-roll-cell"><span style="font-weight:bold;" data-i18n="fail-result">Echec</span></div>
+                    </div>
+                    {{/rollLess() diceroll spell_threshold}}
+
+                </div>
+            </div>
+        </rolltemplate>
+    </aside>
+
+    <script type="text/worker">
+
+        on("change:str change:vig change:agi change:int change:per change:ten change:cha change:ins change:com", function(){
+            console.log("Abilities Change !!!");
+
+            getAttrs(["str","vig","agi","int","per","ten","cha","ins","com"], function(values){
+
+                valStr=parseInt(values.str);
+                valVig=parseInt(values.vig);
+                valAgi=parseInt(values.agi);
+                valInt=parseInt(values.int);
+                valPer=parseInt(values.per);
+                valTen=parseInt(values.ten);
+                valCha=parseInt(values.cha);
+                valIns=parseInt(values.ins);
+                valCom=parseInt(values.com);
+                hpMaxVal=(((valStr+valVig+valAgi)*3)+((valInt+valPer+valTen)*2)+(valCha+valIns+valCom));
+
+                setAttrs({ hp_max: hpMaxVal });
+                setAttrs({ wounded: Math.round(hpMaxVal/2) });
+                setAttrs({ scarred: Math.round(hpMaxVal/4) });
+                setAttrs({ dead: 0-(Math.round(hpMaxVal/4)) });
+            })
+        });
+
+        on("change:hp", function() {
+            getAttrs(["hp","wounded","scarred"], function(values) {
+
+                hpValue = parseInt(values.hp);
+                woundedValue = parseInt(values.wounded);
+                scarredValue = parseInt(values.scarred);
+
+                if (hpValue < scarredValue) {
+                    console.log( "Scarred !!!");
+
+                    setAttrs({ hvHalflife: 0 });
+                    setAttrs({ hvQuarterlife:1 });
+                } else if(hpValue < woundedValue){
+                    console.log( "Wounded !!!");
+
+                    setAttrs({ hvHalflife: 3 });
+                    setAttrs({ hvQuarterlife: 0 });
+                } else{
+                    console.log( "Normal HP !!!");
+
+                    setAttrs({ hvHalflife: 0 });
+                    setAttrs({ hvQuarterlife: 0 });
+                }
+            });
+        });
+
+    </script>
 
 </div>

@@ -254,7 +254,7 @@ input.sheet-pagetab1:checked ~ .sheet-main div.sheet-section-character.sheet-sec
 input.sheet-pagetab2:checked ~ .sheet-main div.sheet-section-abilities.sheet-section,
 input.sheet-pagetab3:checked ~ .sheet-main div.sheet-section-skills.sheet-section,
 input.sheet-pagetab4:checked ~ .sheet-main div.sheet-section-weapons-equipments.sheet-section,
-input.sheet-pagetab5:checked ~ .sheet-main div.sheet-section-spells-magic.sheet-section,
+input.sheet-pagetab5:checked ~ .sheet-main div.sheet-section-spells-runes.sheet-section,
 input.sheet-pagetab6:checked ~ .sheet-main div.sheet-section-notes.sheet-section,
 input.sheet-pagetab7:checked ~ .sheet-main div.sheet-section-config.sheet-section   {
 	display:block;
@@ -289,7 +289,7 @@ input.sheet-pagetab7:checked ~ .sheet-main div.sheet-section-config.sheet-sectio
 .sheet-section-abilities,
 .sheet-section-skills,
 .sheet-section-weapons-equipments,
-.sheet-section-spells-magic,
+.sheet-section-spells-runes,
 .sheet-section-notes,
 .sheet-section-config  {
     display:none;
@@ -744,13 +744,15 @@ input[type="checkbox"]:not(.sheet-noshow):checked + span:not(.sheet-not-sheet-sh
 /* ROLL TEMPLATES */
 .sheet-rolltemplate-ygg_ability,
 .sheet-rolltemplate-ygg_skill,
-.sheet-rolltemplate-ygg_weapon {
+.sheet-rolltemplate-ygg_weapon,
+.sheet-rolltemplate-ygg_spell {
   box-sizing: border-box;
 }
 
 .sheet-rolltemplate-ygg_ability .sheet-roll-table,
 .sheet-rolltemplate-ygg_skill .sheet-roll-table,
-.sheet-rolltemplate-ygg_weapon .sheet-roll-table {
+.sheet-rolltemplate-ygg_weapon .sheet-roll-table,
+.sheet-rolltemplate-ygg_spell .sheet-roll-table {
   width: 100%;
   display: table;
   font-family: cursive;
@@ -765,13 +767,15 @@ input[type="checkbox"]:not(.sheet-noshow):checked + span:not(.sheet-not-sheet-sh
 
 .sheet-rolltemplate-ygg_ability .sheet-roll-table .sheet-rounded,
 .sheet-rolltemplate-ygg_skill .sheet-roll-table .sheet-rounded ,
-.sheet-rolltemplate-ygg_weapon .sheet-roll-table .sheet-rounded {
+.sheet-rolltemplate-ygg_weapon .sheet-roll-table .sheet-rounded,
+.sheet-rolltemplate-ygg_spell .sheet-roll-table .sheet-rounded {
   border-radius: 5px;
 }
 
 .sheet-rolltemplate-ygg_ability .sheet-roll-header,
 .sheet-rolltemplate-ygg_skill .sheet-roll-header,
-.sheet-rolltemplate-ygg_weapon .sheet-roll-header {
+.sheet-rolltemplate-ygg_weapon .sheet-roll-header,
+.sheet-rolltemplate-ygg_spell .sheet-roll-header {
   display: table-row-group;
   width: 100%;
   overflow: hidden;
@@ -783,13 +787,15 @@ input[type="checkbox"]:not(.sheet-noshow):checked + span:not(.sheet-not-sheet-sh
 
 .sheet-rolltemplate-ygg_ability .sheet-roll-header a ,
 .sheet-rolltemplate-ygg_skill .sheet-roll-header a,
-.sheet-rolltemplate-ygg_weapon .sheet-roll-header a {
+.sheet-rolltemplate-ygg_weapon .sheet-roll-header a,
+.sheet-rolltemplate-ygg_spell .sheet-roll-header a {
 	text-decoration: underline;
 }
 
 .sheet-rolltemplate-ygg_ability .sheet-roll-row,
 .sheet-rolltemplate-ygg_skill .sheet-roll-row,
-.sheet-rolltemplate-ygg_weapon .sheet-roll-row {
+.sheet-rolltemplate-ygg_weapon .sheet-roll-row,
+.sheet-rolltemplate-ygg_spell .sheet-roll-row {
   width: 100%;
   overflow: hidden;
   background-color: whitesmoke;
@@ -797,13 +803,15 @@ input[type="checkbox"]:not(.sheet-noshow):checked + span:not(.sheet-not-sheet-sh
 
 .sheet-rolltemplate-ygg_ability .sheet-roll-row:nth-child(even),
 .sheet-rolltemplate-ygg_skill .sheet-roll-row:nth-child(even),
-.sheet-rolltemplate-ygg_weapon .sheet-roll-row:nth-child(even){
+.sheet-rolltemplate-ygg_weapon .sheet-roll-row:nth-child(even),
+.sheet-rolltemplate-ygg_spell .sheet-roll-row:nth-child(even){
   background-color: #FADABF;
 }
 
 .sheet-rolltemplate-ygg_ability .sheet-roll-cell,
 .sheet-rolltemplate-ygg_skill .sheet-roll-cell,
-.sheet-rolltemplate-ygg_weapon .sheet-roll-cell {
+.sheet-rolltemplate-ygg_weapon .sheet-roll-cell,
+.sheet-rolltemplate-ygg_spell .sheet-roll-cell {
   padding: 1px 1px 1px 5px;
   text-align: left;
   width: 100%;
@@ -811,9 +819,10 @@ input[type="checkbox"]:not(.sheet-noshow):checked + span:not(.sheet-not-sheet-sh
 
 .sheet-rolltemplate-ygg_ability .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell,
 .sheet-rolltemplate-ygg_skill .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell ,
-.sheet-rolltemplate-ygg_weapon .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell {
+.sheet-rolltemplate-ygg_weapon .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell,
+.sheet-rolltemplate-ygg_spell .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell {
   font-size: .9em;
-  width: 24%;
+  width: 63%;
   float: right;
   text-align: right;
   display: inline;
@@ -823,8 +832,9 @@ input[type="checkbox"]:not(.sheet-noshow):checked + span:not(.sheet-not-sheet-sh
 
 .sheet-rolltemplate-ygg_ability .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child,
 .sheet-rolltemplate-ygg_skill .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child ,
-.sheet-rolltemplate-ygg_weapon .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child {
-  width: 69%;
+.sheet-rolltemplate-ygg_weapon .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child,
+.sheet-rolltemplate-ygg_spell .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child {
+  width: 30%;
   float: left;
   text-align: left;
   padding: 3px 2px 1px 4px;
@@ -833,7 +843,8 @@ input[type="checkbox"]:not(.sheet-noshow):checked + span:not(.sheet-not-sheet-sh
 
 .sheet-rolltemplate-ygg_ability .inlinerollresult,
 .sheet-rolltemplate-ygg_skill .inlinerollresult,
-.sheet-rolltemplate-ygg_weapon .inlinerollresult {  
+.sheet-rolltemplate-ygg_weapon .inlinerollresult,
+.sheet-rolltemplate-ygg_spell .inlinerollresult {
     background-color: SandyBrown;
     border: 2px solid saddlebrown;
 }
@@ -841,40 +852,46 @@ input[type="checkbox"]:not(.sheet-noshow):checked + span:not(.sheet-not-sheet-sh
 
 .sheet-rolltemplate-ygg_ability .inlinerollresult.fullcrit,
 .sheet-rolltemplate-ygg_skill .inlinerollresult.fullcrit ,
-.sheet-rolltemplate-ygg_weapon .inlinerollresult.fullcrit {
+.sheet-rolltemplate-ygg_weapon .inlinerollresult.fullcrit,
+.sheet-rolltemplate-ygg_spell .inlinerollresult.fullcrit {
   color: #FFF;
   background-color: #3FB315;
 }
 
 .sheet-rolltemplate-ygg_ability .inlinerollresult.fullfail,
 .sheet-rolltemplate-ygg_skill .inlinerollresult.fullfail,
-.sheet-rolltemplate-ygg_weapon .inlinerollresult.fullfail {
+.sheet-rolltemplate-ygg_weapon .inlinerollresult.fullfail,
+.sheet-rolltemplate-ygg_spell .inlinerollresult.fullfail {
   color: #FFF;
   background-color: #B31515;
 }
 
 .sheet-rolltemplate-ygg_ability .inlinerollresult.importantroll,
 .sheet-rolltemplate-ygg_skill .inlinerollresult.importantroll ,
-.sheet-rolltemplate-ygg_weapon .inlinerollresult.importantroll {
+.sheet-rolltemplate-ygg_weapon .inlinerollresult.importantroll,
+.sheet-rolltemplate-ygg_spell .inlinerollresult.importantroll {
   color: #FFF;
   background-color: #4A57ED;
 }
 
 .sheet-rolltemplate-ygg_ability .sheet-roll-text-white,
 .sheet-rolltemplate-ygg_skill .sheet-roll-text-white,
-.sheet-rolltemplate-ygg_weapon .sheet-roll-text-white {
+.sheet-rolltemplate-ygg_weapon .sheet-roll-text-white,
+.sheet-rolltemplate-ygg_spell .sheet-roll-text-white {
   color:white;
 }
 
 .sheet-rolltemplate-ygg_ability .sheet-roll-text-12px,
 .sheet-rolltemplate-ygg_skill .sheet-roll-text-12px,
-.sheet-rolltemplate-ygg_weapon .sheet-roll-text-12px {  
+.sheet-rolltemplate-ygg_weapon .sheet-roll-text-12px,
+.sheet-rolltemplate-ygg_spell .sheet-roll-text-12px {
     font-size: 12px;
 }
 
 .sheet-rolltemplate-ygg_ability .sheet-roll-text-right,
 .sheet-rolltemplate-ygg_skill .sheet-roll-text-right,
-.sheet-rolltemplate-ygg_weapon .sheet-roll-text-right {
+.sheet-rolltemplate-ygg_weapon .sheet-roll-text-right,
+.sheet-rolltemplate-ygg_spell .sheet-roll-text-right {
   text-align:right;
 }
 

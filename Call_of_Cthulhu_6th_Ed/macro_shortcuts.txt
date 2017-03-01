@@ -1,0 +1,2 @@
+<button type="roll" name="roll_abilities" value="/w &quot;@{character_name}&quot; &{template:default} {{name=^{characteristics-and-rolls}}} {{[^{presence}](~@{character_id}|check_app) [^{stamina}](~@{character_id}|check_con) [^{agility}](~@{character_id}|check_dex) [^{strength}](~@{character_id}|check_str) [^{corpulence}](~@{character_id}|check_siz) [^{knowledge}](~@{character_id}|check_edu) [^{intuition}](~@{character_id}|check_int) [^{willpower}](~@{character_id}|check_pow)}}" />
+

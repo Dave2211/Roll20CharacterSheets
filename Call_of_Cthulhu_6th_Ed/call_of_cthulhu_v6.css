@@ -1,6 +1,6 @@
 .sheet-main{
 	font-size: 11px;
-	font-family: verdana;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 input[type="text"], input[type="number"] {
@@ -73,7 +73,7 @@ input[type="text"], input[type="number"] {
 .sheet-rolltemplate-coc_sanity .sheet-roll-row:nth-child(even),
 .sheet-rolltemplate-coc_skills .sheet-roll-row:nth-child(even),
 .sheet-rolltemplate-coc_weapons .sheet-roll-row:nth-child(even){
-  background-color: #FADABF;
+  background-color: #B1B1B1;
 }
 
 .sheet-rolltemplate-coc_abilities .sheet-roll-cell,
