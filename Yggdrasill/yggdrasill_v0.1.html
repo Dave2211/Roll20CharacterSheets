@@ -615,7 +615,7 @@
                                     <br/>
                                     <fieldset class="repeating_sejdr-spells">
 
-                                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:ygg_spell} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{spell_name=@{sejdrSpellName}}} {{spell_level=@{sejdrSpellLevel}}} {{spell_preparation=@{sejdrSpellPreparation}}} {{spell_penalty=@{sejdrSpellPenalty}}} {{spell_duration=@{sejdrSpellDuration}}} {{spell_zone=@{sejdrSpellZone}}} {{spell_effect=@{sejdrSpellEffect}}} {{spell_threshold=[[14]]}} {{spell_critical=[[28]]}} {{diceroll=[[[[(@{ins}-@{hvQuarterlife})]]d10!!k2-[[@{hvHalflife}]]+[[@{sejdrSpellPenalty}]]]]}} " name="roll_sejdrSpellCheck"><span data-i18n=""></span></button>
+                                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:ygg_spell} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{spell_name=@{sejdrSpellName}}} {{spell_level=@{sejdrSpellLevel}}} {{spell_preparation=@{sejdrSpellPreparation}}} {{spell_penalty=@{sejdrSpellPenalty}}} {{spell_duration=@{sejdrSpellDuration}}} {{spell_zone=@{sejdrSpellZone}}} {{spell_effect=@{sejdrSpellEffect}}} {{spell_threshold=[[14]]}} {{spell_critical=[[28]]}} {{diceroll=[[[[(@{ins}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]-[[@{hvHalflife}]]+[[@{sejdrSpellPenalty}]]+@{sejdr}]]}} " name="roll_sejdrSpellCheck"><span data-i18n=""></span></button>
                                         </span>
 
                                         <span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_sejdrSpellName" data-i18n-placeholder="sejdr-spell-name-place" placeholder="Nom du sort" /><span data-i18n="name">Nom</span></span>
@@ -831,7 +831,11 @@
                     {{^spell_duration}}
                     <div class="sheet-roll-row">
                         <div class="sheet-roll-cell"><span data-i18n="duration">Durée</span></div>
-                        <div class="sheet-roll-cell">Durée Aléatoire ({{diceroll}}-{{spell_threshold}})</div>
+                        <div class="sheet-roll-cell">
+
+                            <span data-i18n="random-duration">Durée Aléatoire</span>.<br/>{{#^rollLess() diceroll spell_threshold}}<span data-i18n="success-margin">Marge de réussite</span> : {{diceroll}}-{{spell_threshold}}  [<span data-i18n="launch">Launch</span>](!&#13;#DurationRoll){{/^rollLess() diceroll spell_threshold}}
+
+                        </div>
                     </div>
                     {{/spell_duration}}
                     <div class="sheet-roll-row">
@@ -873,6 +877,56 @@
                 </div>
             </div>
         </rolltemplate>
+
+        <rolltemplate class="sheet-rolltemplate-ygg_duration">
+            <div class="sheet-roll-table sheet-rounded">
+                <div class="sheet-roll-header">
+                    {{#character_name}} {{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}} {{^character_id}}{{character_name}}{{/character_id}} {{/character_name}}
+                </div>
+                <div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
+                    <span data-i18n="spell-duration">Durée du sort</span>
+                </div>
+                <div class="sheet-roll-group2">
+                    {{#rollTotal() margin 1}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">{{action_roll}} <span data-i18n="actions">Actions</span></div>
+                    </div>
+                    {{/rollTotal() margin 1}}
+
+                    {{#rollTotal() margin 2}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">{{turn_roll}} <span data-i18n="turns">Tours</span></div>
+                    </div>
+                    {{/rollTotal() margin 2}}
+
+                    {{#rollTotal() margin 3}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">{{minute_roll}} <span data-i18n="minutes">Minutes</span></div>
+                    </div>
+                    {{/rollTotal() margin 3}}
+
+                    {{#rollTotal() margin 4}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">{{hour_roll}} <span data-i18n="hours">Heures</span></div>
+                    </div>
+                    {{/rollTotal() margin 4}}
+
+                    {{#rollTotal() margin 5}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">{{day_roll}} <span data-i18n="days">Journées</span></div>
+                    </div>
+                    {{/rollTotal() margin 5}}
+
+                </div>
+            </div>
+        </rolltemplate>
+
+
     </aside>
 
     <script type="text/worker">
