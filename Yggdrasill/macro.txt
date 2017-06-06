@@ -1,3 +1,15 @@
 DurationRoll
 
 &{template:ygg_duration} {{margin=?{Marge de Réussite|0-5,[[1]]|6-10,[[2]]|11-15,[[3]]|16-25,[[4]]|26+,[[5]]}}} {{action_roll=[[1d5]]}} {{turn_roll=[[1d10]]}} {{minute_roll=[[1d10]]}} {{hour_roll=[[1d10]]}} {{day_roll=[[1d5]]}}
+
+CurseRoll
+
+&{template:ygg_duration} {{margin=?{Seuil de Difficulté|3,[[1]]|6,[[2]]|9,[[3]]|12,[[4]]|15,[[5]]}}} {{action_roll=[[1d5]]}} {{turn_roll=[[1d10]]}} {{minute_roll=[[1d10]]}} {{hour_roll=[[1d10]]}} {{day_roll=[[1d5]]}} {{type=[[1]]}}
+
+IllusionRoll
+
+&{template:ygg_duration} {{margin=?{Seuil de Difficulté|3,[[1]]|6,[[2]]|9,[[3]]|12,[[4]]|15,[[5]]}}} {{action_roll=[[1d5]]}} {{turn_roll=[[1d10]]}} {{minute_roll=[[1d10]]}} {{hour_roll=[[1d10]]}} {{day_roll=[[1d5]]}} {{type=[[2]]}}
+
+CharmRoll
+
+&{template:ygg_duration} {{margin=?{Seuil de Difficulté|3,[[1]]|6,[[2]]|9,[[3]]|12,[[4]]|15,[[5]]}}} {{action_roll=[[1d5]]}} {{turn_roll=[[1d10]]}} {{minute_roll=[[1d10]]}} {{hour_roll=[[1d10]]}} {{day_roll=[[1d5]]}} {{type=[[3]]}}

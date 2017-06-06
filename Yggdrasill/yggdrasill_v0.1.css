@@ -78,7 +78,7 @@ div.sheet-header{
 }
 
 .sheet-main-container {
-    background-image:url("http://i48.servimg.com/u/f48/13/08/73/86/parcho12.jpg");
+    background-image:url("https://i48.servimg.com/u/f48/13/08/73/86/parcho12.jpg");
 }
 
 .sheet-rTable {   	
@@ -509,7 +509,7 @@ content: counter(sheet-rep-items) '. ▼' !important;
 .repcontainer .repitem,.sheet-repeating-sect  .repitem {
     padding: 2px 4px 1px 0px;
     margin: 2px 0 4px 0;
-    border: 2px solid #CCCCCC;
+    border: 2px solid saddlebrown;
     border-radius: 7px;
 	vertical-align:top;
 	overflow: hidden;
@@ -521,6 +521,7 @@ content: counter(sheet-rep-items) '. ▼' !important;
 }
 .repcontainer.editmode .repitem .itemcontrol {
 	z-index:3;
+    background-color: gray;
 	background-color:rgba(220,220,220,0.40);
 }
 .sheet-repeating-sect {
@@ -529,25 +530,88 @@ content: counter(sheet-rep-items) '. ▼' !important;
 
 /******* end of generic repeating items ********/
 
+.sheet-repeating-sect .repcontrol {
+    display: block;
+    clear: both;
+    width: 100%;
+}
+.sheet-split-column-show:not(:checked) ~ .sheet-repeating-fields .repitem {
+    clear: both;
+}
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .repitem {
+    width: 50%;
+    display: inline-block;
+	float:left;
+}
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .repitem:nth-child(odd),
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .repitem:first-child(odd) {
+    float: left;
+}
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .repitem:nth-child(even) {
+    float: right;
+}
 
+.repcontrol_add::before {
+	content: '&';
+	visibility: visible;
+	font-family: pictos;
+	background-color: #fff;
+	border: 1px solid #000;
+	border-radius: 2px;
+	font-size: 1rem;
+	padding: 2px 4px 2px 4px;
+	color: #000;
+}
+.repcontrol .repcontrol_edit:after {
+	content: 'W';
+	visibility: visible;
+	font-family: pictos;
+	background-color: #fff;
+	border: 1px solid #000;
+	border-radius: 2px;
+	font-size: 1rem;
+	padding: 2px 3px 2px 3px;
+	color: #000;
+	margin-left: -3em;
+}
+.editmode ~ .repcontrol .repcontrol_edit:after {
+	content: '3';
+}
+.repcontrol_edit:hover:before,
+.repcontrol_edit:hover:after,
+.repcontrol_add:hover:before {
+  background-color: #EFEFEF;
+}
+.repcontrol .btn {
+    border: medium none;
+	color: transparent !important;
+	background: none;
+	box-shadow: none;
+}
+.repcontrol .btn:focus {
+  outline: 0;
+}
 .repcontrol_add,
-.repcontrol_edit,
+.repcontrol_edit {
+    display: block;
+    background: none;
+    color: transparent !important;
+	border: none;
+	box-shadow: none;
+}
 .repcontrol_del,
 .repcontrol_move {
     display: block;
-	background:saddlebrown;
-	color:White;
-}
-.repcontrol_del{
-	font-weight: bold;
-	color:red;
+    background: black;
+    color: White !important;
+	border: none;
+	box-shadow: none;
+	width: 2em;
 }
 .repcontrol_move {
-	float: right;
-	margin-right: 5px;
-	width: 2.5em;
+    float: right;
+    margin-right: 5px;
 }
-
 .sheet-nontable {
 	text-align:justify;
 	border-collapse:collapse;

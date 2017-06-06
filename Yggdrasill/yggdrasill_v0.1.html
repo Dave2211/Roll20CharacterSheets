@@ -3,7 +3,7 @@
     <div style="width:1px; height:600px; min-height:600px;position:absolute;left:1px;">&nbsp;</div>
     <header>
         <div class="sheet-table-row">
-            <label class="sheet-table-cell" style="width:22%;"><img src="http://img15.hostingpics.net/pics/954146logo.png" alt="YGGDRASILL Logo" style="max-height: 100px;" /></label>
+            <label class="sheet-table-cell" style="width:22%;"><img src="https://img15.hostingpics.net/pics/954146logo.png" alt="YGGDRASILL Logo" style="max-height: 100px;" /></label>
             <label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="firstname">Prénom</span><input name="attr_character_firstname" type="text" data-i18n-placeholder="character-firstname-place" placeholder="Prénom du Personnage" /></label>
             <label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="lastname">Nom</span><input name="attr_character_lastname" type="text" data-i18n-placeholder="character-lastname-place" placeholder="Nom du personnage" /></label>
             <label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="archetype">Archetype</span><select name="attr_archetype" class="sheet-dropdown-character">
@@ -255,12 +255,12 @@
                         <label class="sheet-small-label2" style="width: 10%;"><input name="attr_dead" type="number" data-i18n-title="dead-title" title="Niveau auquel le personnage est mort" readonly="readonly" /><span data-i18n="dead">Mort</span></label>
                         <br/>
 
-                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_reaction" type="number" data-i18n-title="reaction-title" title="Réaction du personnage" value="(@{int}+@{per}+@{ins})" disabled="true" /><span data-i18n="reaction">Réaction</span></label>
-                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_encumbrance" type="number" data-i18n-title="encumbrance-title" title="Capacité d'Encombrement du personnage" value="((@{str}*2)+@{vig})" disabled="true" /><span data-i18n="encumbrance">Cap. Enc.</span></label>
-                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_physical-defense" type="number" data-i18n-title="physical-defense-title" title="Défense Physique du personnage" value="(@{agi}+@{vig}+@{ins})" disabled="true" /><span data-i18n="physical-defense">Déf. Phy.</span></label>
-                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_movement" type="number" data-i18n-title="movement-title" title="Mouvement du personnage" value="(@{agi}+@{vig})" disabled="true" /><span data-i18n="movement">Déplacement</span></label>
-                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_mental-defense" type="number" data-i18n-title="mental-defense-title" title="Défense Mentale du personnage" value="(@{ten}+@{int}+@{ins})" disabled="true" /><span data-i18n="mental-defense">Déf. Ment.</span></label>
-                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_actions" type="number" data-i18n-title="actions-title" title="Actions du personnage" value="(@{agi}+@{vig})" disabled="true" /><span data-i18n="actions">Actions</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_reaction" type="number" data-i18n-title="reaction-title" title="Réaction du personnage" readonly="readonly" /><span data-i18n="reaction">Réaction</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_encumbrance" type="number" data-i18n-title="encumbrance-title" title="Capacité d'Encombrement du personnage" readonly="readonly" /><span data-i18n="encumbrance">Cap. Enc.</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_physical-defense" type="number" data-i18n-title="physical-defense-title" title="Défense Physique du personnage" readonly="readonly" /><span data-i18n="physical-defense">Déf. Phy.</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_movement" type="number" data-i18n-title="movement-title" title="Mouvement du personnage" readonly="readonly" /><span data-i18n="movement">Déplacement</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_mental-defense" type="number" data-i18n-title="mental-defense-title" title="Défense Mentale du personnage" readonly="readonly" /><span data-i18n="mental-defense">Déf. Ment.</span></label>
+                        <label class="sheet-small-label2" style="width: 10%;"><input name="attr_actions" type="number" data-i18n-title="actions-title" title="Actions du personnage" readonly="readonly" /><span data-i18n="actions">Actions</span></label>
 
                     </div>
                     <br/>
@@ -279,8 +279,7 @@
 
                     <input type="hidden" name="attr_hvFuror" value="?{Furor|0}" />
 
-                    <div class=""><span data-i18n="furor-pool">Réserve de Dés</span><input name="attr_furor-pool" type="number" data-i18n-title="furor-pool-title" title="Réserve actuelle de dés de Furor" />/<input name="attr_furor-pool-max" type="number" data-i18n-title="furor-pool-max-title"
-                            title="Réserve de dés de Furor : <br/>VIG+TEN+INS (don Guerrier-Fauve)<br/>VIG+INT+INS (don Initié d'Odhinn)<br/>(VIG+TEN+INS)/2 (autres)" /></div>
+                    <div class=""><span data-i18n="furor-pool">Réserve de Dés</span><input name="attr_furor-pool" type="number" data-i18n-title="furor-pool-title" title="Réserve actuelle de dés de Furor" />/<input name="attr_furor-pool-max" type="number" data-i18n-title="furor-pool-max-title" title="Réserve de dés de Furor : <br/>VIG+TEN+INS (don Guerrier-Fauve)<br/>VIG+INT+INS (don Initié d'Odhinn)<br/>(VIG+TEN+INS)/2 (autres)" /></div>
                     <br/>
 
                     <div class="sheet-header sheet-text-center"><span data-i18n="skills">Compétences</span></div>
@@ -615,7 +614,7 @@
                                     <br/>
                                     <fieldset class="repeating_sejdr-spells">
 
-                                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:ygg_spell} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{spell_name=@{sejdrSpellName}}} {{spell_level=@{sejdrSpellLevel}}} {{spell_preparation=@{sejdrSpellPreparation}}} {{spell_penalty=@{sejdrSpellPenalty}}} {{spell_duration=@{sejdrSpellDuration}}} {{spell_zone=@{sejdrSpellZone}}} {{spell_effect=@{sejdrSpellEffect}}} {{spell_threshold=[[14]]}} {{spell_critical=[[28]]}} {{diceroll=[[[[(@{ins}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]-[[@{hvHalflife}]]+[[@{sejdrSpellPenalty}]]+@{sejdr}]]}} " name="roll_sejdrSpellCheck"><span data-i18n=""></span></button>
+                                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:ygg_spell} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{spell_domain_type=[[0]]}} {{spell_name=@{sejdrSpellName}}} {{spell_level=@{sejdrSpellLevel}}} {{spell_preparation=@{sejdrSpellPreparation}}} {{spell_penalty=@{sejdrSpellPenalty}}} {{spell_duration=@{sejdrSpellDuration}}} {{spell_zone=@{sejdrSpellZone}}} {{spell_effect=@{sejdrSpellEffect}}} {{spell_threshold=[[14]]}} {{spell_critical=[[28]]}} {{diceroll=[[[[(@{ins}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]-[[@{hvHalflife}]]+[[@{sejdrSpellPenalty}]]+[[@{sejdr}-@{hvHalflife}]]]]}} " name="roll_sejdrSpellCheck"><span data-i18n=""></span></button>
                                         </span>
 
                                         <span class="sheet-small-label2" style="width:20%;"><input type="text" name="attr_sejdrSpellName" data-i18n-placeholder="sejdr-spell-name-place" placeholder="Nom du sort" /><span data-i18n="name">Nom</span></span>
@@ -628,9 +627,7 @@
 
                                         <span class="sheet-small-label2" style="width:7%;"></span>
 
-                                        <span class="sheet-small-label2" style="width:80%;"><input type="text" name="attr_sejdrSpellEffect" data-i18n-placeholder="sejdr-spell-effect-place" placeholder="Effet/Contre Effet du sort" /><span data-i18n="effect">Effet</span></span>
-
-
+                                        <span class="sheet-small-label2" style="width:90%;"><input type="text" name="attr_sejdrSpellEffect" data-i18n-placeholder="sejdr-spell-effect-place" placeholder="Effet/Contre Effet du sort" /><span data-i18n="effect">Effet</span></span>
 
                                     </fieldset>
                                 </div>
@@ -639,8 +636,37 @@
                     </div>
                     <br/>
 
+                    <!-- GALDR SPELLS -->
+                    <div class="sheet-section">
+                        <div class="sheet-h2-section">
+                            <h2 data-i18n="galdr-spells">Sorts du Galdr</h2>
+                            <label for="attr_galdr-spells-details-show" class="sheet-label-a" data-i18n="galdr-spells-exp">Développer les sorts du Galdr</label>
+                            <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_galdr-spells-details-show" name="attr_galdr-spells-details-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked"
+                            /><span></span>
+                            <div class="sheet-nontable sheet-sect">
+                                <div class="sheet-divbox sheet-repeating-sect">
+                                    <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="galdr-spells">Sorts du Galdr</span></div>
+                                    <br/>
+                                    <fieldset class="repeating_galdr-spells">
 
+                                        <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="&{template:ygg_spell} {{character_name=@{character_firstname} @{character_lastname}}} {{character_id=@{character_id}}} {{spell_domain=@{galdrSpellDomain}}} {{spell_domain_type=?{Domain du sort|Malédiction,[[1]]|Illusion,[[2]]|Charme,[[3]]}} {{spell_duration=}} {{spell_duration=@{galdrSpellDuration}}} {{spell_aoe=@{galdrSpellAreaOfEffect}}} {{spell_effect=@{galdrSpellEffect}}} {{spell_threshold=[[14]]}} {{spell_critical=[[28]]}} {{diceroll=[[[[(@{cha}-@{hvQuarterlife})]]d10!!k2+[[@{hvFuror}d10]]+[[@{galdr}-@{hvHalflife}]]]]}} " name="roll_galdrSpellCheck"><span data-i18n=""></span></button>
+                                        </span>
 
+                                        <span class="sheet-small-label2" style="width:40%;"><input type="text" name="attr_galdrSpellDomain" data-i18n-placeholder="galdr-spell-domain-place" placeholder="Domaine du sort" /><span data-i18n="domain">Domaine</span></span>
+
+                                        <span class="sheet-small-label2" style="width:7%;"><input name="attr_galdrSpellDuration" data-i18n-title="galdr-spell-duration-title" title="Durée du sort. Laissez vide pour une durée aléatoire" type="text" /><span data-i18n="duration">Durée</span></span>
+                                        <span class="sheet-small-label2" style="width:25%;"><input name="attr_galdrSpellAreaOfEffect" data-i18n-title="galdr-spell-aoe-title" title="Cible/Zone d'effet du sort" type="text" /><span data-i18n="aoe">Cible/Zone</span></span>
+
+                                        <span class="sheet-small-label2" style="width:7%;"></span>
+
+                                        <span class="sheet-small-label2" style="width:90%;"><input type="text" name="attr_galdrSpellEffect" data-i18n-placeholder="galdr-spell-effect-place" placeholder="Effet/Contre Effet du sort" /><span data-i18n="effect">Effet</span></span>
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
 
                 </div>
             </section>
@@ -807,21 +833,27 @@
                     {{#character_name}} {{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}} {{^character_id}}{{character_name}}{{/character_id}} {{/character_name}}
                 </div>
                 <div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
-                    <span data-i18n="spell">Sort</span> : {{spell_name}}
+                    <span data-i18n="spell">Sort</span> : {{spell_name}}{{spell_domain}}
                 </div>
                 <div class="sheet-roll-group2">
+                    {{#spell_level}}
                     <div class="sheet-roll-row">
                         <div class="sheet-roll-cell"><span data-i18n="level">Niveau</span></div>
                         <div class="sheet-roll-cell">{{spell_level}}</div>
                     </div>
+                    {{/spell_level}}
+                    {{#spell_preparation}}
                     <div class="sheet-roll-row">
                         <div class="sheet-roll-cell"><span data-i18n="preparation">Préparation</span></div>
                         <div class="sheet-roll-cell">{{spell_preparation}}</div>
                     </div>
+                    {{/spell_preparation}}
+                    {{#spell_penalty}}
                     <div class="sheet-roll-row">
                         <div class="sheet-roll-cell"><span data-i18n="penalty">Malus</span></div>
                         <div class="sheet-roll-cell">{{spell_penalty}}</div>
                     </div>
+                    {{/spell_penalty}}
                     {{#spell_duration}}
                     <div class="sheet-roll-row">
                         <div class="sheet-roll-cell"><span data-i18n="duration">Durée</span></div>
@@ -832,24 +864,46 @@
                     <div class="sheet-roll-row">
                         <div class="sheet-roll-cell"><span data-i18n="duration">Durée</span></div>
                         <div class="sheet-roll-cell">
-
+                            {{#rollTotal() spell_domain_type 0}}
                             <span data-i18n="random-duration">Durée Aléatoire</span>.<br/>{{#^rollLess() diceroll spell_threshold}}<span data-i18n="success-margin">Marge de réussite</span> : {{diceroll}}-{{spell_threshold}}  [<span data-i18n="launch">Launch</span>](!&#13;#DurationRoll){{/^rollLess() diceroll spell_threshold}}
+                            {{/rollTotal() spell_domain_type 0}}
 
+                            {{#rollTotal() spell_domain_type 1}}
+                            <span data-i18n="random-duration">Durée Aléatoire</span>.<br/>[<span data-i18n="launch">Launch</span>](!&#13;#CurseRoll)
+                            {{/rollTotal() spell_domain_type 1}}
+
+                            {{#rollTotal() spell_domain_type 2}}
+                            <span data-i18n="random-duration">Durée Aléatoire</span>.<br/>[<span data-i18n="launch">Launch</span>](!&#13;#IllusionRoll)
+                            {{/rollTotal() spell_domain_type 2}}
+
+                            {{#rollTotal() spell_domain_type 3}}
+                            <span data-i18n="random-duration">Durée Aléatoire</span>.<br/>[<span data-i18n="launch">Launch</span>](!&#13;#CharmRoll)
+                            {{/rollTotal() spell_domain_type 3}}
                         </div>
                     </div>
                     {{/spell_duration}}
+                    {{#spell_zone}}
                     <div class="sheet-roll-row">
                         <div class="sheet-roll-cell"><span data-i18n="zone">Zone</span></div>
                         <div class="sheet-roll-cell">{{spell_zone}}</div>
                     </div>
+                    {{/spell_zone}}
+                    {{#spell_aoe}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell"><span data-i18n="aoe">Cible/Zone</span></div>
+                        <div class="sheet-roll-cell">{{spell_aoe}}</div>
+                    </div>
+                    {{/spell_aoe}}
                     <div class="sheet-roll-row">
                         <div class="sheet-roll-cell"><span data-i18n="effect">Effet</span></div>
                         <div class="sheet-roll-cell">{{spell_effect}}</div>
                     </div>
+                    {{#spell_threshold}}
                     <div class="sheet-roll-row">
                         <div class="sheet-roll-cell"><span data-i18n="value">Valeur</span></div>
                         <div class="sheet-roll-cell">{{spell_threshold}}</div>
                     </div>
+                    {{/spell_threshold}}
                     <div class="sheet-roll-row">
                         <div class="sheet-roll-cell"><span data-i18n="result">Résultat</span></div>
                         <div class="sheet-roll-cell">{{diceroll}}</div>
@@ -880,11 +934,8 @@
 
         <rolltemplate class="sheet-rolltemplate-ygg_duration">
             <div class="sheet-roll-table sheet-rounded">
-                <div class="sheet-roll-header">
-                    {{#character_name}} {{#character_id}}[{{character_name}}](https://journal.roll20.net/character/{{character_id}}){{/character_id}} {{^character_id}}{{character_name}}{{/character_id}} {{/character_name}}
-                </div>
                 <div class="sheet-roll-header sheet-roll-text-white sheet-roll-text-right sheet-roll-text-12px">
-                    <span data-i18n="spell-duration">Durée du sort</span>
+                    <span data-i18n="spell-duration">Durée du Sort</span>
                 </div>
                 <div class="sheet-roll-group2">
                     {{#rollTotal() margin 1}}
@@ -892,6 +943,26 @@
                         <div class="sheet-roll-cell">&nbsp;</div>
                         <div class="sheet-roll-cell">{{action_roll}} <span data-i18n="actions">Actions</span></div>
                     </div>
+                    {{#type}}
+                    {{#rollTotal() type 1}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">1 <span data-i18n="target">Cible</span></div>
+                    </div>
+                    {{/rollTotal() type 1}}
+                    {{#rollTotal() type 2}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell"><span data-i18n="effect-zone-sd-3">INS x 10cm3 (chat, balle, épée ...)</span></div>
+                    </div>
+                    {{/rollTotal() type 2}}
+                    {{#rollTotal() type 3}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">1 <span data-i18n="target">Cible</span></div>
+                    </div>
+                    {{/rollTotal() type 3}}
+                    {{/type}}
                     {{/rollTotal() margin 1}}
 
                     {{#rollTotal() margin 2}}
@@ -899,6 +970,26 @@
                         <div class="sheet-roll-cell">&nbsp;</div>
                         <div class="sheet-roll-cell">{{turn_roll}} <span data-i18n="turns">Tours</span></div>
                     </div>
+                    {{#type}}
+                    {{#rollTotal() type 1}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">2 <span data-i18n="to">à</span> 4 <span data-i18n="targets">Cibles</span></div>
+                    </div>
+                    {{/rollTotal() type 1}}
+                    {{#rollTotal() type 2}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell"><span data-i18n="effect-zone-sd-6">INS x 50cm3 (tabouret, enfant ...)</span></div>
+                    </div>
+                    {{/rollTotal() type 2}}
+                    {{#rollTotal() type 3}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">2 <span data-i18n="to">à</span> 4 <span data-i18n="targets">Cibles</span></div>
+                    </div>
+                    {{/rollTotal() type 3}}
+                    {{/type}}
                     {{/rollTotal() margin 2}}
 
                     {{#rollTotal() margin 3}}
@@ -906,6 +997,26 @@
                         <div class="sheet-roll-cell">&nbsp;</div>
                         <div class="sheet-roll-cell">{{minute_roll}} <span data-i18n="minutes">Minutes</span></div>
                     </div>
+                    {{#type}}
+                    {{#rollTotal() type 1}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">5 <span data-i18n="to">à</span> 9 <span data-i18n="targets">Cibles</span></div>
+                    </div>
+                    {{/rollTotal() type 1}}
+                    {{#rollTotal() type 2}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell"><span data-i18n="effect-zone-sd-9">INS x 1m3 (homme, 2 enfants ...)</span></div>
+                    </div>
+                    {{/rollTotal() type 2}}
+                    {{#rollTotal() type 3}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">5 <span data-i18n="to">à</span> 9 <span data-i18n="targets">Cibles</span></div>
+                    </div>
+                    {{/rollTotal() type 3}}
+                    {{/type}}
                     {{/rollTotal() margin 3}}
 
                     {{#rollTotal() margin 4}}
@@ -913,6 +1024,26 @@
                         <div class="sheet-roll-cell">&nbsp;</div>
                         <div class="sheet-roll-cell">{{hour_roll}} <span data-i18n="hours">Heures</span></div>
                     </div>
+                    {{#type}}
+                    {{#rollTotal() type 1}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">10 <span data-i18n="to">à</span> 49 <span data-i18n="targets">Cibles</span></div>
+                    </div>
+                    {{/rollTotal() type 1}}
+                    {{#rollTotal() type 2}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell"><span data-i18n="effect-zone-sd-12">INS x 5m3 (charette, 2 cavaliers ...)</span></div>
+                    </div>
+                    {{/rollTotal() type 2}}
+                    {{#rollTotal() type 3}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">10 <span data-i18n="to">à</span> 49 <span data-i18n="targets">Cibles</span></div>
+                    </div>
+                    {{/rollTotal() type 3}}
+                    {{/type}}
                     {{/rollTotal() margin 4}}
 
                     {{#rollTotal() margin 5}}
@@ -920,6 +1051,26 @@
                         <div class="sheet-roll-cell">&nbsp;</div>
                         <div class="sheet-roll-cell">{{day_roll}} <span data-i18n="days">Journées</span></div>
                     </div>
+                    {{#type}}
+                    {{#rollTotal() type 1}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">50 <span data-i18n="targets">Cibles</span> <span data-i18n="and">et</span> +</div>
+                    </div>
+                    {{/rollTotal() type 1}}
+                    {{#rollTotal() type 2}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell"><span data-i18n="effect-zone-sd-15">INS x 10m3 (maison, kraken, bateau ...)</span></div>
+                    </div>
+                    {{/rollTotal() type 2}}
+                    {{#rollTotal() type 3}}
+                    <div class="sheet-roll-row">
+                        <div class="sheet-roll-cell">&nbsp;</div>
+                        <div class="sheet-roll-cell">10 <span data-i18n="to">à</span> 49 <span data-i18n="targets">Cibles</span></div>
+                    </div>
+                    {{/rollTotal() type 3}}
+                    {{/type}}
                     {{/rollTotal() margin 5}}
 
                 </div>
@@ -931,35 +1082,648 @@
 
     <script type="text/worker">
 
+        /* ---- BEGIN: TheAaronSheet.js ---- */
+        // Github:   https://github.com/shdwjk/TheAaronSheet/blob/master/TheAaronSheet.js
+        // By:       The Aaron, Arcane Scriptomancer
+        // Contact:  https://app.roll20.net/users/104025/the-aaron
+
+        var TAS = TAS || (function () {
+                'use strict';
+                var version = '0.2.4',
+                    lastUpdate = 1457098091,
+                    loggingSettings = {
+                        debug: {
+                            key: 'debug',
+                            title: 'DEBUG',
+                            color: {
+                                bgLabel: '#7732A2',
+                                label: '#F2EF40',
+                                bgText: '#FFFEB7',
+                                text: '#7732A2'
+                            }
+                        },
+                        error: {
+                            key: 'error',
+                            title: 'Error',
+                            color: {
+                                bgLabel: '#C11713',
+                                label: 'white',
+                                bgText: '#C11713',
+                                text: 'white'
+                            }
+                        },
+                        warn: {
+                            key: 'warn',
+                            title: 'Warning',
+                            color: {
+                                bgLabel: '#F29140',
+                                label: 'white',
+                                bgText: '#FFD8B7',
+                                text: 'black'
+                            }
+                        },
+                        info: {
+                            key: 'info',
+                            title: 'Info',
+                            color: {
+                                bgLabel: '#413FA9',
+                                label: 'white',
+                                bgText: '#B3B2EB',
+                                text: 'black'
+                            }
+                        },
+                        notice: {
+                            key: 'notice',
+                            title: 'Notice',
+                            color: {
+                                bgLabel: '#33C133',
+                                label: 'white',
+                                bgText: '#ADF1AD',
+                                text: 'black'
+                            }
+                        },
+                        log: {
+                            key: 'log',
+                            title: 'Log',
+                            color: {
+                                bgLabel: '#f2f240',
+                                label: 'black',
+                                bgText: '#ffff90',
+                                text: 'black'
+                            }
+                        },
+                        callstack: {
+                            key: 'TAS',
+                            title: 'function',
+                            color: {
+                                bgLabel: '#413FA9',
+                                label: 'white',
+                                bgText: '#B3B2EB',
+                                text: 'black'
+                            }
+                        },
+                        callstack_async: {
+                            key: 'TAS',
+                            title: 'ASYNC CALL',
+                            color: {
+                                bgLabel: '#413FA9',
+                                label: 'white',
+                                bgText: '#413FA9',
+                                text: 'white'
+                            }
+                        },
+                        TAS: {
+                            key: 'TAS',
+                            title: 'TAS',
+                            color: {
+                                bgLabel: 'grey',
+                                label: 'black;background:linear-gradient(#304352,#d7d2cc,#d7d2cc,#d7d2cc,#304352)',
+                                bgText: 'grey',
+                                text: 'black;background:linear-gradient(#304352,#d7d2cc,#d7d2cc,#d7d2cc,#304352)'
+                            }
+                        }
+                    },
+                    config = {
+                        debugMode: false,
+                        logging: {
+                            log: true,
+                            notice: true,
+                            info: true,
+                            warn: true,
+                            error: true,
+                            debug: false
+                        }
+                    },
+                    callstackRegistry = [],
+                    queuedUpdates = {}, //< Used for delaying saves till the last moment.
+                    complexType = function (o) {
+                        switch (typeof o) {
+                        case 'string':
+                            return 'string';
+                        case 'boolean':
+                            return 'boolean';
+                        case 'number':
+                            return (_.isNaN(o) ? 'NaN' : (o.toString().match(/\./) ? 'decimal' : 'integer'));
+                        case 'function':
+                            return 'function: ' + (o.name ? o.name + '()' : '(anonymous)');
+                        case 'object':
+                            return (_.isArray(o) ? 'array' : (_.isArguments(o) ? 'arguments' : (_.isNull(o) ? 'null' : 'object')));
+                        default:
+                            return typeof o;
+                        }
+                    },
+                    dataLogger = function (primaryLogger, secondaryLogger, data) {
+                        _.each(data, function (m) {
+                            var type = complexType(m);
+                            switch (type) {
+                            case 'string':
+                                primaryLogger(m);
+                                break;
+                            case 'undefined':
+                            case 'null':
+                            case 'NaN':
+                                primaryLogger('[' + type + ']');
+                                break;
+                            case 'number':
+                            case 'not a number':
+                            case 'integer':
+                            case 'decimal':
+                            case 'boolean':
+                                primaryLogger('[' + type + ']: ' + m);
+                                break;
+                            default:
+                                primaryLogger('[' + type + ']:=========================================');
+                                secondaryLogger(m);
+                                primaryLogger('=========================================================');
+                                break;
+                            }
+                        });
+                    },
+                    colorLog = function (options) {
+                        var coloredLoggerFunction,
+                            key = options.key,
+                            label = options.title || 'TAS',
+                            lBGColor = (options.color && options.color.bgLabel) || 'blue',
+                            lTxtColor = (options.color && options.color.label) || 'white',
+                            mBGColor = (options.color && options.color.bgText) || 'blue',
+                            mTxtColor = (options.color && options.color.text) || 'white';
+                        coloredLoggerFunction = function (message) {
+                            console.log('%c ' + label + ': %c ' + message + ' ', 'background-color: ' + lBGColor + ';color: ' + lTxtColor + '; font-weight:bold;', 'background-color: ' + mBGColor + ';color: ' + mTxtColor + ';');
+                        };
+                        return function () {
+                            if ('TAS' === key || config.logging[key]) {
+                                dataLogger(coloredLoggerFunction, function (m) {
+                                    console.log(m);
+                                }, _.toArray(arguments));
+                            }
+                        };
+                    },
+                    logDebug = colorLog(loggingSettings.debug),
+                    logError = colorLog(loggingSettings.error),
+                    logWarn = colorLog(loggingSettings.warn),
+                    logInfo = colorLog(loggingSettings.info),
+                    logNotice = colorLog(loggingSettings.notice),
+                    logLog = colorLog(loggingSettings.log),
+                    log = colorLog(loggingSettings.TAS),
+                    logCS = colorLog(loggingSettings.callstack),
+                    logCSA = colorLog(loggingSettings.callstack_async),
+                    registerCallstack = function (callstack, label) {
+                        var idx = _.findIndex(callstackRegistry, function (o) {
+                            return (_.difference(o.stack, callstack).length === _.difference(callstack, o.stack).length) && _.difference(o.stack, callstack).length === 0 && o.label === label;
+                        });
+                        if (-1 === idx) {
+                            idx = callstackRegistry.length;
+                            callstackRegistry.push({
+                                stack: callstack,
+                                label: label
+                            });
+                        }
+                        return idx;
+                    },
+                    setConfigOption = function (options) {
+                        var newconf = _.defaults(options, config);
+                        newconf.logging = _.defaults(
+                            (options && options.logging) || {}, config.logging);
+                        config = newconf;
+                    },
+                    debugMode = function () {
+                        config.logging.debug = true;
+                        config.debugMode = true;
+                    },
+                    getCallstack = function () {
+                        var e = new Error('dummy'),
+                            stack = _.map(_.rest(e.stack.replace(/^[^\(]+?[\n$]/gm, '').replace(/^\s+at\s+/gm, '').replace(/^Object.<anonymous>\s*\(/gm, '{anonymous}()@').split('\n')), function (l) {
+                                return l.replace(/\s+.*$/, '');
+                            });
+                        return stack;
+                    },
+                    logCallstackSub = function (cs) {
+                        var matches,
+                            csa;
+                        _.find(cs, function (line) {
+                            matches = line.match(/TAS_CALLSTACK_(\d+)/);
+                            if (matches) {
+                                csa = callstackRegistry[matches[1]];
+                                logCSA('====================' + (csa.label ? '> ' + csa.label + ' <' : '') + '====================');
+                                logCallstackSub(csa.stack);
+                                return true;
+                            }
+                            logCS(line);
+                            return false;
+                        });
+                    },
+                    logCallstack = function () {
+                        var cs;
+                        if (config.debugMode) {
+                            cs = getCallstack();
+                            cs.shift();
+                            log('==============================> CALLSTACK <==============================');
+                            logCallstackSub(cs);
+                            log('=========================================================================');
+                        }
+                    },
+                    wrapCallback = function (label, callback, context) {
+                        var callstack;
+                        if ('function' === typeof label) {
+                            context = callback;
+                            callback = label;
+                            label = undefined;
+                        }
+                        if (!config.debugMode) {
+                            return (function (cb, ctx) {
+                                    return function () {
+                                        cb.apply(ctx || {}, arguments);
+                                    };
+                                }
+                                (callback, context));
+                        }
+                        callstack = getCallstack();
+                        callstack.shift();
+                        return (function (cb, ctx, cs, lbl) {
+                                var ctxref = registerCallstack(cs, lbl);
+                                /*jshint -W054 */
+                                return new Function('cb', 'ctx', 'TASlog', "return function TAS_CALLSTACK_" + ctxref + "(){" + "TASlog('Entering: '+(cb.name||'(anonymous function)'));" + "cb.apply(ctx||{},arguments);" + "TASlog('Exiting: '+(cb.name||'(anonymous function)'));" + "};")(cb, ctx, log);
+                                /*jshint +W054 */
+                            }
+                            (callback, context, callstack, label));
+                    },
+                    prepareUpdate = function (attribute, value) {
+                        queuedUpdates[attribute] = value;
+                    },
+                    applyQueuedUpdates = function () {
+                        setAttrs(queuedUpdates);
+                        queuedUpdates = {};
+                    },
+                    namesFromArgs = function (args, base) {
+                        return _.chain(args).reduce(function (memo, attr) {
+                            if ('string' === typeof attr) {
+                                memo.push(attr);
+                            } else if (_.isArray(args) || _.isArguments(args)) {
+                                memo = namesFromArgs(attr, memo);
+                            }
+                            return memo;
+                        }, (_.isArray(base) && base) || []).uniq().value();
+                    },
+                    addId = function (obj, value) {
+                        Object.defineProperty(obj, 'id', {
+                            value: value,
+                            writeable: false,
+                            enumerable: false
+                        });
+                    },
+                    addProp = function (obj, prop, value, fullname) {
+                        (function () {
+                                var pname = (_.contains(['S', 'F', 'I', 'D'], prop) ? '_' + prop : prop),
+                                    full_pname = fullname || prop,
+                                    pvalue = value;
+                                _.each(['S', 'I', 'F'], function (p) {
+                                    if (!_.has(obj, p)) {
+                                        Object.defineProperty(obj, p, {
+                                            value: {},
+                                            enumerable: false,
+                                            readonly: true
+                                        });
+                                    }
+                                });
+                                if (!_.has(obj, 'D')) {
+                                    Object.defineProperty(obj, 'D', {
+                                        value: _.reduce(_.range(10), function (m, d) {
+                                            Object.defineProperty(m, d, {
+                                                value: {},
+                                                enumerable: true,
+                                                readonly: true
+                                            });
+                                            return m;
+                                        }, {}),
+                                        enumerable: false,
+                                        readonly: true
+                                    });
+                                }
+                                // Raw value
+                                Object.defineProperty(obj, pname, {
+                                    enumerable: true,
+                                    set: function (v) {
+                                        if (v !== pvalue) {
+                                            pvalue = v;
+                                            prepareUpdate(full_pname, v);
+                                        }
+                                    },
+                                    get: function () {
+                                        return pvalue;
+                                    }
+                                });
+                                // string value
+                                Object.defineProperty(obj.S, pname, {
+                                    enumerable: true,
+                                    set: function (v) {
+                                        var val = v.toString();
+                                        if (val !== pvalue) {
+                                            pvalue = val;
+                                            prepareUpdate(full_pname, val);
+                                        }
+                                    },
+                                    get: function () {
+                                        return pvalue.toString();
+                                    }
+                                });
+                                // int value
+                                Object.defineProperty(obj.I, pname, {
+                                    enumerable: true,
+                                    set: function (v) {
+                                        var val = parseInt(v, 10) || 0;
+                                        if (val !== pvalue) {
+                                            pvalue = val;
+                                            prepareUpdate(full_pname, val);
+                                        }
+                                    },
+                                    get: function () {
+                                        return parseInt(pvalue, 10) || 0;
+                                    }
+                                });
+                                // float value
+                                Object.defineProperty(obj.F, pname, {
+                                    enumerable: true,
+                                    set: function (v) {
+                                        var val = parseFloat(v) || 0;
+                                        if (val !== pvalue) {
+                                            pvalue = val;
+                                            prepareUpdate(full_pname, val);
+                                        }
+                                    },
+                                    get: function () {
+                                        return parseFloat(pvalue) || 0;
+                                    }
+                                });
+                                _.each(_.range(10), function (d) {
+                                    Object.defineProperty(obj.D[d], pname, {
+                                        enumerable: true,
+                                        set: function (v) {
+                                            var val = (parseFloat(v) || 0).toFixed(d);
+                                            if (val !== pvalue) {
+                                                pvalue = val;
+                                                prepareUpdate(full_pname, val);
+                                            }
+                                        },
+                                        get: function () {
+                                            return (parseFloat(pvalue) || 0).toFixed(d);
+                                        }
+                                    });
+                                });
+                            }
+                            ());
+                    },
+                    repeating = function (section) {
+                        return (function (s) {
+                                var sectionName = s,
+                                    attrNames = [],
+                                    fieldNames = [],
+                                    operations = [],
+                                    after = [],
+                                    repAttrs = function TAS_Repeating_Attrs() {
+                                        attrNames = namesFromArgs(arguments, attrNames);
+                                        return this;
+                                    },
+                                    repFields = function TAS_Repeating_Fields() {
+                                        fieldNames = namesFromArgs(arguments, fieldNames);
+                                        return this;
+                                    },
+                                    repReduce = function TAS_Repeating_Reduce(func, initial, final, context) {
+                                        operations.push({
+                                            type: 'reduce',
+                                            func: (func && _.isFunction(func) && func) || _.noop,
+                                            memo: (_.isUndefined(initial) && 0) || initial,
+                                            final: (final && _.isFunction(final) && final) || _.noop,
+                                            context: context || {}
+                                        });
+                                        return this;
+                                    },
+                                    repMap = function TAS_Repeating_Map(func, final, context) {
+                                        operations.push({
+                                            type: 'map',
+                                            func: (func && _.isFunction(func) && func) || _.noop,
+                                            final: (final && _.isFunction(final) && final) || _.noop,
+                                            context: context || {}
+                                        });
+                                        return this;
+                                    },
+                                    repEach = function TAS_Repeating_Each(func, final, context) {
+                                        operations.push({
+                                            type: 'each',
+                                            func: (func && _.isFunction(func) && func) || _.noop,
+                                            final: (final && _.isFunction(final) && final) || _.noop,
+                                            context: context || {}
+                                        });
+                                        return this;
+                                    },
+                                    repTap = function TAS_Repeating_Tap(final, context) {
+                                        operations.push({
+                                            type: 'tap',
+                                            final: (final && _.isFunction(final) && final) || _.noop,
+                                            context: context || {}
+                                        });
+                                        return this;
+                                    },
+                                    repAfter = function TAS_Repeating_After(callback, context) {
+                                        after.push({
+                                            callback: (callback && _.isFunction(callback) && callback) || _.noop,
+                                            context: context || {}
+                                        });
+                                        return this;
+                                    },
+                                    repExecute = function TAS_Repeating_Execute(callback, context) {
+                                        var rowSet = {},
+                                            attrSet = {},
+                                            fieldIds = [],
+                                            fullFieldNames = [];
+                                        repAfter(callback, context);
+                                        // call each operation per row.
+                                        // call each operation's final
+                                        getSectionIDs("repeating_" + sectionName, function (ids) {
+                                            fieldIds = ids;
+                                            fullFieldNames = _.reduce(fieldIds, function (memo, id) {
+                                                return memo.concat(_.map(fieldNames, function (name) {
+                                                    return 'repeating_' + sectionName + '_' + id + '_' + name;
+                                                }));
+                                            }, []);
+                                            getAttrs(_.uniq(attrNames.concat(fullFieldNames)), function (values) {
+                                                _.each(attrNames, function (aname) {
+                                                    if (values.hasOwnProperty(aname)) {
+                                                        addProp(attrSet, aname, values[aname]);
+                                                    }
+                                                });
+                                                rowSet = _.reduce(fieldIds, function (memo, id) {
+                                                    var r = {};
+                                                    addId(r, id);
+                                                    _.each(fieldNames, function (name) {
+                                                        var fn = 'repeating_' + sectionName + '_' + id + '_' + name;
+                                                        addProp(r, name, values[fn], fn);
+                                                    });
+                                                    memo[id] = r;
+                                                    return memo;
+                                                }, {});
+                                                _.each(operations, function (op) {
+                                                    var res;
+                                                    switch (op.type) {
+                                                    case 'tap':
+                                                        _.bind(op.final, op.context, rowSet, attrSet)();
+                                                        break;
+                                                    case 'each':
+                                                        _.each(rowSet, function (r) {
+                                                            _.bind(op.func, op.context, r, attrSet, r.id, rowSet)();
+                                                        });
+                                                        _.bind(op.final, op.context, rowSet, attrSet)();
+                                                        break;
+                                                    case 'map':
+                                                        res = _.map(rowSet, function (r) {
+                                                            return _.bind(op.func, op.context, r, attrSet, r.id, rowSet)();
+                                                        });
+                                                        _.bind(op.final, op.context, res, rowSet, attrSet)();
+                                                        break;
+                                                    case 'reduce':
+                                                        res = op.memo;
+                                                        _.each(rowSet, function (r) {
+                                                            res = _.bind(op.func, op.context, res, r, attrSet, r.id, rowSet)();
+                                                        });
+                                                        _.bind(op.final, op.context, res, rowSet, attrSet)();
+                                                        break;
+                                                    }
+                                                });
+                                                // finalize attrs
+                                                applyQueuedUpdates();
+                                                _.each(after, function (op) {
+                                                    _.bind(op.callback, op.context)();
+                                                });
+                                            });
+                                        });
+                                    };
+                                return {
+                                    attrs: repAttrs,
+                                    attr: repAttrs,
+                                    column: repFields,
+                                    columns: repFields,
+                                    field: repFields,
+                                    fields: repFields,
+                                    reduce: repReduce,
+                                    inject: repReduce,
+                                    foldl: repReduce,
+                                    map: repMap,
+                                    collect: repMap,
+                                    each: repEach,
+                                    forEach: repEach,
+                                    tap: repTap,
+                                    'do': repTap,
+                                    after: repAfter,
+                                    last: repAfter,
+                                    done: repAfter,
+                                    execute: repExecute,
+                                    go: repExecute,
+                                    run: repExecute
+                                };
+                            }
+                            (section));
+                    },
+                    repeatingSimpleSum = function (section, field, destination) {
+                        repeating(section).attr(destination).field(field).reduce(function (m, r) {
+                            return m + (r.F[field]);
+                        }, 0, function (t, r, a) {
+                            a.S[destination] = t;
+                        }).execute();
+                    };
+                console.log('%c•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸  The Aaron Sheet  v' + version + '  ¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•', 'background: linear-gradient(to right,green,white,white,green); color:black;text-shadow: 0 0 8px white;');
+                console.log('%c•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸  Last update: ' + (new Date(lastUpdate * 1000)) + '  ¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•', 'background: linear-gradient(to right,green,white,white,green); color:black;text-shadow: 0 0 8px white;');
+                return {
+                    /* Repeating Sections */
+                    repeatingSimpleSum: repeatingSimpleSum,
+                    repeating: repeating,
+                    /* Configuration */
+                    config: setConfigOption,
+                    /* Debugging */
+                    callback: wrapCallback,
+                    callstack: logCallstack,
+                    debugMode: debugMode,
+                    _fn: wrapCallback,
+                    /* Logging */
+                    debug: logDebug,
+                    error: logError,
+                    warn: logWarn,
+                    info: logInfo,
+                    notice: logNotice,
+                    log: logLog
+                };
+            }
+            ());
+        /* ---- END: TheAaronSheet.js ---- */
+
+
+        TAS.config({
+            logging: {
+                info: true,
+                debug: true
+            }
+        });
+
+        TAS.debugMode();
+
+        on('sheet:opened',function(){
+
+            TAS.debug('Sheet Opened');
+        });
+
         on("change:str change:vig change:agi change:int change:per change:ten change:cha change:ins change:com", function(){
-            console.log("Abilities Change !!!");
+            TAS.debug("New Abilities Change !!!");
 
             getAttrs(["str","vig","agi","int","per","ten","cha","ins","com"], function(values){
 
-                valStr=parseInt(values.str);
-                valVig=parseInt(values.vig);
-                valAgi=parseInt(values.agi);
-                valInt=parseInt(values.int);
-                valPer=parseInt(values.per);
-                valTen=parseInt(values.ten);
-                valCha=parseInt(values.cha);
-                valIns=parseInt(values.ins);
-                valCom=parseInt(values.com);
-                hpMaxVal=(((valStr+valVig+valAgi)*3)+((valInt+valPer+valTen)*2)+(valCha+valIns+valCom));
+                var valStr=parseInt(values.str);
+                var valVig=parseInt(values.vig);
+                var valAgi=parseInt(values.agi);
+                var valInt=parseInt(values.int);
+                var valPer=parseInt(values.per);
+                var valTen=parseInt(values.ten);
+                var valCha=parseInt(values.cha);
+                var valIns=parseInt(values.ins);
+                var valCom=parseInt(values.com);
 
-                setAttrs({ hp_max: hpMaxVal });
-                setAttrs({ wounded: Math.round(hpMaxVal/2) });
-                setAttrs({ scarred: Math.round(hpMaxVal/4) });
-                setAttrs({ dead: 0-(Math.round(hpMaxVal/4)) });
-            })
+                var hpMaxVal=(((valStr+valVig+valAgi)*3)+((valInt+valPer+valTen)*2)+(valCha+valIns+valCom));
+
+                var reactionVal=(valInt+valPer+valIns);
+                var encumbranceVal=((valStr*2)+valVig);
+                var physicalDefenseVal=(valAgi+valVig+valIns);
+                var movementVal=(valAgi+valVig);
+                var mentalDefenseVal=(valTen+valInt+valIns);
+                var actionsVal=(valAgi+valVig);
+
+                setAttrs({
+                    hp_max: hpMaxVal
+                });
+
+                setAttrs({
+                    wounded: Math.round(hpMaxVal/2)
+                });
+                setAttrs({
+                    scarred: Math.round(hpMaxVal/4)
+                });
+                setAttrs({
+                    dead: 0-Math.round(hpMaxVal/4)
+                });
+
+                setAttrs({ reaction: reactionVal });
+                setAttrs({ encumbrance: encumbranceVal });
+                setAttrs({ 'physical-defense': physicalDefenseVal });
+                setAttrs({ movement: movementVal });
+                setAttrs({ 'mental-defense': mentalDefenseVal });
+                setAttrs({ actions: actionsVal });
+            });
         });
 
         on("change:hp", function() {
+			TAS.debug("HP Change !!!");
+
             getAttrs(["hp","wounded","scarred"], function(values) {
 
-                hpValue = parseInt(values.hp);
-                woundedValue = parseInt(values.wounded);
-                scarredValue = parseInt(values.scarred);
+                var hpValue = parseInt(values.hp);
+                var woundedValue = parseInt(values.wounded);
+                var scarredValue = parseInt(values.scarred);
 
                 if (hpValue < scarredValue) {
                     console.log( "Scarred !!!");
