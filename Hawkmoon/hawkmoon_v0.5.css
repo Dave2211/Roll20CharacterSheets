@@ -686,6 +686,11 @@ content: counter(sheet-rep-items) '. ▼' !important;
 .sheet-counted:not(:checked) ~ .sheet-small-label2.sheet-entry-vshort  {
 	width:3.5em;
 }
+.sheet-minimize-show:checked ~ .sheet-repeating-fields  .sheet-entry-vvshort,
+.sheet-split-column-show:checked ~ .sheet-repeating-fields .sheet-entry-vvshort,
+.sheet-counted:not(:checked) ~ .sheet-small-label2.sheet-entry-vvshort  {
+	width:2em;
+}
 .sheet-minimize-show:checked ~ .sheet-repeating-fields  .sheet-small-label2.sheet-space-right-collapse,
 .sheet-minimize-show:checked ~ .sheet-repeating-fields  .sheet-linked-fields.sheet-space-right-collapse,
 .sheet-counted:not(:checked) ~ .sheet-small-label2.sheet-space-right-collapse,
@@ -803,13 +808,15 @@ content: counter(sheet-rep-items) '. ▼' !important;
 /* ROLL TEMPLATES */
 .sheet-rolltemplate-hm_weapons,
 .sheet-rolltemplate-hm_skill,
-.sheet-rolltemplate-hm_ability {
+.sheet-rolltemplate-hm_ability,
+.sheet-rolltemplate-hm_macro  {
   box-sizing: border-box;
 }
 
 .sheet-rolltemplate-hm_weapons .sheet-roll-table,
 .sheet-rolltemplate-hm_skill .sheet-roll-table,
-.sheet-rolltemplate-hm_ability .sheet-roll-table {
+.sheet-rolltemplate-hm_ability .sheet-roll-table,
+.sheet-rolltemplate-hm_macro .sheet-roll-table {
   width: 100%;
   display: table;
   font-family: cursive;
@@ -824,13 +831,15 @@ content: counter(sheet-rep-items) '. ▼' !important;
 
 .sheet-rolltemplate-hm_weapons .sheet-roll-table .sheet-rounded,
 .sheet-rolltemplate-hm_skill .sheet-roll-table .sheet-rounded,
-.sheet-rolltemplate-hm_ability .sheet-roll-table .sheet-rounded {
+.sheet-rolltemplate-hm_ability .sheet-roll-table .sheet-rounded,
+.sheet-rolltemplate-hm_macro .sheet-roll-table .sheet-rounded {
   border-radius: 5px;
 }
 
 .sheet-rolltemplate-hm_weapons .sheet-roll-header,
 .sheet-rolltemplate-hm_skill .sheet-roll-header,
-.sheet-rolltemplate-hm_ability .sheet-roll-header {
+.sheet-rolltemplate-hm_ability .sheet-roll-header,
+.sheet-rolltemplate-hm_macro .sheet-roll-header {
   display: table-row-group;
   width: 100%;
   overflow: hidden;
@@ -842,13 +851,15 @@ content: counter(sheet-rep-items) '. ▼' !important;
 
 .sheet-rolltemplate-hm_weapons .sheet-roll-header a ,
 .sheet-rolltemplate-hm_skill .sheet-roll-header a ,
-.sheet-rolltemplate-hm_ability .sheet-roll-header a {
+.sheet-rolltemplate-hm_ability .sheet-roll-header a,
+.sheet-rolltemplate-hm_macro .sheet-roll-header a {
 	text-decoration: underline;
 }
 
 .sheet-rolltemplate-hm_weapons .sheet-roll-row,
 .sheet-rolltemplate-hm_skill .sheet-roll-row ,
-.sheet-rolltemplate-hm_ability .sheet-roll-row {
+.sheet-rolltemplate-hm_ability .sheet-roll-row ,
+.sheet-rolltemplate-hm_macro .sheet-roll-row {
   width: 100%;
   overflow: hidden;
   background-color: whitesmoke;
@@ -856,13 +867,15 @@ content: counter(sheet-rep-items) '. ▼' !important;
 
 .sheet-rolltemplate-hm_weapons .sheet-roll-row:nth-child(even),
 .sheet-rolltemplate-hm_skill .sheet-roll-row:nth-child(even),
-.sheet-rolltemplate-hm_ability .sheet-roll-row:nth-child(even){
+.sheet-rolltemplate-hm_ability .sheet-roll-row:nth-child(even),
+.sheet-rolltemplate-hm_macro .sheet-roll-row:nth-child(even){
   background-color: #B7B7B7;
 }
 
 .sheet-rolltemplate-hm_weapons .sheet-roll-cell,
 .sheet-rolltemplate-hm_skill .sheet-roll-cell ,
-.sheet-rolltemplate-hm_ability .sheet-roll-cell {
+.sheet-rolltemplate-hm_ability .sheet-roll-cell,
+.sheet-rolltemplate-hm_macro .sheet-roll-cell {
   padding: 1px 1px 1px 5px;
   text-align: left;
   width: 100%;
@@ -870,7 +883,8 @@ content: counter(sheet-rep-items) '. ▼' !important;
 
 .sheet-rolltemplate-hm_weapons .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell,
 .sheet-rolltemplate-hm_skill .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell ,
-.sheet-rolltemplate-hm_ability .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell {
+.sheet-rolltemplate-hm_ability .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell,
+.sheet-rolltemplate-hm_macro .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell {
   font-size: .9em;
   width: 24%;
   float: right;
@@ -882,7 +896,8 @@ content: counter(sheet-rep-items) '. ▼' !important;
 
 .sheet-rolltemplate-hm_weapons .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child,
 .sheet-rolltemplate-hm_skill .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child,
-.sheet-rolltemplate-hm_ability .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child {
+.sheet-rolltemplate-hm_ability .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child,
+.sheet-rolltemplate-hm_macro .sheet-roll-group2 .sheet-roll-row .sheet-roll-cell:first-child {
   width: 69%;
   float: left;
   text-align: left;
@@ -892,7 +907,8 @@ content: counter(sheet-rep-items) '. ▼' !important;
 
 .sheet-rolltemplate-hm_weapons .inlinerollresult,
 .sheet-rolltemplate-hm_skill .inlinerollresult,
-.sheet-rolltemplate-hm_ability .inlinerollresult {
+.sheet-rolltemplate-hm_ability .inlinerollresult,
+.sheet-rolltemplate-hm_macro .inlinerollresult {
     background-color: lightgrey;
     border: 2px solid grey;
 }
@@ -900,40 +916,46 @@ content: counter(sheet-rep-items) '. ▼' !important;
 
 .sheet-rolltemplate-hm_weapons .inlinerollresult.fullcrit,
 .sheet-rolltemplate-hm_skill .inlinerollresult.fullcrit,
-.sheet-rolltemplate-hm_ability .inlinerollresult.fullcrit {
+.sheet-rolltemplate-hm_ability .inlinerollresult.fullcrit,
+.sheet-rolltemplate-hm_macro .inlinerollresult.fullcrit {
   color: #FFF;
   background-color: #3FB315;
 }
 
 .sheet-rolltemplate-hm_weapons .inlinerollresult.fullfail,
 .sheet-rolltemplate-hm_skill .inlinerollresult.fullfail ,
-.sheet-rolltemplate-hm_ability .inlinerollresult.fullfail {
+.sheet-rolltemplate-hm_ability .inlinerollresult.fullfail,
+.sheet-rolltemplate-hm_macro .inlinerollresult.fullfail {
   color: #FFF;
   background-color: #B31515;
 }
 
 .sheet-rolltemplate-hm_weapons .inlinerollresult.importantroll,
 .sheet-rolltemplate-hm_skill .inlinerollresult.importantroll,
-.sheet-rolltemplate-hm_ability .inlinerollresult.importantroll {
+.sheet-rolltemplate-hm_ability .inlinerollresult.importantroll ,
+.sheet-rolltemplate-hm_macro .inlinerollresult.importantroll {
   color: #FFF;
   background-color: #4A57ED;
 }
 
 .sheet-rolltemplate-hm_weapons .sheet-roll-text-white,
 .sheet-rolltemplate-hm_skill .sheet-roll-text-white,
-.sheet-rolltemplate-hm_ability .sheet-roll-text-white {
+.sheet-rolltemplate-hm_ability .sheet-roll-text-white,
+.sheet-rolltemplate-hm_macro .sheet-roll-text-white {
   color:white;
 }
 
 .sheet-rolltemplate-hm_weapons .sheet-roll-text-12px,
 .sheet-rolltemplate-hm_skill .sheet-roll-text-12px,
-.sheet-rolltemplate-hm_ability .sheet-roll-text-12px {
+.sheet-rolltemplate-hm_ability .sheet-roll-text-12px,
+.sheet-rolltemplate-hm_macro .sheet-roll-text-12px {
     font-size: 12px;
 }
 
 .sheet-rolltemplate-hm_weapons .sheet-roll-text-right,
 .sheet-rolltemplate-hm_skill .sheet-roll-text-right,
-.sheet-rolltemplate-hm_ability .sheet-roll-text-right {
+.sheet-rolltemplate-hm_ability .sheet-roll-text-right,
+.sheet-rolltemplate-hm_macro .sheet-roll-text-right {
   text-align:right;
 }
 
