@@ -490,12 +490,12 @@
                             <div class="sheet-rTableCell"><input name="attr_misc1" type="number" /></div>
                             <div class="sheet-rTableCell"><button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{misc} (@{misc1Name})}} {{skill_value=[[@{misc1}]]}} {{diceroll=[[1d100cs<[[(ceil(@{misc1}/5))]]cf>99]]}}"
                                     name="roll_misc1Check" /></div>
-                            <div class="sheet-rTableCell"><input type="checkbox" name="attr_misc2Check" data-i18n-title="upgrade-skill-title" title="Augmentez cette compétence à la montée de niveau" /></div>
+                            <div class="sheet-rTableCell sheet-border-left"><input type="checkbox" name="attr_misc2Check" data-i18n-title="upgrade-skill-title" title="Augmentez cette compétence à la montée de niveau" /></div>
                             <div class="sheet-rTableCell"><input name="attr_misc2Name" type="text" data-i18n-placeholder="misc-title" placeholder="Divers" /></div>
                             <div class="sheet-rTableCell"><input name="attr_misc2" type="number" /></div>
                             <div class="sheet-rTableCell"><button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{misc} (@{misc2Name})}} {{skill_value=[[@{misc2}]]}} {{diceroll=[[1d100cs<[[(ceil(@{misc2}/5))]]cf>99]]}}"
                                     name="roll_misc2Check" /></div>
-                            <div class="sheet-rTableCell"><input type="checkbox" name="attr_misc3Check" data-i18n-title="upgrade-skill-title" title="Augmentez cette compétence à la montée de niveau" /></div>
+                            <div class="sheet-rTableCell sheet-border-left"><input type="checkbox" name="attr_misc3Check" data-i18n-title="upgrade-skill-title" title="Augmentez cette compétence à la montée de niveau" /></div>
                             <div class="sheet-rTableCell"><input name="attr_misc3Name" type="text" data-i18n-placeholder="misc-title" placeholder="Divers" /></div>
                             <div class="sheet-rTableCell"><input name="attr_misc3" type="number" /></div>
                             <div class="sheet-rTableCell"><button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{misc} (@{misc3Name})}} {{skill_value=[[@{misc3}]]}} {{diceroll=[[1d100cs<[[(ceil(@{misc3}/5))]]cf>99]]}}"
@@ -507,12 +507,12 @@
                             <div class="sheet-rTableCell"><input name="attr_misc4" type="number" /></div>
                             <div class="sheet-rTableCell"><button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{misc} (@{misc4Name})}} {{skill_value=[[@{misc4}]]}} {{diceroll=[[1d100cs<[[(ceil(@{misc4}/5))]]cf>99]]}}"
                                     name="roll_misc4Check" /></div>
-                            <div class="sheet-rTableCell"><input type="checkbox" name="attr_misc5Check" data-i18n-title="upgrade-skill-title" title="Augmentez cette compétence à la montée de niveau" /></div>
+                            <div class="sheet-rTableCell sheet-border-left"><input type="checkbox" name="attr_misc5Check" data-i18n-title="upgrade-skill-title" title="Augmentez cette compétence à la montée de niveau" /></div>
                             <div class="sheet-rTableCell"><input name="attr_misc5Name" type="text" data-i18n-placeholder="misc-title" placeholder="Divers" /></div>
                             <div class="sheet-rTableCell"><input name="attr_misc5" type="number" /></div>
                             <div class="sheet-rTableCell"><button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{misc} (@{misc5Name})}} {{skill_value=[[@{misc5}]]}} {{diceroll=[[1d100cs<[[(ceil(@{misc5}/5))]]cf>99]]}}"
                                     name="roll_misc5Check" /></div>
-                            <div class="sheet-rTableCell"><input type="checkbox" name="attr_misc6Check" data-i18n-title="upgrade-skill-title" title="Augmentez cette compétence à la montée de niveau" /></div>
+                            <div class="sheet-rTableCell sheet-border-left"><input type="checkbox" name="attr_misc6Check" data-i18n-title="upgrade-skill-title" title="Augmentez cette compétence à la montée de niveau" /></div>
                             <div class="sheet-rTableCell"><input name="attr_misc6Name" type="text" data-i18n-placeholder="misc-title" placeholder="Divers" /></div>
                             <div class="sheet-rTableCell"><input name="attr_misc6" type="number" /></div>
                             <div class="sheet-rTableCell"><button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=^{misc} (@{misc6Name})}} {{skill_value=[[@{misc6}]]}} {{diceroll=[[1d100cs<[[(ceil(@{misc6}/5))]]cf>99]]}}"
@@ -569,10 +569,12 @@
                                                 <span class="sheet-small-label2 sheet-entry-vshort"><input name="attr_meleeWeaponDamage" data-i18n-placeholder="melee-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="weapon-damage">Dégâts</span></span>
                                                 <span class="sheet-small-label2 sheet-entry-short"><select name="attr_meleeWeaponDamageMod">
 													<option value="" selected></option>
-													<option value="@{mod_damage}" >+MD</option>
+													<option value="@{mod_damage}" >+ MD</option>
+													<option value="ceil(@{mod_damage}/2)" >+ 1/2 MD</option>
+													<option value="@{mod_damage}*2" >+ 2 MD</option>
 												</select><span data-i18n="weapon-damage-mod">Mod. Dégâts</span></span>
 
-                                                <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_meleeWeaponStructure" data-i18n-title="melee-weapon-structure-title" title="Structure de l'arme" type="text" /><span data-i18n="structure">Structure</span></span>
+                                                <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_meleeWeaponStructure" data-i18n-title="melee-weapon-structure-title" title="Structure de l'arme" type="number" /><span data-i18n="structure">Structure</span></span>
                                                 <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_meleeWeaponLength" data-i18n-title="melee-weapon-length-title" title="Longueur de l'arme" type="text" /><span data-i18n="length">Longueur</span></span>
                                                 <span class="sheet-small-label2 sheet-sect sheet-entry-short"><select name="attr_meleeWeaponHand" data-i18n-title="melee-weapon-hand-title" title="Tenue en Main de l'arme">
 													<option value="1" selected>1</option>
@@ -612,20 +614,35 @@
                                             <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
 
                                                 <input type="checkbox" class="sheet-counted sheet-sect-show" data-i18n-title="minimize-cmd" title="Minimize Row" name="attr_row-show" value="1" checked="checked" /><span></span>
-                                                <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="@{PC-whisper} &{template:hm_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_name=@{rangedWeaponName}}} {{weapon_value=[[@{rangedWeaponPercent}]]}} {{diceroll=[[1d100cs<[[(ceil(@{rangedWeaponPercent}/5))]]cf>99]]}} {{diceroll_damage=[[@{rangedWeaponDamage}]]}}" name="roll_rangedWeaponCheck"><span data-i18n="attack"></span></button>
+                                                <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="@{PC-whisper} &{template:hm_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_name=@{rangedWeaponName}}} {{weapon_value=[[@{rangedWeaponPercent}]]}} {{diceroll=[[1d100cs<[[(ceil(@{rangedWeaponPercent}/5))]]cf>99]]}} {{diceroll_damage=[[@{rangedWeaponDamage} + @{rangedWeaponDamageMod}]]}}" name="roll_rangedWeaponCheck"><span data-i18n="attack"></span></button>
                                                 </span>
 
                                                 <span class="sheet-small-label2 sheet-sect" style="width:2.125em;"><input type="checkbox" name="attr_rangeWeaponCheck" data-i18n-title="upgrade-skill-title" data-i18n-title="upgrade-skill-title" title="Augmentez cette compétence à la montée de niveau" /></span>
                                                 <span class="sheet-small-label2 sheet-entry-25p-shrink"><input type="text" name="attr_rangedWeaponName" data-i18n-placeholder="ranged-weapon-name-place" placeholder="Nom de l'arme" /><span data-i18n="name">Nom</span></span>
                                                 <span class="sheet-small-label2 sheet-entry-vshort"><input name="attr_rangedWeaponPercent" type="number" data-i18n-title="ranged-weapon-percent-title" title="Niveau l'arme" /><span data-i18n="percent-abbrv">%</span></span>
-                                                <span class="sheet-small-label2 sheet-entry-short"><input name="attr_rangedWeaponDamage" data-i18n-placeholder="ranged-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="weapon-damage">Dégâts</span></span>
+                                                <span class="sheet-small-label2 sheet-entry-vshort"><input name="attr_rangedWeaponDamage" data-i18n-placeholder="ranged-weapon-damage-place" placeholder="ex: 1d6+2" type="text" /><span data-i18n="weapon-damage">Dégâts</span></span>
+                                                <span class="sheet-small-label2 sheet-entry-short"><select name="attr_rangedWeaponDamageMod">
+													<option value="" selected></option>
+													<option value="@{mod_damage}" >+ MD</option>
+													<option value="ceil(@{mod_damage}/2)" >+ 1/2 MD</option>
+													<option value="@{mod_damage}*2" >+ 2 MD</option>
+												</select><span data-i18n="weapon-damage-mod">Mod. Dégâts</span></span>
 
                                                 <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_rangedWeaponRange" data-i18n-title="ranged-weapon-range-title" title="Portée de l'arme" type="number" /><span data-i18n="range">Portée</span></span>
-                                                <span class="sheet-small-label2 sheet-sect sheet-entry-short"><input name="attr_rangedWeaponRound" data-i18n-title="ranged-weapon-round-title" title="Rounds utilisés par l'arme" type="text" /><span data-i18n="round">Att./Round</span></span>
+                                                <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_rangedWeaponRound" data-i18n-title="ranged-weapon-round-title" title="Rounds utilisés par l'arme" type="text" /><span data-i18n="round">Att./Round</span></span>
                                                 <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_rangedWeaponPds" data-i18n-title="ranged-weapon-pds-title" title="Pds de l'arme" type="number" /><span data-i18n="pds">Pds</span></span>
+                                                <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_rangedWeaponStructure" data-i18n-title="melee-weapon-structure-title" title="Structure de l'arme" type="number" /><span data-i18n="structure">Structure</span></span>
                                                 <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_rangedWeaponPA" data-i18n-title="ranged-weapon-pa-title" title="PA de l'arme" type="number" /><span data-i18n="pa">PA</span></span>
                                                 <span class="sheet-small-label2 sheet-sect sheet-entry-short"><input name="attr_rangedWeaponAutonomy" data-i18n-title="ranged-weapon-autonomy-title" title="Autonomie de l'arme" type="text" /><span data-i18n="autonomy">Autonomie</span></span>
-
+                                                <span class="sheet-small-label2 sheet-sect sheet-entry-short"><select name="attr_rangedWeaponImpale">
+													<option value="0" data-i18n="no" selected>Non</option>
+													<option value="1" data-i18n="yes" >Oui</option>
+												</select><span data-i18n="impale">Empale</span></span>
+                                                <span class="sheet-small-label2 sheet-sect sheet-entry-short"><select name="attr_rangedWeaponCounter">
+													<option value="0" data-i18n="no" selected>Non</option>
+													<option value="1" data-i18n="yes" >Oui</option>
+												</select><span data-i18n="counter">Pare</span></span>
+                                                <span class="sheet-small-label2 sheet-sect sheet-entry-vvshort"><input name="attr_rangedWeaponAmmo" data-i18n-title="ranged-weapon-ammo-title" title="Munition de l'arme" type="number" /><span data-i18n="ammo-ab">Mun.</span></span>
                                             </div>
                                         </fieldset>
                                     </div>
@@ -648,20 +665,20 @@
                                 <label class="sheet-small-label2" style="width: 10%;"></label>
 
                                 <label class="sheet-small-label2" style="width: 50%;"><input name="attr_armorName" type="text" data-i18n-placeholder="armor-name-place" placeholder="Nom de l'armure" /><span data-i18n="armor">Armure</span></label>
-                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_armorLoad" type="number" data-i18n-title="armor-load-title" title="Encombrement de l'armure" /><span data-i18n="load">Enc.</span></label>
+                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_armorLoad" type="text" data-i18n-title="armor-load-title" title="Encombrement de l'armure" /><span data-i18n="load">Enc.</span></label>
                                 <label class="sheet-small-label2" style="width: 10%;"><input name="attr_armorRound" type="number" data-i18n-title="armor-round-title" title="Round nécessaire pour revêtir l'armure" /><span data-i18n="rounds">Rounds</span></label>
 
                                 <br/>
 
                                 <label class="sheet-small-label2" style="width: 15%;"><span data-i18n="helmet">Heaume</span> :</label>
-                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_helmetAbs" type="number" data-i18n-title="helmet-absorption-title" title="Absorption du heaume" /><span data-i18n="absorption-abbrv">Absorp.</span></label>
+                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_helmetAbs" type="text" data-i18n-title="helmet-absorption-title" title="Absorption du heaume" /><span data-i18n="absorption-abbrv">Absorp.</span></label>
                                 <label class="sheet-small-label2" style="width: 0.1%;">/</label>
-                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_helmetAffect" type="number" data-i18n-title="helmet-affect-title" title="% Affect du heaume" /><span data-i18n="affect">% Affect</span></label>
+                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_helmetAffect" type="text" data-i18n-title="helmet-affect-title" title="% Affect du heaume" /><span data-i18n="affect">% Affect</span></label>
 
                                 <label class="sheet-small-label2" style="width: 15%;"><span data-i18n="without-helmet">Sans Heaume</span> :</label>
-                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_withoutHelmetAbs" type="number" data-i18n-title="without-helmet-absorption-title" title="Absorption sans heaume" /><span data-i18n="absorption-abbrv">Absorp.</span></label>
+                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_withoutHelmetAbs" type="text" data-i18n-title="without-helmet-absorption-title" title="Absorption sans heaume" /><span data-i18n="absorption-abbrv">Absorp.</span></label>
                                 <label class="sheet-small-label2" style="width: 0.1%;">/</label>
-                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_withoutHelmetAffect" type="number" data-i18n-title="without-helmet-affect-title" title="% Affect sans heaume" /><span data-i18n="affect">% Affect</span></label>
+                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_withoutHelmetAffect" type="text" data-i18n-title="without-helmet-affect-title" title="% Affect sans heaume" /><span data-i18n="affect">% Affect</span></label>
 
                                 <br/>
 
@@ -675,22 +692,28 @@
                             <div class="sheet-nontable sheet-sect" style="border:1px solid black;">
                                 <span class="sheet-nontable-name" data-i18n="shield">Bouclier</span>
 
-                                <label class="sheet-small-label2" style="width: 10%;"></label>
-
                                 <label class="sheet-small-label2" style="width:2.125em;"><input type="checkbox" name="attr_shieldCheck" data-i18n-title="shield-check-title" title="Utilisation du bouclier" class="sheet-noshow" /><span data-i18n="use">Utilisé</span></label>
 
                                 <span class="sheet-small-label2" style="width: 10%;"><input name="attr_shieldBase" data-i18n-title="shield-percent-title" title="Pourcentage du bouclier" type="number" /><span data-i18n="base">Base</span></span>
 
-                                <span class="sheet-small-label2" style="width: 10%;"><input name="attr_shieldDamage" data-i18n-title="shield-damage-push-title" title="Dégâts infliger par le bouclier + Repousser" type="number" /><span data-i18n="damage+push">Dgt.+Rep.</span></span>
+                                <span class="sheet-small-label2" style="width: 10%;"><input name="attr_shieldDamage" data-i18n-title="shield-damage-push-title" title="Dégâts infliger par le bouclier + Repousser" type="text" /><span data-i18n="damage+push">Dgt.+Rep.</span></span>
 
                                 <label class="sheet-small-label2" style="width:2.125em;"><input type="checkbox" name="attr_shieldHalf" data-i18n-title="shield-h-title" title="Demi Bouclier" class="sheet-noshow" /><span data-i18n="half-abbrv">D</span></label>
                                 <label class="sheet-small-label2" style="width:2.125em;"><input type="checkbox" name="attr_shieldSmall" data-i18n-title="shield-s-title" title="Petit Bouclier" class="sheet-noshow" /><span data-i18n="small-abbrv">P</span></label>
                                 <label class="sheet-small-label2" style="width:2.125em;"><input type="checkbox" name="attr_shieldFull" data-i18n-title="shield-f-title" title="Bouclier Entier" class="sheet-noshow" /><span data-i18n="full-abbrv">E</span></label>
                                 <label class="sheet-small-label2" style="width:2.125em;"><input type="checkbox" name="attr_shieldLarge" data-i18n-title="shield-l-title" title="Grand Bouclier" class="sheet-noshow" /><span data-i18n="large-abbrv">G</span></label>
 
+                                <span class="sheet-small-label2 sheet-sect sheet-entry-vshort"><input name="attr_shieldStructure" data-i18n-title="shield-structure-title" title="Structure du Bouclier" type="number" /><span data-i18n="structure">Structure</span></span>
                                 <span class="sheet-small-label2" style="width: 10%;"><input name="attr_shieldInitPercent" data-i18n-title="shield-init-percent-title" title="Pourcentage Initiale du bouclier" type="number" /><span data-i18n="init-percent-abbrv">% Init.</span></span>
                                 <span class="sheet-small-label2" style="width: 10%;"><input name="attr_shieldPds" data-i18n-title="shield-pds-title" title="Pds du bouclier" type="number" /><span data-i18n="pds">Pds</span></span>
-
+                                <span class="sheet-small-label2 sheet-sect sheet-entry-short"><select name="attr_shieldImpale">
+                                    <option value="0" data-i18n="no" selected>Non</option>
+                                    <option value="1" data-i18n="yes" >Oui</option>
+                                </select><span data-i18n="impale">Empale</span></span>
+                                <span class="sheet-small-label2 sheet-sect sheet-entry-short"><select name="attr_shieldWeaponCounter">
+                                    <option value="0" data-i18n="no" selected>Non</option>
+                                    <option value="1" data-i18n="yes" >Oui</option>
+                                </select><span data-i18n="counter">Pare</span></span>
                                 <br/>
                                 <label class="sheet-small-label2" style="width: 39%;"></label>
                                 <label class="sheet-small-label2" style="width: 22%;"><input name="attr_shieldMacroFormula" type="text" data-i18n-placeholder="shieldMacroFormula-place" placeholder="Ex: [[2d10+6]]" data-i18n-title="shieldMacroFormula-title" title="Macro dédiée au Bouclier" /><button class="sheet-text-button" type="roll" name="roll_shieldMacroFormula-Check" value="@{PC-whisper} &{template:hm_macro} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{macro_name=^{shield}}} {{diceroll=@{shieldMacroFormula}}}">&nbsp;<span style="vertical-align: text-bottom; color: white;" data-i18n="shieldMacroFormula-bt-name">Macro Bouclier</span></button></label>
@@ -938,8 +961,25 @@
             <section role="region" aria-label="Notes" data-i18n-aria-label="page-notes-aria">
                 <div class="sheet-section sheet-section-notes">
 
-                    <textarea name="attr_notes" style="width:99%;height: 400px;"></textarea>
 
+                    <div class="sheet-nontable sheet-sect">
+                        <div class="sheet-divbox sheet-repeating-sect">
+                            <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="notes">Notes</span></div>
+                            <br/>
+                            <div class="sheet-repeating-fields">
+                                <fieldset class="repeating_notes">
+                                    <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
+
+                                        <input type="checkbox" class="sheet-counted sheet-sect-show" data-i18n-title="minimize-cmd" title="Minimize Row" name="attr_row-show" value="1" checked="checked" /><span></span>
+                                        <span class="sheet-small-label2" style="width: 95%;"><input type="text" name="attr_noteTitle" data-i18n-placeholder="note-title-place" placeholder="Titre de la note" /><span data-i18n="name">Nom</span></span>
+                                        <span class="sheet-small-label2 sheet-sect" style="width: 99%;min-height: 120px;"><textarea name="attr_note" style="width:95%;height: 100px;"></textarea></span>
+
+                                        </div>
+                                </fieldset>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -958,13 +998,15 @@
         <div class="sheet-footer">
             <div class="sheet-table">
                 <div class="sheet-table-row">
-                    <span class="sheet-table-cell"><span data-i18n="footer-created-by">Créé par</span> PadRPG <span data-i18n="footer-inspired">(fortement inspiré de la fiche Pathfinder)</span> | <span data-i18n="footer-last-update">Dernière MAJ</span>:<i>06.06.2017&nbsp;&nbsp;</i>v1</span>
+                    <span class="sheet-table-cell"><span data-i18n="footer-created-by">Créé par</span> PadRPG <span data-i18n="footer-inspired">(fortement inspiré de la fiche Pathfinder)</span> | <span data-i18n="footer-last-update">Dernière MAJ</span>:<i>14.06.2017&nbsp;&nbsp;</i>v1.0</span>
                 </div>
             </div>
         </div>
     </footer>
 
     <aside role="complementary">
+
+
 
         <rolltemplate class="sheet-rolltemplate-hm_ability">
             <div class="sheet-roll-table sheet-rounded">
