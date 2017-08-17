@@ -3,6 +3,37 @@
     font-family: Verdana, Geneva, sans-serif;
 }
 
+input[type="checkbox"].sheet-button-recalc
+{
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+input[type="checkbox"].sheet-button-recalc + span::before {
+    font-family: "Pictos" !important;
+    margin-right: 4px;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    content:'1';
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+}
+
+input[type="checkbox"].sheet-button-recalc:checked + span::before {
+    color: white;
+    background-color: black;
+}
+
 input[type="text"], input[type="number"], select {
     font-size: 11px;
     font-family: Verdana, Geneva, sans-serif;

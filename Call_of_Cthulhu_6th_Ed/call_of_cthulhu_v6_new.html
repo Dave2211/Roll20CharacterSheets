@@ -3,12 +3,12 @@
 		<div class="sheet-div-row">
 			<div class="sheet-div-cell">
 				<img src="http://www.begamer.be/wp-content/uploads/2016/02/Call-of-Cthulhu-Logo.jpg" />
-                <h3 style="text-align: center; color: #FFF; background-color: #000;"><span data-i18n="shorcuts">Raccouris</span></h3>
+                <!--<h3 style="text-align: center; color: #FFF; background-color: #000;"><span data-i18n="shorcuts">Raccouris</span></h3>
                 <div style="text-align: center;">
 			        <button type="roll" class="sheet-command-button btn ui-draggable" value="@{ability_checks-macro}" name="attr_ability_checks"><span data-i18n="abilities">Caractéristiques</span></button>
 			        <button type="roll" class="sheet-command-button btn ui-draggable" value="@{skills-macro}" name="attr_skills_buttons"><span data-i18n="skills">Compétences</span></button>
 					<button type="roll" class="sheet-command-button btn ui-draggable" value="@{attacks-macro}" name="attr_attacks_buttons_macro"><span data-i18n="weapons">Armes</span></button>
-				</div>
+				</div>-->
 				<div style="display:none;">
 					<input type="hidden" name="attr_ability_checks-macro" value="/w &quot;@{character_name}&quot; &{template:coc_buttons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{name=^{characteristics-and-rolls}}} {{[^{presence}](~@{character_id}|check_app) [^{stamina}](~@{character_id}|check_con) [^{agility}](~@{character_id}|check_dex) [^{strength}](~@{character_id}|check_str) [^{corpulence}](~@{character_id}|check_siz) [^{knowledge}](~@{character_id}|check_edu) [^{intuition}](~@{character_id}|check_int) [^{willpower}](~@{character_id}|check_pow)}}" />
 
@@ -1670,6 +1670,7 @@
             <option value="/w gm" data-i18n="whisper-to-guardian">Pour le Gardien</option>
         </select>
         <br/>
+        <input type="checkbox" name="attr_recalc1" value="1" class="sheet-button-recalc" title="Recalculer la feuille." /><span>Recalculer la feuille</span>
 
     </div>
 </div>
@@ -2884,12 +2885,23 @@ var CoC = CoC || (function () {
 }
 ());
 
-on('sheet:opened',function(){
+on('sheet:opened', function(){
 
 	TAS.debug('Sheet Opened');
 	CoC.initCSheet();
 	CoC.initWeapons();
 	CoC.initSkills();
+});
+
+on("change:recalc1", function(eventInfo){
+
+    TAS.debug('Recalc Sheet');
+
+    setAttrs({
+        'recalc1': 0,
+        'initSheet': 1
+    });
+	CoC.initCSheet();
 });
 
 on("change:repeating_weapons", function(eventInfo) {
