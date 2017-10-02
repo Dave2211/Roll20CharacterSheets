@@ -135,7 +135,7 @@
                                 <label class="sheet-small-label2" style="width: 5%;"></label>
 
                                 <label class="sheet-small-label2" style="width: 7%;"><span data-i18n="damage-mod">Mod. Dégâts</span></label>
-                                <label class="sheet-small-label2" style="width: 7%;"><span name="attr_mod_damage" data-i18n-title="mod-damage-title" title="Modificateur de dégâts du personnage" /></label>
+                                <label class="sheet-small-label2" style="width: 7%;"><span name="attr_mod_damage" data-i18n-title="mod-damage-title" title="Modificateur de dégâts du personnage @{mod_damage}" /></label>
 
                             </div>
                         </div>
@@ -652,12 +652,87 @@
                     </div>
                     <br/>
 
-                    <!-- ARMOR AND SHIELD DESCRIPTION -->
+                    <!-- HIT LOCATION, ARMOR AND SHIELD DESCRIPTION -->
                     <div class="sheet-section">
                         <div class="sheet-h2-section">
                             <h2 data-i18n="armor-shield">Armure, Bouclier</h2>
                             <label for="attr_armor-shield-show" class="sheet-label-a" data-i18n="armor-shield-exp">Développer de l'Armure ou du Bouclier</label>
                             <input type="checkbox" class="sheet-sect-show" title="Cliquer pour développer" data-i18n-title="showsect-cmd" id="attr_armor-shield-show" name="attr_armor-shield-show" value="1" style="width: 12em;margin: -0.5em -1em 0 -11em;" checked="checked" /><span></span>
+
+                            <input type="checkbox" name="attr_use-hit-location" class="sheet-use-hit-location" style="display: none;" />
+
+                            <!-- HIT LOCATION -->
+                            <div class="sheet-nontable sheet-sect sheet-hit-location" style="border:1px solid black;">
+
+                                <span class="sheet-nontable-name" data-i18n="hit-location">Localisation des dégâts</span>
+
+                                <table class="sheet-table-hit-location">
+                                    <thead>
+                                        <tr>
+                                            <th class="sheet-border-right sheet-border-bottom"><span data-i18n="armor-location">Localisation</span>(1d20)</th>
+                                            <th class="sheet-border-right sheet-border-bottom"><span data-i18n="armor">Armure</span></th>
+                                            <th class="sheet-border-right sheet-border-bottom"><span data-i18n="ap">PA</span></th>
+                                            <th class="sheet-border-right sheet-border-bottom"><span data-i18n="armor-hp">PV</span></th>
+                                            <th class="sheet-border-bottom"><span data-i18n="armor-hp-max">PV Max</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="sheet-border-right sheet-border-bottom"><span data-i18n="right-leg">Jambe Droite</span>(1-3)</td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_rightLegArmor" type="text" data-i18n-title="right-leg-armor-title" title="Nom de l'armure de la jambe droite" /></td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_rightLegArmorPoint" type="number" data-i18n-title="right-leg-armor-point-title" title="Points d'armure de la jambe droite" /></td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_rightLegHitPoint" type="number" data-i18n-title="right-leg-hit-point-title" title="Points de vie de la jambe droite" /></td>
+                                            <td class="sheet-border-bottom"><input name="attr_rightLegHitPoint_max" type="number" data-i18n-title="right-leg-hit-point-max-title" title="Points de vie max de la jambe droite" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sheet-border-right sheet-border-bottom"><span data-i18n="left-leg">Jambe Gauche</span>(4-6)</td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_leftLegArmor" type="text" data-i18n-title="left-leg-armor-title" title="Nom de l'armure de la jambe gauche" /></td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_leftLegArmorPoint" type="number" data-i18n-title="left-leg-armor-point-title" title="Points d'armure de la jambe gauche" /></td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_leftLegHitPoint" type="number" data-i18n-title="left-leg-hit-point-title" title="Points de vie de la jambe gauche" /></td>
+                                            <td class="sheet-border-bottom"><input name="attr_leftLegHitPoint_max" type="number" data-i18n-title="left-leg-hit-point-max-title" title="Points de vie max de la jambe gauche" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sheet-border-right sheet-border-bottom"><span data-i18n="abdomen">Abdomen</span>(7-9)</td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_abdomenArmor" type="text" data-i18n-title="abdomen-armor-title" title="Nom de l'armure de l'abdomen'" /></td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_abdomenArmorPoint" type="number" data-i18n-title="abdomen-armor-point-title" title="Points d'armure de l'abdomen" /></td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_abdomenHitPoint" type="number" data-i18n-title="abdomen-hit-point-title" title="Points de vie de l'abdomen" /></td>
+                                            <td class="sheet-border-bottom"><input name="attr_abdomenHitPoint_max" type="number" data-i18n-title="abdomen-hit-point-max-title" title="Points de vie max de l'abdomen" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sheet-border-right sheet-border-bottom"><span data-i18n="chest">Poitrine</span>(10-12)</td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_chestArmor" type="text" data-i18n-title="chest-armor-title" title="Nom de l'armure de la poitrine'" /></td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_chestArmorPoint" type="number" data-i18n-title="chest-armor-point-title" title="Points d'armure de la poitrine" /></td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_chestHitPoint" type="number" data-i18n-title="chest-hit-point-title" title="Points de vie de la poitrine" /></td>
+                                            <td class="sheet-border-bottom"><input name="attr_chestHitPoint_max" type="number" data-i18n-title="chest-hit-point-max-title" title="Points de vie max de la poitrine" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sheet-border-right sheet-border-bottom"><span data-i18n="right-arm">Bras Droit</span>(13-15)</td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_rightarmArmor" type="text" data-i18n-title="right-arm-armor-title" title="Nom de l'armure de la bras droit" /></td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_rightarmArmorPoint" type="number" data-i18n-title="right-arm-armor-point-title" title="Points d'armure de la bras droit" /></td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_rightarmHitPoint" type="number" data-i18n-title="right-arm-hit-point-title" title="Points de vie de la bras droit" /></td>
+                                            <td class="sheet-border-bottom"><input name="attr_rightarmHitPoint_max" type="number" data-i18n-title="right-arm-hit-point-max-title" title="Points de vie max de la bras droit" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sheet-border-right sheet-border-bottom"><span data-i18n="left-arm">Bras Gauche</span>(16-18)</td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_leftarmArmor" type="text" data-i18n-title="left-arm-armor-title" title="Nom de l'armure de la bras gauche" /></td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_leftarmArmorPoint" type="number" data-i18n-title="left-arm-armor-point-title" title="Points d'armure de la bras gauche" /></td>
+                                            <td class="sheet-border-right sheet-border-bottom"><input name="attr_leftarmHitPoint" type="number" data-i18n-title="left-arm-hit-point-title" title="Points de vie de la bras gauche" /></td>
+                                            <td class="sheet-border-bottom"><input name="attr_leftarmHitPoint_max" type="number" data-i18n-title="left-arm-hit-point-max-title" title="Points de vie max de la bras gauche" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sheet-border-right"><span data-i18n="head">Tête</span>(19-20)</td>
+                                            <td class="sheet-border-right"><input name="attr_headArmor" type="text" data-i18n-title="head-armor-title" title="Nom de l'armure de la tête'" /></td>
+                                            <td class="sheet-border-right"><input name="attr_headArmorPoint" type="number" data-i18n-title="head-armor-point-title" title="Points d'armure de la tête" /></td>
+                                            <td class="sheet-border-right"><input name="attr_headHitPoint" type="number" data-i18n-title="head-hit-point-title" title="Points de vie de la tête" /></td>
+                                            <td><input name="attr_headHitPoint_max" type="number" data-i18n-title="head-hit-point-max-title" title="Points de vie max de la tête" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br/>
+                            </div>
+                            <br/>
+
+                            <!-- ARMOR -->
                             <div class="sheet-nontable sheet-sect" style="border:1px solid black;">
 
                                 <span class="sheet-nontable-name" data-i18n="armor">Armure</span>
@@ -689,6 +764,8 @@
                                 <br/>
                             </div>
                             <br/>
+
+                            <!-- SHIELD -->
                             <div class="sheet-nontable sheet-sect" style="border:1px solid black;">
                                 <span class="sheet-nontable-name" data-i18n="shield">Bouclier</span>
 
@@ -1047,6 +1124,8 @@
                         <option value="&nbsp;" data-i18n="public" selected>Pour Tous</option>
                         <option value="/w gm" data-i18n="whisper-to-gm">Pour le MJ</option>
                     </select>
+                    <br/>
+                    <input type="checkbox" name="attr_use-hit-location" class="sheet-use-hit-location" /><h4 data-i18n="use-hit-location">Utilisez la localisation des dégâts</h4>
                 </div>
             </section>
         </div>

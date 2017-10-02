@@ -57,6 +57,23 @@ h1 {
 	vertical-align:bottom;
 }
 
+.sheet-use-hit-location{
+    float: left;
+}
+.sheet-use-hit-location ~ .sheet-hit-location {
+    display: none;
+}
+
+.sheet-use-hit-location:checked ~ .sheet-hit-location {
+    display: block;
+}
+
+.sheet-table-hit-location {
+    border-collapse: collapse;
+    border: 1px solid grey;
+    text-align: center;
+    margin: auto;
+}
 
 .sheet-text-button {
     font-family: Arial, sans-serif;
@@ -561,6 +578,17 @@ div.sheet-header{
 	border-left:1px solid grey;
 }
 
+.sheet-border-right{
+	border-right:1px solid grey;
+}
+
+.sheet-border-top{
+	border-top:1px solid grey;
+}
+
+.sheet-border-bottom{
+	border-bottom:1px solid grey;
+}
 /***********************repeating item counter ************************************/
 .sheet-repeating-fields {
 	counter-reset: sheet-rep-items -1;
