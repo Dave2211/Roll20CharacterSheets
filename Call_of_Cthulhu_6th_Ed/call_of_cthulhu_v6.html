@@ -1485,7 +1485,7 @@
         <table style="width: 100%;">
             <tr>
                 <td><span data-i18n="impact">Impact</span>
-                    <input type="text" name="attr_impact" value="0" style="width: 130px" />
+                    <input type="text" name="attr_impact" value="0" title="@{impact}" style="width: 130px" />
                 </td>
                 <td><span data-i18n="feet">Pieds</span> : 1D6
                     <button type="roll" value="@{PC-whisper} &{template:coc_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_name=^{feet}}} {{damage_roll=[[1d6+@{impact}]]}}" />
