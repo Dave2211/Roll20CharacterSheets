@@ -65,34 +65,35 @@ h1 {
 
 
 div.sheet-header{
-	background-color:saddlebrown;	
+	background-color:saddlebrown;
 	height:30px;
 	color: white;
-	font-weight:bold; 
+	font-weight:bold;
 	line-height:30px;
 	font-size:13px;
 }
 
-.sheet-text-center{	
-	text-align:center;	
+.sheet-text-center{
+	text-align:center;
 }
 
 .sheet-main-container {
-    background-image:url("https://i48.servimg.com/u/f48/13/08/73/86/parcho12.jpg");
+    /*background-image:url("https://i48.servimg.com/u/f48/13/08/73/86/parcho12.jpg");*/
+    background-color: #e8b57a;
 }
 
-.sheet-rTable {   	
-	display: table;   	
-	width: 100%; 
+.sheet-rTable {
+	display: table;
+	width: 100%;
 	font-size:11px;
-} 
+}
 .sheet-rTableRow {
   display: table-row;
 }
-.sheet-rTableCell, .sheet-rTableHead {   	
-	display: table-cell;   	
-	padding: 3px 10px;   	
-} 
+.sheet-rTableCell, .sheet-rTableHead {
+	display: table-cell;
+	padding: 3px 10px;
+}
 
 .sheet-border-left{
 	border-left:1px solid brown;
@@ -110,11 +111,11 @@ div.sheet-header{
     background: saddlebrown;
 }
 
-.sheet-table-carac-head h4{	
+.sheet-table-carac-head h4{
     color: white;
 }
 
-.sheet-table-carac-label{	
+.sheet-table-carac-label{
     color: brown;
 }
 .sheet-table-carac-left{
@@ -172,7 +173,7 @@ input[type="number"]:disabled {
     text-align:center;
 	font-size: 1em;
 	font-weight: bold;
-	color: brown;	
+	color: brown;
 	height:2em;
 	vertical-align:bottom;
 	width:10%; /*default */
@@ -275,14 +276,14 @@ input.sheet-pagetab7:checked ~ .sheet-main div.sheet-section-config.sheet-sectio
 
 
 .sheet-expand-show:checked ~ div .sheet-sect-show:checked ~.sheet-expand ,
-.sheet-expand-show:checked ~ div .sheet-expand 
-.sheet-expand-show:checked ~ .sheet-expand { 
+.sheet-expand-show:checked ~ div .sheet-expand
+.sheet-expand-show:checked ~ .sheet-expand {
 	display:none;
 }
 
 .sheet-sect-show:not(:checked)~.sheet-sect,
 .sheet-sect-show-inverse:checked~.sheet-sect-inverse{
-	display:none !important;	
+	display:none !important;
 }
 
 .sheet-section-character,
@@ -584,9 +585,10 @@ content: counter(sheet-rep-items) '. ▼' !important;
 }
 .repcontrol .btn {
     border: medium none;
-	color: transparent !important;
-	background: none;
-	box-shadow: none;
+    color: #e8b57a !important;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
 }
 .repcontrol .btn:focus {
   outline: 0;
@@ -636,7 +638,7 @@ content: counter(sheet-rep-items) '. ▼' !important;
 .sheet-nontable-name {
 	text-align: center;
 	font-weight: bold;
-	color: #FFF;	
+	color: #FFF;
 	background: saddlebrown;
 	width: 100%;
 	display: block;
@@ -707,15 +709,15 @@ content: counter(sheet-rep-items) '. ▼' !important;
 
 
 .sheet-footer {
-	text-align: center; 
-	font-size: xx-small; 
-	background-color: #FFF8DC;	
+	text-align: center;
+	font-size: xx-small;
+	background-color: #FFF8DC;
 	border: 1px #000 solid;
 	border-radius: 3px;
 }
 
 
-div.sheet-h2-section {	
+div.sheet-h2-section {
   display:block;
   position:relative;
   clear:both;
@@ -742,7 +744,7 @@ input.sheet-sect-show:checked ~.sheet-npc-spells.sheet-sect {
 	visibility: visible;
 	opacity: 1;
 	transition: opacity 0.5s linear 0s;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 input[type="checkbox"].sheet-cssbutton, input[type="checkbox"].sheet-showbutton,
@@ -751,7 +753,7 @@ input[type="checkbox"].sheet-options-show, input[type="checkbox"].sheet-desc-sho
 input[type="checkbox"].sheet-repeating_ids-show, input[type="checkbox"].sheet-sect-show {
 	opacity: 0;height: 1.5em; position: relative; top: 0; left: 0; cursor: pointer; z-index: 1;
 }
-/* added sheet-noshow to input so class can be on checkbox, instead of on a span after checkbox 
+/* added sheet-noshow to input so class can be on checkbox, instead of on a span after checkbox
 though ideally we'd add a class only to checkbox we want to modify */
 input[type="checkbox"]:not(.sheet-noshow) + span:not(.sheet-not-sheet-show)::before {
 	display: inline-block;
@@ -793,7 +795,7 @@ input[type="checkbox"]:not(.sheet-noshow):checked + span:not(.sheet-not-sheet-sh
 
 .sheet-sect-show:not(:checked)~.sheet-sect,
 .sheet-sect-show-inverse:checked~.sheet-sect-inverse{
-	display:none !important;	
+	display:none !important;
 }
 
 .sheet-hide-a , .sheet-label-a{

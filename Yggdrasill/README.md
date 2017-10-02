@@ -3,6 +3,6 @@
 Character Sheet for Yggdrasill.
 
 #Versions
-##v1.0 (2017-03-01)
+##v1.0 (2017-08-21)
 
-- Creation
+- Creation of the sheet

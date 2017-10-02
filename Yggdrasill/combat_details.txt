@@ -1,0 +1,62 @@
+﻿-INITIATIVE
+
+INIT(REA)+1D10
+
+-PARADE
+AGI+Comp Martiale >= Resultat ATQ Advers
+
+-ESQUIVER
+AGI+Esquive >= Resultat ATQ Advers
+
+
+ATTAQUES
+
+Carac+Comp >= 14+DP (14 de base)
+
+
+CàC
+
+-ATTAQUE EN PUISSANCE (PUI + Comp Martiale)
+
+    En Force
+Malus / Dgt+PUI
+
+    Dévastatrice
+Malus+PUI / Dgt+(PUIx3)
+
+-ATTAQUE CLASSIQUE (AGI + Comp Martiale)
+
+Malus
+
+-ATTAQUE EN PRECISION (PER + Comp Martiale)
+
+    Précise
+Malus / Dgt+PER
+
+    Visée
+Malus+PER / Dgt+(PER*3)
+
+
+
+
+Distance
+
+-TIR D'ARRET (INS + Comp Martiale ou PUI + Comp Martiale)
+
+    Arrêt
+Malus / Dgt+INS ou Dgt+PUI
+
+    Impact
+Malus+INS ou Malus+PUI / Dgt+(INSx3) ou Dgt+(PUIx3)
+
+-TIR POSE (AGI + Comp Martiale)
+
+Malus
+
+-TIR DE PRECISION (PER + Comp Martiale)
+
+    Précis
+Malus / Dgt+PER
+
+    Visé
+Malus+PER / Dgt+(PER*3)
