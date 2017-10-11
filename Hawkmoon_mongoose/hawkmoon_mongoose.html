@@ -3,6 +3,7 @@
     <input type="hidden" name="attr_initHp" value="1"/>
     <!--spacer so scrollbar does not disappear-->
     <div style="width:1px; height:600px; min-height:600px;position:absolute;left:1px;">&nbsp;</div>
+
     <header>
         <div class="sheet-table-row">
             <label class="sheet-table-cell" style="width:22%;"><img src="https://s3.amazonaws.com/files.staging.d20.io/images/221093/hstj0O3XmZYDhA6tPiiJrA/med.png" alt="Hawkmoon Logo" style="max-height: 100px;" /></label>
@@ -10,6 +11,7 @@
             <label class="sheet-cell-label-lg" style="width: 15%;"><span data-i18n="player-name">Player Name</span><input name="attr_player-name" type="text" data-i18n-placeholder="player-name-place" placeholder="Player Name" /></label>
         </div>
     </header>
+
     <nav role="navigation" aria-label="Main navigation hide and show sections." data-i18n-aria-label="nav-main-desc">
         <input type="checkbox" class="sheet-tab1 sheet-pagetab1" name="attr_tab" value="1" style="display:none;" />
         <input type="checkbox" class="sheet-tab2 sheet-pagetab2" name="attr_tab" value="2" style="display:none;" />
@@ -28,6 +30,7 @@
             <label class="sheet-tab sheet-tab7" style="width:5%;"><span data-i18n-title="page-config" title="Configuration" class="sheet-pictos">y</span><input type="radio" class="sheet-tab" name="attr_tab" value="7" /></label>
         </div>
     </nav>
+
     <main role="main">
         <div class="sheet-main">
 
@@ -96,7 +99,7 @@
 
                                 <label class="sheet-small-label2" style="width: 10%;">
                                     <input name="attr_ca" type="number" readonly="readonly" data-i18n-title="combat-action-title" title="Combat Actions - @{ca}" />
-                                    <span data-i18n="ca">CA</span>
+                                    <button data-i18n-title="ca-initiative-title" title="Launch Initiative (select your token before)" class="sheet-text-button" type="roll" name="roll_ca-check" value="@{PC-whisper} [[1d10+@{ca}+(@{dex}/100)&{tracker}]]"><span style="vertical-align: text-bottom; color: white;" data-i18n="ca">CA</span></button>
                                 </label>
                                 <label class="sheet-small-label2" style="width: 10%;">
                                     <input name="attr_dmg-mod" type="text" style="text-align: center;" readonly="readonly" data-i18n-title="damage-modifier-title" title="Damage Modifier - @{dmg-mod}" />
@@ -616,6 +619,7 @@
 
                     <div class="sheet-header sheet-text-center"><span data-i18n="weapon-skills">Weapon Skills</span></div>
                     <br/>
+
                     <div class="sheet-rTable" data-i18n-list="weapon-skills-list">
                         <div>
                             <div class="sheet-rTableRow">
@@ -681,47 +685,55 @@
                         </div>
                     </div>
                     <div class="sheet-nontable sheet-sect">
-                        <div class="sheet-divbox sheet-repeating-sect" style="width: 54%; margin: auto;">
+                        <div class="sheet-divbox sheet-repeating-sect" style="width: 73%; margin: auto;">
                             <div class="sheet-repeating-fields">
-                                <fieldset class="repeating_weapon-skills">
+                                <fieldset class="repeating_weaponSkills">
                                     <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
 
                                         <span class="sheet-small-label2  sheet-sect">
-                                            <input name="attr_weapon-skill-name" type="text" data-i18n-place="weapon-skill-name-place" placeholder="Weapon Skill Name" />
+                                            <input name="attr_weaponSkillName" type="text" data-i18n-placeholder="weapon-skill-name-place" placeholder="Weapon Skill Name" />
                                             <span data-i18n="weapon-skill-name">Skill Name</span>
                                         </span>
                                         <span class="sheet-small-label2  sheet-sect">
-                                            <select name="attr_weapon-skill-char-1" data-i18n-title="weapon-skill-characteristics-1-title" title="First Characteristics for Weapon Skill">
+                                            <select name="attr_weaponSkillChar1" data-i18n-title="weapon-skill-characteristics-1-title" title="First Characteristics for Weapon Skill">
                                                 <option value="0" selected></option>
-                                                <option value="@{str}" data-i18n="STR">STR</option>
-                                                <option value="@{con}" data-i18n="CON">CON</option>
-                                                <option value="@{dex}" data-i18n="DEX">DEX</option>
-                                                <option value="@{siz}" data-i18n="SIZ">SIZ</option>
-                                                <option value="@{int}" data-i18n="INT">INT</option>
-                                                <option value="@{pow}" data-i18n="POW">POW</option>
-                                                <option value="@{cha}" data-i18n="CHA">CHA</option>
+                                                <option value="str" data-i18n="STR">STR</option>
+                                                <option value="con" data-i18n="CON">CON</option>
+                                                <option value="dex" data-i18n="DEX">DEX</option>
+                                                <option value="siz" data-i18n="SIZ">SIZ</option>
+                                                <option value="int" data-i18n="INT">INT</option>
+                                                <option value="pow" data-i18n="POW">POW</option>
+                                                <option value="cha" data-i18n="CHA">CHA</option>
                                             </select>
                                             <span data-i18n="characteristics-1">Ch. 1</span>
                                         </span>
                                         <span class="sheet-small-label2  sheet-sect">
-                                            <select name="attr_weapon-skill-char-2" data-i18n-title="weapon-skill-characteristics-2-title" title="Second Characteristics for Weapon Skill">
+                                            <select name="attr_weaponSkillChar2" data-i18n-title="weapon-skill-characteristics-2-title" title="Second Characteristics for Weapon Skill">
                                                 <option value="0" selected></option>
-                                                <option value="@{str}" data-i18n="STR">STR</option>
-                                                <option value="@{con}" data-i18n="CON">CON</option>
-                                                <option value="@{dex}" data-i18n="DEX">DEX</option>
-                                                <option value="@{siz}" data-i18n="SIZ">SIZ</option>
-                                                <option value="@{int}" data-i18n="INT">INT</option>
-                                                <option value="@{pow}" data-i18n="POW">POW</option>
-                                                <option value="@{cha}" data-i18n="CHA">CHA</option>
+                                                <option value="str" data-i18n="STR">STR</option>
+                                                <option value="con" data-i18n="CON">CON</option>
+                                                <option value="dex" data-i18n="DEX">DEX</option>
+                                                <option value="siz" data-i18n="SIZ">SIZ</option>
+                                                <option value="int" data-i18n="INT">INT</option>
+                                                <option value="pow" data-i18n="POW">POW</option>
+                                                <option value="cha" data-i18n="CHA">CHA</option>
                                             </select>
                                             <span data-i18n="characteristics-2">Ch. 2</span>
                                         </span>
                                         <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
-                                            <input name="attr_weapon-skill" type="number" title="@{weapon-skill}" />
+                                            <input name="attr_weaponSkillBase" readonly="readonly" type="number" title="@{weaponSkillBase}" />
+                                            <span data-i18n="weapon-skill-score-base">Base</span>
+                                        </span>
+                                        <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
+                                            <input name="attr_weaponSkillMod" type="number" title="@{weaponSkillMod}" value="0" />
+                                            <span data-i18n="weapon-skill-mod">Mod.</span>
+                                        </span>
+                                        <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
+                                            <input name="attr_weaponSkill" readonly="readonly" type="number" title="@{weaponSkill}" />
                                             <span data-i18n="weapon-skill-score">Score</span>
                                         </span>
                                         <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
-                                            <button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{weapon-skill-name}}} {{skill_value=[[@{weapon-skill-char-1}+@{weapon-skill-char-2}+@{weapon-skill}+?{Malus/Bonus|0}]]}} {{diceroll=[[1d100cs<[[(ceil((@{weapon-skill-char-1}+@{weapon-skill-char-2}+@{weapon-skill})/10))]]cf>99]]}}" name="roll_weapon-skill-check" />
+                                            <button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{weaponSkillName}}} {{skill_value=[[@{weaponSkill}+?{Malus/Bonus|0}]]}} {{diceroll=[[1d100cs<[[(ceil((@{weaponSkill})/10))]]cf>99]]}}" name="roll_weapon-skill-check" />
                                         </span>
 
                                     </div>
@@ -733,49 +745,58 @@
 
                     <div class="sheet-header sheet-text-center"><span data-i18n="advanced-skills">Advanced Skills</span></div>
                     <br/>
+
                     <div class="sheet-nontable sheet-sect">
-                        <div class="sheet-divbox sheet-repeating-sect" style="width: 54%; margin: auto;">
+                        <div class="sheet-divbox sheet-repeating-sect" style="width: 73%; margin: auto;">
                             <div class="sheet-repeating-fields">
-                                <fieldset class="repeating_advanced-skills">
+                                <fieldset class="repeating_advancedSkills">
                                     <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
 
                                         <span class="sheet-small-label2  sheet-sect">
-                                            <input name="attr_advanced-skill-name" type="text" data-i18n-place="advanced-skill-name-place" placeholder="Advanced Skill Name" />
+                                            <input name="attr_advancedSkillName" type="text" data-i18n-placeholder="advanced-skill-name-place" placeholder="Advanced Skill Name" />
                                             <span data-i18n="advanced-skill-name">Skill Name</span>
                                         </span>
 
                                         <span class="sheet-small-label2  sheet-sect">
-                                            <select name="attr_advanced-skill-char-1" data-i18n-title="advanced-skill-characteristics-1-title" title="First Characteristics for Advanced Skill">
+                                            <select name="attr_advancedSkillChar1" data-i18n-title="advanced-skill-characteristics-1-title" title="First Characteristics for Advanced Skill">
                                                 <option value="0" selected></option>
-                                                <option value="@{str}" data-i18n="STR">STR</option>
-                                                <option value="@{con}" data-i18n="CON">CON</option>
-                                                <option value="@{dex}" data-i18n="DEX">DEX</option>
-                                                <option value="@{siz}" data-i18n="SIZ">SIZ</option>
-                                                <option value="@{int}" data-i18n="INT">INT</option>
-                                                <option value="@{pow}" data-i18n="POW">POW</option>
-                                                <option value="@{cha}" data-i18n="CHA">CHA</option>
+                                                <option value="str" data-i18n="STR">STR</option>
+                                                <option value="con" data-i18n="CON">CON</option>
+                                                <option value="dex" data-i18n="DEX">DEX</option>
+                                                <option value="siz" data-i18n="SIZ">SIZ</option>
+                                                <option value="int" data-i18n="INT">INT</option>
+                                                <option value="pow" data-i18n="POW">POW</option>
+                                                <option value="cha" data-i18n="CHA">CHA</option>
                                             </select>
                                             <span data-i18n="characteristics-1">Ch. 1</span>
                                         </span>
                                         <span class="sheet-small-label2  sheet-sect">
-                                            <select name="attr_advanced-skill-char-2" data-i18n-title="advanced-skill-characteristics-2-title" title="First Characteristics for Advanced Skill">
+                                            <select name="attr_advancedSkillChar2" data-i18n-title="advanced-skill-characteristics-2-title" title="First Characteristics for Advanced Skill">
                                                 <option value="0" selected></option>
-                                                <option value="@{str}" data-i18n="STR">STR</option>
-                                                <option value="@{con}" data-i18n="CON">CON</option>
-                                                <option value="@{dex}" data-i18n="DEX">DEX</option>
-                                                <option value="@{siz}" data-i18n="SIZ">SIZ</option>
-                                                <option value="@{int}" data-i18n="INT">INT</option>
-                                                <option value="@{pow}" data-i18n="POW">POW</option>
-                                                <option value="@{cha}" data-i18n="CHA">CHA</option>
+                                                <option value="str" data-i18n="STR">STR</option>
+                                                <option value="con" data-i18n="CON">CON</option>
+                                                <option value="dex" data-i18n="DEX">DEX</option>
+                                                <option value="siz" data-i18n="SIZ">SIZ</option>
+                                                <option value="int" data-i18n="INT">INT</option>
+                                                <option value="pow" data-i18n="POW">POW</option>
+                                                <option value="cha" data-i18n="CHA">CHA</option>
                                             </select>
                                             <span data-i18n="characteristics-2">Ch. 2</span>
                                         </span>
                                         <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
-                                            <input name="attr_advanced-skill" type="number" title="@{advanced-skill}" />
+                                            <input name="attr_advancedSkillBase" readonly="readonly" type="number" title="@{advancedSkillBase}" />
+                                            <span data-i18n="advanced-skill-score-base">Base</span>
+                                        </span>
+                                        <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
+                                            <input name="attr_advancedSkillMod" type="number" title="@{advancedSkillMod}" value="0" />
+                                            <span data-i18n="advanced-skill-mod">Mod.</span>
+                                        </span>
+                                        <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
+                                            <input name="attr_advancedSkill" readonly="readonly" type="number" title="@{advancedSkill}" />
                                             <span data-i18n="advanced-skill-score">Score</span>
                                         </span>
                                         <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
-                                            <button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{advanced-skill-name}}} {{skill_value=[[@{advanced-skill-char-1}+@{advanced-skill-char-2}+@{advanced-skill}+?{Malus/Bonus|0}]]}} {{diceroll=[[1d100cs<[[(ceil((@{advanced-skill-char-1}+@{advanced-skill-char-2}+@{advanced-skill})/10))]]cf>99]]}}" name="roll_advanced-skill-check" />
+                                            <button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{advancedSkillName}}} {{skill_value=[[@{advancedSkill}+?{Malus/Bonus|0}]]}} {{diceroll=[[1d100cs<[[(ceil((@{advancedSkill})/10))]]cf>99]]}}" name="roll_advanced-skill-check" />
                                         </span>
 
                                     </div>
@@ -1209,7 +1230,7 @@
                                     <br/>
                                     <br/>
                                     <span data-i18n="current-fatigue" style="float:left;">Current Fatigue:</span>
-                                    <input name="attr_current-fatigue" type="number" data-i18n-title="current-fatigue-title" title="Character Current Fatigue" />
+                                    <input name="attr_current-fatigue" type="text" data-i18n-placeholder="current-fatigue-place" placeholder="Character Current Fatigue" style="width:100px" />
 
                                 </div>
                             </div>
@@ -1307,9 +1328,372 @@
                 </div>
             </section>
 
-            <section role="region" aria-label="Monture" data-i18n-aria-label="page-mount-aria">
+            <section role="region" aria-label="Mount" data-i18n-aria-label="page-mount-aria">
                 <div class="sheet-section sheet-section-mount">
-                    // TODO //
+
+                    <!-- MOUNT CHARACTERISTICS -->
+                    <div class="sheet-section">
+                        <div class="sheet-h2-section">
+
+                            <div class="sheet-nontable sheet-sect" style="border:1px solid black;">
+                                <span class="sheet-nontable-name" data-i18n="character-characteristics-desc">Characteristics</span>
+
+                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_mount-str" type="number" title="@{str}" /><span data-i18n="STR">FOR</span></label>
+                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_mount-con" type="number" title="@{con}" /><span data-i18n="CON">CON</span></label>
+                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_mount-dex" type="number" title="@{dex}" /><span data-i18n="DEX">DEX</span></label>
+                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_mount-siz" type="number" title="@{siz}" /><span data-i18n="SIZ">SIZ</span></label>
+                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_mount-int" type="number" title="@{int}" /><span data-i18n="INT">INT</span></label>
+                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_mount-pow" type="number" title="@{pow}" /><span data-i18n="POW">POW</span></label>
+                                <label class="sheet-small-label2" style="width: 10%;"><input name="attr_mount-cha" type="number" title="@{cha}" /><span data-i18n="CHA">CHA</span></label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <!-- MOUNT SKILLS -->
+                     <div class="sheet-section">
+                        <div class="sheet-h2-section">
+
+                            <div class="sheet-header sheet-text-center"><span data-i18n="skills">Skills</span></div>
+                            <br/>
+                            <div class="sheet-nontable sheet-sect">
+                                <div class="sheet-divbox sheet-repeating-sect" style="width: 54%; margin: auto;">
+                                    <div class="sheet-repeating-fields">
+                                        <fieldset class="repeating_mount-skills">
+                                            <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
+
+                                                <span class="sheet-small-label2  sheet-sect">
+                                                    <input name="attr_mount-skill-name" type="text" data-i18n-placeholder="mount-skill-name-place" placeholder="Mount Skill Name" />
+                                                    <span data-i18n="mount-skill-name">Skill Name</span>
+                                                </span>
+
+                                                <span class="sheet-small-label2  sheet-sect">
+                                                    <select name="attr_mount-skill-char-1" data-i18n-title="mount-skill-characteristics-1-title" title="First Characteristics for mount Skill">
+                                                        <option value="0" selected></option>
+                                                        <option value="@{str}" data-i18n="STR">STR</option>
+                                                        <option value="@{con}" data-i18n="CON">CON</option>
+                                                        <option value="@{dex}" data-i18n="DEX">DEX</option>
+                                                        <option value="@{siz}" data-i18n="SIZ">SIZ</option>
+                                                        <option value="@{int}" data-i18n="INT">INT</option>
+                                                        <option value="@{pow}" data-i18n="POW">POW</option>
+                                                        <option value="@{cha}" data-i18n="CHA">CHA</option>
+                                                    </select>
+                                                    <span data-i18n="characteristics-1">Ch. 1</span>
+                                                </span>
+                                                <span class="sheet-small-label2  sheet-sect">
+                                                    <select name="attr_mount-skill-char-2" data-i18n-title="mount-skill-characteristics-2-title" title="First Characteristics for mount Skill">
+                                                        <option value="0" selected></option>
+                                                        <option value="@{str}" data-i18n="STR">STR</option>
+                                                        <option value="@{con}" data-i18n="CON">CON</option>
+                                                        <option value="@{dex}" data-i18n="DEX">DEX</option>
+                                                        <option value="@{siz}" data-i18n="SIZ">SIZ</option>
+                                                        <option value="@{int}" data-i18n="INT">INT</option>
+                                                        <option value="@{pow}" data-i18n="POW">POW</option>
+                                                        <option value="@{cha}" data-i18n="CHA">CHA</option>
+                                                    </select>
+                                                    <span data-i18n="characteristics-2">Ch. 2</span>
+                                                </span>
+                                                <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
+                                                    <input name="attr_mount-skill" type="number" title="@{mount-skill}" />
+                                                    <span data-i18n="mount-skill-score">Score</span>
+                                                </span>
+                                                <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
+                                                    <button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{mount-skill-name}}} {{skill_value=[[@{mount-skill-char-1}+@{mount-skill-char-2}+@{mount-skill}+?{Malus/Bonus|0}]]}} {{diceroll=[[1d100cs<[[(ceil((@{mount-skill-char-1}+@{mount-skill-char-2}+@{mount-skill})/10))]]cf>99]]}}" name="roll_mount-skill-check" />
+                                                </span>
+
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                        </div>
+                    </div>
+
+
+                    <!-- MOUNT HIT LOCATIONS -->
+
+                    <div class="sheet-nontable sheet-sect sheet-hit-location" style="border:1px solid black;">
+
+                        <span class="sheet-nontable-name" data-i18n="hit-locations">Hit Locations</span>
+
+                        <div class="sheet-divbox sheet-repeating-sect" style="width: 63%; margin: auto;">
+                            <div class="sheet-repeating-fields">
+                                <fieldset class="repeating_hit-locations">
+
+                                    <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
+
+                                            <span class="sheet-small-label2" style="width: 15%;">
+                                                <input name="attr_hit-location-dice-value" type="text" data-i18n-title="hit-location-dice-value-title" title="Dice Value (ex: 3-5)" />
+                                                <span data-i18n="dice">Dice</span>
+                                            </span>
+
+                                            <span class="sheet-small-label2" style="width: 25%;">
+                                                <input name="attr_hit-location-name" type="text" data-i18n-placeholder="hit-location-name-place" placeholder="Name (ex: chest)" />
+                                                <span data-i18n="location">Location</span>
+                                            </span>
+
+                                            <div class="sheet-linked-fields" style="width: 20%;">
+                                                <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%; padding-right: 4px;">
+                                                    <input name="attr_hit-location-ap" type="number" data-i18n-title="hit-location-ap-title" title="Location Armor Points" />
+                                                    <span data-i18n="ap">AP</span>
+                                                </label>
+                                                <span class="sheet-divider-db-lg" style="width:1em; padding-bottom:10px;">/</span>
+                                                <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%;">
+                                                    <input name="attr_hit-location-ap_max" type="number" data-i18n-title="hit-location-ap-max-title" title="Location Max Armor Points" />
+                                                    <span data-i18n="max">Max</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="sheet-linked-fields" style="width: 20%;">
+                                                <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%; padding-right: 4px;">
+                                                    <input name="attr_hit-location-hp" type="number" data-i18n-title="hit-location-hp-title" title="Location Hit Points" />
+                                                    <span data-i18n="hp">HP</span>
+                                                </label>
+                                                <span class="sheet-divider-db-lg" style="width:1em; padding-bottom:10px;">/</span>
+                                                <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%;">
+                                                    <input name="attr_hit-location-hp_max" type="number" data-i18n-title="hit-location-hp-max-title" title="Location Max Hit Points" />
+                                                    <span data-i18n="max">Max</span>
+                                                </label>
+                                            </div>
+
+                                    </div>
+
+                                </fieldset>
+                            </div>
+                        </div>
+                        <br/>
+                    </div>
+                    <br/>
+
+                    <!-- MOUNT CLOSE COMBAT WEAPONS -->
+                    <div class="sheet-section">
+                        <div class="sheet-h2-section">
+
+                            <div class="sheet-nontable sheet-sect">
+                                <div class="sheet-divbox sheet-repeating-sect">
+                                    <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="mount-close-combat-weapons">Mount Close Combat Weapons</span></div>
+                                    <br/>
+                                    <div class="sheet-repeating-fields">
+                                        <fieldset class="repeating_mount-close-combat-weapons">
+                                            <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
+
+                                                <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="@{PC-whisper} &{template:hm_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_name=@{mount-close-combat-weapon-name}}} {{weapon_value=[[@{mount-close-combat-weapon-skill-score}+?{Malus/Bonus|0}]]}} {{diceroll=[[1d100cs<[[(ceil(@{mount-close-combat-weapon-skill-score}/5))]]cf>99]]}} {{diceroll_damage=[[@{mount-close-combat-weapon-damage} + @{dmg-mod}]]}} {{hit_location=[[1d20]]}}" name="roll_mount-close-combat-weapon-check"><span data-i18n="attack"></span></button>
+                                                </span>
+
+                                                <span class="sheet-small-label2" style="width: 15%;">
+                                                    <input type="text" name="attr_mount-close-combat-weapon-name" data-i18n-placeholder="mount-close-combat-weapon-name-place" placeholder="Weapon Name" />
+                                                    <span data-i18n="name">Nom</span>
+                                                </span>
+
+                                                <span class="sheet-small-label2" style="width: 7%;">
+                                                    <input name="attr_mount-close-combat-weapon-skill-score" type="number" data-i18n-title="mount-close-combat-weapon-skill-score-title" title="Weapon Skill Score" />
+                                                    <span data-i18n="score">Score</span>
+                                                </span>
+
+                                                <span class="sheet-small-label2" style="width: 10%;">
+                                                    <input name="attr_mount-close-combat-weapon-damage" data-i18n-placeholder="mount-close-combat-weapon-damage-place" placeholder="ex: 1d6+2" type="text" />
+                                                    <span data-i18n="damage">Damage</span>
+                                                </span>
+
+                                                <span class="sheet-small-label2" style="width: 7%;">
+                                                    <input name="attr_mount-close-combat-weapon-enc" data-i18n-title="mount-close-combat-weapon-enc-title" title="Weapon Encumbrance" type="number" />
+                                                    <span data-i18n="encumbrance">ENC</span>
+                                                </span>
+
+                                                <div class="sheet-linked-fields" style="width: 15%;">
+                                                    <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%; padding-right: 4px;">
+                                                        <input name="attr_mount-close-combat-weapon-ap" type="number" data-i18n-title="mount-close-combat-weapon-ap-title" title="Weapon Armor Points" />
+                                                        <span data-i18n="ap">AP</span>
+                                                    </label>
+                                                    <span class="sheet-divider-db-lg" style="width:1em; padding-bottom:10px;">/</span>
+                                                    <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%;">
+                                                        <input name="attr_mount-close-combat-weapon-ap_max" type="number" data-i18n-title="mount-close-combat-weapon-ap-max-title" title="Weapon Max Armor Points" />
+                                                        <span data-i18n="max">Max</span>
+                                                    </label>
+                                                </div>
+
+                                                <div class="sheet-linked-fields" style="width: 15%;">
+                                                    <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%; padding-right: 4px;">
+                                                        <input name="attr_mount-close-combat-weapon-hp" type="number" data-i18n-title="mount-close-combat-weapon-hp-title" title="Weapon Hit Points" />
+                                                        <span data-i18n="hp">HP</span>
+                                                    </label>
+                                                    <span class="sheet-divider-db-lg" style="width:1em; padding-bottom:10px;">/</span>
+                                                    <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%;">
+                                                        <input name="attr_mount-close-combat-weapon-hp_max" type="number" data-i18n-title="mount-close-combat-weapon-hp-max-title" title="Weapon Max Hit Points" />
+                                                        <span data-i18n="max">Max</span>
+                                                    </label>
+                                                </div>
+
+                                                <span class="sheet-small-label2" style="width: 99%;">
+                                                    <input type="text" name="attr_mount-close-combat-weapon-notes" data-i18n-placeholder="mount-close-combat-weapon-notes-place" placeholder="Special Notes" />
+                                                    <span data-i18n="notes">Notes</span>
+                                                </span>
+
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br/>
+
+                    <!-- MOUNT RANGED WEAPONS -->
+                    <div class="sheet-section">
+                        <div class="sheet-h2-section">
+
+                            <div class="sheet-nontable sheet-sect">
+                                <div class="sheet-divbox sheet-repeating-sect">
+                                    <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="mount-ranged-weapons">Mount Ranged Weapons</span></div>
+                                    <br/>
+                                    <div class="sheet-repeating-fields">
+                                        <fieldset class="repeating_mount-ranged-weapons">
+                                            <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
+
+                                                <span class="sheet-repeating-rollbutton sheet-small-label2"><button type="roll" value="@{PC-whisper} &{template:hm_weapons} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{weapon_name=@{mount-ranged-weapon-name}}} {{weapon_value=[[@{mount-ranged-weapon-skill-score}+?{Malus/Bonus|0}]]}} {{diceroll=[[1d100cs<[[(ceil(@{mount-ranged-weapon-skill-score}/5))]]cf>99]]}} {{diceroll_damage=[[@{mount-ranged-weapon-damage} + ?{Damage Mod|0,0|1/2,((@{dmg-mod})/2)|Full,@{dmg-mod}}]]}} {{hit_location=[[1d20]]}}" name="roll_mount-ranged-weapon-check"><span data-i18n="attack"></span></button>
+                                                </span>
+
+                                                <span class="sheet-small-label2" style="width: 15%;">
+                                                    <input type="text" name="attr_mount-ranged-weapon-name" data-i18n-placeholder="mount-ranged-weapon-name-place" placeholder="Weapon Name" />
+                                                    <span data-i18n="name">Nom</span>
+                                                </span>
+
+                                                <span class="sheet-small-label2" style="width: 7%;">
+                                                    <input name="attr_mount-ranged-weapon-skill-score" type="number" data-i18n-title="mount-ranged-weapon-skill-score-title" title="Weapon Skill Score" />
+                                                    <span data-i18n="score">Score</span>
+                                                </span>
+
+                                                <span class="sheet-small-label2" style="width: 10%;">
+                                                    <input name="attr_mount-ranged-weapon-damage" data-i18n-placeholder="mount-ranged-weapon-damage-place" placeholder="ex: 1d6+2" type="text" />
+                                                    <span data-i18n="damage">Damage</span>
+                                                </span>
+
+                                                <span class="sheet-small-label2" style="width: 7%;">
+                                                    <input name="attr_mount-ranged-weapon-enc" data-i18n-title="mount-ranged-weapon-enc-title" title="Weapon Encumbrance" type="number" />
+                                                    <span data-i18n="encumbrance">ENC</span>
+                                                </span>
+
+                                                <span class="sheet-small-label2" style="width: 7%;">
+                                                    <input name="attr_mount-ranged-weapon-range" type="number" data-i18n-title="mount-ranged-weapon-range-title" title="Weapon Range" />
+                                                    <span data-i18n="range">Range</span>
+                                                </span>
+
+                                                <span class="sheet-small-label2" style="width: 7%;">
+                                                    <input name="attr_mount-ranged-weapon-load" type="number" data-i18n-title="mount-ranged-weapon-load-title" title="Weapon Load" />
+                                                    <span data-i18n="load">Load</span>
+                                                </span>
+
+                                                <div class="sheet-linked-fields" style="width: 15%;">
+                                                    <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%; padding-right: 4px;">
+                                                        <input name="attr_mount-ranged-combat-weapon-ap" type="number" data-i18n-title="mount-ranged-combat-weapon-ap-title" title="Weapon Armor Points" />
+                                                        <span data-i18n="ap">AP</span>
+                                                    </label>
+                                                    <span class="sheet-divider-db-lg" style="width:1em; padding-bottom:10px;">/</span>
+                                                    <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%;">
+                                                        <input name="attr_mount-ranged-combat-weapon-ap_max" type="number" data-i18n-title="mount-ranged-combat-weapon-ap-max-title" title="Weapon Max Armor Points" />
+                                                        <span data-i18n="max">Max</span>
+                                                    </label>
+                                                </div>
+
+                                                <div class="sheet-linked-fields" style="width: 15%;">
+                                                    <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%; padding-right: 4px;">
+                                                        <input name="attr_mount-ranged-combat-weapon-hp" type="number" data-i18n-title="mount-ranged-combat-weapon-hp-title" title="Weapon Hit Points" />
+                                                        <span data-i18n="hp">HP</span>
+                                                    </label>
+                                                    <span class="sheet-divider-db-lg" style="width:1em; padding-bottom:10px;">/</span>
+                                                    <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%;">
+                                                        <input name="attr_mount-ranged-combat-weapon-hp_max" type="number" data-i18n-title="mount-ranged-combat-weapon-hp-max-title" title="Weapon Max Hit Points" />
+                                                        <span data-i18n="max">Max</span>
+                                                    </label>
+                                                </div>
+
+                                                <span class="sheet-small-label2" style="width: 99%;">
+                                                    <input type="text" name="attr_mount-ranged-combat-weapon-notes" data-i18n-placeholder="mount-ranged-combat-weapon-notes-place" placeholder="Special Notes" />
+                                                    <span data-i18n="notes">Notes</span>
+                                                </span>
+
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br/>
+
+                    <!-- MOUNT EQUIPMENTS -->
+                    <div class="sheet-section">
+                        <div class="sheet-h2-section">
+
+                            <div class="sheet-nontable sheet-sect">
+                                <div class="sheet-divbox sheet-repeating-sect">
+                                    <div class="sheet-header sheet-text-center" style="width:100%;"><span data-i18n="equipments">Equipments</span></div>
+                                    <br/>
+                                    <div class="sheet-repeating-fields">
+                                        <fieldset class="repeating_mount-equipments">
+                                            <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
+
+                                                <span class="sheet-small-label2" style="width: 50%;">
+                                                    <input type="text" name="attr_item-name" data-i18n-placeholder="item-name-place" placeholder="Item Name" />
+                                                    <span data-i18n="item">Item</span>
+                                                </span>
+
+                                                <span class="sheet-small-label2" style="width: 7%;">
+                                                    <input name="attr_item-enc" data-i18n-title="item-enc-title" title="Item Encumbrance" type="number" />
+                                                    <span data-i18n="encumbrance">ENC</span>
+                                                </span>
+
+                                                <div class="sheet-linked-fields" style="width: 15%;">
+                                                    <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%; padding-right: 4px;">
+                                                        <input name="attr_item-ap" type="number" data-i18n-title="item-ap-title" title="Item Armor Points" />
+                                                        <span data-i18n="ap">AP</span>
+                                                    </label>
+                                                    <span class="sheet-divider-db-lg" style="width:1em; padding-bottom:10px;">/</span>
+                                                    <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%;">
+                                                        <input name="attr_item-ap_max" type="number" data-i18n-title="item-ap-max-title" title="Item Max Armor Points" />
+                                                        <span data-i18n="max">Max</span>
+                                                    </label>
+                                                </div>
+
+                                                <div class="sheet-linked-fields" style="width: 15%;">
+                                                    <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%; padding-right: 4px;">
+                                                        <input name="attr_item-hp" type="number" data-i18n-title="item-hp-title" title="Item Hit Points" />
+                                                        <span data-i18n="hp">HP</span>
+                                                    </label>
+                                                    <span class="sheet-divider-db-lg" style="width:1em; padding-bottom:10px;">/</span>
+                                                    <label class="sheet-small-label2 sheet-narrow-numbers" style="width: 30%;">
+                                                        <input name="attr_item-hp_max" type="number" data-i18n-title="item-hp-max-title" title="Item Max Hit Points" />
+                                                        <span data-i18n="max">Max</span>
+                                                    </label>
+                                                </div>
+
+                                                <span class="sheet-small-label2" style="width: 99%;">
+                                                    <input type="text" name="attr_item-notes" data-i18n-placeholder="item-notes-place" placeholder="Special Notes" />
+                                                    <span data-i18n="notes">Notes</span>
+                                                </span>
+
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <br/>
+                                    <span data-i18n="total-enc" style="float:left;">Total Enc:</span>
+                                    <input name="attr_mount-total-enc" type="number" readonly="readonly" data-i18n-title="mount-total-enc-title" title="Mount Total Encumbrance" />
+                                    <br/>
+                                    <br/>
+                                    <span data-i18n="current-fatigue" style="float:left;">Current Fatigue:</span>
+                                    <input name="attr_mount-current-fatigue" type="text" data-i18n-placeholder="mount-current-fatigue-place" placeholder="Mount Current Fatigue" style="width:100px" />
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br/>
+
                 </div>
             </section>
 
@@ -1475,25 +1859,25 @@
                     <div class="sheet-roll-row">
                         <div class="sheet-roll-cell"><span data-i18n="location">Location</span></div>
                         {{#rollBetween() hit_location 1 3}}
-                        <div class="sheet-roll-cell"><span data-i18n="right-leg">Right Leg</span></div>
+                        <div class="sheet-roll-cell"><span data-i18n="right-leg">Right Leg</span> ({{hit_location}})</div>
                         {{/rollBetween() hit_location 1 3}}
                         {{#rollBetween() hit_location 4 6}}
-                        <div class="sheet-roll-cell"><span data-i18n="left-leg">Left Leg</span></div>
+                        <div class="sheet-roll-cell"><span data-i18n="left-leg">Left Leg</span> ({{hit_location}})</div>
                         {{/rollBetween() hit_location 4 6}}
                         {{#rollBetween() hit_location 7 9}}
-                        <div class="sheet-roll-cell"><span data-i18n="abdomen">Abdomen</span></div>
+                        <div class="sheet-roll-cell"><span data-i18n="abdomen">Abdomen</span> ({{hit_location}})</div>
                         {{/rollBetween() hit_location 7 9}}
                         {{#rollBetween() hit_location 10 12}}
-                        <div class="sheet-roll-cell"><span data-i18n="chest">Chest</span></div>
+                        <div class="sheet-roll-cell"><span data-i18n="chest">Chest</span> ({{hit_location}})</div>
                         {{/rollBetween() hit_location 10 12}}
                         {{#rollBetween() hit_location 13 15}}
-                        <div class="sheet-roll-cell"><span data-i18n="right-arm">Right Arm</span></div>
+                        <div class="sheet-roll-cell"><span data-i18n="right-arm">Right Arm</span> ({{hit_location}})</div>
                         {{/rollBetween() hit_location 13 15}}
                         {{#rollBetween() hit_location 16 18}}
-                        <div class="sheet-roll-cell"><span data-i18n="left-arm">Left Arm</span></div>
+                        <div class="sheet-roll-cell"><span data-i18n="left-arm">Left Arm</span> ({{hit_location}})</div>
                         {{/rollBetween() hit_location 16 18}}
                         {{#rollBetween() hit_location 19 20}}
-                        <div class="sheet-roll-cell"><span data-i18n="head">Head</span></div>
+                        <div class="sheet-roll-cell"><span data-i18n="head">Head</span> ({{hit_location}})</div>
                         {{/rollBetween() hit_location 19 20}}
                     </div>
 
@@ -1527,576 +1911,671 @@
         // By:       The Aaron, Arcane Scriptomancer
         // Contact:  https://app.roll20.net/users/104025/the-aaron
 
-        var TAS = TAS || (function () {
-                'use strict';
-                var version = '0.2.4',
-                    lastUpdate = 1457098091,
-                    loggingSettings = {
-                        debug: {
-                            key: 'debug',
-                            title: 'DEBUG',
-                            color: {
-                                bgLabel: '#7732A2',
-                                label: '#F2EF40',
-                                bgText: '#FFFEB7',
-                                text: '#7732A2'
-                            }
-                        },
-                        error: {
-                            key: 'error',
-                            title: 'Error',
-                            color: {
-                                bgLabel: '#C11713',
-                                label: 'white',
-                                bgText: '#C11713',
-                                text: 'white'
-                            }
-                        },
-                        warn: {
-                            key: 'warn',
-                            title: 'Warning',
-                            color: {
-                                bgLabel: '#F29140',
-                                label: 'white',
-                                bgText: '#FFD8B7',
-                                text: 'black'
-                            }
-                        },
-                        info: {
-                            key: 'info',
-                            title: 'Info',
-                            color: {
-                                bgLabel: '#413FA9',
-                                label: 'white',
-                                bgText: '#B3B2EB',
-                                text: 'black'
-                            }
-                        },
-                        notice: {
-                            key: 'notice',
-                            title: 'Notice',
-                            color: {
-                                bgLabel: '#33C133',
-                                label: 'white',
-                                bgText: '#ADF1AD',
-                                text: 'black'
-                            }
-                        },
-                        log: {
-                            key: 'log',
-                            title: 'Log',
-                            color: {
-                                bgLabel: '#f2f240',
-                                label: 'black',
-                                bgText: '#ffff90',
-                                text: 'black'
-                            }
-                        },
-                        callstack: {
-                            key: 'TAS',
-                            title: 'function',
-                            color: {
-                                bgLabel: '#413FA9',
-                                label: 'white',
-                                bgText: '#B3B2EB',
-                                text: 'black'
-                            }
-                        },
-                        callstack_async: {
-                            key: 'TAS',
-                            title: 'ASYNC CALL',
-                            color: {
-                                bgLabel: '#413FA9',
-                                label: 'white',
-                                bgText: '#413FA9',
-                                text: 'white'
-                            }
-                        },
-                        TAS: {
-                            key: 'TAS',
-                            title: 'TAS',
-                            color: {
-                                bgLabel: 'grey',
-                                label: 'black;background:linear-gradient(#304352,#d7d2cc,#d7d2cc,#d7d2cc,#304352)',
-                                bgText: 'grey',
-                                text: 'black;background:linear-gradient(#304352,#d7d2cc,#d7d2cc,#d7d2cc,#304352)'
-                            }
+        var TAS = TAS || (function(){
+            'use strict';
+
+            var version = '0.2.5',
+                lastUpdate = 1504710542,
+
+                loggingSettings = {
+                    debug: {
+                        key:     'debug',
+                        title:   'DEBUG',
+                        color: {
+                            bgLabel: '#7732A2',
+                            label:   '#F2EF40',
+                            bgText:  '#FFFEB7',
+                            text:    '#7732A2'
                         }
                     },
-                    config = {
-                        debugMode: false,
-                        logging: {
-                            log: true,
-                            notice: true,
-                            info: true,
-                            warn: true,
-                            error: true,
-                            debug: false
+                    error: {
+                        key:     'error',
+                        title:   'Error',
+                        color: {
+                            bgLabel: '#C11713',
+                            label:   'white',
+                            bgText:  '#C11713',
+                            text:    'white'
                         }
                     },
-                    callstackRegistry = [],
-                    queuedUpdates = {}, //< Used for delaying saves till the last moment.
-                    complexType = function (o) {
-                        switch (typeof o) {
+                    warn: {
+                        key:     'warn',
+                        title:   'Warning',
+                        color: {
+                            bgLabel: '#F29140',
+                            label:   'white',
+                            bgText:  '#FFD8B7',
+                            text:    'black'
+                        }
+                    },
+                    info: {
+                        key:     'info',
+                        title:   'Info',
+                        color: {
+                            bgLabel: '#413FA9',
+                            label:   'white',
+                            bgText:  '#B3B2EB',
+                            text:    'black'
+                        }
+                    },
+                    notice: {
+                        key:     'notice',
+                        title:   'Notice',
+                        color: {
+                            bgLabel: '#33C133',
+                            label:   'white',
+                            bgText:  '#ADF1AD',
+                            text:    'black'
+                        }
+                    },
+                    log: {
+                        key:     'log',
+                        title:   'Log',
+                        color: {
+                            bgLabel: '#f2f240',
+                            label:   'black',
+                            bgText:  '#ffff90',
+                            text:    'black'
+                        }
+                    },
+                    callstack: {
+                        key:     'TAS',
+                        title:   'function',
+                        color: {
+                            bgLabel: '#413FA9',
+                            label:   'white',
+                            bgText:  '#B3B2EB',
+                            text:    'black'
+                        }
+                    },
+                    callstack_async: {
+                        key:     'TAS',
+                        title:   'ASYNC CALL',
+                        color: {
+                            bgLabel: '#413FA9',
+                            label:   'white',
+                            bgText:  '#413FA9',
+                            text:    'white'
+                        }
+                    },
+                    TAS: {
+                        key:     'TAS',
+                        title:   'TAS',
+                        color: {
+                            bgLabel: 'grey',
+                            label:   'black;background:linear-gradient(#304352,#d7d2cc,#d7d2cc,#d7d2cc,#304352)',
+                            bgText:  'grey',
+                            text:    'black;background:linear-gradient(#304352,#d7d2cc,#d7d2cc,#d7d2cc,#304352)'
+                        }
+                    }
+                },
+
+
+                config = {
+                    debugMode: false,
+                    logging: {
+                        log: true,
+                        notice: true,
+                        info: true,
+                        warn: true,
+                        error: true,
+                        debug: false
+                    }
+                },
+
+                callstackRegistry = [],
+                queuedUpdates = {}, //< Used for delaying saves till the last moment.
+
+            complexType = function(o){
+                switch(typeof o){
+                    case 'string':
+                        return 'string';
+                    case 'boolean':
+                        return 'boolean';
+                    case 'number':
+                        return (_.isNaN(o) ? 'NaN' : (o.toString().match(/\./) ? 'decimal' : 'integer'));
+                    case 'function':
+                        return 'function: '+(o.name ? o.name+'()' : '(anonymous)');
+                    case 'object':
+                        return (_.isArray(o) ? 'array' : (_.isArguments(o) ? 'arguments' : ( _.isNull(o) ? 'null' : 'object')));
+                    default:
+                        return typeof o;
+                }
+            },
+
+            dataLogger = function(primaryLogger,secondaryLogger,data){
+                _.each(data,function(m){
+                    var type = complexType(m);
+                    switch(type){
                         case 'string':
-                            return 'string';
-                        case 'boolean':
-                            return 'boolean';
+                            primaryLogger(m);
+                            break;
+                        case 'undefined':
+                        case 'null':
+                        case 'NaN':
+                            primaryLogger('['+type+']');
+                            break;
                         case 'number':
-                            return (_.isNaN(o) ? 'NaN' : (o.toString().match(/\./) ? 'decimal' : 'integer'));
-                        case 'function':
-                            return 'function: ' + (o.name ? o.name + '()' : '(anonymous)');
-                        case 'object':
-                            return (_.isArray(o) ? 'array' : (_.isArguments(o) ? 'arguments' : (_.isNull(o) ? 'null' : 'object')));
+                        case 'not a number':
+                        case 'integer':
+                        case 'decimal':
+                        case 'boolean':
+                            primaryLogger('['+type+']: '+m);
+                            break;
                         default:
-                            return typeof o;
+                            primaryLogger('['+type+']:=========================================');
+                            secondaryLogger(m);
+                            primaryLogger('=========================================================');
+                            break;
+                    }
+                });
+            },
+
+
+            colorLog = function(options){
+                var coloredLoggerFunction,
+                    key = options.key,
+                    label = options.title || 'TAS',
+                    lBGColor = (options.color && options.color.bgLabel) || 'blue',
+                    lTxtColor = (options.color && options.color.label) || 'white',
+                    mBGColor = (options.color && options.color.bgText) || 'blue',
+                    mTxtColor = (options.color && options.color.text) || 'white';
+
+                coloredLoggerFunction = function(message){
+                    /* eslint-disable no-console */
+                    console.log(
+                        '%c '+label+': %c '+message + ' ',
+                        'background-color: '+lBGColor+';color: '+lTxtColor+'; font-weight:bold;',
+                        'background-color: '+mBGColor+';color: '+mTxtColor+';'
+                    );
+                    /* eslint-enable no-console */
+                };
+                return function(){
+                    if('TAS'===key || config.logging[key]){
+                        /* eslint-disable no-console */
+                       dataLogger(coloredLoggerFunction,function(m){console.log(m);},_.toArray(arguments));
+                        /* eslint-enable no-console */
+                    }
+                };
+            },
+
+            logDebug  = colorLog(loggingSettings.debug),
+            logError  = colorLog(loggingSettings.error),
+            logWarn   = colorLog(loggingSettings.warn),
+            logInfo   = colorLog(loggingSettings.info),
+            logNotice = colorLog(loggingSettings.notice),
+            logLog    = colorLog(loggingSettings.log),
+            log       = colorLog(loggingSettings.TAS),
+            logCS     = colorLog(loggingSettings.callstack),
+            logCSA    = colorLog(loggingSettings.callstack_async),
+
+            registerCallstack = function(callstack,label){
+                var idx=_.findIndex(callstackRegistry,function(o){
+                    return (_.difference(o.stack,callstack).length === _.difference(callstack,o.stack).length) &&
+                        _.difference(o.stack,callstack).length === 0 &&
+                        o.label === label;
+                });
+                if(-1 === idx){
+                    idx=callstackRegistry.length;
+                    callstackRegistry.push({
+                        stack: callstack,
+                        label: label
+                    });
+                }
+                return idx;
+            },
+
+            setConfigOption = function(options){
+                var newconf =_.defaults(options,config);
+                newconf.logging=_.defaults(
+                    (options && options.logging)||{},
+                    config.logging
+                );
+                config=newconf;
+            },
+
+            isDebugMode = function(){
+                return config.debugMode;
+            },
+
+            debugMode = function(){
+                config.logging.debug=true;
+                config.debugMode = true;
+            },
+
+            getCallstack = function(){
+                var e = new Error('dummy'),
+                    stack = _.map(_.rest(e.stack.replace(/^[^(]+?[\n$]/gm, '')
+                    .replace(/^\s+at\s+/gm, '')
+                    .replace(/^Object.<anonymous>\s*\(/gm, '{anonymous}()@')
+                    .split('\n')),function(l){
+                        return l.replace(/\s+.*$/,'');
+                    });
+                return stack;
+            },
+            logCallstackSub = function(cs){
+                var matches, csa;
+                _.find(cs,function(line){
+                    matches = line.match(/TAS_CALLSTACK_(\d+)/);
+                    if(matches){
+                       csa=callstackRegistry[matches[1]];
+                       logCSA( '===================='+(csa.label ? '> '+csa.label+' <' : '')+'====================');
+                       logCallstackSub(csa.stack);
+                       return true;
+                    }
+                    logCS(line);
+                    return false;
+                });
+            },
+            logCallstack = function(){
+                var cs;
+                if(config.debugMode){
+                    cs = getCallstack();
+                    cs.shift();
+                    log('==============================> CALLSTACK <==============================');
+                    logCallstackSub(cs);
+                    log('=========================================================================');
+                }
+            },
+
+
+            wrapCallback = function (label, callback, context){
+                var callstack;
+                if('function' === typeof label){
+                    context=callback;
+                    callback=label;
+                    label=undefined;
+                }
+                if(!config.debugMode){
+                    return (function(cb,ctx){
+                        return function(){
+                            cb.apply(ctx||{},arguments);
+                        };
+                    }(callback,context));
+                }
+
+                callstack = getCallstack();
+                callstack.shift();
+
+                return (function(cb,ctx,cs,lbl){
+                    var ctxref=registerCallstack(cs,lbl);
+
+                    /*jshint -W054 */
+                    return new Function('cb','ctx','TASlog',
+                        "return function TAS_CALLSTACK_"+ctxref+"(){"+
+                            "var start,end;"+
+                            "TASlog('Entering: '+(cb.name||'(anonymous function)'));"+
+                            "start=_.now();"+
+                            "cb.apply(ctx||{},arguments);"+
+                            "end=_.now();"+
+                            "TASlog('Exiting: '+(cb.name||'(anonymous function)')+' :: '+(end-start)+'ms elapsed');"+
+                        "};")(cb,ctx,log);
+                    /*jshint +W054 */
+                }(callback,context,callstack,label));
+            },
+
+
+            prepareUpdate = function( attribute, value ){
+                queuedUpdates[attribute]=value;
+            },
+
+            applyQueuedUpdates = function() {
+              log(queuedUpdates);
+                setAttrs(queuedUpdates);
+              queuedUpdates = {};
+            },
+
+            namesFromArgs = function(args,base){
+                return _.chain(args)
+                    .reduce(function(memo,attr){
+                        if('string' === typeof attr) {
+                            memo.push(attr);
+                        } else if(_.isArray(args) || _.isArguments(args)){
+                            memo = namesFromArgs(attr,memo);
                         }
-                    },
-                    dataLogger = function (primaryLogger, secondaryLogger, data) {
-                        _.each(data, function (m) {
-                            var type = complexType(m);
-                            switch (type) {
-                            case 'string':
-                                primaryLogger(m);
-                                break;
-                            case 'undefined':
-                            case 'null':
-                            case 'NaN':
-                                primaryLogger('[' + type + ']');
-                                break;
-                            case 'number':
-                            case 'not a number':
-                            case 'integer':
-                            case 'decimal':
-                            case 'boolean':
-                                primaryLogger('[' + type + ']: ' + m);
-                                break;
-                            default:
-                                primaryLogger('[' + type + ']:=========================================');
-                                secondaryLogger(m);
-                                primaryLogger('=========================================================');
-                                break;
-                            }
-                        });
-                    },
-                    colorLog = function (options) {
-                        var coloredLoggerFunction,
-                            key = options.key,
-                            label = options.title || 'TAS',
-                            lBGColor = (options.color && options.color.bgLabel) || 'blue',
-                            lTxtColor = (options.color && options.color.label) || 'white',
-                            mBGColor = (options.color && options.color.bgText) || 'blue',
-                            mTxtColor = (options.color && options.color.text) || 'white';
-                        coloredLoggerFunction = function (message) {
-                            console.log('%c ' + label + ': %c ' + message + ' ', 'background-color: ' + lBGColor + ';color: ' + lTxtColor + '; font-weight:bold;', 'background-color: ' + mBGColor + ';color: ' + mTxtColor + ';');
-                        };
-                        return function () {
-                            if ('TAS' === key || config.logging[key]) {
-                                dataLogger(coloredLoggerFunction, function (m) {
-                                    console.log(m);
-                                }, _.toArray(arguments));
-                            }
-                        };
-                    },
-                    logDebug = colorLog(loggingSettings.debug),
-                    logError = colorLog(loggingSettings.error),
-                    logWarn = colorLog(loggingSettings.warn),
-                    logInfo = colorLog(loggingSettings.info),
-                    logNotice = colorLog(loggingSettings.notice),
-                    logLog = colorLog(loggingSettings.log),
-                    log = colorLog(loggingSettings.TAS),
-                    logCS = colorLog(loggingSettings.callstack),
-                    logCSA = colorLog(loggingSettings.callstack_async),
-                    registerCallstack = function (callstack, label) {
-                        var idx = _.findIndex(callstackRegistry, function (o) {
-                            return (_.difference(o.stack, callstack).length === _.difference(callstack, o.stack).length) && _.difference(o.stack, callstack).length === 0 && o.label === label;
-                        });
-                        if (-1 === idx) {
-                            idx = callstackRegistry.length;
-                            callstackRegistry.push({
-                                stack: callstack,
-                                label: label
+                        return memo;
+                    },(_.isArray(base) && base) || [])
+                    .uniq()
+                    .value();
+            },
+
+            addId = function(obj,value){
+                Object.defineProperty(obj,'id',{
+                    value: value,
+                    writable: false,
+                    enumerable: false
+                });
+            },
+
+            addProp = function(obj,prop,value,fullname){
+                (function(){
+                    var pname=(_.contains(['S','F','I','D'],prop) ? '_'+prop : prop),
+                        full_pname = fullname || prop,
+                        pvalue=value;
+
+                    _.each(['S','I','F'],function(p){
+                        if( !_.has(obj,p)){
+                            Object.defineProperty(obj, p, {
+                                value: {},
+                                enumerable: false,
+                                readonly: true
                             });
                         }
-                        return idx;
-                    },
-                    setConfigOption = function (options) {
-                        var newconf = _.defaults(options, config);
-                        newconf.logging = _.defaults(
-                            (options && options.logging) || {}, config.logging);
-                        config = newconf;
-                    },
-                    debugMode = function () {
-                        config.logging.debug = true;
-                        config.debugMode = true;
-                    },
-                    getCallstack = function () {
-                        var e = new Error('dummy'),
-                            stack = _.map(_.rest(e.stack.replace(/^[^\(]+?[\n$]/gm, '').replace(/^\s+at\s+/gm, '').replace(/^Object.<anonymous>\s*\(/gm, '{anonymous}()@').split('\n')), function (l) {
-                                return l.replace(/\s+.*$/, '');
-                            });
-                        return stack;
-                    },
-                    logCallstackSub = function (cs) {
-                        var matches,
-                            csa;
-                        _.find(cs, function (line) {
-                            matches = line.match(/TAS_CALLSTACK_(\d+)/);
-                            if (matches) {
-                                csa = callstackRegistry[matches[1]];
-                                logCSA('====================' + (csa.label ? '> ' + csa.label + ' <' : '') + '====================');
-                                logCallstackSub(csa.stack);
-                                return true;
-                            }
-                            logCS(line);
-                            return false;
-                        });
-                    },
-                    logCallstack = function () {
-                        var cs;
-                        if (config.debugMode) {
-                            cs = getCallstack();
-                            cs.shift();
-                            log('==============================> CALLSTACK <==============================');
-                            logCallstackSub(cs);
-                            log('=========================================================================');
-                        }
-                    },
-                    wrapCallback = function (label, callback, context) {
-                        var callstack;
-                        if ('function' === typeof label) {
-                            context = callback;
-                            callback = label;
-                            label = undefined;
-                        }
-                        if (!config.debugMode) {
-                            return (function (cb, ctx) {
-                                    return function () {
-                                        cb.apply(ctx || {}, arguments);
-                                    };
-                                }
-                                (callback, context));
-                        }
-                        callstack = getCallstack();
-                        callstack.shift();
-                        return (function (cb, ctx, cs, lbl) {
-                                var ctxref = registerCallstack(cs, lbl);
-                                /*jshint -W054 */
-                                return new Function('cb', 'ctx', 'TASlog', "return function TAS_CALLSTACK_" + ctxref + "(){" + "TASlog('Entering: '+(cb.name||'(anonymous function)'));" + "cb.apply(ctx||{},arguments);" + "TASlog('Exiting: '+(cb.name||'(anonymous function)'));" + "};")(cb, ctx, log);
-                                /*jshint +W054 */
-                            }
-                            (callback, context, callstack, label));
-                    },
-                    prepareUpdate = function (attribute, value) {
-                        queuedUpdates[attribute] = value;
-                    },
-                    applyQueuedUpdates = function () {
-                        setAttrs(queuedUpdates);
-                        queuedUpdates = {};
-                    },
-                    namesFromArgs = function (args, base) {
-                        return _.chain(args).reduce(function (memo, attr) {
-                            if ('string' === typeof attr) {
-                                memo.push(attr);
-                            } else if (_.isArray(args) || _.isArguments(args)) {
-                                memo = namesFromArgs(attr, memo);
-                            }
-                            return memo;
-                        }, (_.isArray(base) && base) || []).uniq().value();
-                    },
-                    addId = function (obj, value) {
-                        Object.defineProperty(obj, 'id', {
-                            value: value,
-                            writeable: false,
-                            enumerable: false
-                        });
-                    },
-                    addProp = function (obj, prop, value, fullname) {
-                        (function () {
-                                var pname = (_.contains(['S', 'F', 'I', 'D'], prop) ? '_' + prop : prop),
-                                    full_pname = fullname || prop,
-                                    pvalue = value;
-                                _.each(['S', 'I', 'F'], function (p) {
-                                    if (!_.has(obj, p)) {
-                                        Object.defineProperty(obj, p, {
-                                            value: {},
-                                            enumerable: false,
-                                            readonly: true
-                                        });
-                                    }
-                                });
-                                if (!_.has(obj, 'D')) {
-                                    Object.defineProperty(obj, 'D', {
-                                        value: _.reduce(_.range(10), function (m, d) {
-                                            Object.defineProperty(m, d, {
-                                                value: {},
-                                                enumerable: true,
-                                                readonly: true
-                                            });
-                                            return m;
-                                        }, {}),
-                                        enumerable: false,
+                    });
+                    if( !_.has(obj,'D')){
+                        Object.defineProperty(obj, 'D', {
+                            value: _.reduce(_.range(10),function(m,d){
+                                    Object.defineProperty(m, d, {
+                                        value: {},
+                                        enumerable: true,
                                         readonly: true
                                     });
+                                    return m;
+                                },{}),
+                            enumerable: false,
+                            readonly: true
+                        });
+                    }
+
+
+                    // Raw value
+                    Object.defineProperty(obj, pname, {
+                        enumerable: true,
+                        set: function(v){
+                            if(v!==pvalue) {
+                                pvalue=v;
+                                prepareUpdate(full_pname,v);
+                            }
+                        },
+                        get: function(){
+                            return pvalue;
+                        }
+                    });
+
+                    // string value
+                    Object.defineProperty(obj.S, pname, {
+                        enumerable: true,
+                        set: function(v){
+                            var val=v.toString();
+                            if(val !== pvalue) {
+                                pvalue=val;
+                                prepareUpdate(full_pname,val);
+                            }
+                        },
+                        get: function(){
+                            return pvalue.toString();
+                        }
+                    });
+
+                    // int value
+                    Object.defineProperty(obj.I, pname, {
+                        enumerable: true,
+                        set: function(v){
+                            var val=parseInt(v,10) || 0;
+                            if(val !== pvalue){
+                                pvalue=val;
+                                prepareUpdate(full_pname,val);
+                            }
+                        },
+                        get: function(){
+                            return parseInt(pvalue,10) || 0;
+                        }
+                    });
+
+                    // float value
+                    Object.defineProperty(obj.F, pname, {
+                        enumerable: true,
+                        set: function(v){
+                            var val=parseFloat(v) || 0;
+                            if(val !== pvalue) {
+                                pvalue=val;
+                                prepareUpdate(full_pname,val);
+                            }
+                        },
+                        get: function(){
+                            return parseFloat(pvalue) || 0;
+                        }
+                    });
+                    _.each(_.range(10),function(d){
+                        Object.defineProperty(obj.D[d], pname, {
+                            enumerable: true,
+                            set: function(v){
+                                var val=(parseFloat(v) || 0).toFixed(d);
+                                if(val !== pvalue){
+                                    pvalue=val;
+                                    prepareUpdate(full_pname,val);
                                 }
-                                // Raw value
-                                Object.defineProperty(obj, pname, {
-                                    enumerable: true,
-                                    set: function (v) {
-                                        if (v !== pvalue) {
-                                            pvalue = v;
-                                            prepareUpdate(full_pname, v);
-                                        }
-                                    },
-                                    get: function () {
-                                        return pvalue;
+                            },
+                            get: function(){
+                                return (parseFloat(pvalue) || 0).toFixed(d);
+                            }
+                        });
+                    });
+
+                }());
+            },
+
+            repeating = function( section ) {
+                return (function(s){
+                    var sectionName = s,
+                        attrNames = [],
+                        fieldNames = [],
+                        operations = [],
+                        after = [],
+
+                    repAttrs = function TAS_Repeating_Attrs(){
+                        attrNames = namesFromArgs(arguments,attrNames);
+                        return this;
+                    },
+                    repFields = function TAS_Repeating_Fields(){
+                        fieldNames = namesFromArgs(arguments,fieldNames);
+                        return this;
+                    },
+                    repReduce = function TAS_Repeating_Reduce(func, initial, final, context) {
+                        operations.push({
+                            type: 'reduce',
+                            func: (func && _.isFunction(func) && func) || _.noop,
+                            memo: (_.isUndefined(initial) && 0) || initial,
+                            final: (final && _.isFunction(final) && final) || _.noop,
+                            context: context || {}
+                        });
+                        return this;
+                    },
+                    repMap = function TAS_Repeating_Map(func, final, context) {
+                        operations.push({
+                            type: 'map',
+                            func: (func && _.isFunction(func) && func) || _.noop,
+                            final: (final && _.isFunction(final) && final) || _.noop,
+                            context: context || {}
+                        });
+                        return this;
+                    },
+                    repEach = function TAS_Repeating_Each(func, final, context) {
+                        operations.push({
+                            type: 'each',
+                            func: (func && _.isFunction(func) && func) || _.noop,
+                            final: (final && _.isFunction(final) && final) || _.noop,
+                            context: context || {}
+                        });
+                        return this;
+                    },
+                    repTap = function TAS_Repeating_Tap(final, context) {
+                        operations.push({
+                            type: 'tap',
+                            final: (final && _.isFunction(final) && final) || _.noop,
+                            context: context || {}
+                        });
+                        return this;
+                    },
+                    repAfter = function TAS_Repeating_After(callback,context) {
+                        after.push({
+                            callback: (callback && _.isFunction(callback) && callback) || _.noop,
+                            context: context || {}
+                        });
+                        return this;
+                    },
+                    repExecute = function TAS_Repeating_Execute(callback,context){
+                        var rowSet = {},
+                            attrSet = {},
+                            fieldIds = [],
+                            fullFieldNames = [];
+
+                        repAfter(callback,context);
+
+                        // call each operation per row.
+                        // call each operation's final
+                        getSectionIDs("repeating_"+sectionName,function(ids){
+                            fieldIds = ids;
+                            fullFieldNames = _.reduce(fieldIds,function(memo,id){
+                                return memo.concat(_.map(fieldNames,function(name){
+                                    return 'repeating_'+sectionName+'_'+id+'_'+name;
+                                }));
+                            },[]);
+                            getAttrs( _.uniq(attrNames.concat(fullFieldNames)), function(values){
+                                _.each(attrNames,function(aname){
+                                    if(values.hasOwnProperty(aname)){
+                                        addProp(attrSet,aname,values[aname]);
                                     }
                                 });
-                                // string value
-                                Object.defineProperty(obj.S, pname, {
-                                    enumerable: true,
-                                    set: function (v) {
-                                        var val = v.toString();
-                                        if (val !== pvalue) {
-                                            pvalue = val;
-                                            prepareUpdate(full_pname, val);
-                                        }
-                                    },
-                                    get: function () {
-                                        return pvalue.toString();
-                                    }
-                                });
-                                // int value
-                                Object.defineProperty(obj.I, pname, {
-                                    enumerable: true,
-                                    set: function (v) {
-                                        var val = parseInt(v, 10) || 0;
-                                        if (val !== pvalue) {
-                                            pvalue = val;
-                                            prepareUpdate(full_pname, val);
-                                        }
-                                    },
-                                    get: function () {
-                                        return parseInt(pvalue, 10) || 0;
-                                    }
-                                });
-                                // float value
-                                Object.defineProperty(obj.F, pname, {
-                                    enumerable: true,
-                                    set: function (v) {
-                                        var val = parseFloat(v) || 0;
-                                        if (val !== pvalue) {
-                                            pvalue = val;
-                                            prepareUpdate(full_pname, val);
-                                        }
-                                    },
-                                    get: function () {
-                                        return parseFloat(pvalue) || 0;
-                                    }
-                                });
-                                _.each(_.range(10), function (d) {
-                                    Object.defineProperty(obj.D[d], pname, {
-                                        enumerable: true,
-                                        set: function (v) {
-                                            var val = (parseFloat(v) || 0).toFixed(d);
-                                            if (val !== pvalue) {
-                                                pvalue = val;
-                                                prepareUpdate(full_pname, val);
-                                            }
-                                        },
-                                        get: function () {
-                                            return (parseFloat(pvalue) || 0).toFixed(d);
-                                        }
+
+                                rowSet = _.reduce(fieldIds,function(memo,id){
+                                    var r={};
+                                    addId(r,id);
+                                    _.each(fieldNames,function(name){
+                                        var fn = 'repeating_'+sectionName+'_'+id+'_'+name;
+                                        addProp(r,name,values[fn],fn);
                                     });
-                                });
-                            }
-                            ());
-                    },
-                    repeating = function (section) {
-                        return (function (s) {
-                                var sectionName = s,
-                                    attrNames = [],
-                                    fieldNames = [],
-                                    operations = [],
-                                    after = [],
-                                    repAttrs = function TAS_Repeating_Attrs() {
-                                        attrNames = namesFromArgs(arguments, attrNames);
-                                        return this;
-                                    },
-                                    repFields = function TAS_Repeating_Fields() {
-                                        fieldNames = namesFromArgs(arguments, fieldNames);
-                                        return this;
-                                    },
-                                    repReduce = function TAS_Repeating_Reduce(func, initial, final, context) {
-                                        operations.push({
-                                            type: 'reduce',
-                                            func: (func && _.isFunction(func) && func) || _.noop,
-                                            memo: (_.isUndefined(initial) && 0) || initial,
-                                            final: (final && _.isFunction(final) && final) || _.noop,
-                                            context: context || {}
-                                        });
-                                        return this;
-                                    },
-                                    repMap = function TAS_Repeating_Map(func, final, context) {
-                                        operations.push({
-                                            type: 'map',
-                                            func: (func && _.isFunction(func) && func) || _.noop,
-                                            final: (final && _.isFunction(final) && final) || _.noop,
-                                            context: context || {}
-                                        });
-                                        return this;
-                                    },
-                                    repEach = function TAS_Repeating_Each(func, final, context) {
-                                        operations.push({
-                                            type: 'each',
-                                            func: (func && _.isFunction(func) && func) || _.noop,
-                                            final: (final && _.isFunction(final) && final) || _.noop,
-                                            context: context || {}
-                                        });
-                                        return this;
-                                    },
-                                    repTap = function TAS_Repeating_Tap(final, context) {
-                                        operations.push({
-                                            type: 'tap',
-                                            final: (final && _.isFunction(final) && final) || _.noop,
-                                            context: context || {}
-                                        });
-                                        return this;
-                                    },
-                                    repAfter = function TAS_Repeating_After(callback, context) {
-                                        after.push({
-                                            callback: (callback && _.isFunction(callback) && callback) || _.noop,
-                                            context: context || {}
-                                        });
-                                        return this;
-                                    },
-                                    repExecute = function TAS_Repeating_Execute(callback, context) {
-                                        var rowSet = {},
-                                            attrSet = {},
-                                            fieldIds = [],
-                                            fullFieldNames = [];
-                                        repAfter(callback, context);
-                                        // call each operation per row.
-                                        // call each operation's final
-                                        getSectionIDs("repeating_" + sectionName, function (ids) {
-                                            fieldIds = ids;
-                                            fullFieldNames = _.reduce(fieldIds, function (memo, id) {
-                                                return memo.concat(_.map(fieldNames, function (name) {
-                                                    return 'repeating_' + sectionName + '_' + id + '_' + name;
-                                                }));
-                                            }, []);
-                                            getAttrs(_.uniq(attrNames.concat(fullFieldNames)), function (values) {
-                                                _.each(attrNames, function (aname) {
-                                                    if (values.hasOwnProperty(aname)) {
-                                                        addProp(attrSet, aname, values[aname]);
-                                                    }
-                                                });
-                                                rowSet = _.reduce(fieldIds, function (memo, id) {
-                                                    var r = {};
-                                                    addId(r, id);
-                                                    _.each(fieldNames, function (name) {
-                                                        var fn = 'repeating_' + sectionName + '_' + id + '_' + name;
-                                                        addProp(r, name, values[fn], fn);
-                                                    });
-                                                    memo[id] = r;
-                                                    return memo;
-                                                }, {});
-                                                _.each(operations, function (op) {
-                                                    var res;
-                                                    switch (op.type) {
-                                                    case 'tap':
-                                                        _.bind(op.final, op.context, rowSet, attrSet)();
-                                                        break;
-                                                    case 'each':
-                                                        _.each(rowSet, function (r) {
-                                                            _.bind(op.func, op.context, r, attrSet, r.id, rowSet)();
-                                                        });
-                                                        _.bind(op.final, op.context, rowSet, attrSet)();
-                                                        break;
-                                                    case 'map':
-                                                        res = _.map(rowSet, function (r) {
-                                                            return _.bind(op.func, op.context, r, attrSet, r.id, rowSet)();
-                                                        });
-                                                        _.bind(op.final, op.context, res, rowSet, attrSet)();
-                                                        break;
-                                                    case 'reduce':
-                                                        res = op.memo;
-                                                        _.each(rowSet, function (r) {
-                                                            res = _.bind(op.func, op.context, res, r, attrSet, r.id, rowSet)();
-                                                        });
-                                                        _.bind(op.final, op.context, res, rowSet, attrSet)();
-                                                        break;
-                                                    }
-                                                });
-                                                // finalize attrs
-                                                applyQueuedUpdates();
-                                                _.each(after, function (op) {
-                                                    _.bind(op.callback, op.context)();
-                                                });
+
+                                    memo[id]=r;
+
+                                    return memo;
+                                },{});
+
+                                _.each(operations,function(op){
+                                    var res;
+                                    switch(op.type){
+                                        case 'tap':
+                                            _.bind(op.final,op.context,rowSet,attrSet)();
+                                            break;
+
+                                        case 'each':
+                                            _.each(rowSet,function(r){
+                                                _.bind(op.func,op.context,r,attrSet,r.id,rowSet)();
                                             });
-                                        });
-                                    };
-                                return {
-                                    attrs: repAttrs,
-                                    attr: repAttrs,
-                                    column: repFields,
-                                    columns: repFields,
-                                    field: repFields,
-                                    fields: repFields,
-                                    reduce: repReduce,
-                                    inject: repReduce,
-                                    foldl: repReduce,
-                                    map: repMap,
-                                    collect: repMap,
-                                    each: repEach,
-                                    forEach: repEach,
-                                    tap: repTap,
-                                    'do': repTap,
-                                    after: repAfter,
-                                    last: repAfter,
-                                    done: repAfter,
-                                    execute: repExecute,
-                                    go: repExecute,
-                                    run: repExecute
-                                };
-                            }
-                            (section));
-                    },
-                    repeatingSimpleSum = function (section, field, destination) {
-                        repeating(section).attr(destination).field(field).reduce(function (m, r) {
-                            return m + (r.F[field]);
-                        }, 0, function (t, r, a) {
-                            a.S[destination] = t;
-                        }).execute();
+                                            _.bind(op.final,op.context,rowSet,attrSet)();
+                                            break;
+
+                                        case 'map':
+                                            res = _.map(rowSet,function(r){
+                                                return _.bind(op.func,op.context,r,attrSet,r.id,rowSet)();
+                                            });
+                                            _.bind(op.final,op.context,res,rowSet,attrSet)();
+                                            break;
+
+                                        case 'reduce':
+                                            res = op.memo;
+                                            _.each(rowSet,function(r){
+                                                res = _.bind(op.func,op.context,res,r,attrSet,r.id,rowSet)();
+                                            });
+                                            _.bind(op.final,op.context,res,rowSet,attrSet)();
+                                            break;
+                                    }
+                                });
+
+                                // finalize attrs
+                                applyQueuedUpdates();
+                                _.each(after,function(op){
+                                    _.bind(op.callback,op.context)();
+                                });
+                            });
+                        });
                     };
-                console.log('%c•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸  The Aaron Sheet  v' + version + '  ¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•', 'background: linear-gradient(to right,green,white,white,green); color:black;text-shadow: 0 0 8px white;');
-                console.log('%c•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸  Last update: ' + (new Date(lastUpdate * 1000)) + '  ¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•', 'background: linear-gradient(to right,green,white,white,green); color:black;text-shadow: 0 0 8px white;');
-                return {
-                    /* Repeating Sections */
-                    repeatingSimpleSum: repeatingSimpleSum,
-                    repeating: repeating,
-                    /* Configuration */
-                    config: setConfigOption,
-                    /* Debugging */
-                    callback: wrapCallback,
-                    callstack: logCallstack,
-                    debugMode: debugMode,
-                    _fn: wrapCallback,
-                    /* Logging */
-                    debug: logDebug,
-                    error: logError,
-                    warn: logWarn,
-                    info: logInfo,
-                    notice: logNotice,
-                    log: logLog
-                };
-            }
-            ());
+
+                    return {
+                        attrs: repAttrs,
+                        attr: repAttrs,
+
+                        column: repFields,
+                        columns: repFields,
+                        field: repFields,
+                        fields: repFields,
+
+                        reduce: repReduce,
+                        inject: repReduce,
+                        foldl: repReduce,
+
+                        map: repMap,
+                        collect: repMap,
+
+                        each: repEach,
+                        forEach: repEach,
+
+                        tap: repTap,
+                        'do': repTap,
+
+                        after: repAfter,
+                        last: repAfter,
+                        done: repAfter,
+
+                        execute: repExecute,
+                        go: repExecute,
+                        run: repExecute
+                    };
+                }(section));
+            },
+
+
+            repeatingSimpleSum = function(section, field, destination){
+                repeating(section)
+                    .attr(destination)
+                    .field(field)
+                    .reduce(function(m,r){
+                        return m + (r.F[field]);
+                    },0,function(t,r,a){
+                        a.S[destination]=t;
+                    })
+                    .execute();
+            };
+
+            /* eslint-disable no-console */
+            console.log('%c•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸  The Aaron Sheet  v'+version+'  ¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•','background: linear-gradient(to right,green,white,white,green); color:black;text-shadow: 0 0 8px white;');
+            console.log('%c•.¸¸.•*´¨`*•.¸¸.•*´¨`*•.¸  Last update: '+(new Date(lastUpdate*1000))+'  ¸.•*´¨`*•.¸¸.•*´¨`*•.¸¸.•','background: linear-gradient(to right,green,white,white,green); color:black;text-shadow: 0 0 8px white;');
+            /* eslint-enable no-console */
+
+
+            return {
+                /* Repeating Sections */
+                repeatingSimpleSum: repeatingSimpleSum,
+                repeating: repeating,
+
+                /* Configuration */
+                config: setConfigOption,
+
+                /* Debugging */
+                callback: wrapCallback,
+                callstack: logCallstack,
+                debugMode: debugMode,
+                isDebugMode: isDebugMode,
+                _fn: wrapCallback,
+
+                /* Logging */
+                debug: logDebug,
+                error: logError,
+                warn: logWarn,
+                info: logInfo,
+                notice: logNotice,
+                log: logLog
+            };
+        }());
+
         /* ---- END: TheAaronSheet.js ---- */
+
 
 
         TAS.config({
             logging: {
+                error: true,
+                warning: true,
                 info: true,
                 debug: true
             }
@@ -2506,14 +2985,6 @@
             });
         });
 
-        on("change:repeating_equipments:item-enc", function(eventinfo) {
-           TAS.repeatingSimpleSum('equipments','item-enc','total-enc');
-        });
-
-        on("remove:repeating_equipments", function(eventinfo) {
-           TAS.repeatingSimpleSum('equipments','item-enc','total-enc');
-        });
-
         on("change:str change:con change:dex change:siz change:int change:pow change:cha", function () {
 	       getAttrs(["str", "con", "dex", "siz", "int", "pow", "cha"], function (values) {
 
@@ -2839,6 +3310,61 @@
             });
         });
 
+        on("change:repeating_equipments:item-enc", function(eventinfo) {
+           TAS.repeatingSimpleSum('equipments','item-enc','total-enc');
+        });
+
+        on("remove:repeating_equipments", function(eventinfo) {
+           TAS.repeatingSimpleSum('equipments','item-enc','total-enc');
+        });
+
+        on("change:repeating_mount-equipments:item-enc", function(eventinfo) {
+           TAS.repeatingSimpleSum('mount-equipments','item-enc','mount-total-enc');
+        });
+
+        on("remove:repeating_mount-equipments", function(eventinfo) {
+           TAS.repeatingSimpleSum('mount-equipments','item-enc','mount-total-enc');
+        });
+
+        on("change:repeating_advancedskills", function() {
+
+            TAS.repeating('advancedSkills')
+                .attrs('str','con','dex','siz','int','pow','cha')
+                .fields('advancedSkillChar1','advancedSkillChar2','advancedSkillMod','advancedSkillBase','advancedSkill')
+                .tap((rowSet,attrSet)=>{
+                    TAS.log('rowSet: '+JSON.stringify(rowSet));
+                    TAS.log('attrSet: '+JSON.stringify(attrSet));
+                })
+                .each(function(r,f){
+                    var charVal1=f.I[r.advancedSkillChar1]||0;
+                    var charVal2=f.I[r.advancedSkillChar2]||0;
+
+                    r.advancedSkillBase=charVal1 + charVal2;
+                    r.advancedSkill=charVal1 + charVal2 + r.I.advancedSkillMod;
+                })
+                .execute();
+
+        });
+
+        on("change:repeating_weaponskills", function() {
+
+            TAS.repeating('weaponSkills')
+                .attrs('str','con','dex','siz','int','pow','cha')
+                .fields('weaponSkillChar1','weaponSkillChar2','weaponSkillMod','weaponSkillBase','weaponSkill')
+                .tap((rowSet,attrSet)=>{
+                    TAS.log('rowSet: '+JSON.stringify(rowSet));
+                    TAS.log('attrSet: '+JSON.stringify(attrSet));
+                })
+                .each(function(r,f){
+                    var charVal1=f.I[r.weaponSkillChar1]||0;
+                    var charVal2=f.I[r.weaponSkillChar2]||0;
+
+                    r.weaponSkillBase=charVal1 + charVal2;
+                    r.weaponSkill=charVal1 + charVal2 + r.I.weaponSkillMod;
+                })
+                .execute();
+
+        });
 
     </script>
 
