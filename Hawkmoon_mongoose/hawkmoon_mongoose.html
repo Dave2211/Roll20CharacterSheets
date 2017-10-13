@@ -1,6 +1,7 @@
 <div class="sheet-main-container">
     <input type="hidden" name="attr_initSheet" value="1"/>
     <input type="hidden" name="attr_initHp" value="1"/>
+    <input type="hidden" name="attr_initFate" value="1"/>
     <!--spacer so scrollbar does not disappear-->
     <div style="width:1px; height:600px; min-height:600px;position:absolute;left:1px;">&nbsp;</div>
 
@@ -99,7 +100,7 @@
 
                                 <label class="sheet-small-label2" style="width: 10%;">
                                     <input name="attr_ca" type="number" readonly="readonly" data-i18n-title="combat-action-title" title="Combat Actions - @{ca}" />
-                                    <button data-i18n-title="ca-initiative-title" title="Launch Initiative (select your token before)" class="sheet-text-button" type="roll" name="roll_ca-check" value="@{PC-whisper} [[1d10+@{ca}+(@{dex}/100)&{tracker}]]"><span style="vertical-align: text-bottom; color: white;" data-i18n="ca">CA</span></button>
+                                    <span data-i18n="ca">CA</span>
                                 </label>
                                 <label class="sheet-small-label2" style="width: 10%;">
                                     <input name="attr_dmg-mod" type="text" style="text-align: center;" readonly="readonly" data-i18n-title="damage-modifier-title" title="Damage Modifier - @{dmg-mod}" />
@@ -107,7 +108,7 @@
                                 </label>
                                 <label class="sheet-small-label2" style="width: 10%;">
                                     <input name="attr_sr" type="number" data-i18n-title="strike-rank-title" title="Strike Rank - @{sr}" />
-                                    <span data-i18n="strike-rank">Strike Rank</span>
+                                    <button data-i18n-title="sr-initiative-title" title="Launch Initiative (select your token before)" class="sheet-text-button" type="roll" name="roll_sr-check" value="@{PC-whisper} [[1d10+@{sr}+(@{dex}/100)&{tracker}]]"><span style="vertical-align: text-bottom; color: white;" data-i18n="strike-rank">SR</span></button>
                                 </label>
                                 <label class="sheet-small-label2" style="width: 10%;">
                                     <input name="attr_mov" type="number" data-i18n-title="movement-title" title="Movement - @{mov}" />
@@ -126,11 +127,7 @@
                                     <span data-i18n="current">Current</span>
                                 </label>
                                 <label class="sheet-small-label2" style="width: 10%;">
-                                    <input name="attr_fate-points_max" type="number" readonly="readonly" data-i18n-title="fate-point-max-title" title="Max Fate Points - @{fate-points_max}" />
-                                    <span data-i18n="max">Max</span>
-                                </label>
-                                <label class="sheet-small-label2" style="width: 10%;">
-                                    <input name="attr_fate-points-used" type="number" data-i18n-title="fate-point-used-title" title="Total Used Fate Points - @{fate-points-used}" />
+                                    <input name="attr_fate-points-total" type="number" data-i18n-title="fate-point-used-title" title="Total Fate Points - @{fate-points-total}" />
                                     <span data-i18n="total">Total</span>
                                 </label>
                                 <label class="sheet-small-label2" style="width: 45%;"></label>
@@ -1331,6 +1328,44 @@
             <section role="region" aria-label="Mount" data-i18n-aria-label="page-mount-aria">
                 <div class="sheet-section sheet-section-mount">
 
+                    <!-- MOUNT DESCRIPTION -->
+                    <div class="sheet-section">
+                        <div class="sheet-h2-section">
+
+                            <div class="sheet-nontable sheet-sect" style="border:1px solid black;">
+                                <span class="sheet-nontable-name" data-i18n="mount-desc">Mount Description</span>
+
+                                <label class="sheet-small-label2" style="width: 20%;">
+                                    <input name="attr_mount_name" type="text" data-i18n-placeholder="mount-name-place" placeholder="Mount Name" />
+                                    <span data-i18n="mount-name">Mount Name</span>
+                                </label>
+
+                                <label class="sheet-small-label2" style="width: 20%;">
+                                    <input name="attr_mount-type" type="text" data-i18n-placeholder="mount-type-place" placeholder="Mount Type" />
+                                    <span data-i18n="mount-type">Mount Type</span>
+                                </label>
+                                <label class="sheet-small-label2" style="width: 10%;">
+                                    <input name="attr_mount-ca" type="number" readonly="readonly" data-i18n-title="mount-combat-action-title" title="Mount Combat Actions - @{mount-ca}" />
+                                    <span data-i18n="ca">CA</span>
+                                </label>
+                                <label class="sheet-small-label2" style="width: 10%;">
+                                    <input name="attr_mount-sr" type="number" data-i18n-title="mount-strike-rank-title" title="Mount Strike Rank - @{mount-sr}" />
+                                    <button data-i18n-title="mount-sr-initiative-title" title="Launch Initiative (select your token before)" class="sheet-text-button" type="roll" name="roll_mount-sr-check" value="@{PC-whisper} [[1d10+@{mount-sr}+(@{mount-dex}/100)&{tracker}]]"><span style="vertical-align: text-bottom; color: white;" data-i18n="strike-rank">SR</span></button>
+                                </label>
+                                <label class="sheet-small-label2" style="width: 10%;">
+                                    <input name="attr_mount-mov" type="number" data-i18n-title="mount-movement-title" title="Mount Movement - @{mount-mov}" />
+                                    <span data-i18n="mov">MOV</span>
+                                </label>
+
+                                <label class="sheet-small-label2" style="width: 99%;">
+                                    <input name="attr_mount-notes" type="text" data-i18n-placeholder="mount-notes-place" placeholder="Mount Notes" />
+                                    <span data-i18n="notes">Notes</span>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
                     <!-- MOUNT CHARACTERISTICS -->
                     <div class="sheet-section">
                         <div class="sheet-h2-section">
@@ -1358,48 +1393,56 @@
                             <div class="sheet-header sheet-text-center"><span data-i18n="skills">Skills</span></div>
                             <br/>
                             <div class="sheet-nontable sheet-sect">
-                                <div class="sheet-divbox sheet-repeating-sect" style="width: 54%; margin: auto;">
+                                <div class="sheet-divbox sheet-repeating-sect" style="width: 73%; margin: auto;">
                                     <div class="sheet-repeating-fields">
-                                        <fieldset class="repeating_mount-skills">
+                                        <fieldset class="repeating_mountSkills">
                                             <div style="border-spacing:2px; border-collapse:separate; margin:2px;">
 
                                                 <span class="sheet-small-label2  sheet-sect">
-                                                    <input name="attr_mount-skill-name" type="text" data-i18n-placeholder="mount-skill-name-place" placeholder="Mount Skill Name" />
+                                                    <input name="attr_mountSkillName" type="text" data-i18n-placeholder="mount-skill-name-place" placeholder="Mount Skill Name" />
                                                     <span data-i18n="mount-skill-name">Skill Name</span>
                                                 </span>
 
                                                 <span class="sheet-small-label2  sheet-sect">
-                                                    <select name="attr_mount-skill-char-1" data-i18n-title="mount-skill-characteristics-1-title" title="First Characteristics for mount Skill">
+                                                    <select name="attr_mountSkillChar1" data-i18n-title="mount-skill-characteristics-1-title" title="First Characteristics for Mount Skill">
                                                         <option value="0" selected></option>
-                                                        <option value="@{str}" data-i18n="STR">STR</option>
-                                                        <option value="@{con}" data-i18n="CON">CON</option>
-                                                        <option value="@{dex}" data-i18n="DEX">DEX</option>
-                                                        <option value="@{siz}" data-i18n="SIZ">SIZ</option>
-                                                        <option value="@{int}" data-i18n="INT">INT</option>
-                                                        <option value="@{pow}" data-i18n="POW">POW</option>
-                                                        <option value="@{cha}" data-i18n="CHA">CHA</option>
+                                                        <option value="mount-str" data-i18n="STR">STR</option>
+                                                        <option value="mount-con" data-i18n="CON">CON</option>
+                                                        <option value="mount-dex" data-i18n="DEX">DEX</option>
+                                                        <option value="mount-siz" data-i18n="SIZ">SIZ</option>
+                                                        <option value="mount-int" data-i18n="INT">INT</option>
+                                                        <option value="mount-pow" data-i18n="POW">POW</option>
+                                                        <option value="mount-cha" data-i18n="CHA">CHA</option>
                                                     </select>
                                                     <span data-i18n="characteristics-1">Ch. 1</span>
                                                 </span>
                                                 <span class="sheet-small-label2  sheet-sect">
-                                                    <select name="attr_mount-skill-char-2" data-i18n-title="mount-skill-characteristics-2-title" title="First Characteristics for mount Skill">
+                                                    <select name="attr_mountSkillChar2" data-i18n-title="mount-skill-characteristics-2-title" title="First Characteristics for Mount Skill">
                                                         <option value="0" selected></option>
-                                                        <option value="@{str}" data-i18n="STR">STR</option>
-                                                        <option value="@{con}" data-i18n="CON">CON</option>
-                                                        <option value="@{dex}" data-i18n="DEX">DEX</option>
-                                                        <option value="@{siz}" data-i18n="SIZ">SIZ</option>
-                                                        <option value="@{int}" data-i18n="INT">INT</option>
-                                                        <option value="@{pow}" data-i18n="POW">POW</option>
-                                                        <option value="@{cha}" data-i18n="CHA">CHA</option>
+                                                        <option value="mount-str" data-i18n="STR">STR</option>
+                                                        <option value="mount-con" data-i18n="CON">CON</option>
+                                                        <option value="mount-dex" data-i18n="DEX">DEX</option>
+                                                        <option value="mount-siz" data-i18n="SIZ">SIZ</option>
+                                                        <option value="mount-int" data-i18n="INT">INT</option>
+                                                        <option value="mount-pow" data-i18n="POW">POW</option>
+                                                        <option value="mount-cha" data-i18n="CHA">CHA</option>
                                                     </select>
                                                     <span data-i18n="characteristics-2">Ch. 2</span>
                                                 </span>
                                                 <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
-                                                    <input name="attr_mount-skill" type="number" title="@{mount-skill}" />
+                                                    <input name="attr_mountSkillBase" readonly="readonly" type="number" title="@{mountSkillBase}" />
+                                                    <span data-i18n="mount-skill-score-base">Base</span>
+                                                </span>
+                                                <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
+                                                    <input name="attr_mountSkillMod" type="number" title="@{mountSkillMod}" value="0" />
+                                                    <span data-i18n="mount-skill-mod">Mod.</span>
+                                                </span>
+                                                <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
+                                                    <input name="attr_mountSkill" readonly="readonly" type="number" title="@{mountSkill}" />
                                                     <span data-i18n="mount-skill-score">Score</span>
                                                 </span>
                                                 <span class="sheet-small-label2  sheet-sect sheet-entry-vshort">
-                                                    <button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{mount-skill-name}}} {{skill_value=[[@{mount-skill-char-1}+@{mount-skill-char-2}+@{mount-skill}+?{Malus/Bonus|0}]]}} {{diceroll=[[1d100cs<[[(ceil((@{mount-skill-char-1}+@{mount-skill-char-2}+@{mount-skill})/10))]]cf>99]]}}" name="roll_mount-skill-check" />
+                                                    <button type="roll" value="@{PC-whisper} &{template:hm_skill} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{mountSkillName}}} {{skill_value=[[@{mountSkill}+?{Malus/Bonus|0}]]}} {{diceroll=[[1d100cs<[[(ceil((@{mountSkill})/10))]]cf>99]]}}" name="roll_mount-skill-check" />
                                                 </span>
 
                                             </div>
@@ -1408,12 +1451,11 @@
                                 </div>
                             </div>
                             <br/>
+
                         </div>
                     </div>
 
-
                     <!-- MOUNT HIT LOCATIONS -->
-
                     <div class="sheet-nontable sheet-sect sheet-hit-location" style="border:1px solid black;">
 
                         <span class="sheet-nontable-name" data-i18n="hit-locations">Hit Locations</span>
@@ -2636,6 +2678,10 @@
             hkmn.initCSheet();
         });
 
+/*****************************/
+/* Combat Action Calculation */
+/*****************************/
+
         on("change:dex", function () {
 	       getAttrs(["dex"], function (values) {
 
@@ -2661,6 +2707,39 @@
             });
         });
 
+/***********************************/
+/* Mount Combat Action Calculation */
+/***********************************/
+
+        on("change:mount-dex", function () {
+	       getAttrs(["mount-dex"], function (values) {
+
+                var resValue = parseInt(values["mount-dex"]);
+
+                if (resValue < 7) {
+                    setAttrs({
+                        'mount-ca': 1
+                    });
+                } else if (resValue < 13) {
+                    setAttrs({
+                        'mount-ca': 2
+                    });
+                } else if (resValue < 19) {
+                    setAttrs({
+                        'mount-ca': 3
+                    });
+                } else{
+                    setAttrs({
+                        'mount-ca': 4
+                    });
+                }
+            });
+        });
+
+/***************************/
+/* Strike Rank Calculation */
+/***************************/
+
         on("change:int change:dex", function () {
 	       getAttrs(["dex", "int"], function (values) {
 
@@ -2673,18 +2752,51 @@
             });
         });
 
+/*********************************/
+/* Mount Strike Rank Calculation */
+/*********************************/
+
+        on("change:mount-int change:mount-dex", function () {
+	       getAttrs(["mount-dex", "mount-int"], function (values) {
+
+                var resValue = parseInt(values["mount-dex"])+parseInt(values["mount-int"]);
+                var result = Math.ceil(resValue/2);
+
+                setAttrs({
+                    'mount-sr': result
+                });
+            });
+        });
+
+/***************************/
+/* Fate Points Calculation */
+/***************************/
+
         on("change:pow", function () {
-	       getAttrs(["pow"], function (values) {
+	       getAttrs(["pow","initFate"], function (values) {
 
                 var resValue = parseInt(values.pow);
                 var result = Math.floor(resValue/2);
 
+                var valInitFate=parseInt(values.initFate);
+
+                if(valInitFate==1){
+                    setAttrs({
+                        'fate-points': result,
+                        'fate-points-total': result,
+                        'initFate': 0
+                    });
+                }
+
                 setAttrs({
-                    'fate-points_max': result,
                     'focus-points_max': resValue
                 });
             });
         });
+
+/**********************************/
+/* Hit Point Location Calculation */
+/**********************************/
 
         on("change:siz change:con", function () {
 	       getAttrs(["siz", "con", "initHp"], function (values) {
@@ -2896,6 +3008,10 @@
             });
         });
 
+/*******************************/
+/* Damage Modifier Calculation */
+/*******************************/
+
         on("change:str change:siz", function () {
 	       getAttrs(["str", "siz"], function (values) {
 
@@ -2985,6 +3101,10 @@
             });
         });
 
+/****************************/
+/* Basic Skills Calculation */
+/****************************/
+
         on("change:str change:con change:dex change:siz change:int change:pow change:cha", function () {
 	       getAttrs(["str", "con", "dex", "siz", "int", "pow", "cha"], function (values) {
 
@@ -3024,6 +3144,10 @@
             });
         });
 
+/********************************/
+/* Acrobatics Skill Calculation */
+/********************************/
+
         on("change:acrobatics-base change:acrobatics-mod", function (eventinfo) {
 	        getAttrs(["acrobatics-base","acrobatics-mod"], function (values) {
 
@@ -3036,6 +3160,10 @@
 
             });
         });
+
+/*******************************/
+/* Athletics Skill Calculation */
+/*******************************/
 
         on("change:athletics-base change:athletics-mod", function (eventinfo) {
 	        getAttrs(["athletics-base","athletics-mod"], function (values) {
@@ -3050,6 +3178,10 @@
             });
         });
 
+/*****************************/
+/* Boating Skill Calculation */
+/*****************************/
+
         on("change:boating-base change:boating-mod", function (eventinfo) {
 	        getAttrs(["boating-base","boating-mod"], function (values) {
 
@@ -3062,6 +3194,10 @@
 
             });
         });
+
+/***************************/
+/* Dodge Skill Calculation */
+/***************************/
 
         on("change:dodge-base change:dodge-mod", function (eventinfo) {
 	        getAttrs(["dodge-base","dodge-mod"], function (values) {
@@ -3076,6 +3212,10 @@
             });
         });
 
+/*****************************/
+/* Driving Skill Calculation */
+/*****************************/
+
         on("change:driving-base change:driving-mod", function (eventinfo) {
 	        getAttrs(["driving-base","driving-mod"], function (values) {
 
@@ -3088,6 +3228,10 @@
 
             });
         });
+
+/******************************/
+/* Evaluate Skill Calculation */
+/******************************/
 
         on("change:evaluate-base change:evaluate-mod", function (eventinfo) {
 	        getAttrs(["evaluate-base","evaluate-mod"], function (values) {
@@ -3102,6 +3246,10 @@
             });
         });
 
+/*******************************/
+/* Influence Skill Calculation */
+/*******************************/
+
         on("change:influence-base change:influence-mod", function (eventinfo) {
 	        getAttrs(["influence-base","influence-mod"], function (values) {
 
@@ -3114,6 +3262,10 @@
 
             });
         });
+
+/*******************************/
+/* First Aid Skill Calculation */
+/*******************************/
 
         on("change:first-aid-base change:first-aid-mod", function (eventinfo) {
 	        getAttrs(["first-aid-base","first-aid-mod"], function (values) {
@@ -3128,6 +3280,10 @@
             });
         });
 
+/*********************************/
+/* Lore Animal Skill Calculation */
+/*********************************/
+
         on("change:lore-animal-base change:lore-animal-mod", function (eventinfo) {
 	        getAttrs(["lore-animal-base","lore-animal-mod"], function (values) {
 
@@ -3140,6 +3296,10 @@
 
             });
         });
+
+/********************************/
+/* Lore Plant Skill Calculation */
+/********************************/
 
         on("change:lore-plant-base change:lore-plant-mod", function (eventinfo) {
 	        getAttrs(["lore-plant-base","lore-plant-mod"], function (values) {
@@ -3154,6 +3314,10 @@
             });
         });
 
+/********************************/
+/* Lore World Skill Calculation */
+/********************************/
+
         on("change:lore-world-base change:lore-world-mod", function (eventinfo) {
 	        getAttrs(["lore-world-base","lore-world-mod"], function (values) {
 
@@ -3166,6 +3330,10 @@
 
             });
         });
+
+/********************************/
+/* Perception Skill Calculation */
+/********************************/
 
         on("change:perception-base change:perception-mod", function (eventinfo) {
 	        getAttrs(["perception-base","perception-mod"], function (values) {
@@ -3180,6 +3348,10 @@
             });
         });
 
+/*********************************/
+/* Persistence Skill Calculation */
+/*********************************/
+
         on("change:persistence-base change:persistence-mod", function (eventinfo) {
 	        getAttrs(["persistence-base","persistence-mod"], function (values) {
 
@@ -3192,6 +3364,10 @@
 
             });
         });
+
+/********************************/
+/* Resilience Skill Calculation */
+/********************************/
 
         on("change:resilience-base change:resilience-mod", function (eventinfo) {
 	        getAttrs(["resilience-base","resilience-mod"], function (values) {
@@ -3206,6 +3382,10 @@
             });
         });
 
+/****************************/
+/* Riding Skill Calculation */
+/****************************/
+
         on("change:riding-base change:riding-mod", function (eventinfo) {
 	        getAttrs(["riding-base","riding-mod"], function (values) {
 
@@ -3218,6 +3398,10 @@
 
             });
         });
+
+/**************************/
+/* Sing Skill Calculation */
+/**************************/
 
         on("change:sing-base change:sing-mod", function (eventinfo) {
 	        getAttrs(["sing-base","sing-mod"], function (values) {
@@ -3232,6 +3416,9 @@
             });
         });
 
+/*****************************/
+/* Sleight Skill Calculation */
+/*****************************/
         on("change:sleight-base change:sleight-mod", function (eventinfo) {
 	        getAttrs(["sleight-base","sleight-mod"], function (values) {
 
@@ -3244,6 +3431,10 @@
 
             });
         });
+
+/*****************************/
+/* Stealth Skill Calculation */
+/*****************************/
 
         on("change:stealth-base change:stealth-mod", function (eventinfo) {
 	        getAttrs(["stealth-base","stealth-mod"], function (values) {
@@ -3258,6 +3449,10 @@
             });
         });
 
+/******************************/
+/* Throwing Skill Calculation */
+/******************************/
+
         on("change:throwing-base change:throwing-mod", function (eventinfo) {
 	        getAttrs(["throwing-base","throwing-mod"], function (values) {
 
@@ -3270,6 +3465,10 @@
 
             });
         });
+
+/*****************************/
+/* Unarmed Skill Calculation */
+/*****************************/
 
         on("change:unarmed-base change:unarmed-mod", function (eventinfo) {
 	        getAttrs(["unarmed-base","unarmed-mod"], function (values) {
@@ -3284,6 +3483,10 @@
             });
         });
 
+/****************************************/
+/* Basic Close Combat Skill Calculation */
+/****************************************/
+
         on("change:basic-close-combat-base change:basic-close-combat-mod", function (eventinfo) {
 	        getAttrs(["basic-close-combat-base","basic-close-combat-mod"], function (values) {
 
@@ -3297,6 +3500,10 @@
             });
         });
 
+/**********************************/
+/* Basic Ranged Skill Calculation */
+/**********************************/
+
         on("change:basic-ranged-base change:basic-ranged-mod", function (eventinfo) {
 	        getAttrs(["basic-ranged-base","basic-ranged-mod"], function (values) {
 
@@ -3309,6 +3516,11 @@
 
             });
         });
+
+
+/*************************************/
+/* Equipmens Encumbrance Calculation */
+/*************************************/
 
         on("change:repeating_equipments:item-enc", function(eventinfo) {
            TAS.repeatingSimpleSum('equipments','item-enc','total-enc');
@@ -3326,7 +3538,127 @@
            TAS.repeatingSimpleSum('mount-equipments','item-enc','mount-total-enc');
         });
 
-        on("change:repeating_advancedskills", function() {
+/*******************************/
+/* Advanced Skills Calculation */
+/*******************************/
+
+        on("change:repeating_advancedskills:advancedSkillChar1 change:repeating_advancedskills:advancedSkillChar2 change:repeating_advancedskills:advancedSkillMod", function(){
+            getAttrs([
+                "repeating_advancedskills_advancedSkillChar1",
+                "repeating_advancedskills_advancedSkillChar2",
+                "repeating_advancedskills_advancedSkillMod",
+                "str",
+                "con",
+                "dex",
+                "siz",
+                "int",
+                "pow",
+                "cha"
+                ], function (values) {
+
+                var modVal=parseInt(values.repeating_advancedskills_advancedSkillMod);
+
+                var charVal1=parseInt(values[values.repeating_advancedskills_advancedSkillChar1])||0;
+                var charVal2=parseInt(values[values.repeating_advancedskills_advancedSkillChar2])||0;
+
+                setAttrs({
+                    'repeating_advancedskills_advancedSkillBase': charVal1 + charVal2,
+                    'repeating_advancedskills_advancedSkill':charVal1 + charVal2 + modVal
+                });
+
+            });
+        });
+
+/*****************************/
+/* Weapon Skills Calculation */
+/*****************************/
+
+        on("change:repeating_weaponskills:weaponSkillChar1 change:repeating_weaponskills:weaponSkillChar2 change:repeating_weaponskills:weaponSkillMod", function(){
+            getAttrs([
+                "repeating_weaponskills_weaponSkillChar1",
+                "repeating_weaponskills_weaponSkillChar2",
+                "repeating_weaponskills_weaponSkillMod",
+                "str",
+                "con",
+                "dex",
+                "siz",
+                "int",
+                "pow",
+                "cha"
+                ], function (values) {
+
+                var modVal=parseInt(values.repeating_weaponskills_weaponSkillMod);
+
+                var charVal1=parseInt(values[values.repeating_weaponskills_weaponSkillChar1])||0;
+                var charVal2=parseInt(values[values.repeating_weaponskills_weaponSkillChar2])||0;
+
+                setAttrs({
+                    'repeating_weaponskills_weaponSkillBase': charVal1 + charVal2,
+                    'repeating_weaponskills_weaponSkill':charVal1 + charVal2 + modVal
+                });
+
+            });
+        });
+
+/****************************/
+/* Mount Skills Calculation */
+/****************************/
+
+        on("change:repeating_mountskills:mountSkillChar1 change:repeating_mountskills:mountSkillChar2 change:repeating_mountskills:mountSkillMod change:mount-str change:mount-con change:mount-dex change:mount-siz change:mount-int change:mount-pow change:mount-cha", function(){
+            getAttrs([
+                "repeating_mountskills_mountSkillChar1",
+                "repeating_mountskills_mountSkillChar2",
+                "repeating_mountskills_mountSkillMod",
+                "mount-str",
+                "mount-con",
+                "mount-dex",
+                "mount-siz",
+                "mount-int",
+                "mount-pow",
+                "mount-cha"
+                ], function (values) {
+
+                var modVal=parseInt(values.repeating_mountskills_mountSkillMod);
+
+                var charVal1=parseInt(values[values.repeating_mountskills_mountSkillChar1])||0;
+                var charVal2=parseInt(values[values.repeating_mountskills_mountSkillChar2])||0;
+
+                setAttrs({
+                    'repeating_mountskills_mountSkillBase': charVal1 + charVal2,
+                    'repeating_mountskills_mountSkill':charVal1 + charVal2 + modVal
+                });
+
+            });
+        });
+
+/*************************************************/
+/* Mount Skills ReCalculation after Mount change */
+/*************************************************/
+
+        on("change:mount-str change:mount-con change:mount-dex change:mount-siz change:mount-int change:mount-pow change:mount-cha", function(){
+
+            TAS.repeating('mountskills')
+                .attrs('mount-str','mount-con','mount-dex','mount-siz','mount-int','mount-pow','mount-cha')
+                .fields('mountSkillChar1','mountSkillChar2','mountSkillMod','mountSkillBase','mountSkill')
+                .tap((rowSet,attrSet)=>{
+                    TAS.log('rowSet: '+JSON.stringify(rowSet));
+                    TAS.log('attrSet: '+JSON.stringify(attrSet));
+                })
+                .each(function(r,f){
+                    var charVal1=f.I[r.mountSkillChar1]||0;
+                    var charVal2=f.I[r.mountSkillChar2]||0;
+
+                    r.mountSkillBase=charVal1 + charVal2;
+                    r.mountSkill=charVal1 + charVal2 + r.I.mountSkillMod;
+                })
+                .execute();
+        });
+
+/***********************************************************************/
+/* Weapon & Advanced Skills ReCalculation after Characteristics change */
+/***********************************************************************/
+
+        on("change:str change:con change:dex change:siz change:int change:pow change:cha", function(){
 
             TAS.repeating('advancedSkills')
                 .attrs('str','con','dex','siz','int','pow','cha')
@@ -3344,26 +3676,21 @@
                 })
                 .execute();
 
-        });
-
-        on("change:repeating_weaponskills", function() {
-
-            TAS.repeating('weaponSkills')
+            TAS.repeating('weaponskills')
                 .attrs('str','con','dex','siz','int','pow','cha')
-                .fields('weaponSkillChar1','weaponSkillChar2','weaponSkillMod','weaponSkillBase','weaponSkill')
+                .fields('weaponskillChar1','weaponskillChar2','weaponskillMod','weaponskillBase','weaponskill')
                 .tap((rowSet,attrSet)=>{
                     TAS.log('rowSet: '+JSON.stringify(rowSet));
                     TAS.log('attrSet: '+JSON.stringify(attrSet));
                 })
                 .each(function(r,f){
-                    var charVal1=f.I[r.weaponSkillChar1]||0;
-                    var charVal2=f.I[r.weaponSkillChar2]||0;
+                    var charVal1=f.I[r.weaponskillChar1]||0;
+                    var charVal2=f.I[r.weaponskillChar2]||0;
 
-                    r.weaponSkillBase=charVal1 + charVal2;
-                    r.weaponSkill=charVal1 + charVal2 + r.I.weaponSkillMod;
+                    r.weaponskillBase=charVal1 + charVal2;
+                    r.weaponskill=charVal1 + charVal2 + r.I.weaponskillMod;
                 })
                 .execute();
-
         });
 
     </script>
