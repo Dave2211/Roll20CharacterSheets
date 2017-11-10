@@ -180,6 +180,7 @@
   "mount-close-combat-weapons": "Armes de Combat Rapproché",
   "mount-combat-action-title": "Actions de Combat de la Monture - @{mount-ca}",
   "mount-current-fatigue-place": "Fatigue Actuelle de la Monture",
+  "mount-damage-modifier-title":"Modificateur de Dégât - @{mount-dmg-mod}",
   "mount-desc": "Description de la Monture",
   "mount-movement-title": "Mouvement de la monture - @{mount-mov}",
   "mount-name": "Nom de la Monture",

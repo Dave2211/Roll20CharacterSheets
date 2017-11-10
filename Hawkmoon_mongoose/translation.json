@@ -180,6 +180,7 @@
   "mount-close-combat-weapons": "Mount Close Combat Weapons",
   "mount-combat-action-title": "Mount Combat Actions - @{mount-ca}",
   "mount-current-fatigue-place": "Mount Current Fatigue",
+  "mount-damage-modifier-title":"Damage Modifier - @{mount-dmg-mod}",
   "mount-desc": "Mount Description",
   "mount-movement-title": "Mount Movement - @{mount-mov}",
   "mount-name": "Mount Name",
