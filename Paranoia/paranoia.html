@@ -3,7 +3,7 @@
     <!-- HEADER -->
     <div class="sheet-header">
         <h1>PARANOIA</h1>
-        <h4><span data-i18n="citizen-form">FORMULAIRE DE CITOYEN</span></h4>
+        <h4><span data-i18n="identity-form">FORMULAIRE DE CITOYEN</span></h4>
     </div>
 
     <!-- PERSONAL DETAILS -->
@@ -17,7 +17,7 @@
                 <input type="text" name="attr_character_name" data-i18n-placeholder="character-name-place" placeholder="Nom du Citoyen" />
                 <span class="sheet-label" data-i18n="name">NOM</span>
             </label>
-            <label class="sheet-cell" style="width:15%;">
+            <label class="sheet-cell" style="width:25%;">
                 <input type="text" name="attr_security-clearance" data-i18n-placeholder="security-clearance-place" placeholder="Accréditation" />
                 <span class="sheet-label" data-i18n="security-clearance">ACCRÉDITATION</span>
             </label>
@@ -82,7 +82,7 @@
         <div style="display:table; width:100%">
             <div style="width:25%; display:table-cell;">
                 <div class="sheet-tab-header sheet-size-90">
-                    <img src="https://i.imgur.com/PJpaBhL.png" class="sheet-img-skill" />
+                    <img src="https://i.imgur.com/xi61YYo.png" class="sheet-img-skill" />
                     <span style="float:left;" data-i18n="violence">VIOLENCE</span>
                     <input type="number" name="attr_violence" data-i18n-title="violence-title" title="Points de Violence" class="sheet-header-skill" />
                 </div>
@@ -113,7 +113,7 @@
                             <span style="margin-left:5px;" data-i18n="melee">COMBAT</span>
                         </div>
                         <div style="width:20%; display:table-cell;">
-                            <input type="number" name="attr_melee" data-i18n-title="melee-title" title="Points d'Athlétisme" />
+                            <input type="number" name="attr_melee" data-i18n-title="melee-title" title="Points de Combat" />
                         </div>
                     </div>
 
@@ -122,7 +122,7 @@
                             <span style="margin-left:5px;" data-i18n="throw">LANCER</span>
                         </div>
                         <div style="width:20%; display:table-cell;">
-                            <input type="number" name="attr_throw" data-i18n-title="throw-title" title="Points d'Athlétisme" />
+                            <input type="number" name="attr_throw" data-i18n-title="throw-title" title="Points de Lancer" />
                         </div>
                     </div>
 
@@ -132,7 +132,7 @@
             </div>
             <div style="width:25%; display:table-cell;">
                 <div class="sheet-tab-header sheet-size-90">
-                    <img src="https://i.imgur.com/PJpaBhL.png" class="sheet-img-skill" />
+                    <img src="https://i.imgur.com/XZ7ZF6Q.png" class="sheet-img-skill" />
                     <span style="float:left;" data-i18n="chutzpah">CULOT</span>
                     <input type="number" name="attr_chutzpah" data-i18n-title="chutzpah-title" title="Points de Culot" class="sheet-header-skill" />
                 </div>
@@ -182,7 +182,7 @@
             </div>
             <div style="width:25%; display:table-cell;">
                 <div class="sheet-tab-header sheet-size-90">
-                    <img src="https://i.imgur.com/PJpaBhL.png" class="sheet-img-skill" />
+                    <img src="https://i.imgur.com/Mx7boIh.png" class="sheet-img-skill" />
                     <span style="float:left;" data-i18n="brains">NEURONES</span>
                     <input type="number" name="attr_brains" data-i18n-title="brains-title" title="Points de Neurones" class="sheet-header-skill" />
                 </div>
@@ -232,7 +232,7 @@
             </div>
             <div style="width:25%; display:table-cell;">
                 <div class="sheet-tab-header sheet-size-90">
-                    <img src="https://i.imgur.com/PJpaBhL.png" class="sheet-img-skill" />
+                    <img src="https://i.imgur.com/1ruWiE9.png" class="sheet-img-skill" />
                     <span style="float:left;" data-i18n="mechanics">MECANIQUE</span>
                     <input type="number" name="attr_mechanics" data-i18n-title="mechanics-title" title="Points de Mécaniques" class="sheet-header-skill" />
                 </div>
@@ -297,7 +297,7 @@
 
         <div style="width:49%; margin:auto; float:left;">
             <div class="sheet-tab-header">
-                <img src="https://i.imgur.com/PJpaBhL.png" style="margin:-15px 15px 0px 15px; width:50px; float:left;" />
+                <img src="https://i.imgur.com/RY6OlrE.png" style="margin:-15px 15px 0px 15px; width:50px; float:left;" />
                 <span style="float:left;" data-i18n="moxie">SANG-FROID</span>
             </div>
             <div class="sheet-tab-body" style="height:50px;">
@@ -317,7 +317,7 @@
 
         <div style="width:49%; margin:auto; float:right;">
             <div class="sheet-tab-header">
-                <img src="https://i.imgur.com/WYDSTC9.png" style="margin:-15px 15px 0px 15px; width:50px; float:left;" />
+                <img src="https://i.imgur.com/UITDGSe.png" style="margin:-15px 15px 0px 15px; width:50px; float:left;" />
             <span style="font-weight: bolder;" data-i18n="wounds">BLESSURES</span>
             </div>
             <div class="sheet-tab-body" style="height:50px;">
@@ -413,12 +413,12 @@
             <td><span data-i18n="computer-dice">Dé de l'Ordinateur</span></td>
         </tr>
         <tr style="background-color: white; text-align: center; height: 30px;">
-            {{#rollWasFumble() computer_roll}}
+            {{#rollWasCritical() computer_roll}}
             <td><img src="https://i.imgur.com/6O8eEWC.png" style="width:25px;" /></td>
-            {{/rollWasFumble() computer_roll}}
-            {{#^rollWasFumble() computer_roll}}
+            {{/rollWasCritical() computer_roll}}
+            {{#^rollWasCritical() computer_roll}}
             <td>{{computer_roll}}</td>
-            {{/^rollWasFumble() computer_roll}}
+            {{/^rollWasCritical() computer_roll}}
         </tr>
         {{/rollGreater() computer_roll 0}}
     </table>

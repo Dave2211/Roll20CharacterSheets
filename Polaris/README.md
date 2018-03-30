@@ -7,3 +7,8 @@ Character Sheet for Polaris v3.0/v3.1
 
 - Minor fixes
 - Official Logo
+
+##v1 (2018-03-10)
+
+- Minor fixes
+- Better Sheet Worker management

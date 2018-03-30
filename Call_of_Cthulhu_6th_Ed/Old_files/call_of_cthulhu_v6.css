@@ -112,7 +112,7 @@ input[type="text"], input[type="number"] {
 .sheet-rolltemplate-coc_abilities .inlinerollresult,
 .sheet-rolltemplate-coc_sanity .inlinerollresult,
 .sheet-rolltemplate-coc_skills .inlinerollresult ,
-.sheet-rolltemplate-coc_weapons .inlinerollresult {  
+.sheet-rolltemplate-coc_weapons .inlinerollresult {
     background-color: lightgrey;
     border: 2px solid black;
 }
@@ -152,7 +152,7 @@ input[type="text"], input[type="number"] {
 .sheet-rolltemplate-coc_abilities .sheet-roll-text-12px,
 .sheet-rolltemplate-coc_sanity .sheet-roll-text-12px,
 .sheet-rolltemplate-coc_skills .sheet-roll-text-12px,
-.sheet-rolltemplate-coc_weapons .sheet-roll-text-12px {  
+.sheet-rolltemplate-coc_weapons .sheet-roll-text-12px {
     font-size: 12px;
 }
 

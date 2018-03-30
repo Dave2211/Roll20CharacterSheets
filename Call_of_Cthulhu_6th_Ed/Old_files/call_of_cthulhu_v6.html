@@ -247,10 +247,10 @@
                         <input type="number" name="attr_sanity_max" readonly="readonly" />
                     </td>
                 </tr>
-            </table>     
+            </table>
             <h3 style="text-align: center; color: #FFF; background-color: #000;"><span data-i18n="magic-points">Points de Magie</span></h3>
             <input type="number" name="attr_mp" />/<input type="number" name="attr_mp_max" readonly="readonly" />
-            
+
         </div>
     </div>
     <hr/>
@@ -1415,8 +1415,8 @@
                 <br>
                 <b><span data-i18n="others">Autres</span></b>
                 <fieldset class="repeating_Skills">
-                    <input type="checkbox" name="attr_misc-skill-success-x" />                   
-                    <input type="text" name="attr_misc-skill-name-x" data-i18n-placeholder="misc-skill-place" placeholder="Divers" style="width: 145px" />                    
+                    <input type="checkbox" name="attr_misc-skill-success-x" />
+                    <input type="text" name="attr_misc-skill-name-x" data-i18n-placeholder="misc-skill-place" placeholder="Divers" style="width: 145px" />
                     <input type="number" name="attr_misc-skill-x" />
                     <button type="roll" value="@{PC-whisper} &{template:coc_skills} {{character_name=@{character_name}}} {{character_id=@{character_id}}} {{skill_name=@{misc-skill-name-x}}} {{skill_threshold=[[@{misc-skill-x}]]}} {{special_success=[[(ceil(@{misc-skill-x}/5))]]}} {{diceroll=[[1d100cs<1cf>100]]}}" />
                 </fieldset>
@@ -1553,7 +1553,7 @@
                                 <input type="text" name="attr_effect" style="width: 100px" />
                             </td>
                             <td>
-                                <input type="text" name="attr_description" style="width: 100px" /> 
+                                <input type="text" name="attr_description" style="width: 100px" />
                             </td>
                         </tr>
                     </table>
@@ -1652,7 +1652,7 @@
     </div>
     <hr/>
     <div>
-        <h3 style="text-align: center; color: #FFF; background-color: #000;"><span data-i18n="unholy-knowledge">Savoirs impies</span></h3> 
+        <h3 style="text-align: center; color: #FFF; background-color: #000;"><span data-i18n="unholy-knowledge">Savoirs impies</span></h3>
         <span data-i18n="known-creatures">Créatures connues</span>
         <textarea name="attr_creatures"></textarea>
         <span data-i18n="consulted-books">Ouvrages consultés</span>
@@ -1670,13 +1670,13 @@
         <select name="attr_PC-whisper">
             <option value="&nbsp;" data-i18n="public" selected>Public</option>
             <option value="/w gm" data-i18n="whisper-to-guardian">Pour le Gardien</option>
-        </select>   
+        </select>
     </div>
 </div>
 
 
 <!-- ROLLTEMPLATE FOR ABILITIES -->
-<rolltemplate class="sheet-rolltemplate-coc_abilities">  
+<rolltemplate class="sheet-rolltemplate-coc_abilities">
   <div class="sheet-roll-table sheet-rounded">
     <div class="sheet-roll-header">
     {{#character_name}}
@@ -1723,7 +1723,7 @@
 </rolltemplate>
 
 <!-- ROLLTEMPLATE FOR SANITY -->
-<rolltemplate class="sheet-rolltemplate-coc_sanity">  
+<rolltemplate class="sheet-rolltemplate-coc_sanity">
   <div class="sheet-roll-table sheet-rounded">
     <div class="sheet-roll-header">
     {{#character_name}}
@@ -1770,7 +1770,7 @@
 </rolltemplate>
 
 <!-- ROLLTEMPLATE FOR SKILLS -->
-<rolltemplate class="sheet-rolltemplate-coc_skills">  
+<rolltemplate class="sheet-rolltemplate-coc_skills">
   <div class="sheet-roll-table sheet-rounded">
     <div class="sheet-roll-header">
     {{#character_name}}
@@ -1817,7 +1817,7 @@
 </rolltemplate>
 
 <!-- ROLLTEMPLATE FOR WEAPONS -->
-<rolltemplate class="sheet-rolltemplate-coc_weapons">  
+<rolltemplate class="sheet-rolltemplate-coc_weapons">
   <div class="sheet-roll-table sheet-rounded">
     <div class="sheet-roll-header">
     {{#character_name}}

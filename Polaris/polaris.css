@@ -1,3 +1,8 @@
+input[type="number"][readonly],
+input[type="text"][readonly] {
+    font-weight: bold;
+    background-color: lightsteelblue;
+}
 
 input[type="text"], input[type="number"] {
     background-color: transparent;
@@ -960,7 +965,7 @@ h1 {
     text-align:center;
 	font-size: 1em;
 	font-weight: bold;
-	color: darkblue;	
+	color: darkblue;
 	height:2em;
 	vertical-align:bottom;
 	width:10%; /*default */
@@ -984,8 +989,8 @@ h1 {
 
 
 .sheet-expand-show:checked ~ div .sheet-sect-show:checked ~.sheet-expand ,
-.sheet-expand-show:checked ~ div .sheet-expand 
-.sheet-expand-show:checked ~ .sheet-expand { 
+.sheet-expand-show:checked ~ div .sheet-expand
+.sheet-expand-show:checked ~ .sheet-expand {
 	display:none;
 }
 
@@ -995,7 +1000,7 @@ input.sheet-sect-show:checked ~.sheet-npc-spells.sheet-sect {
 	visibility: visible;
 	opacity: 1;
 	transition: opacity 0.5s linear 0s;
-	overflow: hidden;	
+	overflow: hidden;
 }
 input[type="checkbox"].sheet-cssbutton, input[type="checkbox"].sheet-showbutton,
 input[type="checkbox"].sheet-refreshbutton, input[type="checkbox"].sheet-split-column-show,
@@ -1003,7 +1008,7 @@ input[type="checkbox"].sheet-options-show, input[type="checkbox"].sheet-desc-sho
 input[type="checkbox"].sheet-repeating_ids-show, input[type="checkbox"].sheet-sect-show {
 	opacity: 0;height: 1.5em; position: relative; top: 0; left: 0; cursor: pointer; z-index: 1;
 }
-/* added sheet-noshow to input so class can be on checkbox, instead of on a span after checkbox 
+/* added sheet-noshow to input so class can be on checkbox, instead of on a span after checkbox
 though ideally we'd add a class only to checkbox we want to modify */
 input[type="checkbox"]:not(.sheet-noshow) + span:not(.sheet-not-sheet-show)::before {
 	display: inline-block;
@@ -1050,14 +1055,14 @@ input[type="checkbox"]:not(.sheet-noshow):checked + span:not(.sheet-not-sheet-sh
 }
 
 input[type="checkbox"]:not(.sheet-noshow):hover + span:not(.sheet-not-sheet-show) {
-	color:#3F83D0; 
+	color:#3F83D0;
 }
 .sheet-sect-show:not(:checked)~.sheet-sect,
 .sheet-sect-show-inverse:checked~.sheet-sect-inverse{
-	display:none !important;	
+	display:none !important;
 }
 
-div.sheet-h2-section {	
+div.sheet-h2-section {
   display:block;
   position:relative;
   clear:both;
@@ -1084,7 +1089,7 @@ span.sheet-entry-wide textarea {
 	width:100% ;
 	max-width:100%;
 }
-.sheet-entry_med, input[type="text"].sheet-entry_med, 
+.sheet-entry_med, input[type="text"].sheet-entry_med,
 span.sheet-entry_med {
 	width:9em;
 	text-align:left;
@@ -1114,7 +1119,7 @@ div.sheet-h2-section {
 .sheet-nontable-name {
 	text-align: center;
 	font-weight: bold;
-	color: #FFF;	
+	color: #FFF;
 	background: linear-gradient(to right, black , #3F83D0);
 	width: 100%;
 	display: block;
@@ -1169,10 +1174,10 @@ div.sheet-header-weapons {
 }
 
 div.sheet-header{
-    height:30px;	
+    height:30px;
 	background: linear-gradient(to right, black , #3F83D0);
 	color: white;
-	font-weight:bold; 
+	font-weight:bold;
 	line-height:30px;
 	font-size:13px;
 	width:98%;
@@ -1182,39 +1187,39 @@ div.sheet-divbox{
 	border:1px solid black;
 }
 
-.sheet-text-center{	
-	text-align:center;	
+.sheet-text-center{
+	text-align:center;
 }
 
-.sheet-text-left{	
-	text-align:left;	
+.sheet-text-left{
+	text-align:left;
 }
 
-.sheet-text-right{	
-	text-align:right;	
+.sheet-text-right{
+	text-align:right;
 }
 
-.sheet-rTable {   	
-	display: table;   	
-	width: 98%; 
+.sheet-rTable {
+	display: table;
+	width: 98%;
 	font-size:11px;
-} 
+}
 .sheet-rTableRow {
   display: table-row;
 }
 
-.sheet-rTableHeadRow {   	
-	display: table-header-group;   	
-} 
-.sheet-rTableHead {   	  	
+.sheet-rTableHeadRow {
+	display: table-header-group;
+}
+.sheet-rTableHead {
 	background-color: black;
 	color: white;
-	font-weight: bold; 
-} 
-.sheet-rTableCell, .sheet-rTableHead {   	
-	display: table-cell;   	
-	padding: 3px 10px;   	
-} 
+	font-weight: bold;
+}
+.sheet-rTableCell, .sheet-rTableHead {
+	display: table-cell;
+	padding: 3px 10px;
+}
 
 .sheet-rTableCaption{
 	display: table-caption;
@@ -1244,7 +1249,7 @@ div.sheet-divbox{
 	font-weight:bold;
 }
 
-.sheet-title {	
+.sheet-title {
 	background: linear-gradient(to right, black , #3F83D0);
 	color:white;
 	text-align:left;
@@ -1356,11 +1361,11 @@ td.sheet-cell-bold{
 th.sheet-header{
 	background-color: black;
 	color:white;
-	height:30px;	
+	height:30px;
 }
 th.sheet-comp-header{
 	background: linear-gradient(to right, black , #3F83D0);
-	color:white;	
+	color:white;
 	height:30px;
 	margin-top:2px;
 	margin-bottom:2px;
@@ -1424,9 +1429,9 @@ td.sheet-column-20percent{
 .sheet-clear  {clear:both}
 
 .sheet-footer {
-	text-align: center; 
-	font-size: xx-small; 
-	background-color: #FFF8DC;	
+	text-align: center;
+	font-size: xx-small;
+	background-color: #FFF8DC;
 	border: 1px #000 solid;
 	border-radius: 3px;
 }
@@ -1526,7 +1531,7 @@ td.sheet-column-20percent{
 
 .sheet-rolltemplate-pl_weapons .inlinerollresult,
 .sheet-rolltemplate-pl_skill .inlinerollresult,
-.sheet-rolltemplate-pl_incident .inlinerollresult {  
+.sheet-rolltemplate-pl_incident .inlinerollresult {
     background-color: lightblue;
     border: 2px solid darkblue;
 }
@@ -1561,7 +1566,7 @@ td.sheet-column-20percent{
 
 .sheet-rolltemplate-pl_weapons .sheet-roll-text-12px,
 .sheet-rolltemplate-pl_skill .sheet-roll-text-12px,
-.sheet-rolltemplate-pl_incident .sheet-roll-text-12px {  
+.sheet-rolltemplate-pl_incident .sheet-roll-text-12px {
     font-size: 12px;
 }
 
