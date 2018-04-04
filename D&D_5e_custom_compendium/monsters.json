@@ -35,7 +35,9 @@
 				{
 					"name": "Flameform",
 					"entries": [
-						"As a bonus action, the firetamer can transform into a fire elemental. While in this form, the firetamer cannot cast spells, but can expend a spell slot as a bonus action to regain 1d8 hit points per level of the spell slot expended. When the firetamer is reduced to 0 hit points, falls unconscious, or dies in this form, it reverts to its humanoid form. It can remain in ﬂameform for up to 5 hours, and can enter ﬂameform twice, regaining expended uses after completing a short or long rest."
+						"As a bonus action, the firetamer can transform into a fire elemental.",
+						"While in this form, the firetamer cannot cast spells, but can expend a spell slot as a bonus action to regain 1d8 hit points per level of the spell slot expended.",
+						"When the firetamer is reduced to 0 hit points, falls unconscious, or dies in this form, it reverts to its humanoid form. It can remain in ﬂameform for up to 5 hours, and can enter ﬂameform twice, regaining expended uses after completing a short or long rest."
 					]
 				}
 			],
@@ -49,7 +51,8 @@
 				{
 					"name": "Flamecharm (Recharges after a Short or Long Rest)",
 					"entries": [
-						"The firetamer can cast dominate monster (save DC 16) on a fire elemental or other fire elemental creature. If the elemental has 150 or more hit points, it has advantage on the saving throw."
+						"The firetamer can cast dominate monster (save DC 16) on a fire elemental or other fire elemental creature.",
+						"If the elemental has 150 or more hit points, it has advantage on the saving throw."
 					]
 				}
 			],
@@ -59,7 +62,8 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"The firetamer is a 9th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks). It has the following druid spells prepared:"
+						"The firetamer is a 9th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks).",
+						"It has the following druid spells prepared:"
 					],
 					"spells": {
 						"0": {
