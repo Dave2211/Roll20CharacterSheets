@@ -56,8 +56,6 @@
 					]
 				}
 			],
-			"page": 128,
-			"tokenURL":"http://www.syncrpg.com/sam/data/tokenImages/David_North/commissioned/morlock.png",
             "spellcasting": [
 				{
 					"name": "Spellcasting",
@@ -114,7 +112,9 @@
 						}
 					}
 				}
-			]
+			],
+			"page": 128,
+			"tokenURL":"http://www.syncrpg.com/sam/data/tokenImages/David_North/commissioned/morlock.png"
 		}
     ]
 }
