@@ -1761,14 +1761,22 @@ var HM_Skills = HM_Skills || (function () {
 
                 var usePenalty = parseInt(values["useArmorPenalty"]);
 
-                var charVal1=parseInt(values[values.repeating_advancedskills_advancedSkillChar1])||0;
-                var charVal2=parseInt(values[values.repeating_advancedskills_advancedSkillChar2])||0;
+                var advSkill1 = values.repeating_advancedskills_advancedSkillChar1;
+                var advSkill2 = values.repeating_advancedskills_advancedSkillChar2;
+
+                var charVal1=parseInt(values[advSkill1])||0;
+                var charVal2=parseInt(values[advSkill2])||0;
 
                 var baseVal= charVal1 + charVal2;
 
                 var scoreVal= 0;
 
-                if(usePenalty==1){
+                var dexSkillBase = false;
+
+                if(advSkill1=='dex' || advSkill2=='dex')
+                    dexSkillBase = true;
+
+                if(usePenalty==1 && dexSkillBase){
                     if((modVal + penaltyVal)>=0){
                         scoreVal= baseVal + modVal + penaltyVal;
                     }
@@ -1804,14 +1812,18 @@ var HM_Skills = HM_Skills || (function () {
 
                     var usePenalty=f.I['useArmorPenalty'];
 
-                    if(r.advancedSkillChar1=='dex' || r.advancedSkillChar2=='dex')
+                    var dexSkillBase = false;
+
+                    if(r.advancedSkillChar1=='dex' || r.advancedSkillChar2=='dex'){
                         penaltyVal=f.I['total_armor_penalty'];
+                        dexSkillBase = true;
+                    }
 
                     var baseVal= charVal1 + charVal2;
 
                     var scoreVal= 0;
 
-                    if(usePenalty==1){
+                    if(usePenalty==1 && dexSkillBase){
                         if((modVal + penaltyVal)>=0){
                             scoreVal= baseVal + modVal + penaltyVal;
                         }
