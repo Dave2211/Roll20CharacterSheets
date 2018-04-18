@@ -45,7 +45,7 @@
 				{
 					"name": "Scimitar",
 					"entries": [
-						"Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage plus 14 (4d6) fre damage."
+						"Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage plus 14 (4d6) fire damage."
 					]
 				},
 				{
@@ -114,7 +114,16 @@
 				}
 			],
 			"page": 128,
-			"tokenURL":"https://www.mrpadrpg.fr/dnd_5e_compendium/tokens/ashari.png"
+			"tokenURL":"https://i.imgur.com/YccYuM7.png",
+            "fluff": {
+                "entries": {
+                    "type": "entries",
+                    "entries": [
+                        "Of all the ashari tribes, the fire ashari of Pyrah have suﬀered the greatest. Teir people were all but destroyed when Tordak burst through the Rift of Flame in his cataclysmic return to Exandria. Yet despite their immense hardships, the fire ashari have given selﬂessly to the people of Tal’Dorei. Led by a half-orc ashari named Lorkathar, a group of firetamers keep watch over the volatile Scar of the Cinder King on the outskirts of Emon.",
+                        "Firetamers are the elite elementalists of the Pyrah, using their attunement to the primordial forces of the world to not just create fire, not just command it, but tame it to their will. A firetamer of Pyrah is nothing like the manic pyromancers of Tal’Dorei; while the latter recklessly wields fire as a weapon, firetamers use their talent to protect others from fire’s destructive power—or to use that same power to destroy those who threaten their people. Firetamers are almost always accompanied by a salamander, a fire elemental, or a small herd of magma or smoke mephits. While home in Pyrah, ashari firetamers use their power to control the Rift of Flame or to control the ﬂames of the Cindergrove."
+                    ]
+                }
+            }
 		}
     ]
 }
